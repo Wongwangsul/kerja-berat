@@ -1,0 +1,21 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       896Mi        14Gi        40Mi       875Mi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   57G   88G  40% /
+Linux runnervmnwato 7.0.0-1017-azure #17-Ubuntu SMP PREEMPT Thu Sep 24 15:54:51 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/jajal-002.sh ===
+=== Jajal kerja berat serbaguna (2) ===
+Mengalokasikan 10 GB RAM (melebihi total RAM mesin Muse)...
+10 GB berhasil dialokasikan dan disentuh penuh.
+Menghitung SHA-256 paralel di 4 inti selama ~30 detik (konteks fork)...
+Total hash: 155,791,000 dalam 30.0 detik = 5,185,965 hash/detik
+Jajal selesai.
+
+JAJAL KERJA BERAT SERBAGUNA
+Inti CPU: 4
+RAM: alokasi 10 GB berhasil (melebihi total RAM mesin Muse 8 GB)
+CPU: 155,791,000 hash SHA-256 dalam 30.0 detik (5,185,965/detik)
+=== Selesai. Kode keluar: 0 ===

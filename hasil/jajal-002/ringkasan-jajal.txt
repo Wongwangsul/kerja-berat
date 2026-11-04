@@ -1,0 +1,4 @@
+JAJAL KERJA BERAT SERBAGUNA
+Inti CPU: 4
+RAM: alokasi 10 GB berhasil (melebihi total RAM mesin Muse 8 GB)
+CPU: 155,791,000 hash SHA-256 dalam 30.0 detik (5,185,965/detik)
