@@ -1,0 +1,12 @@
+SARING-001 UJI (2 berkas pertama)
+kata_kunci: بريرة
+berkas_diproses: 2
+ - data/csv/search__13_part1.csv
+ - data/csv/search__13_part2.csv
+total_baris_diproses: 464
+baris_cocok: 464
+baris_cocok_prioritas: 14
+durasi_detik: 0.0
+error: 0
+Uji selesai: 464 baris cocok dari 464 baris, 2 berkas, 0.0 detik, error 0
+=== Selesai. Kode keluar: 0 ===
