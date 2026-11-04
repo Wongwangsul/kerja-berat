@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Pekerjaan uji pertama: buktikan spesifikasi runner dan jalur pengiriman hasil.
 # Keluaran standar otomatis ditangkap ke hasil-run/log.txt oleh workflow.
+# Pemicu: workflow Kerja Berat sudah terpasang (2026-11-04).
 set -e
 
 echo "Halo dari runner GitHub Actions - uji pertama jalur kerja berat."
