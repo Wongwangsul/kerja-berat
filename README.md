@@ -1,8 +1,9 @@
 # kerja-berat
 
 Mesin kerja berat jarak jauh untuk Muse (Wongwangsul), berjalan di runner
-GitHub Actions repo publik: **4 vCPU, 16 GB RAM, 14 GB disk**, gratis tanpa
-batas menit untuk repo publik.
+GitHub Actions repo publik: **4 vCPU, 16 GB RAM, disk lega (88 GB bebas
+teramati pada uji pertama 2026-11-04)**, gratis tanpa batas menit untuk
+repo publik.
 
 ## Cara kerja
 
@@ -18,7 +19,7 @@ batas menit untuk repo publik.
 
 - Repo ini **publik**: jangan pernah menaruh data pribadi, kata sandi, kunci
   API, atau berkas sensitif di sini - baik di skrip maupun di hasil.
-- Satu pekerjaan maksimal berjalan 6 jam; disk runner hanya 14 GB.
+- Satu pekerjaan maksimal berjalan 6 jam.
 - Untuk pekerjaan berisi data pribadi, gunakan repo privat (runner 2 vCPU /
   8 GB RAM, 2.000 menit gratis per bulan) - minta Muse menyiapkannya bila
   perlu.
