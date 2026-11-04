@@ -1,0 +1,74 @@
+name: Kerja Berat
+
+on:
+  push:
+    paths:
+      - 'jobs/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  kerja:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - name: Ambil repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Tentukan skrip pekerjaan
+        id: pilih
+        shell: bash
+        run: |
+          JOB="$(git log -1 --name-only --pretty=format: | grep -E '^jobs/[^/]+\.sh$' | head -n 1)"
+          if [ -z "$JOB" ]; then
+            echo "Tidak ada berkas jobs/*.sh pada commit terakhir; tidak ada yang dijalankan."
+            exit 1
+          fi
+          echo "job=$JOB" >> "$GITHUB_OUTPUT"
+          echo "id=$(basename "$JOB" .sh)" >> "$GITHUB_OUTPUT"
+          echo "Pekerjaan: $JOB"
+
+      - name: Jalankan pekerjaan
+        shell: bash
+        run: |
+          mkdir -p hasil-run
+          {
+            echo "=== Mesin runner GitHub Actions ==="
+            echo "Inti CPU: $(nproc)"
+            free -h
+            df -h /
+            uname -a
+            echo "=== Mulai pekerjaan: ${{ steps.pilih.outputs.job }} ==="
+          } | tee hasil-run/log.txt
+          set +e
+          bash "${{ steps.pilih.outputs.job }}" >> hasil-run/log.txt 2>&1
+          KODE=$?
+          set -e
+          echo "=== Selesai. Kode keluar: $KODE ===" >> hasil-run/log.txt
+          ls -la hasil-run
+
+      - name: Unggah artefak
+        uses: actions/upload-artifact@v4
+        with:
+          name: hasil-${{ steps.pilih.outputs.id }}
+          path: hasil-run/
+
+      - name: Commit hasil ke repo
+        shell: bash
+        run: |
+          TUJUAN="hasil/${{ steps.pilih.outputs.id }}"
+          mkdir -p "$TUJUAN"
+          cp -r hasil-run/. "$TUJUAN"/
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$TUJUAN"
+          if git diff --cached --quiet; then
+            echo "Tidak ada hasil untuk dicommit."
+          else
+            git commit -m "Hasil ${{ steps.pilih.outputs.id }} dari runner [skip ci]"
+            git push
+          fi
