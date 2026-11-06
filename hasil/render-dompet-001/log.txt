@@ -1,0 +1,71 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       994Mi        14Gi        42Mi       886Mi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   57G   88G  40% /
+Linux runnervmwuk1x 7.0.0-1019-azure #20-Ubuntu SMP PREEMPT Mon Oct 19 22:41:16 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/render-dompet-001.sh ===
+== Dekode masukan base64 ==
+audio:
+total 1428
+drwxr-xr-x 2 runner runner   4096 Nov  6 15:49 .
+drwxr-xr-x 4 runner runner   4096 Nov  6 15:49 ..
+-rw-r--r-- 1 runner runner  84888 Nov  6 15:49 s1.mp3
+-rw-r--r-- 1 runner runner 114674 Nov  6 15:49 s1.mp3.b64
+-rw-r--r-- 1 runner runner  95337 Nov  6 15:49 s2.mp3
+-rw-r--r-- 1 runner runner 128789 Nov  6 15:49 s2.mp3.b64
+-rw-r--r-- 1 runner runner 124594 Nov  6 15:49 s3.mp3
+-rw-r--r-- 1 runner runner 168314 Nov  6 15:49 s3.mp3.b64
+-rw-r--r-- 1 runner runner  80709 Nov  6 15:49 s4.mp3
+-rw-r--r-- 1 runner runner 109028 Nov  6 15:49 s4.mp3.b64
+-rw-r--r-- 1 runner runner 133372 Nov  6 15:49 s5.mp3
+-rw-r--r-- 1 runner runner 180172 Nov  6 15:49 s5.mp3.b64
+-rw-r--r-- 1 runner runner  90322 Nov  6 15:49 s6.mp3
+-rw-r--r-- 1 runner runner 122017 Nov  6 15:49 s6.mp3.b64
+
+panels:
+total 6436
+drwxr-xr-x 2 runner runner   4096 Nov  6 15:49 .
+drwxr-xr-x 4 runner runner   4096 Nov  6 15:49 ..
+-rw-r--r-- 1 runner runner 592718 Nov  6 15:49 s1.webp
+-rw-r--r-- 1 runner runner 800691 Nov  6 15:49 s1.webp.b64
+-rw-r--r-- 1 runner runner 406496 Nov  6 15:49 s2.webp
+-rw-r--r-- 1 runner runner 549128 Nov  6 15:49 s2.webp.b64
+-rw-r--r-- 1 runner runner 361060 Nov  6 15:49 s3.webp
+-rw-r--r-- 1 runner runner 487751 Nov  6 15:49 s3.webp.b64
+-rw-r--r-- 1 runner runner 500978 Nov  6 15:49 s4.webp
+-rw-r--r-- 1 runner runner 676762 Nov  6 15:49 s4.webp.b64
+-rw-r--r-- 1 runner runner 406560 Nov  6 15:49 s5.webp
+-rw-r--r-- 1 runner runner 549213 Nov  6 15:49 s5.webp.b64
+-rw-r--r-- 1 runner runner 517782 Nov  6 15:49 s6.webp
+-rw-r--r-- 1 runner runner 699460 Nov  6 15:49 s6.webp.b64
+== Periksa alat ==
+jobs/render-dompet-001.sh: line 18: ffmpeg: command not found
+Python 3.14.4
+/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf: DejaVu Serif:style=Bold
+/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf: DejaVu Sans Mono:style=Book
+/usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Oblique.ttf: DejaVu Sans,DejaVu Sans Condensed:style=Condensed Oblique,Oblique
+== Render ==
+Traceback (most recent call last):
+  File "/home/runner/work/kerja-berat/kerja-berat/render-data/dompet-001/build_render.py", line 48, in <module>
+    r = subprocess.run(cmd, capture_output=True, text=True)
+  File "/usr/lib/python3.14/subprocess.py", line 555, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1990, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+RENDER GAGAL: video tidak terbentuk
+=== Selesai. Kode keluar: 1 ===
