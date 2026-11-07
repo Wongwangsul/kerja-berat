@@ -79,15 +79,18 @@ run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0",
 # 3) Berkas teks untuk drawtext (menghindari masalah escaping)
 filters = []
 for i, (s, e, txt) in enumerate(CAPTIONS):
-    fn = f"cap{i}.txt"
-    with open(fn, "w", encoding="utf-8") as f:
-        f.write(txt)
-    filters.append(
-        f"drawtext=fontfile=DejaVuSans-Bold.ttf:textfile={fn}"
-        f":fontsize=30:fontcolor=white:box=1:boxcolor=black@0.55"
-        f":boxborderw=10:x=(w-text_w)/2:y=h-text_h-64"
-        f":enable='between(t,{s:.2f},{e:.2f})'"
-    )
+    lines = txt.split("\n")
+    for j, line in enumerate(lines):
+        fn = f"cap{i}_{j}.txt"
+        with open(fn, "w", encoding="utf-8") as f:
+            f.write(line)
+        yoff = 64 + (len(lines) - 1 - j) * 42
+        filters.append(
+            f"drawtext=fontfile=DejaVuSans-Bold.ttf:textfile={fn}"
+            f":fontsize=30:fontcolor=white:box=1:boxcolor=black@0.55"
+            f":boxborderw=10:x=(w-text_w)/2:y=h-text_h-{yoff}"
+            f":enable='between(t,{s:.2f},{e:.2f})'"
+        )
 for i, (s, e, txt) in enumerate(ARABIC):
     fn = f"arab{i}.txt"
     with open(fn, "w", encoding="utf-8") as f:
