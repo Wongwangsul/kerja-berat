@@ -1,0 +1,1461 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       910Mi        14Gi        42Mi       889Mi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   57G   88G  40% /
+Linux runnervmwuk1x 7.0.0-1019-azure #20-Ubuntu SMP PREEMPT Mon Oct 19 22:41:16 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/render-doa-001.sh ===
+== Rakit narasi.mp3 dari base64 ==
+Ukuran narasi.mp3: 490728 (harus 490728)
+== Periksa alat ==
+ffmpeg belum ada di runner ini, pasang via apt...
+Selecting previously unselected package libva2:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 213197 files and directories currently installed.)
+Preparing to unpack .../00-libva2_2.23.0-1ubuntu1_amd64v3.deb ...
+Unpacking libva2:amd64 (2.23.0-1ubuntu1) ...
+Selecting previously unselected package libva-drm2:amd64.
+Preparing to unpack .../01-libva-drm2_2.23.0-1ubuntu1_amd64v3.deb ...
+Unpacking libva-drm2:amd64 (2.23.0-1ubuntu1) ...
+Selecting previously unselected package libva-x11-2:amd64.
+Preparing to unpack .../02-libva-x11-2_2.23.0-1ubuntu1_amd64v3.deb ...
+Unpacking libva-x11-2:amd64 (2.23.0-1ubuntu1) ...
+Selecting previously unselected package libvdpau1:amd64.
+Preparing to unpack .../03-libvdpau1_1.5-4_amd64v3.deb ...
+Unpacking libvdpau1:amd64 (1.5-4) ...
+Selecting previously unselected package libvpl2.
+Preparing to unpack .../04-libvpl2_1%3a2.16.0-1_amd64v3.deb ...
+Unpacking libvpl2 (1:2.16.0-1) ...
+Selecting previously unselected package ocl-icd-libopencl1:amd64.
+Preparing to unpack .../05-ocl-icd-libopencl1_2.3.4-1_amd64v3.deb ...
+Unpacking ocl-icd-libopencl1:amd64 (2.3.4-1) ...
+Selecting previously unselected package libavutil60:amd64.
+Preparing to unpack .../06-libavutil60_7%3a8.0.1-3ubuntu2_amd64v3.deb ...
+Unpacking libavutil60:amd64 (7:8.0.1-3ubuntu2) ...
+Selecting previously unselected package libcodec2-1.2:amd64.
+Preparing to unpack .../07-libcodec2-1.2_1.2.0-4_amd64v3.deb ...
+Unpacking libcodec2-1.2:amd64 (1.2.0-4) ...
+Selecting previously unselected package libdav1d7:amd64.
+Preparing to unpack .../08-libdav1d7_1.5.3-1_amd64v3.deb ...
+Unpacking libdav1d7:amd64 (1.5.3-1) ...
+Selecting previously unselected package libgsm1:amd64.
+Preparing to unpack .../09-libgsm1_1.0.23-2_amd64v3.deb ...
+Unpacking libgsm1:amd64 (1.0.23-2) ...
+Selecting previously unselected package libmpg123-0t64:amd64.
+Preparing to unpack .../10-libmpg123-0t64_1.33.3-2_amd64v3.deb ...
+Unpacking libmpg123-0t64:amd64 (1.33.3-2) ...
+Selecting previously unselected package libmp3lame0:amd64.
+Preparing to unpack .../11-libmp3lame0_3.101~svn6525+dfsg-2ubuntu0.1_amd64v3.deb ...
+Unpacking libmp3lame0:amd64 (3.101~svn6525+dfsg-2ubuntu0.1) ...
+Selecting previously unselected package libopus0:amd64.
+Preparing to unpack .../12-libopus0_1.6.1-1_amd64v3.deb ...
+Unpacking libopus0:amd64 (1.6.1-1) ...
+Selecting previously unselected package librav1e0.8:amd64.
+Preparing to unpack .../13-librav1e0.8_0.8.1-7_amd64v3.deb ...
+Unpacking librav1e0.8:amd64 (0.8.1-7) ...
+Selecting previously unselected package libshine3:amd64.
+Preparing to unpack .../14-libshine3_3.1.1-3build1_amd64v3.deb ...
+Unpacking libshine3:amd64 (3.1.1-3build1) ...
+Selecting previously unselected package libspeex1:amd64.
+Preparing to unpack .../15-libspeex1_1.2.1-3build1_amd64v3.deb ...
+Unpacking libspeex1:amd64 (1.2.1-3build1) ...
+Selecting previously unselected package libsvtav1enc2:amd64.
+Preparing to unpack .../16-libsvtav1enc2_2.3.0+dfsg-1build1_amd64v3.deb ...
+Unpacking libsvtav1enc2:amd64 (2.3.0+dfsg-1build1) ...
+Selecting previously unselected package libsoxr0:amd64.
+Preparing to unpack .../17-libsoxr0_0.1.3-4.1_amd64v3.deb ...
+Unpacking libsoxr0:amd64 (0.1.3-4.1) ...
+Selecting previously unselected package libswresample6:amd64.
+Preparing to unpack .../18-libswresample6_7%3a8.0.1-3ubuntu2_amd64v3.deb ...
+Unpacking libswresample6:amd64 (7:8.0.1-3ubuntu2) ...
+Selecting previously unselected package libtheoradec2:amd64.
+Preparing to unpack .../19-libtheoradec2_1.2.0+dfsg-6_amd64v3.deb ...
+Unpacking libtheoradec2:amd64 (1.2.0+dfsg-6) ...
+Selecting previously unselected package libtheoraenc2:amd64.
+Preparing to unpack .../20-libtheoraenc2_1.2.0+dfsg-6_amd64v3.deb ...
+Unpacking libtheoraenc2:amd64 (1.2.0+dfsg-6) ...
+Selecting previously unselected package libtwolame0:amd64.
+Preparing to unpack .../21-libtwolame0_0.4.0-2build4_amd64v3.deb ...
+Unpacking libtwolame0:amd64 (0.4.0-2build4) ...
+Selecting previously unselected package libvorbisenc2:amd64.
+Preparing to unpack .../22-libvorbisenc2_1.3.7-3build2_amd64v3.deb ...
+Unpacking libvorbisenc2:amd64 (1.3.7-3build2) ...
+Selecting previously unselected package libvpx12:amd64.
+Preparing to unpack .../23-libvpx12_1.16.0-3_amd64v3.deb ...
+Unpacking libvpx12:amd64 (1.16.0-3) ...
+Selecting previously unselected package libx264-165:amd64.
+Preparing to unpack .../24-libx264-165_2%3a0.165.3222+gitb35605ac-3build1_amd64v3.deb ...
+Unpacking libx264-165:amd64 (2:0.165.3222+gitb35605ac-3build1) ...
+Selecting previously unselected package libx265-215:amd64.
+Preparing to unpack .../25-libx265-215_4.1-4_amd64v3.deb ...
+Unpacking libx265-215:amd64 (4.1-4) ...
+Selecting previously unselected package libxvidcore4:amd64.
+Preparing to unpack .../26-libxvidcore4_2%3a1.3.7-3_amd64v3.deb ...
+Unpacking libxvidcore4:amd64 (2:1.3.7-3) ...
+Selecting previously unselected package libzvbi-common.
+Preparing to unpack .../27-libzvbi-common_0.2.44-1ubuntu2_all.deb ...
+Unpacking libzvbi-common (0.2.44-1ubuntu2) ...
+Selecting previously unselected package libzvbi0t64:amd64.
+Preparing to unpack .../28-libzvbi0t64_0.2.44-1ubuntu2_amd64v3.deb ...
+Unpacking libzvbi0t64:amd64 (0.2.44-1ubuntu2) ...
+Selecting previously unselected package libavcodec62:amd64.
+Preparing to unpack .../29-libavcodec62_7%3a8.0.1-3ubuntu2_amd64v3.deb ...
+Unpacking libavcodec62:amd64 (7:8.0.1-3ubuntu2) ...
+Selecting previously unselected package libraw1394-11:amd64.
+Preparing to unpack .../30-libraw1394-11_2.1.2-2build4_amd64v3.deb ...
+Unpacking libraw1394-11:amd64 (2.1.2-2build4) ...
+Selecting previously unselected package libavc1394-0:amd64.
+Preparing to unpack .../31-libavc1394-0_0.5.4-5build4_amd64v3.deb ...
+Unpacking libavc1394-0:amd64 (0.5.4-5build4) ...
+Selecting previously unselected package libunibreak6:amd64.
+Preparing to unpack .../32-libunibreak6_6.1-3build1_amd64v3.deb ...
+Unpacking libunibreak6:amd64 (6.1-3build1) ...
+Selecting previously unselected package libass9:amd64.
+Preparing to unpack .../33-libass9_1%3a0.17.4-2_amd64v3.deb ...
+Unpacking libass9:amd64 (1:0.17.4-2) ...
+Selecting previously unselected package libudfread3:amd64.
+Preparing to unpack .../34-libudfread3_1.2.0-2_amd64v3.deb ...
+Unpacking libudfread3:amd64 (1.2.0-2) ...
+Selecting previously unselected package libbluray3:amd64.
+Preparing to unpack .../35-libbluray3_1%3a1.4.1-1_amd64v3.deb ...
+Unpacking libbluray3:amd64 (1:1.4.1-1) ...
+Selecting previously unselected package libchromaprint1:amd64.
+Preparing to unpack .../36-libchromaprint1_1.6.0-2build1_amd64v3.deb ...
+Unpacking libchromaprint1:amd64 (1.6.0-2build1) ...
+Selecting previously unselected package libdvdread8t64:amd64.
+Preparing to unpack .../37-libdvdread8t64_7.0.1-1_amd64v3.deb ...
+Unpacking libdvdread8t64:amd64 (7.0.1-1) ...
+Selecting previously unselected package libdvdnav4:amd64.
+Preparing to unpack .../38-libdvdnav4_7.0.0-2_amd64v3.deb ...
+Unpacking libdvdnav4:amd64 (7.0.0-2) ...
+Selecting previously unselected package libgme0:amd64.
+Preparing to unpack .../39-libgme0_0.6.4-1_amd64v3.deb ...
+Unpacking libgme0:amd64 (0.6.4-1) ...
+Selecting previously unselected package libopenmpt0t64:amd64.
+Preparing to unpack .../40-libopenmpt0t64_0.8.4-1_amd64v3.deb ...
+Unpacking libopenmpt0t64:amd64 (0.8.4-1) ...
+Selecting previously unselected package libcjson1:amd64.
+Preparing to unpack .../41-libcjson1_1.7.19-2_amd64v3.deb ...
+Unpacking libcjson1:amd64 (1.7.19-2) ...
+Selecting previously unselected package libmbedcrypto16:amd64.
+Preparing to unpack .../42-libmbedcrypto16_3.6.5-0.1ubuntu2_amd64v3.deb ...
+Unpacking libmbedcrypto16:amd64 (3.6.5-0.1ubuntu2) ...
+Selecting previously unselected package librist4:amd64.
+Preparing to unpack .../43-librist4_0.2.11+dfsg-1build1_amd64v3.deb ...
+Unpacking librist4:amd64 (0.2.11+dfsg-1build1) ...
+Selecting previously unselected package libsrt1.5-gnutls:amd64.
+Preparing to unpack .../44-libsrt1.5-gnutls_1.5.4-3_amd64v3.deb ...
+Unpacking libsrt1.5-gnutls:amd64 (1.5.4-3) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../45-libssh-4_0.11.3-1ubuntu2.1_amd64v3.deb ...
+Unpacking libssh-4:amd64 (0.11.3-1ubuntu2.1) ...
+Selecting previously unselected package libavformat62:amd64.
+Preparing to unpack .../46-libavformat62_7%3a8.0.1-3ubuntu2_amd64v3.deb ...
+Unpacking libavformat62:amd64 (7:8.0.1-3ubuntu2) ...
+Selecting previously unselected package libbs2b0:amd64.
+Preparing to unpack .../47-libbs2b0_3.1.0+dfsg-8build1_amd64v3.deb ...
+Unpacking libbs2b0:amd64 (3.1.0+dfsg-8build1) ...
+Selecting previously unselected package libflite1:amd64.
+Preparing to unpack .../48-libflite1_2.2-7build1_amd64v3.deb ...
+Unpacking libflite1:amd64 (2.2-7build1) ...
+Selecting previously unselected package libserd-0-0:amd64.
+Preparing to unpack .../49-libserd-0-0_0.32.6-1_amd64v3.deb ...
+Unpacking libserd-0-0:amd64 (0.32.6-1) ...
+Selecting previously unselected package libzix-0-0:amd64.
+Preparing to unpack .../50-libzix-0-0_0.8.0-1_amd64v3.deb ...
+Unpacking libzix-0-0:amd64 (0.8.0-1) ...
+Selecting previously unselected package libsord-0-0:amd64.
+Preparing to unpack .../51-libsord-0-0_0.16.20-1_amd64v3.deb ...
+Unpacking libsord-0-0:amd64 (0.16.20-1) ...
+Selecting previously unselected package libsratom-0-0:amd64.
+Preparing to unpack .../52-libsratom-0-0_0.6.20-1_amd64v3.deb ...
+Unpacking libsratom-0-0:amd64 (0.6.20-1) ...
+Selecting previously unselected package liblilv-0-0:amd64.
+Preparing to unpack .../53-liblilv-0-0_0.26.2-1_amd64v3.deb ...
+Unpacking liblilv-0-0:amd64 (0.26.2-1) ...
+Selecting previously unselected package libmysofa1:amd64.
+Preparing to unpack .../54-libmysofa1_1.3.3+dfsg-1ubuntu2_amd64v3.deb ...
+Unpacking libmysofa1:amd64 (1.3.3+dfsg-1ubuntu2) ...
+Selecting previously unselected package libplacebo360:amd64.
+Preparing to unpack .../55-libplacebo360_7.360.0-3_amd64v3.deb ...
+Unpacking libplacebo360:amd64 (7.360.0-3) ...
+Selecting previously unselected package libsamplerate0:amd64.
+Preparing to unpack .../56-libsamplerate0_0.2.2-4build2_amd64v3.deb ...
+Unpacking libsamplerate0:amd64 (0.2.2-4build2) ...
+Selecting previously unselected package librubberband3:amd64.
+Preparing to unpack .../57-librubberband3_4.0.0+dfsg-2ubuntu1_amd64v3.deb ...
+Unpacking librubberband3:amd64 (4.0.0+dfsg-2ubuntu1) ...
+Selecting previously unselected package libswscale9:amd64.
+Preparing to unpack .../58-libswscale9_7%3a8.0.1-3ubuntu2_amd64v3.deb ...
+Unpacking libswscale9:amd64 (7:8.0.1-3ubuntu2) ...
+Selecting previously unselected package libvidstab1.1:amd64.
+Preparing to unpack .../59-libvidstab1.1_1.1.0-2.1_amd64v3.deb ...
+Unpacking libvidstab1.1:amd64 (1.1.0-2.1) ...
+Selecting previously unselected package libzimg2:amd64.
+Preparing to unpack .../60-libzimg2_3.0.6+ds1-1_amd64v3.deb ...
+Unpacking libzimg2:amd64 (3.0.6+ds1-1) ...
+Selecting previously unselected package libavfilter11:amd64.
+Preparing to unpack .../61-libavfilter11_7%3a8.0.1-3ubuntu2_amd64v3.deb ...
+Unpacking libavfilter11:amd64 (7:8.0.1-3ubuntu2) ...
+Selecting previously unselected package libcdio19t64:amd64.
+Preparing to unpack .../62-libcdio19t64_2.2.0-4build1_amd64v3.deb ...
+Unpacking libcdio19t64:amd64 (2.2.0-4build1) ...
+Selecting previously unselected package libcdio-cdda2t64:amd64.
+Preparing to unpack .../63-libcdio-cdda2t64_10.2+2.0.2-2_amd64v3.deb ...
+Unpacking libcdio-cdda2t64:amd64 (10.2+2.0.2-2) ...
+Selecting previously unselected package libcdio-paranoia2t64:amd64.
+Preparing to unpack .../64-libcdio-paranoia2t64_10.2+2.0.2-2_amd64v3.deb ...
+Unpacking libcdio-paranoia2t64:amd64 (10.2+2.0.2-2) ...
+Selecting previously unselected package libdc1394-25:amd64.
+Preparing to unpack .../65-libdc1394-25_2.2.6-6_amd64v3.deb ...
+Unpacking libdc1394-25:amd64 (2.2.6-6) ...
+Selecting previously unselected package libiec61883-0:amd64.
+Preparing to unpack .../66-libiec61883-0_1.2.0-8_amd64v3.deb ...
+Unpacking libiec61883-0:amd64 (1.2.0-8) ...
+Selecting previously unselected package libjack-jackd2-0:amd64.
+Preparing to unpack .../67-libjack-jackd2-0_1.9.22~dfsg-5build1_amd64v3.deb ...
+Unpacking libjack-jackd2-0:amd64 (1.9.22~dfsg-5build1) ...
+Selecting previously unselected package libopenal-data.
+Preparing to unpack .../68-libopenal-data_1%3a1.25.1-2_all.deb ...
+Unpacking libopenal-data (1:1.25.1-2) ...
+Selecting previously unselected package libopenal1:amd64.
+Preparing to unpack .../69-libopenal1_1%3a1.25.1-2_amd64v3.deb ...
+Unpacking libopenal1:amd64 (1:1.25.1-2) ...
+Selecting previously unselected package libasyncns0:amd64.
+Preparing to unpack .../70-libasyncns0_0.8-7_amd64v3.deb ...
+Unpacking libasyncns0:amd64 (0.8-7) ...
+Selecting previously unselected package libflac14:amd64.
+Preparing to unpack .../71-libflac14_1.5.0+ds-5_amd64v3.deb ...
+Unpacking libflac14:amd64 (1.5.0+ds-5) ...
+Selecting previously unselected package libsndfile1:amd64.
+Preparing to unpack .../72-libsndfile1_1.2.2-4_amd64v3.deb ...
+Unpacking libsndfile1:amd64 (1.2.2-4) ...
+Selecting previously unselected package libpulse0:amd64.
+Preparing to unpack .../73-libpulse0_1%3a17.0+dfsg1-2ubuntu4_amd64v3.deb ...
+Unpacking libpulse0:amd64 (1:17.0+dfsg1-2ubuntu4) ...
+Selecting previously unselected package libxcb-shape0:amd64.
+Preparing to unpack .../74-libxcb-shape0_1.17.0-2ubuntu1_amd64v3.deb ...
+Unpacking libxcb-shape0:amd64 (1.17.0-2ubuntu1) ...
+Selecting previously unselected package libxv1:amd64.
+Preparing to unpack .../75-libxv1_2%3a1.0.13-1_amd64v3.deb ...
+Unpacking libxv1:amd64 (2:1.0.13-1) ...
+Selecting previously unselected package libavdevice62:amd64.
+Preparing to unpack .../76-libavdevice62_7%3a8.0.1-3ubuntu2_amd64v3.deb ...
+Unpacking libavdevice62:amd64 (7:8.0.1-3ubuntu2) ...
+Selecting previously unselected package libdecor-0-0:amd64.
+Preparing to unpack .../77-libdecor-0-0_0.2.5-1_amd64v3.deb ...
+Unpacking libdecor-0-0:amd64 (0.2.5-1) ...
+Selecting previously unselected package libsdl2-classic:amd64.
+Preparing to unpack .../78-libsdl2-classic_2.32.10+dfsg-6_amd64v3.deb ...
+Unpacking libsdl2-classic:amd64 (2.32.10+dfsg-6) ...
+Selecting previously unselected package libsdl2-2.0-0:amd64.
+Preparing to unpack .../79-libsdl2-2.0-0_2.32.10+dfsg-6_amd64v3.deb ...
+Unpacking libsdl2-2.0-0:amd64 (2.32.10+dfsg-6) ...
+Selecting previously unselected package ffmpeg.
+Preparing to unpack .../80-ffmpeg_7%3a8.0.1-3ubuntu2_amd64v3.deb ...
+Unpacking ffmpeg (7:8.0.1-3ubuntu2) ...
+Selecting previously unselected package libaacs0:amd64.
+Preparing to unpack .../81-libaacs0_0.11.1-4build1_amd64v3.deb ...
+Unpacking libaacs0:amd64 (0.11.1-4build1) ...
+Selecting previously unselected package libbdplus0:amd64.
+Preparing to unpack .../82-libbdplus0_0.2.0-4build1_amd64v3.deb ...
+Unpacking libbdplus0:amd64 (0.2.0-4build1) ...
+Selecting previously unselected package libdecor-0-plugin-1-gtk:amd64.
+Preparing to unpack .../83-libdecor-0-plugin-1-gtk_0.2.5-1_amd64v3.deb ...
+Unpacking libdecor-0-plugin-1-gtk:amd64 (0.2.5-1) ...
+Selecting previously unselected package libfftw3-single3:amd64.
+Preparing to unpack .../84-libfftw3-single3_3.3.10-2fakesync1build3_amd64v3.deb ...
+Unpacking libfftw3-single3:amd64 (3.3.10-2fakesync1build3) ...
+Selecting previously unselected package libwebrtc-audio-processing-1-3:amd64.
+Preparing to unpack .../85-libwebrtc-audio-processing-1-3_1.3-3build2_amd64v3.deb ...
+Unpacking libwebrtc-audio-processing-1-3:amd64 (1.3-3build2) ...
+Selecting previously unselected package libspa-0.2-modules:amd64.
+Preparing to unpack .../86-libspa-0.2-modules_1.6.2-1ubuntu1.2_amd64v3.deb ...
+Unpacking libspa-0.2-modules:amd64 (1.6.2-1ubuntu1.2) ...
+Selecting previously unselected package libpipewire-0.3-0t64:amd64.
+Preparing to unpack .../87-libpipewire-0.3-0t64_1.6.2-1ubuntu1.2_amd64v3.deb ...
+Unpacking libpipewire-0.3-0t64:amd64 (1.6.2-1ubuntu1.2) ...
+Selecting previously unselected package libpipewire-0.3-common.
+Preparing to unpack .../88-libpipewire-0.3-common_1.6.2-1ubuntu1.2_all.deb ...
+Unpacking libpipewire-0.3-common (1.6.2-1ubuntu1.2) ...
+Setting up libgme0:amd64 (0.6.4-1) ...
+Setting up libchromaprint1:amd64 (1.6.0-2build1) ...
+Setting up libpipewire-0.3-common (1.6.2-1ubuntu1.2) ...
+Setting up libdvdread8t64:amd64 (7.0.1-1) ...
+Setting up libraw1394-11:amd64 (2.1.2-2build4) ...
+Setting up libfftw3-single3:amd64 (3.3.10-2fakesync1build3) ...
+Setting up libudfread3:amd64 (1.2.0-2) ...
+Setting up libspeex1:amd64 (1.2.1-3build1) ...
+Setting up libshine3:amd64 (3.1.1-3build1) ...
+Setting up libvpl2 (1:2.16.0-1) ...
+Setting up libtwolame0:amd64 (0.4.0-2build4) ...
+Setting up libgsm1:amd64 (1.0.23-2) ...
+Setting up libsoxr0:amd64 (0.1.3-4.1) ...
+Setting up libzix-0-0:amd64 (0.8.0-1) ...
+Setting up libx264-165:amd64 (2:0.165.3222+gitb35605ac-3build1) ...
+Setting up libcodec2-1.2:amd64 (1.2.0-4) ...
+Setting up libmysofa1:amd64 (1.3.3+dfsg-1ubuntu2) ...
+Setting up libxcb-shape0:amd64 (1.17.0-2ubuntu1) ...
+Setting up libcdio19t64:amd64 (2.2.0-4build1) ...
+Setting up libmpg123-0t64:amd64 (1.33.3-2) ...
+Setting up libcjson1:amd64 (1.7.19-2) ...
+Setting up libxvidcore4:amd64 (2:1.3.7-3) ...
+Setting up libwebrtc-audio-processing-1-3:amd64 (1.3-3build2) ...
+Setting up libtheoraenc2:amd64 (1.2.0+dfsg-6) ...
+Setting up libcdio-cdda2t64:amd64 (10.2+2.0.2-2) ...
+Setting up librav1e0.8:amd64 (0.8.1-7) ...
+Setting up libtheoradec2:amd64 (1.2.0+dfsg-6) ...
+Setting up libvpx12:amd64 (1.16.0-3) ...
+Setting up libva2:amd64 (2.23.0-1ubuntu1) ...
+Setting up libsvtav1enc2:amd64 (2.3.0+dfsg-1build1) ...
+Setting up libopus0:amd64 (1.6.1-1) ...
+Setting up libcdio-paranoia2t64:amd64 (10.2+2.0.2-2) ...
+Setting up libdc1394-25:amd64 (2.2.6-6) ...
+Setting up libxv1:amd64 (2:1.0.13-1) ...
+Setting up libflac14:amd64 (1.5.0+ds-5) ...
+Setting up libaacs0:amd64 (0.11.1-4build1) ...
+Setting up libssh-4:amd64 (0.11.3-1ubuntu2.1) ...
+Setting up libplacebo360:amd64 (7.360.0-3) ...
+Setting up libbdplus0:amd64 (0.2.0-4build1) ...
+Setting up libvidstab1.1:amd64 (1.1.0-2.1) ...
+Setting up libsrt1.5-gnutls:amd64 (1.5.4-3) ...
+Setting up libflite1:amd64 (2.2-7build1) ...
+Setting up libdav1d7:amd64 (1.5.3-1) ...
+Setting up libva-drm2:amd64 (2.23.0-1ubuntu1) ...
+Setting up ocl-icd-libopencl1:amd64 (2.3.4-1) ...
+Setting up libasyncns0:amd64 (0.8-7) ...
+Setting up libvdpau1:amd64 (1.5-4) ...
+Setting up libbs2b0:amd64 (3.1.0+dfsg-8build1) ...
+Setting up libdecor-0-0:amd64 (0.2.5-1) ...
+Setting up libzimg2:amd64 (3.0.6+ds1-1) ...
+Setting up libopenal-data (1:1.25.1-2) ...
+Setting up libbluray3:amd64 (1:1.4.1-1) ...
+Setting up libunibreak6:amd64 (6.1-3build1) ...
+Setting up libmbedcrypto16:amd64 (3.6.5-0.1ubuntu2) ...
+Setting up libx265-215:amd64 (4.1-4) ...
+Setting up libsamplerate0:amd64 (0.2.2-4build2) ...
+Setting up libva-x11-2:amd64 (2.23.0-1ubuntu1) ...
+Setting up libdecor-0-plugin-1-gtk:amd64 (0.2.5-1) ...
+Setting up libopenmpt0t64:amd64 (0.8.4-1) ...
+Setting up libzvbi-common (0.2.44-1ubuntu2) ...
+Setting up libmp3lame0:amd64 (3.101~svn6525+dfsg-2ubuntu0.1) ...
+Setting up libvorbisenc2:amd64 (1.3.7-3build2) ...
+Setting up libdvdnav4:amd64 (7.0.0-2) ...
+Setting up libiec61883-0:amd64 (1.2.0-8) ...
+Setting up libserd-0-0:amd64 (0.32.6-1) ...
+Setting up libavc1394-0:amd64 (0.5.4-5build4) ...
+Setting up libzvbi0t64:amd64 (0.2.44-1ubuntu2) ...
+Setting up libavutil60:amd64 (7:8.0.1-3ubuntu2) ...
+Setting up libopenal1:amd64 (1:1.25.1-2) ...
+Setting up librist4:amd64 (0.2.11+dfsg-1build1) ...
+Setting up libass9:amd64 (1:0.17.4-2) ...
+Setting up libswscale9:amd64 (7:8.0.1-3ubuntu2) ...
+Setting up librubberband3:amd64 (4.0.0+dfsg-2ubuntu1) ...
+Setting up libswresample6:amd64 (7:8.0.1-3ubuntu2) ...
+Setting up libjack-jackd2-0:amd64 (1.9.22~dfsg-5build1) ...
+Setting up libsord-0-0:amd64 (0.16.20-1) ...
+Setting up libsratom-0-0:amd64 (0.6.20-1) ...
+Setting up libsndfile1:amd64 (1.2.2-4) ...
+Setting up liblilv-0-0:amd64 (0.26.2-1) ...
+Setting up libpulse0:amd64 (1:17.0+dfsg1-2ubuntu4) ...
+Setting up libspa-0.2-modules:amd64 (1.6.2-1ubuntu1.2) ...
+Setting up libavcodec62:amd64 (7:8.0.1-3ubuntu2) ...
+Setting up libpipewire-0.3-0t64:amd64 (1.6.2-1ubuntu1.2) ...
+Setting up libsdl2-classic:amd64 (2.32.10+dfsg-6) ...
+Setting up libavformat62:amd64 (7:8.0.1-3ubuntu2) ...
+Setting up libavfilter11:amd64 (7:8.0.1-3ubuntu2) ...
+Setting up libsdl2-2.0-0:amd64 (2.32.10+dfsg-6) ...
+Setting up libavdevice62:amd64 (7:8.0.1-3ubuntu2) ...
+Setting up ffmpeg (7:8.0.1-3ubuntu2) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Not building database; man-db/auto-update is not 'true'.
+Processing triggers for libc-bin (2.43-2ubuntu2.4) ...
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+
+Service restarts being deferred:
+ systemctl restart hosted-compute-agent.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ffmpeg version 8.0.1-3ubuntu2 Copyright (c) 2000-2025 the FFmpeg developers
+v24.22.2
+11.19.1
+== Pasang dependensi proyek ==
+
+added 251 packages in 5s
+npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn install-scripts   esbuild@0.28.1 (postinstall: node install.js)
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+== Pastikan browser Remotion tersedia ==
+[90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
+Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-158.0.8127.2.zip?clear
+Getting Headless Shell - 9.5 Mb/102.5 Mb
+Getting Headless Shell - 19.1 Mb/102.5 Mb
+Getting Headless Shell - 28.6 Mb/102.5 Mb
+Getting Headless Shell - 38.2 Mb/102.5 Mb
+Getting Headless Shell - 47.7 Mb/102.5 Mb
+Getting Headless Shell - 57.3 Mb/102.5 Mb
+Getting Headless Shell - 66.8 Mb/102.5 Mb
+Getting Headless Shell - 76.4 Mb/102.5 Mb
+Getting Headless Shell - 85.9 Mb/102.5 Mb
+Getting Headless Shell - 95.5 Mb/102.5 Mb
+Got Headless Shell
+Has browser at /home/runner/work/kerja-berat/kerja-berat/render-data/doa-001/node_modules/.remotion/chrome-headless-shell/linux64/chrome-headless-shell-linux64/chrome-headless-shell
+== Render ==
+Bundling 6%
+Bundling 21%
+Bundling 32%
+Bundling 43%
+Bundling 54%
+Bundling 65%
+Bundling 70%
+Bundling 75%
+Bundling 80%
+Bundling 85%
+Bundling 91%
+Bundling 98%
+Bundling 100%
+Getting composition
+⚡️ Cached bundle. Subsequent renders will be faster.
+[90mComposition          DoaSebelumMakan[39m
+[90mCodec                h264[39m
+[90mOutput               doa-sebelum-makan.mp4[39m
+[90mConcurrency          4x[39m
+Rendered 0/945
+Rendered 1/945, time remaining: 7m 17s
+Rendered 2/945, time remaining: 3m 39s
+Rendered 3/945, time remaining: 2m 38s
+Rendered 4/945, time remaining: 1m 59s
+Rendered 5/945, time remaining: 1m 43s
+Rendered 6/945, time remaining: 1m 29s
+Rendered 7/945, time remaining: 1m 21s
+Rendered 8/945, time remaining: 1m 11s
+Rendered 9/945, time remaining: 1m 6s
+Rendered 10/945, time remaining: 1m 2s
+Rendered 11/945, time remaining: 58s
+Rendered 12/945, time remaining: 54s
+Rendered 13/945, time remaining: 52s
+Rendered 14/945, time remaining: 50s
+Rendered 15/945, time remaining: 48s
+Rendered 16/945, time remaining: 46s
+Rendered 17/945, time remaining: 44s
+Rendered 18/945, time remaining: 43s
+Rendered 19/945, time remaining: 42s
+Rendered 20/945, time remaining: 40s
+Rendered 21/945, time remaining: 39s
+Rendered 22/945, time remaining: 38s
+Rendered 22/945, time remaining: 38s
+Rendered 23/945, time remaining: 38s
+Rendered 24/945, time remaining: 37s
+Rendered 25/945, time remaining: 36s
+Rendered 26/945, time remaining: 35s
+Rendered 27/945, time remaining: 35s
+Rendered 28/945, time remaining: 35s
+Rendered 29/945, time remaining: 33s
+Rendered 30/945, time remaining: 32s
+Rendered 31/945, time remaining: 33s
+Rendered 32/945, time remaining: 32s
+Rendered 33/945, time remaining: 32s
+Rendered 34/945, time remaining: 31s
+Rendered 35/945, time remaining: 31s
+Rendered 36/945, time remaining: 30s
+Rendered 37/945, time remaining: 30s
+Rendered 38/945, time remaining: 29s
+Rendered 39/945, time remaining: 29s
+Rendered 40/945, time remaining: 29s
+Rendered 41/945, time remaining: 29s
+Rendered 42/945, time remaining: 28s
+Rendered 43/945, time remaining: 28s
+Rendered 44/945, time remaining: 28s
+Rendered 45/945, time remaining: 28s
+Rendered 46/945, time remaining: 27s
+Rendered 46/945, time remaining: 27s
+Rendered 47/945, time remaining: 28s
+Rendered 48/945, time remaining: 27s
+Rendered 49/945, time remaining: 27s
+Rendered 50/945, time remaining: 27s
+Rendered 51/945, time remaining: 27s
+Rendered 52/945, time remaining: 26s
+Rendered 53/945, time remaining: 27s
+Rendered 54/945, time remaining: 26s
+Rendered 55/945, time remaining: 27s
+Rendered 56/945, time remaining: 27s
+Rendered 57/945, time remaining: 28s
+Rendered 58/945, time remaining: 28s
+Rendered 59/945, time remaining: 28s
+Rendered 60/945, time remaining: 27s
+Rendered 61/945, time remaining: 28s
+Rendered 61/945, time remaining: 28s
+Rendered 62/945, time remaining: 28s
+Rendered 63/945, time remaining: 27s
+Rendered 64/945, time remaining: 27s
+Rendered 65/945, time remaining: 27s
+Rendered 66/945, time remaining: 27s
+Rendered 67/945, time remaining: 27s
+Rendered 68/945, time remaining: 27s
+Rendered 69/945, time remaining: 27s
+Rendered 70/945, time remaining: 26s
+Rendered 71/945, time remaining: 26s
+Rendered 72/945, time remaining: 26s
+Rendered 73/945, time remaining: 26s
+Rendered 74/945, time remaining: 26s
+Rendered 75/945, time remaining: 26s
+Rendered 76/945, time remaining: 26s
+Rendered 77/945, time remaining: 26s
+Rendered 78/945, time remaining: 26s
+Rendered 79/945, time remaining: 25s
+Rendered 80/945, time remaining: 25s
+Rendered 81/945, time remaining: 25s
+Rendered 82/945, time remaining: 25s
+Rendered 82/945, time remaining: 25s
+Rendered 83/945, time remaining: 25s
+Rendered 84/945, time remaining: 25s
+Rendered 85/945, time remaining: 25s
+Rendered 86/945, time remaining: 25s
+Rendered 87/945, time remaining: 25s
+Rendered 88/945, time remaining: 25s
+Rendered 89/945, time remaining: 25s
+Rendered 90/945, time remaining: 25s
+Rendered 91/945, time remaining: 25s
+Rendered 92/945, time remaining: 24s
+Rendered 93/945, time remaining: 25s
+Rendered 94/945, time remaining: 24s
+Rendered 95/945, time remaining: 24s
+Rendered 96/945, time remaining: 24s
+Rendered 97/945, time remaining: 24s
+Rendered 98/945, time remaining: 24s
+Rendered 99/945, time remaining: 24s
+Rendered 100/945, time remaining: 24s
+Rendered 101/945, time remaining: 24s
+Rendered 102/945, time remaining: 24s
+Rendered 102/945, time remaining: 24s
+Rendered 103/945, time remaining: 24s
+Rendered 104/945, time remaining: 24s
+Rendered 105/945, time remaining: 24s
+Rendered 106/945, time remaining: 24s
+Rendered 107/945, time remaining: 23s
+Rendered 108/945, time remaining: 23s
+Rendered 109/945, time remaining: 23s
+Rendered 110/945, time remaining: 23s
+Rendered 111/945, time remaining: 23s
+Rendered 112/945, time remaining: 23s
+Rendered 113/945, time remaining: 23s
+Rendered 114/945, time remaining: 23s
+Rendered 115/945, time remaining: 23s
+Rendered 116/945, time remaining: 23s
+Rendered 117/945, time remaining: 23s
+Rendered 118/945, time remaining: 23s
+Rendered 119/945, time remaining: 23s
+Rendered 120/945, time remaining: 23s
+Rendered 121/945, time remaining: 23s
+Rendered 122/945, time remaining: 23s
+Rendered 122/945, time remaining: 23s
+Rendered 123/945, time remaining: 23s
+Rendered 124/945, time remaining: 22s
+Rendered 125/945, time remaining: 22s
+Rendered 126/945, time remaining: 22s
+Rendered 127/945, time remaining: 22s
+Rendered 128/945, time remaining: 22s
+Rendered 129/945, time remaining: 22s
+Rendered 130/945, time remaining: 22s
+Rendered 131/945, time remaining: 22s
+Rendered 132/945, time remaining: 22s
+Rendered 133/945, time remaining: 22s
+Rendered 134/945, time remaining: 22s
+Rendered 135/945, time remaining: 22s
+Rendered 136/945, time remaining: 22s
+Rendered 137/945, time remaining: 22s
+Rendered 138/945, time remaining: 22s
+Rendered 139/945, time remaining: 22s
+Rendered 140/945, time remaining: 22s
+Rendered 141/945, time remaining: 22s
+Rendered 142/945, time remaining: 22s
+Rendered 142/945, time remaining: 22s
+Rendered 143/945, time remaining: 22s
+Rendered 144/945, time remaining: 22s
+Rendered 145/945, time remaining: 22s
+Rendered 146/945, time remaining: 22s
+Rendered 147/945, time remaining: 22s
+Rendered 148/945, time remaining: 22s
+Rendered 149/945, time remaining: 21s
+Rendered 150/945, time remaining: 21s
+Rendered 151/945, time remaining: 19s
+Rendered 152/945, time remaining: 19s
+Rendered 153/945, time remaining: 19s
+Rendered 154/945, time remaining: 19s
+Rendered 155/945, time remaining: 19s
+Rendered 156/945, time remaining: 19s
+Rendered 157/945, time remaining: 19s
+Rendered 158/945, time remaining: 19s
+Rendered 159/945, time remaining: 19s
+Rendered 160/945, time remaining: 19s
+Rendered 161/945, time remaining: 19s
+Rendered 161/945, time remaining: 19s
+Rendered 162/945, time remaining: 19s
+Rendered 163/945, time remaining: 19s
+Rendered 164/945, time remaining: 19s
+Rendered 165/945, time remaining: 19s
+Rendered 166/945, time remaining: 19s
+Rendered 167/945, time remaining: 19s
+Rendered 168/945, time remaining: 19s
+Rendered 169/945, time remaining: 19s
+Rendered 170/945, time remaining: 19s
+Rendered 171/945, time remaining: 19s
+Rendered 172/945, time remaining: 19s
+Rendered 173/945, time remaining: 19s
+Rendered 174/945, time remaining: 19s
+Rendered 175/945, time remaining: 19s
+Rendered 176/945, time remaining: 19s
+Rendered 177/945, time remaining: 19s
+Rendered 178/945, time remaining: 19s
+Rendered 179/945, time remaining: 19s
+Rendered 180/945, time remaining: 19s
+Rendered 181/945, time remaining: 19s
+Rendered 182/945, time remaining: 19s
+Rendered 182/945, time remaining: 19s
+Rendered 183/945, time remaining: 19s
+Rendered 184/945, time remaining: 19s
+Rendered 185/945, time remaining: 19s
+Rendered 186/945, time remaining: 19s
+Rendered 187/945, time remaining: 19s
+Rendered 188/945, time remaining: 19s
+Rendered 189/945, time remaining: 19s
+Rendered 190/945, time remaining: 19s
+Rendered 191/945, time remaining: 19s
+Rendered 192/945, time remaining: 19s
+Rendered 193/945, time remaining: 19s
+Rendered 194/945, time remaining: 19s
+Rendered 195/945, time remaining: 19s
+Rendered 196/945, time remaining: 19s
+Rendered 197/945, time remaining: 19s
+Rendered 198/945, time remaining: 19s
+Rendered 199/945, time remaining: 19s
+Rendered 200/945, time remaining: 19s
+Rendered 201/945, time remaining: 19s
+Rendered 202/945, time remaining: 19s
+Rendered 202/945, time remaining: 19s
+Rendered 203/945, time remaining: 19s
+Rendered 204/945, time remaining: 19s
+Rendered 205/945, time remaining: 18s
+Rendered 206/945, time remaining: 18s
+Rendered 207/945, time remaining: 18s
+Rendered 208/945, time remaining: 18s
+Rendered 209/945, time remaining: 18s
+Rendered 210/945, time remaining: 18s
+Rendered 211/945, time remaining: 18s
+Rendered 212/945, time remaining: 18s
+Rendered 213/945, time remaining: 18s
+Rendered 214/945, time remaining: 18s
+Rendered 215/945, time remaining: 18s
+Rendered 216/945, time remaining: 18s
+Rendered 217/945, time remaining: 18s
+Rendered 218/945, time remaining: 18s
+Rendered 219/945, time remaining: 18s
+Rendered 220/945, time remaining: 18s
+Rendered 221/945, time remaining: 18s
+Rendered 222/945, time remaining: 18s
+Rendered 222/945, time remaining: 18s
+Rendered 223/945, time remaining: 18s
+Rendered 224/945, time remaining: 18s
+Rendered 225/945, time remaining: 18s
+Rendered 226/945, time remaining: 18s
+Rendered 227/945, time remaining: 18s
+Rendered 228/945, time remaining: 18s
+Rendered 229/945, time remaining: 18s
+Rendered 230/945, time remaining: 17s
+Rendered 231/945, time remaining: 17s
+Rendered 232/945, time remaining: 18s
+Rendered 233/945, time remaining: 18s
+Rendered 234/945, time remaining: 17s
+Rendered 235/945, time remaining: 17s
+Rendered 236/945, time remaining: 17s
+Rendered 237/945, time remaining: 17s
+Rendered 238/945, time remaining: 17s
+Rendered 239/945, time remaining: 17s
+Rendered 240/945, time remaining: 17s
+Rendered 240/945, time remaining: 17s
+Rendered 241/945, time remaining: 17s
+Rendered 242/945, time remaining: 17s
+Rendered 243/945, time remaining: 17s
+Rendered 244/945, time remaining: 17s
+Rendered 245/945, time remaining: 17s
+Rendered 246/945, time remaining: 17s
+Rendered 247/945, time remaining: 17s
+Rendered 248/945, time remaining: 17s
+Rendered 249/945, time remaining: 17s
+Rendered 250/945, time remaining: 17s
+Rendered 251/945, time remaining: 17s
+Rendered 252/945, time remaining: 17s
+Rendered 253/945, time remaining: 17s
+Rendered 254/945, time remaining: 17s
+Rendered 255/945, time remaining: 17s
+Rendered 256/945, time remaining: 17s
+Rendered 257/945, time remaining: 17s
+Rendered 258/945, time remaining: 17s
+Rendered 258/945, time remaining: 17s
+Rendered 259/945, time remaining: 17s
+Rendered 260/945, time remaining: 17s
+Rendered 261/945, time remaining: 17s
+Rendered 262/945, time remaining: 17s
+Rendered 263/945, time remaining: 17s
+Rendered 264/945, time remaining: 17s
+Rendered 265/945, time remaining: 17s
+Rendered 266/945, time remaining: 17s
+Rendered 267/945, time remaining: 17s
+Rendered 268/945, time remaining: 17s
+Rendered 269/945, time remaining: 17s
+Rendered 270/945, time remaining: 17s
+Rendered 271/945, time remaining: 17s
+Rendered 272/945, time remaining: 17s
+Rendered 273/945, time remaining: 17s
+Rendered 274/945, time remaining: 17s
+Rendered 275/945, time remaining: 17s
+Rendered 276/945, time remaining: 17s
+Rendered 277/945, time remaining: 17s
+Rendered 277/945, time remaining: 17s
+Rendered 278/945, time remaining: 17s
+Rendered 279/945, time remaining: 17s
+Rendered 280/945, time remaining: 17s
+Rendered 281/945, time remaining: 17s
+Rendered 282/945, time remaining: 17s
+Rendered 283/945, time remaining: 17s
+Rendered 284/945, time remaining: 17s
+Rendered 285/945, time remaining: 17s
+Rendered 286/945, time remaining: 17s
+Rendered 287/945, time remaining: 17s
+Rendered 288/945, time remaining: 17s
+Rendered 289/945, time remaining: 17s
+Rendered 290/945, time remaining: 17s
+Rendered 291/945, time remaining: 17s
+Rendered 291/945, time remaining: 17s
+Rendered 292/945, time remaining: 18s
+Rendered 293/945, time remaining: 18s
+Rendered 294/945, time remaining: 19s
+Rendered 295/945, time remaining: 19s
+Rendered 295/945, time remaining: 19s
+Rendered 296/945, time remaining: 19s
+Rendered 297/945, time remaining: 20s
+Rendered 297/945, time remaining: 20s
+Rendered 298/945, time remaining: 21s
+Rendered 299/945, time remaining: 21s
+Rendered 300/945, time remaining: 21s
+Rendered 301/945, time remaining: 22s
+Rendered 301/945, time remaining: 22s
+Rendered 302/945, time remaining: 22s
+Rendered 303/945, time remaining: 23s
+Rendered 304/945, time remaining: 23s
+Rendered 305/945, time remaining: 23s
+Rendered 305/945, time remaining: 23s
+Rendered 306/945, time remaining: 24s
+Rendered 307/945, time remaining: 25s
+Rendered 308/945, time remaining: 25s
+Rendered 309/945, time remaining: 25s
+Rendered 309/945, time remaining: 25s
+Rendered 310/945, time remaining: 25s
+Rendered 311/945, time remaining: 27s
+Rendered 312/945, time remaining: 27s
+Rendered 313/945, time remaining: 27s
+Rendered 313/945, time remaining: 27s
+Rendered 314/945, time remaining: 27s
+Rendered 315/945, time remaining: 28s
+Rendered 315/945, time remaining: 28s
+Rendered 316/945, time remaining: 29s
+Rendered 317/945, time remaining: 29s
+Rendered 318/945, time remaining: 29s
+Rendered 319/945, time remaining: 30s
+Rendered 319/945, time remaining: 30s
+Rendered 320/945, time remaining: 30s
+Rendered 321/945, time remaining: 30s
+Rendered 322/945, time remaining: 31s
+Rendered 323/945, time remaining: 31s
+Rendered 323/945, time remaining: 31s
+Rendered 324/945, time remaining: 32s
+Rendered 325/945, time remaining: 32s
+Rendered 326/945, time remaining: 32s
+Rendered 326/945, time remaining: 32s
+Rendered 327/945, time remaining: 33s
+Rendered 328/945, time remaining: 34s
+Rendered 329/945, time remaining: 34s
+Rendered 330/945, time remaining: 34s
+Rendered 330/945, time remaining: 34s
+Rendered 331/945, time remaining: 35s
+Rendered 332/945, time remaining: 36s
+Rendered 333/945, time remaining: 35s
+Rendered 334/945, time remaining: 35s
+Rendered 335/945, time remaining: 36s
+Rendered 335/945, time remaining: 36s
+Rendered 336/945, time remaining: 37s
+Rendered 337/945, time remaining: 37s
+Rendered 338/945, time remaining: 37s
+Rendered 338/945, time remaining: 37s
+Rendered 339/945, time remaining: 37s
+Rendered 339/945, time remaining: 37s
+Rendered 340/945, time remaining: 39s
+Rendered 341/945, time remaining: 39s
+Rendered 342/945, time remaining: 39s
+Rendered 343/945, time remaining: 39s
+Rendered 343/945, time remaining: 39s
+Rendered 344/945, time remaining: 41s
+Rendered 345/945, time remaining: 40s
+Rendered 346/945, time remaining: 41s
+Rendered 347/945, time remaining: 41s
+Rendered 347/945, time remaining: 41s
+Rendered 348/945, time remaining: 42s
+Rendered 349/945, time remaining: 42s
+Rendered 350/945, time remaining: 43s
+Rendered 351/945, time remaining: 42s
+Rendered 351/945, time remaining: 42s
+Rendered 352/945, time remaining: 43s
+Rendered 353/945, time remaining: 44s
+Rendered 354/945, time remaining: 44s
+Rendered 355/945, time remaining: 44s
+Rendered 355/945, time remaining: 44s
+Rendered 356/945, time remaining: 44s
+Rendered 357/945, time remaining: 46s
+Rendered 358/945, time remaining: 46s
+Rendered 359/945, time remaining: 45s
+Rendered 359/945, time remaining: 45s
+Rendered 360/945, time remaining: 46s
+Rendered 361/945, time remaining: 47s
+Rendered 362/945, time remaining: 47s
+Rendered 362/945, time remaining: 47s
+Rendered 363/945, time remaining: 47s
+Rendered 364/945, time remaining: 47s
+Rendered 365/945, time remaining: 48s
+Rendered 365/945, time remaining: 48s
+Rendered 366/945, time remaining: 49s
+Rendered 367/945, time remaining: 49s
+Rendered 368/945, time remaining: 49s
+Rendered 369/945, time remaining: 49s
+Rendered 370/945, time remaining: 49s
+Rendered 371/945, time remaining: 49s
+Rendered 372/945, time remaining: 49s
+Rendered 372/945, time remaining: 49s
+Rendered 373/945, time remaining: 49s
+Rendered 374/945, time remaining: 49s
+Rendered 375/945, time remaining: 49s
+Rendered 376/945, time remaining: 49s
+Rendered 377/945, time remaining: 49s
+Rendered 378/945, time remaining: 49s
+Rendered 379/945, time remaining: 49s
+Rendered 380/945, time remaining: 48s
+Rendered 381/945, time remaining: 49s
+Rendered 382/945, time remaining: 48s
+Rendered 383/945, time remaining: 48s
+Rendered 384/945, time remaining: 48s
+Rendered 385/945, time remaining: 48s
+Rendered 386/945, time remaining: 48s
+Rendered 387/945, time remaining: 48s
+Rendered 387/945, time remaining: 48s
+Rendered 388/945, time remaining: 48s
+Rendered 389/945, time remaining: 48s
+Rendered 390/945, time remaining: 48s
+Rendered 391/945, time remaining: 48s
+Rendered 392/945, time remaining: 48s
+Rendered 393/945, time remaining: 48s
+Rendered 394/945, time remaining: 48s
+Rendered 395/945, time remaining: 48s
+Rendered 396/945, time remaining: 48s
+Rendered 397/945, time remaining: 48s
+Rendered 398/945, time remaining: 47s
+Rendered 399/945, time remaining: 47s
+Rendered 400/945, time remaining: 47s
+Rendered 401/945, time remaining: 47s
+Rendered 402/945, time remaining: 47s
+Rendered 402/945, time remaining: 47s
+Rendered 403/945, time remaining: 47s
+Rendered 404/945, time remaining: 47s
+Rendered 405/945, time remaining: 47s
+Rendered 406/945, time remaining: 47s
+Rendered 407/945, time remaining: 47s
+Rendered 408/945, time remaining: 47s
+Rendered 409/945, time remaining: 47s
+Rendered 410/945, time remaining: 47s
+Rendered 411/945, time remaining: 47s
+Rendered 412/945, time remaining: 47s
+Rendered 413/945, time remaining: 47s
+Rendered 414/945, time remaining: 47s
+Rendered 415/945, time remaining: 47s
+Rendered 415/945, time remaining: 47s
+Rendered 416/945, time remaining: 47s
+Rendered 417/945, time remaining: 46s
+Rendered 418/945, time remaining: 46s
+Rendered 419/945, time remaining: 46s
+Rendered 420/945, time remaining: 46s
+Rendered 421/945, time remaining: 46s
+Rendered 422/945, time remaining: 46s
+Rendered 423/945, time remaining: 46s
+Rendered 424/945, time remaining: 46s
+Rendered 425/945, time remaining: 46s
+Rendered 426/945, time remaining: 46s
+Rendered 427/945, time remaining: 46s
+Rendered 428/945, time remaining: 46s
+Rendered 429/945, time remaining: 46s
+Rendered 430/945, time remaining: 46s
+Rendered 431/945, time remaining: 45s
+Rendered 431/945, time remaining: 45s
+Rendered 432/945, time remaining: 45s
+Rendered 433/945, time remaining: 45s
+Rendered 434/945, time remaining: 45s
+Rendered 435/945, time remaining: 45s
+Rendered 436/945, time remaining: 45s
+Rendered 437/945, time remaining: 45s
+Rendered 438/945, time remaining: 45s
+Rendered 439/945, time remaining: 45s
+Rendered 440/945, time remaining: 45s
+Rendered 441/945, time remaining: 45s
+Rendered 442/945, time remaining: 44s
+Rendered 443/945, time remaining: 43s
+Rendered 444/945, time remaining: 43s
+Rendered 445/945, time remaining: 43s
+Rendered 446/945, time remaining: 42s
+Rendered 447/945, time remaining: 41s
+Rendered 448/945, time remaining: 41s
+Rendered 448/945, time remaining: 41s
+Rendered 449/945, time remaining: 41s
+Rendered 450/945, time remaining: 40s
+Rendered 451/945, time remaining: 40s
+Rendered 452/945, time remaining: 39s
+Rendered 453/945, time remaining: 39s
+Rendered 454/945, time remaining: 38s
+Rendered 455/945, time remaining: 38s
+Rendered 456/945, time remaining: 38s
+Rendered 457/945, time remaining: 37s
+Rendered 458/945, time remaining: 37s
+Rendered 459/945, time remaining: 36s
+Rendered 460/945, time remaining: 36s
+Rendered 461/945, time remaining: 35s
+Rendered 462/945, time remaining: 35s
+Rendered 463/945, time remaining: 35s
+Rendered 463/945, time remaining: 35s
+Rendered 464/945, time remaining: 35s
+Rendered 465/945, time remaining: 33s
+Rendered 466/945, time remaining: 33s
+Rendered 467/945, time remaining: 33s
+Rendered 468/945, time remaining: 33s
+Rendered 469/945, time remaining: 32s
+Rendered 470/945, time remaining: 31s
+Rendered 471/945, time remaining: 31s
+Rendered 472/945, time remaining: 31s
+Rendered 473/945, time remaining: 31s
+Rendered 474/945, time remaining: 30s
+Rendered 475/945, time remaining: 30s
+Rendered 476/945, time remaining: 30s
+Rendered 477/945, time remaining: 29s
+Rendered 478/945, time remaining: 28s
+Rendered 479/945, time remaining: 28s
+Rendered 479/945, time remaining: 28s
+Rendered 480/945, time remaining: 28s
+Rendered 481/945, time remaining: 27s
+Rendered 482/945, time remaining: 26s
+Rendered 483/945, time remaining: 27s
+Rendered 484/945, time remaining: 27s
+Rendered 485/945, time remaining: 26s
+Rendered 486/945, time remaining: 25s
+Rendered 487/945, time remaining: 25s
+Rendered 488/945, time remaining: 25s
+Rendered 489/945, time remaining: 25s
+Rendered 490/945, time remaining: 23s
+Rendered 491/945, time remaining: 23s
+Rendered 492/945, time remaining: 23s
+Rendered 493/945, time remaining: 23s
+Rendered 494/945, time remaining: 22s
+Rendered 495/945, time remaining: 22s
+Rendered 496/945, time remaining: 21s
+Rendered 497/945, time remaining: 21s
+Rendered 497/945, time remaining: 21s
+Rendered 498/945, time remaining: 20s
+Rendered 499/945, time remaining: 20s
+Rendered 500/945, time remaining: 20s
+Rendered 501/945, time remaining: 20s
+Rendered 502/945, time remaining: 19s
+Rendered 503/945, time remaining: 18s
+Rendered 504/945, time remaining: 18s
+Rendered 505/945, time remaining: 18s
+Rendered 506/945, time remaining: 18s
+Rendered 507/945, time remaining: 17s
+Rendered 508/945, time remaining: 17s
+Rendered 509/945, time remaining: 17s
+Rendered 510/945, time remaining: 16s
+Rendered 511/945, time remaining: 15s
+Rendered 512/945, time remaining: 15s
+Rendered 513/945, time remaining: 15s
+Rendered 514/945, time remaining: 15s
+Rendered 514/945, time remaining: 15s
+Rendered 515/945, time remaining: 14s
+Rendered 516/945, time remaining: 14s
+Rendered 517/945, time remaining: 14s
+Rendered 518/945, time remaining: 14s
+Rendered 519/945, time remaining: 13s
+Rendered 520/945, time remaining: 13s
+Rendered 521/945, time remaining: 13s
+Rendered 522/945, time remaining: 13s
+Rendered 523/945, time remaining: 13s
+Rendered 524/945, time remaining: 13s
+Rendered 525/945, time remaining: 13s
+Rendered 526/945, time remaining: 13s
+Rendered 527/945, time remaining: 13s
+Rendered 528/945, time remaining: 13s
+Rendered 529/945, time remaining: 13s
+Rendered 530/945, time remaining: 13s
+Rendered 531/945, time remaining: 12s
+Rendered 531/945, time remaining: 12s
+Rendered 532/945, time remaining: 12s
+Rendered 533/945, time remaining: 12s
+Rendered 534/945, time remaining: 12s
+Rendered 535/945, time remaining: 12s
+Rendered 536/945, time remaining: 12s
+Rendered 537/945, time remaining: 12s
+Rendered 538/945, time remaining: 12s
+Rendered 539/945, time remaining: 12s
+Rendered 540/945, time remaining: 12s
+Rendered 541/945, time remaining: 12s
+Rendered 542/945, time remaining: 12s
+Rendered 543/945, time remaining: 12s
+Rendered 544/945, time remaining: 12s
+Rendered 545/945, time remaining: 12s
+Rendered 546/945, time remaining: 12s
+Rendered 547/945, time remaining: 12s
+Rendered 548/945, time remaining: 12s
+Rendered 549/945, time remaining: 12s
+Rendered 550/945, time remaining: 12s
+Rendered 550/945, time remaining: 12s
+Rendered 551/945, time remaining: 12s
+Rendered 552/945, time remaining: 12s
+Rendered 553/945, time remaining: 11s
+Rendered 554/945, time remaining: 11s
+Rendered 555/945, time remaining: 11s
+Rendered 556/945, time remaining: 11s
+Rendered 557/945, time remaining: 11s
+Rendered 558/945, time remaining: 11s
+Rendered 559/945, time remaining: 11s
+Rendered 560/945, time remaining: 11s
+Rendered 561/945, time remaining: 11s
+Rendered 562/945, time remaining: 11s
+Rendered 563/945, time remaining: 11s
+Rendered 564/945, time remaining: 11s
+Rendered 565/945, time remaining: 11s
+Rendered 566/945, time remaining: 11s
+Rendered 567/945, time remaining: 11s
+Rendered 567/945, time remaining: 11s
+Rendered 568/945, time remaining: 11s
+Rendered 569/945, time remaining: 11s
+Rendered 570/945, time remaining: 11s
+Rendered 571/945, time remaining: 11s
+Rendered 572/945, time remaining: 11s
+Rendered 573/945, time remaining: 10s
+Rendered 574/945, time remaining: 10s
+Rendered 575/945, time remaining: 10s
+Rendered 576/945, time remaining: 10s
+Rendered 577/945, time remaining: 10s
+Rendered 578/945, time remaining: 10s
+Rendered 579/945, time remaining: 10s
+Rendered 580/945, time remaining: 10s
+Rendered 581/945, time remaining: 10s
+Rendered 582/945, time remaining: 10s
+Rendered 583/945, time remaining: 10s
+Rendered 584/945, time remaining: 10s
+Rendered 584/945, time remaining: 10s
+Rendered 585/945, time remaining: 10s
+Rendered 586/945, time remaining: 10s
+Rendered 587/945, time remaining: 10s
+Rendered 588/945, time remaining: 10s
+Rendered 589/945, time remaining: 10s
+Rendered 590/945, time remaining: 10s
+Rendered 591/945, time remaining: 10s
+Rendered 592/945, time remaining: 10s
+Rendered 593/945, time remaining: 10s
+Rendered 594/945, time remaining: 10s
+Rendered 595/945, time remaining: 10s
+Rendered 596/945, time remaining: 10s
+Rendered 597/945, time remaining: 10s
+Rendered 598/945, time remaining: 10s
+Rendered 599/945, time remaining: 10s
+Rendered 600/945, time remaining: 10s
+Rendered 601/945, time remaining: 10s
+Rendered 602/945, time remaining: 10s
+Rendered 602/945, time remaining: 10s
+Rendered 603/945, time remaining: 10s
+Rendered 604/945, time remaining: 10s
+Rendered 605/945, time remaining: 9s
+Rendered 606/945, time remaining: 9s
+Rendered 607/945, time remaining: 9s
+Rendered 608/945, time remaining: 9s
+Rendered 609/945, time remaining: 9s
+Rendered 610/945, time remaining: 9s
+Rendered 611/945, time remaining: 9s
+Rendered 612/945, time remaining: 9s
+Rendered 613/945, time remaining: 9s
+Rendered 614/945, time remaining: 9s
+Rendered 615/945, time remaining: 9s
+Rendered 616/945, time remaining: 9s
+Rendered 617/945, time remaining: 9s
+Rendered 617/945, time remaining: 9s
+Rendered 618/945, time remaining: 9s
+Rendered 619/945, time remaining: 9s
+Rendered 620/945, time remaining: 9s
+Rendered 621/945, time remaining: 9s
+Rendered 622/945, time remaining: 9s
+Rendered 623/945, time remaining: 9s
+Rendered 624/945, time remaining: 9s
+Rendered 625/945, time remaining: 9s
+Rendered 626/945, time remaining: 9s
+Rendered 627/945, time remaining: 9s
+Rendered 628/945, time remaining: 9s
+Rendered 629/945, time remaining: 9s
+Rendered 630/945, time remaining: 9s
+Rendered 631/945, time remaining: 9s
+Rendered 632/945, time remaining: 9s
+Rendered 632/945, time remaining: 9s
+Rendered 633/945, time remaining: 9s
+Rendered 634/945, time remaining: 9s
+Rendered 635/945, time remaining: 9s
+Rendered 636/945, time remaining: 9s
+Rendered 637/945, time remaining: 9s
+Rendered 638/945, time remaining: 9s
+Rendered 639/945, time remaining: 9s
+Rendered 640/945, time remaining: 9s
+Rendered 641/945, time remaining: 9s
+Rendered 642/945, time remaining: 9s
+Rendered 643/945, time remaining: 8s
+Rendered 644/945, time remaining: 8s
+Rendered 645/945, time remaining: 8s
+Rendered 646/945, time remaining: 8s
+Rendered 647/945, time remaining: 8s
+Rendered 648/945, time remaining: 8s
+Rendered 649/945, time remaining: 8s
+Rendered 649/945, time remaining: 8s
+Rendered 650/945, time remaining: 8s
+Rendered 651/945, time remaining: 8s
+Rendered 652/945, time remaining: 8s
+Rendered 653/945, time remaining: 8s
+Rendered 654/945, time remaining: 8s
+Rendered 655/945, time remaining: 8s
+Rendered 656/945, time remaining: 8s
+Rendered 657/945, time remaining: 8s
+Rendered 658/945, time remaining: 8s
+Rendered 659/945, time remaining: 8s
+Rendered 660/945, time remaining: 8s
+Rendered 661/945, time remaining: 8s
+Rendered 662/945, time remaining: 8s
+Rendered 663/945, time remaining: 8s
+Rendered 664/945, time remaining: 8s
+Rendered 665/945, time remaining: 8s
+Rendered 666/945, time remaining: 8s
+Rendered 666/945, time remaining: 8s
+Rendered 667/945, time remaining: 8s
+Rendered 668/945, time remaining: 8s
+Rendered 669/945, time remaining: 8s
+Rendered 670/945, time remaining: 8s
+Rendered 671/945, time remaining: 8s
+Rendered 672/945, time remaining: 8s
+Rendered 673/945, time remaining: 8s
+Rendered 674/945, time remaining: 8s
+Rendered 675/945, time remaining: 8s
+Rendered 676/945, time remaining: 8s
+Rendered 677/945, time remaining: 8s
+Rendered 678/945, time remaining: 8s
+Rendered 679/945, time remaining: 8s
+Rendered 680/945, time remaining: 7s
+Rendered 681/945, time remaining: 7s
+Rendered 681/945, time remaining: 7s
+Rendered 682/945, time remaining: 7s
+Rendered 683/945, time remaining: 7s
+Rendered 684/945, time remaining: 7s
+Rendered 685/945, time remaining: 7s
+Rendered 686/945, time remaining: 7s
+Rendered 687/945, time remaining: 7s
+Rendered 688/945, time remaining: 7s
+Rendered 689/945, time remaining: 7s
+Rendered 690/945, time remaining: 7s
+Rendered 691/945, time remaining: 7s
+Rendered 692/945, time remaining: 7s
+Rendered 693/945, time remaining: 7s
+Rendered 694/945, time remaining: 7s
+Rendered 695/945, time remaining: 7s
+Rendered 696/945, time remaining: 7s
+Rendered 697/945, time remaining: 7s
+Rendered 697/945, time remaining: 7s
+Rendered 698/945, time remaining: 7s
+Rendered 699/945, time remaining: 7s
+Rendered 700/945, time remaining: 7s
+Rendered 701/945, time remaining: 7s
+Rendered 702/945, time remaining: 7s
+Rendered 703/945, time remaining: 7s
+Rendered 704/945, time remaining: 7s
+Rendered 705/945, time remaining: 7s
+Rendered 706/945, time remaining: 7s
+Rendered 707/945, time remaining: 7s
+Rendered 708/945, time remaining: 7s
+Rendered 709/945, time remaining: 7s
+Rendered 710/945, time remaining: 7s
+Rendered 711/945, time remaining: 7s
+Rendered 712/945, time remaining: 7s
+Rendered 712/945, time remaining: 7s
+Rendered 713/945, time remaining: 7s
+Rendered 714/945, time remaining: 7s
+Rendered 715/945, time remaining: 7s
+Rendered 716/945, time remaining: 6s
+Rendered 717/945, time remaining: 7s
+Rendered 718/945, time remaining: 6s
+Rendered 719/945, time remaining: 6s
+Rendered 720/945, time remaining: 6s
+Rendered 721/945, time remaining: 6s
+Rendered 722/945, time remaining: 6s
+Rendered 723/945, time remaining: 6s
+Rendered 724/945, time remaining: 6s
+Rendered 725/945, time remaining: 6s
+Rendered 726/945, time remaining: 6s
+Rendered 727/945, time remaining: 6s
+Rendered 728/945, time remaining: 6s
+Rendered 729/945, time remaining: 6s
+Rendered 729/945, time remaining: 6s
+Rendered 730/945, time remaining: 6s
+Rendered 731/945, time remaining: 6s
+Rendered 732/945, time remaining: 6s
+Rendered 733/945, time remaining: 6s
+Rendered 734/945, time remaining: 6s
+Rendered 735/945, time remaining: 6s
+Rendered 736/945, time remaining: 6s
+Rendered 737/945, time remaining: 6s
+Rendered 738/945, time remaining: 6s
+Rendered 739/945, time remaining: 6s
+Rendered 740/945, time remaining: 6s
+Rendered 741/945, time remaining: 6s
+Rendered 742/945, time remaining: 6s
+Rendered 743/945, time remaining: 6s
+Rendered 744/945, time remaining: 6s
+Rendered 745/945, time remaining: 6s
+Rendered 746/945, time remaining: 6s
+Rendered 747/945, time remaining: 6s
+Rendered 748/945, time remaining: 6s
+Rendered 748/945, time remaining: 6s
+Rendered 749/945, time remaining: 6s
+Rendered 750/945, time remaining: 5s
+Rendered 751/945, time remaining: 5s
+Rendered 752/945, time remaining: 5s
+Rendered 753/945, time remaining: 5s
+Rendered 754/945, time remaining: 5s
+Rendered 755/945, time remaining: 5s
+Rendered 756/945, time remaining: 5s
+Rendered 757/945, time remaining: 5s
+Rendered 758/945, time remaining: 5s
+Rendered 759/945, time remaining: 5s
+Rendered 760/945, time remaining: 5s
+Rendered 761/945, time remaining: 5s
+Rendered 762/945, time remaining: 5s
+Rendered 763/945, time remaining: 5s
+Rendered 764/945, time remaining: 5s
+Rendered 765/945, time remaining: 5s
+Rendered 765/945, time remaining: 5s
+Rendered 766/945, time remaining: 5s
+Rendered 767/945, time remaining: 5s
+Rendered 768/945, time remaining: 5s
+Rendered 769/945, time remaining: 5s
+Rendered 770/945, time remaining: 5s
+Rendered 771/945, time remaining: 5s
+Rendered 772/945, time remaining: 5s
+Rendered 773/945, time remaining: 5s
+Rendered 774/945, time remaining: 5s
+Rendered 775/945, time remaining: 5s
+Rendered 776/945, time remaining: 5s
+Rendered 777/945, time remaining: 5s
+Rendered 778/945, time remaining: 4s
+Rendered 779/945, time remaining: 4s
+Rendered 780/945, time remaining: 4s
+Rendered 781/945, time remaining: 4s
+Rendered 782/945, time remaining: 4s
+Rendered 783/945, time remaining: 4s
+Rendered 783/945, time remaining: 4s
+Rendered 784/945, time remaining: 4s
+Rendered 785/945, time remaining: 4s
+Rendered 786/945, time remaining: 4s
+Rendered 787/945, time remaining: 4s
+Rendered 788/945, time remaining: 4s
+Rendered 789/945, time remaining: 4s
+Rendered 790/945, time remaining: 4s
+Rendered 791/945, time remaining: 4s
+Rendered 792/945, time remaining: 4s
+Rendered 793/945, time remaining: 4s
+Rendered 794/945, time remaining: 4s
+Rendered 795/945, time remaining: 4s
+Rendered 796/945, time remaining: 4s
+Rendered 797/945, time remaining: 4s
+Rendered 798/945, time remaining: 4s
+Rendered 799/945, time remaining: 4s
+Rendered 800/945, time remaining: 4s
+Rendered 801/945, time remaining: 4s
+Rendered 801/945, time remaining: 4s
+Rendered 802/945, time remaining: 4s
+Rendered 803/945, time remaining: 4s
+Rendered 804/945, time remaining: 4s
+Rendered 805/945, time remaining: 4s
+Rendered 806/945, time remaining: 4s
+Rendered 807/945, time remaining: 4s
+Rendered 808/945, time remaining: 4s
+Rendered 809/945, time remaining: 4s
+Rendered 810/945, time remaining: 4s
+Rendered 811/945, time remaining: 3s
+Rendered 812/945, time remaining: 3s
+Rendered 813/945, time remaining: 3s
+Rendered 814/945, time remaining: 3s
+Rendered 815/945, time remaining: 3s
+Rendered 816/945, time remaining: 3s
+Rendered 817/945, time remaining: 3s
+Rendered 818/945, time remaining: 3s
+Rendered 818/945, time remaining: 3s
+Rendered 819/945, time remaining: 3s
+Rendered 820/945, time remaining: 3s
+Rendered 821/945, time remaining: 3s
+Rendered 822/945, time remaining: 3s
+Rendered 823/945, time remaining: 3s
+Rendered 824/945, time remaining: 3s
+Rendered 825/945, time remaining: 3s
+Rendered 826/945, time remaining: 3s
+Rendered 827/945, time remaining: 3s
+Rendered 828/945, time remaining: 3s
+Rendered 829/945, time remaining: 3s
+Rendered 830/945, time remaining: 3s
+Rendered 831/945, time remaining: 3s
+Rendered 832/945, time remaining: 3s
+Rendered 832/945, time remaining: 3s
+Rendered 833/945, time remaining: 3s
+Rendered 834/945, time remaining: 3s
+Rendered 835/945, time remaining: 3s
+Rendered 836/945, time remaining: 3s
+Rendered 837/945, time remaining: 3s
+Rendered 838/945, time remaining: 3s
+Rendered 839/945, time remaining: 3s
+Rendered 840/945, time remaining: 3s
+Rendered 841/945, time remaining: 3s
+Rendered 842/945, time remaining: 3s
+Rendered 843/945, time remaining: 3s
+Rendered 844/945, time remaining: 3s
+Rendered 845/945, time remaining: 3s
+Rendered 846/945, time remaining: 2s
+Rendered 847/945, time remaining: 2s
+Rendered 848/945, time remaining: 2s
+Rendered 848/945, time remaining: 2s
+Rendered 849/945, time remaining: 2s
+Rendered 850/945, time remaining: 2s
+Rendered 851/945, time remaining: 2s
+Rendered 852/945, time remaining: 2s
+Rendered 853/945, time remaining: 2s
+Rendered 854/945, time remaining: 2s
+Rendered 855/945, time remaining: 2s
+Rendered 856/945, time remaining: 2s
+Rendered 857/945, time remaining: 2s
+Rendered 858/945, time remaining: 2s
+Rendered 859/945, time remaining: 2s
+Rendered 860/945, time remaining: 2s
+Rendered 861/945, time remaining: 2s
+Rendered 862/945, time remaining: 2s
+Rendered 863/945, time remaining: 2s
+Rendered 864/945, time remaining: 2s
+Rendered 865/945, time remaining: 2s
+Rendered 866/945, time remaining: 2s
+Rendered 866/945, time remaining: 2s
+Rendered 867/945, time remaining: 2s
+Rendered 868/945, time remaining: 2s
+Rendered 869/945, time remaining: 2s
+Rendered 870/945, time remaining: 2s
+Rendered 871/945, time remaining: 2s
+Rendered 872/945, time remaining: 2s
+Rendered 873/945, time remaining: 2s
+Rendered 874/945, time remaining: 2s
+Rendered 875/945, time remaining: 2s
+Rendered 876/945, time remaining: 2s
+Rendered 877/945, time remaining: 1s
+Rendered 878/945, time remaining: 1s
+Rendered 879/945, time remaining: 1s
+Rendered 880/945, time remaining: 1s
+Rendered 881/945, time remaining: 1s
+Rendered 882/945, time remaining: 1s
+Rendered 883/945, time remaining: 1s
+Rendered 884/945, time remaining: 1s
+Rendered 885/945, time remaining: 1s
+Rendered 885/945, time remaining: 1s
+Rendered 886/945, time remaining: 1s
+Rendered 887/945, time remaining: 1s
+Rendered 888/945, time remaining: 1s
+Rendered 889/945, time remaining: 1s
+Rendered 890/945, time remaining: 1s
+Rendered 891/945, time remaining: 1s
+Rendered 892/945, time remaining: 1s
+Rendered 893/945, time remaining: 1s
+Rendered 894/945, time remaining: 1s
+Rendered 895/945, time remaining: 1s
+Rendered 896/945, time remaining: 1s
+Rendered 897/945, time remaining: 1s
+Rendered 898/945, time remaining: 1s
+Rendered 899/945, time remaining: 1s
+Rendered 900/945, time remaining: 1s
+Rendered 901/945, time remaining: 1s
+Rendered 902/945, time remaining: 1s
+Rendered 903/945, time remaining: 1s
+Rendered 904/945, time remaining: 1s
+Rendered 905/945, time remaining: 1s
+Rendered 905/945, time remaining: 1s
+Rendered 906/945, time remaining: 1s
+Rendered 907/945, time remaining: 1s
+Rendered 908/945, time remaining: 1s
+Rendered 909/945, time remaining: 1s
+Rendered 910/945, time remaining: 1s
+Rendered 911/945, time remaining: 0s
+Rendered 912/945, time remaining: 0s
+Rendered 913/945, time remaining: 0s
+Rendered 914/945, time remaining: 0s
+Rendered 915/945, time remaining: 0s
+Rendered 916/945, time remaining: 0s
+Rendered 917/945, time remaining: 0s
+Rendered 918/945, time remaining: 0s
+Rendered 919/945, time remaining: 0s
+Rendered 920/945, time remaining: 0s
+Rendered 921/945, time remaining: 0s
+Rendered 922/945, time remaining: 0s
+Rendered 923/945, time remaining: 0s
+Rendered 924/945, time remaining: 0s
+Rendered 925/945, time remaining: 0s
+Rendered 925/945, time remaining: 0s
+Rendered 926/945, time remaining: 0s
+Rendered 927/945, time remaining: 0s
+Rendered 928/945, time remaining: 0s
+Rendered 929/945, time remaining: 0s
+Rendered 930/945, time remaining: 0s
+Rendered 931/945, time remaining: 0s
+Rendered 932/945, time remaining: 0s
+Rendered 933/945, time remaining: 0s
+Rendered 934/945, time remaining: 0s
+Rendered 935/945, time remaining: 0s
+Rendered 936/945, time remaining: 0s
+Rendered 937/945, time remaining: 0s
+Rendered 938/945, time remaining: 0s
+Rendered 939/945, time remaining: 0s
+Rendered 940/945, time remaining: 0s
+Rendered 941/945, time remaining: 0s
+Rendered 942/945, time remaining: 0s
+Rendered 942/945, time remaining: 0s
+Rendered 943/945, time remaining: 0s
+Rendered 944/945, time remaining: 0s
+Encoded 714/945
+Encoded 756/945
+Encoded 945/945
+[34m+                    doa-sebelum-makan.mp4[39m [90m5.3 MB[39m
+-rw-r--r-- 1 runner runner 5269581 Nov  7 16:32 /home/runner/work/kerja-berat/kerja-berat/render-data/doa-001/doa-sebelum-makan.mp4
+duration=31.509000
+size=5269581
+== Poster (frame detik 14, adegan doa) ==
+== Unggah video ke GitHub Release ==
+Release id: 437695722
+Kode unggah aset: 201
+Video tersedia di: https://github.com/Wongwangsul/kerja-berat/releases/download/render-doa-001/doa-sebelum-makan.mp4
+Selesai.
+=== Selesai. Kode keluar: 0 ===
