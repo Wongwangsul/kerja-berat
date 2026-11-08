@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="id">
+<!-- Doa Sebelum Makan — versi Bang Motion (kartun kolase, Pastel ceria)
+     Karakter LALA: cutout dari panel Studio Cerita yang sudah ada (pakai ulang, tanpa generate baru).
+     VO: berkas final user. Timeline murni fungsi tl.time() — deterministik. -->
+<head>
+<meta charset="utf-8">
+<title>Doa Sebelum Makan — LALA (Bang Motion)</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Caveat:wght@700&family=Noto+Naskh+Arabic:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF7E6;      /* kerah putih krem LALA */
+  --peach:#E79B84;      /* hijab LALA */
+  --mustard:#D09030;    /* gaun LALA */
+  --skin:#E8B08C;       /* kulit/pipi LALA */
+  --wood:#8D6E63;       /* meja kayu proyek sebelumnya */
+  --gold:#C99700;       /* turunan mustard diperdalam — khusus teks Arab */
+  --green:#1F7A4D;      /* daun/sayur proyek sebelumnya */
+  --ink:#4A3226;        /* turunan cokelat sepatu LALA */
+  --coral:#D96C4F;      /* turunan peach diperdalam — anotasi */
+}
+html,body{margin:0;height:100%;background:#191008;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:1080px;height:1920px;overflow:hidden;background:var(--cream);font-family:"Baloo 2",system-ui,sans-serif;color:var(--ink)}
+.safe{position:absolute;inset:0;transform:scale(.78);transform-origin:50% 45%}
+#world{position:absolute;inset:0;transform-origin:0 0;will-change:transform}
+#filters{position:fixed;width:0;height:0;opacity:0;pointer-events:none}
+.base{position:absolute;left:-1400px;top:-900px;width:13800px;height:3800px;background:linear-gradient(180deg,#FFFBF0 0%,#FFF6E2 46%,#FDEBD0 100%)}
+.blob{position:absolute;border-radius:50%;filter:blur(64px);opacity:.5;pointer-events:none}
+.kitchen{position:absolute;top:0;opacity:.5;pointer-events:none}
+.table{position:absolute;width:1240px;height:560px;top:1408px;border-radius:46px 46px 0 0;background:linear-gradient(180deg,#C79A6B 0%,#B0865C 16%,#9A7350 55%,#8D6E63 100%);box-shadow:0 -14px 34px rgba(141,110,99,.20)}
+.table::before{content:"";position:absolute;left:0;right:0;top:0;height:64px;border-radius:46px 46px 0 0;background:linear-gradient(180deg,rgba(255,240,214,.65),rgba(255,240,214,0))}
+.table::after{content:"";position:absolute;inset:64px 0 0 0;background:repeating-linear-gradient(0deg,transparent 0 52px,rgba(74,50,38,.06) 52px 54px)}
+.grain{position:absolute;left:-1400px;top:-900px;width:13800px;height:3800px;opacity:.05;mix-blend-mode:multiply;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .29 0 0 0 0 .20 0 0 0 0 .13 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E")}
+.cut{position:absolute;opacity:0;will-change:transform,filter}
+.cut img{display:block;width:100%;filter:drop-shadow(0 22px 26px rgba(74,50,38,.26))}
+.cut.noshade img{filter:none}
+.inner{will-change:transform}
+.steam{position:absolute;opacity:.5;pointer-events:none}
+.line{position:absolute;width:980px;text-align:center;font-weight:700;font-size:68px;line-height:1.14;letter-spacing:-.01em;color:var(--ink);opacity:0;text-shadow:0 2px 0 rgba(255,255,255,.75)}
+.w{display:inline-block;white-space:nowrap;margin:0 .09em;opacity:0;will-change:transform,opacity}
+.hl{position:relative;display:inline-block;padding:.0em .16em;border-radius:.2em;color:var(--ink)}
+.hl i{position:absolute;inset:0;border-radius:inherit;transform:scaleX(0);transform-origin:0 50%;z-index:-1;background:var(--peach)}
+.arabline{position:absolute;width:1500px;text-align:center;direction:rtl;white-space:nowrap;font-family:"Noto Naskh Arabic",serif;font-weight:700;font-size:100px;line-height:1.5;color:var(--gold);text-shadow:0 0 36px rgba(201,151,0,.45),0 3px 0 rgba(255,255,255,.5)}
+.arp{display:inline-block;opacity:0;will-change:transform,opacity,filter}
+.translit{position:absolute;width:1280px;height:70px;text-align:center;font-weight:600;font-size:48px;color:var(--ink);text-shadow:0 2px 0 rgba(255,255,255,.75)}
+.trp{position:absolute;left:0;right:0;top:0;opacity:0;will-change:transform,opacity}
+.hand{position:absolute;font-family:"Caveat",cursive;font-weight:700;color:var(--coral);opacity:0;white-space:nowrap;will-change:transform,opacity}
+#shade{position:absolute;left:4440px;top:-60px;width:1400px;height:2060px;opacity:0;pointer-events:none;background:radial-gradient(58% 44% at 50% 42%,rgba(0,0,0,0) 42%,rgba(74,44,16,.58) 100%)}
+#spot{position:absolute;left:4560px;top:300px;width:1160px;height:1160px;opacity:0;pointer-events:none;border-radius:50%;background:radial-gradient(circle,rgba(255,205,96,.90) 0%,rgba(255,176,66,.38) 46%,rgba(255,176,66,0) 70%);filter:blur(6px)}
+#sweep{position:absolute;left:4390px;top:205px;width:1500px;height:175px;opacity:0;pointer-events:none;mix-blend-mode:screen;background:linear-gradient(100deg,transparent 32%,rgba(255,238,190,.85) 50%,transparent 68%)}
+.ptc{position:absolute;border-radius:50%;background:radial-gradient(circle,#FFF3C4 0%,rgba(255,205,96,.85) 55%,rgba(255,205,96,0) 78%);opacity:0;pointer-events:none}
+.star{position:absolute;opacity:0;will-change:transform,opacity}
+#book{position:absolute;opacity:0;will-change:transform,opacity}
+.vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(72% 60% at 50% 46%,transparent 58%,rgba(74,50,38,.13) 100%)}
+#dbg{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);display:none;gap:12px;align-items:center;padding:10px 16px;border-radius:14px;background:rgba(14,16,22,.9);color:#cfd5e3;font:13px system-ui;z-index:50}
+#dbg input{width:360px}#dbg span{font-variant-numeric:tabular-nums;min-width:6ch}
+</style>
+</head>
+<body>
+<svg id="filters"><defs></defs></svg>
+<div id="stage">
+  <div class="safe">
+  <div id="world">
+    <div class="base"></div>
+    <div id="deco"></div>
+
+    <!-- properti: piring + gelas tiap adegan (potongan panel p1/p3) -->
+    <div class="cut" id="plate1" style="left:210px;top:1472px;width:620px"><div class="inner"><img src="assets/piring.webp" alt=""></div></div>
+    <div class="cut" id="glass1" style="left:840px;top:1406px;width:150px"><div class="inner"><img src="assets/gelas.webp" alt=""></div></div>
+    <div class="cut" id="plate2" style="left:2510px;top:1472px;width:620px"><div class="inner"><img src="assets/piring.webp" alt=""></div></div>
+    <div class="cut" id="glass2" style="left:3140px;top:1406px;width:150px"><div class="inner"><img src="assets/gelas.webp" alt=""></div></div>
+    <div class="cut" id="plate3" style="left:4810px;top:1472px;width:620px"><div class="inner"><img src="assets/piring.webp" alt=""></div></div>
+    <div class="cut" id="glass3" style="left:5440px;top:1406px;width:150px"><div class="inner"><img src="assets/gelas.webp" alt=""></div></div>
+    <div class="cut" id="plate4" style="left:7110px;top:1472px;width:620px"><div class="inner"><img src="assets/piring.webp" alt=""></div></div>
+    <div class="cut" id="glass4" style="left:7740px;top:1406px;width:150px"><div class="inner"><img src="assets/gelas.webp" alt=""></div></div>
+    <div class="cut" id="plate5" style="left:9410px;top:1472px;width:620px"><div class="inner"><img src="assets/piring.webp" alt=""></div></div>
+    <div class="cut" id="glass5" style="left:10040px;top:1406px;width:150px"><div class="inner"><img src="assets/gelas.webp" alt=""></div></div>
+
+    <!-- uap makanan (SVG, digambar berulang secara deterministik) -->
+    <svg class="steam" id="steam1" style="left:390px;top:1300px" width="300" height="168" viewBox="0 0 340 190"><g fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" opacity=".6"><path pathLength="100" d="M90 178 C70 130 110 108 90 62 C76 30 96 16 90 4"/><path pathLength="100" d="M170 182 C150 132 190 110 170 60 C156 28 178 14 170 2"/><path pathLength="100" d="M250 178 C230 130 270 108 250 62 C236 30 256 16 250 4"/></g></svg>
+    <svg class="steam" id="steam2" style="left:2690px;top:1300px" width="300" height="168" viewBox="0 0 340 190"><g fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" opacity=".6"><path pathLength="100" d="M90 178 C70 130 110 108 90 62 C76 30 96 16 90 4"/><path pathLength="100" d="M170 182 C150 132 190 110 170 60 C156 28 178 14 170 2"/><path pathLength="100" d="M250 178 C230 130 270 108 250 62 C236 30 256 16 250 4"/></g></svg>
+    <svg class="steam" id="steam4" style="left:7290px;top:1300px" width="300" height="168" viewBox="0 0 340 190"><g fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" opacity=".6"><path pathLength="100" d="M90 178 C70 130 110 108 90 62 C76 30 96 16 90 4"/><path pathLength="100" d="M170 182 C150 132 190 110 170 60 C156 28 178 14 170 2"/><path pathLength="100" d="M250 178 C230 130 270 108 250 62 C236 30 256 16 250 4"/></g></svg>
+
+    <!-- LALA: cutout panel (urut tampil mengikuti adegan) -->
+    <div class="cut" id="lalaSapa"  style="left:140px;top:262px;width:800px"><div class="inner"><img src="assets/lala-sapa.webp" alt="LALA melambai"></div></div>
+    <div class="cut" id="lalaPikir" style="left:2390px;top:492px;width:900px"><div class="inner"><img src="assets/lala-pikir.webp" alt="LALA berpikir"></div></div>
+    <div class="cut" id="lalaAjak"  style="left:4740px;top:470px;width:800px"><div class="inner"><img src="assets/lala-ajak.webp" alt="LALA mengajak berdoa"></div></div>
+    <div class="cut" id="lalaDoa"   style="left:4760px;top:520px;width:760px"><div class="inner"><img src="assets/lala-doa.webp" alt="LALA berdoa"></div></div>
+    <div class="cut" id="lalaMakan" style="left:7030px;top:566px;width:820px"><div class="inner"><img src="assets/lala-makan.webp" alt="LALA makan"></div></div>
+    <div class="cut" id="lalaPuas"  style="left:7020px;top:624px;width:840px"><div class="inner"><img src="assets/lala-puas.webp" alt="LALA puas"></div></div>
+    <div class="cut" id="lalaPuas5" style="left:9320px;top:624px;width:840px"><div class="inner"><img src="assets/lala-puas.webp" alt="LALA menutup"></div></div>
+    <div class="cut" id="lalaSapa5" style="left:9340px;top:262px;width:800px"><div class="inner"><img src="assets/lala-sapa.webp" alt="LALA dadah"></div></div>
+
+    <div id="pts"></div>
+
+    <!-- anotasi & benda khusus -->
+    <div class="hand" id="bang" style="left:3120px;top:330px;font-size:210px;transform:rotate(-8deg)">!</div>
+    <div class="hand" id="ques" style="left:3050px;top:215px;font-size:300px">?</div>
+    <svg class="star" id="star1" style="left:7060px;top:660px" width="58" height="58" viewBox="0 0 100 100"><path d="M50 4 L63 37 L98 39 L70 61 L79 95 L50 75 L21 95 L30 61 L2 39 L37 37 Z" fill="#C99700" stroke="#FFF3C4" stroke-width="5"/></svg>
+    <svg class="star" id="star2" style="left:7760px;top:580px" width="76" height="76" viewBox="0 0 100 100"><path d="M50 4 L63 37 L98 39 L70 61 L79 95 L50 75 L21 95 L30 61 L2 39 L37 37 Z" fill="#C99700" stroke="#FFF3C4" stroke-width="5"/></svg>
+    <div id="book" style="left:9965px;top:1478px;width:190px;height:146px">
+      <svg width="190" height="146" viewBox="0 0 190 146">
+        <rect x="14" y="10" width="162" height="126" rx="12" fill="#FFF7E6" stroke="#8D6E63" stroke-width="4"/>
+        <rect x="4" y="2" width="162" height="126" rx="12" fill="#B97E26" stroke="#8D6E63" stroke-width="4"/>
+        <path d="M118 38 a30 30 0 1 0 14 54 a24 24 0 1 1 -14 -54 Z" fill="#FFF3C4"/>
+        <path d="M126 44 l5.5 11.5 12.5 1.5 -9.2 8.6 2.5 12.4 -11.3 -6.4 -11 6.4 2.4 -12.4 -9.2 -8.6 12.5 -1.5 Z" fill="#FFF3C4"/>
+        <text x="46" y="112" font-family="Baloo 2" font-weight="800" font-size="30" fill="#FFF7E6">DOA</text>
+      </svg>
+    </div>
+
+    <!-- kalimat per adegan -->
+    <div class="line" id="L1" style="left:50px;top:168px">Assalamu'alaikum, teman-teman!</div>
+    <div class="line" id="L2" style="left:50px;top:168px">Hari ini aku mau <span class="hl"><i></i>makan</span></div>
+    <div class="line" id="L3" style="left:2350px;top:176px">Tapi <span class="hl"><i></i>tunggu</span> dulu!</div>
+    <div class="line" id="L4a" style="left:2390px;top:140px;width:900px;font-size:56px">Apa ya yang harus kita baca</div>
+    <div class="line" id="L4b" style="left:2390px;top:222px;width:900px;font-size:56px">sebelum makan?</div>
+    <div class="line" id="L5" style="left:4650px;top:168px">Yuk, kita <span class="hl"><i></i>berdoa</span> bersama-sama!</div>
+    <div class="arabline" id="arab1" style="left:4390px;top:215px"><span class="arp" id="ar1">اللَّهُمَّ بَارِكْ لَنَا</span> <span class="arp" id="ar2">فِيمَا رَزَقْتَنَا</span></div>
+    <div class="arabline" id="arab2" style="left:4390px;top:372px"><span class="arp" id="ar3">وَقِنَا عَذَابَ النَّارِ</span></div>
+    <div class="translit" id="translit" style="left:4500px;top:128px"><span class="trp" id="tr1">Allahumma barik lana</span><span class="trp" id="tr2">fima razaqtana</span><span class="trp" id="tr3">waqina 'adzabannar</span></div>
+    <div class="line" id="L7" style="left:6950px;top:168px">Bismillahirrahmanirrahim</div>
+    <div class="line" id="L8" style="left:6950px;top:168px">Hmm, <span class="hl"><i></i>yummy</span>!</div>
+    <div class="line" id="L9" style="left:6950px;top:168px">Alhamdulillah, makanannya enak</div>
+    <div class="line" id="L10" style="left:9250px;top:150px;font-size:60px">Jangan lupa baca <span class="hl"><i></i>doa</span> ya, teman-teman</div>
+    <div class="line" id="L11" style="left:9250px;top:190px;font-size:96px">Dadah!</div>
+  </div>
+  </div>
+  <div class="vig"></div>
+  <div id="dbg"><button id="dPlay">Pause</button><input id="dScrub" type="range" min="0" max="1000" value="0"><span id="dClock">0.00s</span></div>
+</div>
+<audio id="vo" src="assets/vo.mp3" preload="auto"></audio>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const W=1080,H=1920,DUR=31.5;
+function fit(){const s=Math.min(innerWidth/W,innerHeight/H);$('#stage').style.transform=`translate(-50%,-50%) scale(${s})`;}
+addEventListener('resize',fit);fit();
+
+/* ---------- dekor dunia: blob mengambang (§7c #3), siluet dapur, meja, shade & spot adegan doa ---------- */
+const CX=[540,2840,5140,7440,9740];
+const deco=$('#deco');
+const KITCHEN=`<svg class="kitchen" width="1080" height="1920" viewBox="0 0 1080 1920">
+<g stroke="#1F7A4D" stroke-width="7" fill="rgba(191,227,200,.32)" opacity=".55"><rect x="712" y="250" width="290" height="430" rx="26"/><line x1="857" y1="250" x2="857" y2="680"/><line x1="712" y1="465" x2="1002" y2="465"/></g>
+<g stroke="#8D6E63" stroke-width="7" opacity=".5"><line x1="270" y1="0" x2="270" y2="150"/><path d="M205 208 L335 208 L292 138 L248 138 Z" fill="rgba(208,144,48,.30)"/><circle cx="270" cy="226" r="17" fill="rgba(208,144,48,.5)" stroke="none"/></g>
+<g opacity=".45"><circle cx="150" cy="880" r="56" fill="rgba(255,247,230,.65)" stroke="#8D6E63" stroke-width="7"/><line x1="150" y1="880" x2="150" y2="842" stroke="#4A3226" stroke-width="7" stroke-linecap="round"/><line x1="150" y1="880" x2="178" y2="894" stroke="#4A3226" stroke-width="7" stroke-linecap="round"/></g>
+<g opacity=".5"><path d="M118 1332 h112 l-14 94 h-84 Z" fill="rgba(141,110,99,.55)"/><g fill="rgba(31,122,77,.42)"><circle cx="140" cy="1300" r="30"/><circle cx="182" cy="1270" r="39"/><circle cx="224" cy="1304" r="28"/></g></g>
+</svg>`;
+const blobCfg=[[-400,-610,470,'#F6C7B4'],[405,-430,530,'#F7D08A'],[-70,830,440,'#C4E5CE'],[345,905,380,'#F6C7B4']];
+CX.forEach((cx,i)=>{
+  blobCfg.forEach((b,j)=>{
+    const d=document.createElement('div');d.className='blob';d.id=`blob${i}-${j}`;
+    d.style.cssText=`left:${cx+b[0]-b[2]/2}px;top:${960+b[1]-b[2]/2}px;width:${b[2]}px;height:${b[2]}px;background:${b[3]}`;
+    deco.appendChild(d);
+  });
+  const k=document.createElement('div');k.innerHTML=KITCHEN;const svg=k.firstChild;
+  svg.style.left=(cx-540)+'px';deco.appendChild(svg);
+  const t=document.createElement('div');t.className='table';t.style.left=(cx-620)+'px';deco.appendChild(t);
+});
+[1690,3990,6290,8690].forEach((gx,j)=>{
+  const d=document.createElement('div');d.className='blob';d.id='blobG'+j;
+  d.style.cssText=`left:${gx-260}px;top:${(j%2?520:830)}px;width:520px;height:520px;background:${j%2?'#F7D08A':'#F6C7B4'}`;
+  deco.appendChild(d);
+});
+const shade=document.createElement('div');shade.id='shade';deco.appendChild(shade);
+const spot=document.createElement('div');spot.id='spot';deco.appendChild(spot);
+const grain=document.createElement('div');grain.className='grain';deco.appendChild(grain);
+
+/* ---------- partikel cahaya adegan doa (posisi tetap, deterministik) ---------- */
+const pts=$('#pts');
+const PTC=[[-360,1380,13],[-250,1300,10],[-140,1420,15],[-40,1330,9],[60,1400,12],[170,1290,10],[280,1360,14],[360,1430,10],[-300,1470,9],[120,1480,13],[-200,1240,11],[320,1240,9]];
+PTC.forEach((p,i)=>{const d=document.createElement('div');d.className='ptc';d.id='ptc'+i;
+  d.style.cssText=`left:${5140+p[0]}px;top:${p[1]}px;width:${p[2]}px;height:${p[2]}px`;pts.appendChild(d);});
+
+/* ---------- motion blur berarah ---------- */
+const defs=$('#filters defs');let fc=0;
+function makeBlur(){const id='mb'+(fc++),NS='http://www.w3.org/2000/svg';const f=document.createElementNS(NS,'filter');f.id=id;
+  f.setAttribute('x','-70%');f.setAttribute('y','-70%');f.setAttribute('width','240%');f.setAttribute('height','240%');
+  const g=document.createElementNS(NS,'feGaussianBlur');g.setAttribute('stdDeviation','0 0');f.appendChild(g);defs.appendChild(f);return {url:`url(#${id})`,node:g};}
+function blurTween(tl,targets,at,from,to,dur,{ease='power3.out',ax=1,ay=.08}={}){const b=makeBlur(),o={v:from};tl.set(targets,{filter:b.url},at);
+  tl.to(o,{v:to,duration:dur,ease,onUpdate(){b.node.setAttribute('stdDeviation',`${(o.v*ax).toFixed(2)} ${(o.v*ay).toFixed(2)}`);}},at);tl.set(targets,{filter:'none'},at+dur);}
+const VERT={ax:.1,ay:1},HORZ={ax:1,ay:.1};
+
+/* ---------- pecah kalimat per kata ---------- */
+$$('.line').forEach(el=>{const out=[];el.childNodes.forEach(n=>{if(n.nodeType===3){n.textContent.split(/\s+/).filter(Boolean).forEach(w=>{const s=document.createElement('span');s.className='w';s.textContent=w;out.push(s);});}
+  else{const s=document.createElement('span');s.className='w';s.appendChild(n.cloneNode(true));out.push(s);}});el.textContent='';out.forEach(s=>el.appendChild(s));});
+
+const tl=gsap.timeline({paused:true});const rig=$('#world');
+const words=el=>$$('.w',el);
+const say=(sel,at,{dur=.55,st=.08,mode='up'}={})=>{const el=$(sel),ws=words(el);tl.set(el,{opacity:1},at);
+  if(mode==='scale')tl.fromTo(ws,{opacity:0,scale:.6,rotate:-4},{opacity:1,scale:1,rotate:0,duration:dur,ease:'back.out(1.8)',stagger:st,immediateRender:false},at);
+  else tl.fromTo(ws,{opacity:0,yPercent:60,scaleY:1.25},{opacity:1,yPercent:0,scaleY:1,duration:dur,ease:'power4.out',stagger:st,immediateRender:false},at);
+  blurTween(tl,el,at,22,0,dur+st*ws.length,VERT);
+  $$('.hl i',el).forEach((h,i)=>tl.fromTo(h,{scaleX:0},{scaleX:1,duration:.4,ease:'power3.out',immediateRender:false},at+st*ws.length+.2+i*.2));};
+const unsay=(sel,at,{dur=.3}={})=>{const el=$(sel),ws=words(el);tl.to(ws,{opacity:0,yPercent:-50,duration:dur,ease:'power2.in',stagger:.02},at);
+  blurTween(tl,el,at,0,30,dur+.1,{ease:'power2.in',...VERT});tl.set(el,{opacity:0},at+dur+.15);};
+const fly=(sel,at,{from={x:0,y:500,rotate:10,scale:.9},dur=.9,ease='power4.out',float=true}={})=>{const el=$(sel);
+  tl.fromTo(el,{opacity:0,...from},{opacity:1,x:0,y:0,rotate:0,scale:1,duration:dur,ease,immediateRender:false},at);
+  blurTween(tl,el,at,34,0,dur*.7,Math.abs(from.x||0)>Math.abs(from.y||0)?HORZ:VERT);
+  if(float)tl.to(el,{y:-25,rotate:1.5,scale:1.03,duration:1.5+((at*7)%1)*.3,ease:'sine.inOut',yoyo:true,repeat:-1},at+dur);};
+const flyOut=(sel,at,{to={x:0,y:-700,rotate:-8,scale:1.1},dur=.45}={})=>{const el=$(sel);tl.to(el,{opacity:0,...to,duration:dur,ease:'power2.in'},at);blurTween(tl,el,at,0,50,dur+.1,{ease:'power2.in',...VERT});};
+const pop=(sel,at,{dur=.5,fromScale=.3,rot=-10}={})=>{tl.fromTo($(sel),{opacity:0,scale:fromScale,rotate:rot},{opacity:1,scale:1,rotate:0,duration:dur,ease:'back.out(2.1)',immediateRender:false},at);};
+
+/* ---------- kamera: rig #world ---------- */
+const C={x:540,y:600,z:1.42};
+function applyCam(){rig.style.transform=`translate(${540-C.x*C.z}px,${960-C.y*C.z}px) scale(${C.z})`;}
+const look=(at,x,y,z,dur=1.6,ease='sine.inOut')=>tl.to(C,{x,y,z,duration:dur,ease,onUpdate:applyCam},at);
+const into=(cutAt,x,y,z)=>tl.to(C,{x,y,z,duration:.9,ease:'power2.in',onUpdate:applyCam},cutAt-.9);
+const settle=(cutAt,x,y,z)=>tl.to(C,{x,y,z:z*.94,duration:1.1,ease:'power3.out',onUpdate:applyCam},cutAt);
+
+/* ---------- sapuan cahaya teks Arab & potongan doa ---------- */
+const sweep=document.createElement('div');sweep.id='sweep';$('#world').appendChild(sweep);
+const sweepAt=(t,top)=>{tl.set('#sweep',{top:top+'px'},t);tl.fromTo('#sweep',{x:-800,opacity:0},{x:800,opacity:.85,duration:.85,ease:'power2.inOut',immediateRender:false},t);tl.set('#sweep',{opacity:0},t+.87);};
+const arpIn=(sel,at)=>tl.fromTo($(sel),{opacity:0,y:26,filter:'blur(8px)'},{opacity:1,y:0,filter:'blur(0px)',duration:.6,ease:'power3.out',immediateRender:false},at);
+const trIn=(sel,at)=>tl.fromTo($(sel),{opacity:0,y:14},{opacity:1,y:0,duration:.45,ease:'power3.out',immediateRender:false},at);
+
+/* ---------- gerak latar & uap (deterministik, bagian dari timeline) ---------- */
+CX.forEach((cx,i)=>{blobCfg.forEach((b,j)=>{tl.to(`#blob${i}-${j}`,{x:(j%2?55:-55),y:((j%3)-1)*36,duration:4.2+((i*3+j)%3)*.7,ease:'sine.inOut',yoyo:true,repeat:-1},0);});});
+[0,1,2,3].forEach(j=>{tl.to('#blobG'+j,{x:(j%2?-60:60),y:(j%2?30:-30),duration:5+j*.6,ease:'sine.inOut',yoyo:true,repeat:-1},0);});
+$$('.steam path').forEach((p,i)=>{p.style.strokeDasharray='34 66';tl.fromTo(p,{strokeDashoffset:100},{strokeDashoffset:0,duration:2.8,ease:'none',repeat:-1},(i%3)*.45);});
+tl.set(['#steam1','#steam2','#steam4'],{opacity:0},0);
+tl.to('#steam1',{opacity:.5,duration:.4},2.6);
+tl.to('#steam2',{opacity:.5,duration:.4},4.55);
+tl.to('#steam4',{opacity:.5,duration:.4},20.7);
+
+/* ================= ADEGAN 1 · SAPA (0,00–4,74) ================= */
+tl.set(C,{x:540,y:600,z:1.42,onUpdate:applyCam},0);
+look(0.05,550,590,1.44,2.1,'sine.inOut');
+fly('#lalaSapa',0.15,{ease:'back.out(1.2)'});
+say('#L1',0.32);
+unsay('#L1',2.02);
+look(2.2,540,880,1.14,1.5);
+fly('#plate1',2.5,{from:{x:0,y:300,rotate:4,scale:.92},ease:'back.out(1.5)'});
+fly('#glass1',2.85,{from:{x:0,y:300,rotate:-4,scale:.92},ease:'back.out(1.5)'});
+say('#L2',2.45);
+look(3.6,540,960,1.0,1.05,'power2.inOut');
+unsay('#L2',4.5);
+
+/* ================= ADEGAN 2 · TANYA (4,74–9,70) ================= */
+fly('#plate2',4.42,{from:{x:0,y:300,scale:.92},ease:'back.out(1.5)'});
+fly('#glass2',4.52,{from:{x:0,y:300,scale:.92},ease:'back.out(1.5)'});
+into(4.74,2840,640,1.5); settle(4.74,2840,600,1.40);
+fly('#lalaPikir',4.84,{ease:'back.out(1.2)'});
+say('#L3',4.88);
+pop('#bang',4.98);
+tl.to('#plate2 .inner',{scale:.92,y:16,duration:.5,ease:'power2.out'},5.2);
+tl.to('#steam2',{opacity:0,duration:.3},5.15);
+tl.to('#bang',{opacity:0,duration:.25},6.38);
+unsay('#L3',6.36);
+look(6.58,2860,545,1.36,1.25);
+say('#L4a',6.64);
+say('#L4b',7.5);
+pop('#ques',6.74,{fromScale:.25,rot:8});
+look(8.7,2840,610,1.40,1.05);
+tl.to('#ques',{opacity:0,duration:.25},9.46);
+unsay('#L4a',9.42);
+unsay('#L4b',9.46);
+
+/* ================= ADEGAN 3 · BERDOA (9,70–20,88) — momen istimewa ================= */
+fly('#plate3',9.4,{from:{x:0,y:300,scale:.92},ease:'back.out(1.5)'});
+fly('#glass3',9.5,{from:{x:0,y:300,scale:.92},ease:'back.out(1.5)'});
+into(9.70,5140,640,1.5); settle(9.70,5140,615,1.38);
+fly('#lalaAjak',9.8,{ease:'back.out(1.2)'});
+say('#L5',9.84);
+tl.to('#shade',{opacity:1,duration:.9,ease:'sine.inOut'},11.85);
+unsay('#L5',12.04);
+flyOut('#lalaAjak',12.06,{to:{x:0,y:-560,rotate:-5,scale:1.06},dur:.32});
+tl.to('#spot',{opacity:.95,duration:.8,ease:'sine.out'},12.24);
+fly('#lalaDoa',12.28,{from:{x:0,y:340,rotate:0,scale:.94},ease:'back.out(1.1)'});
+look(12.3,5140,640,1.20,1.2,'power2.inOut');
+look(13.5,5140,640,1.24,6.35,'sine.inOut');
+arpIn('#ar1',12.32); sweepAt(12.34,205); trIn('#tr1',12.4);
+tl.to('#tr1',{opacity:0,duration:.3},14.88);
+arpIn('#ar2',14.9);  sweepAt(14.92,205); trIn('#tr2',14.98);
+tl.to('#tr2',{opacity:0,duration:.3},16.96);
+arpIn('#ar3',16.98); sweepAt(17.0,362);  trIn('#tr3',17.06);
+PTC.forEach((p,i)=>{tl.fromTo('#ptc'+i,{opacity:0,x:0,y:0},{opacity:.95,x:(i%2?26:-26),y:-300-(i%4)*22,duration:2.3,ease:'sine.out',repeat:2,immediateRender:false},12.35+i*.33);});
+tl.to('#spot',{opacity:0,duration:.7,ease:'sine.inOut'},20.3);
+tl.to('#shade',{opacity:0,duration:.8,ease:'sine.inOut'},20.3);
+tl.to('.arp',{opacity:0,y:-16,duration:.4},20.52);
+tl.to('.trp',{opacity:0,duration:.4},20.52);
+tl.set('.ptc',{opacity:0},20.6);
+
+/* ================= ADEGAN 4 · MAKAN (20,88–27,60) ================= */
+fly('#plate4',20.58,{from:{x:0,y:300,scale:.92},ease:'back.out(1.5)'});
+fly('#glass4',20.68,{from:{x:0,y:300,scale:.92},ease:'back.out(1.5)'});
+into(20.88,7440,720,1.45); settle(20.88,7440,700,1.32);
+fly('#lalaMakan',20.98,{ease:'back.out(1.2)'});
+say('#L7',21.0);
+unsay('#L7',22.6);
+look(22.78,7440,560,1.55,1.1);
+say('#L8',22.88);
+pop('#star1',23.06,{fromScale:0,rot:-24});
+pop('#star2',23.2,{fromScale:0,rot:18});
+tl.to('.star',{opacity:0,duration:.25},24.62);
+unsay('#L8',24.6);
+flyOut('#lalaMakan',24.64,{to:{x:0,y:-560,rotate:4,scale:1.06},dur:.3});
+fly('#lalaPuas',24.82,{ease:'back.out(1.2)'});
+look(24.9,7440,900,1.14,1.25);
+say('#L9',24.96);
+tl.to('#lalaPuas .inner',{rotation:2,duration:.26,yoyo:true,repeat:3,ease:'sine.inOut'},25.35);
+unsay('#L9',27.36);
+
+/* ================= ADEGAN 5 · TUTUP (27,60–31,50) ================= */
+fly('#plate5',27.3,{from:{x:0,y:300,scale:.92},ease:'back.out(1.5)'});
+fly('#glass5',27.4,{from:{x:0,y:300,scale:.92},ease:'back.out(1.5)'});
+into(27.6,9740,820,1.4); settle(27.6,9740,860,1.16);
+fly('#lalaPuas5',27.7,{ease:'back.out(1.2)'});
+say('#L10',27.76);
+tl.fromTo('#book',{opacity:0,scale:.4,rotation:-14},{opacity:1,scale:1,rotation:-5,duration:.6,ease:'back.out(1.8)',immediateRender:false},27.88);
+unsay('#L10',29.02);
+flyOut('#lalaPuas5',29.06,{to:{x:0,y:-560,rotate:-4,scale:1.06},dur:.3});
+fly('#lalaSapa5',29.22,{ease:'back.out(1.2)'});
+look(29.3,9740,620,1.5,1.7,'sine.inOut');
+say('#L11',29.36,{mode:'scale',dur:.5,st:.1});
+tl.to('#lalaSapa5 .inner',{rotation:2.6,duration:.3,yoyo:true,repeat:5,ease:'sine.inOut'},29.55);
+tl.to({},{duration:.01},DUR);
+
+/* ---------- kontrol: autoplay + loop tanpa player; ?debug=1 panel; ?clean=1 export ---------- */
+const q=new URLSearchParams(location.search),vo=$('#vo'),hasVO=!!vo.getAttribute('src');let audioOn=false;
+function start(){tl.play(0);if(hasVO){vo.currentTime=0;vo.play().then(()=>audioOn=true).catch(()=>{});}}
+tl.eventCallback('onComplete',()=>start());
+gsap.ticker.add(()=>{if(!audioOn||tl.paused())return;if(Math.abs(vo.currentTime-tl.time())>.12)vo.currentTime=tl.time();});
+window.OPENER={W,H,DURATION:DUR,tl,ready:false,seek(t){tl.pause(t,false);applyCam();if(gsap.ticker.tick)gsap.ticker.tick();},play:start};
+addEventListener('keydown',e=>{if(/^[rR]$/.test(e.key))start();if(e.code==='Space'){e.preventDefault();tl.paused()?tl.play():tl.pause();}});
+if(q.has('debug')){const dbg=$('#dbg');dbg.style.display='flex';const sc=$('#dScrub'),ck=$('#dClock');let drag=false;
+  gsap.ticker.add(()=>{if(!drag)sc.value=String(tl.time()/DUR*1000);ck.textContent=tl.time().toFixed(2)+'s';$('#dPlay').textContent=tl.paused()?'Play':'Pause';});
+  sc.addEventListener('pointerdown',()=>{drag=true;tl.pause();});addEventListener('pointerup',()=>drag=false);
+  sc.addEventListener('input',()=>{tl.pause();tl.time(sc.value/1000*DUR);});$('#dPlay').onclick=()=>tl.paused()?tl.play():tl.pause();}
+document.fonts.ready.then(()=>{applyCam();window.OPENER.ready=true;if(q.has('clean'))return;
+  if(!hasVO){start();return;}
+  vo.play().then(()=>{audioOn=true;vo.currentTime=0;tl.play(0);}).catch(()=>{const go=()=>{removeEventListener('pointerdown',go);removeEventListener('keydown',go);start();};addEventListener('pointerdown',go);addEventListener('keydown',go);});});
+</script>
+</body>
+</html>
