@@ -1,0 +1,35 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       924Mi        14Gi        40Mi       896Mi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   57G   88G  40% /
+Linux runnervmwuk1x 7.0.0-1019-azure #20-Ubuntu SMP PREEMPT Mon Oct 19 22:41:16 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/render-doa-bangmotion-001.sh ===
+== pulihkan aset biner dari base64 ==
+total 1304
+drwxr-xr-x 2 runner runner   4096 Nov  8 21:24 .
+drwxr-xr-x 5 runner runner   4096 Nov  8 21:24 ..
+-rw-r--r-- 1 runner runner  21752 Nov  8 21:24 gelas.webp
+-rw-r--r-- 1 runner runner 138950 Nov  8 21:24 lala-ajak.webp
+-rw-r--r-- 1 runner runner 130488 Nov  8 21:24 lala-doa.webp
+-rw-r--r-- 1 runner runner 115368 Nov  8 21:24 lala-makan.webp
+-rw-r--r-- 1 runner runner  99464 Nov  8 21:24 lala-pikir.webp
+-rw-r--r-- 1 runner runner 122932 Nov  8 21:24 lala-puas.webp
+-rw-r--r-- 1 runner runner 124364 Nov  8 21:24 lala-sapa.webp
+-rw-r--r-- 1 runner runner  63258 Nov  8 21:24 piring.webp
+-rw-r--r-- 1 runner runner 490728 Nov  8 21:24 vo.mp3
+== dependensi sistem untuk Chromium (bila belum ada) ==
+== pasang puppeteer ==
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+== layani proyek di 127.0.0.1:5178 ==
+== render frame 60 fps ==
+1890 frame @ 60 fps (31.5s) ukuran 1080x1920 -> frames/
+0/1890  0.0s  0.881s berlalu60/1890  1.0s  69.494s berlalu120/1890  2.0s  105.253s berlalu180/1890  3.0s  152.646s berlalu240/1890  4.0s  191.933s berlalu300/1890  5.0s  233.348s berlalu360/1890  6.0s  288.932s berlalu420/1890  7.0s  326.943s berlalu480/1890  8.0s  365.972s berlalu540/1890  9.0s  399.953s berlalu600/1890  10.0s  440.003s berlalu660/1890  11.0s  494.989s berlalu720/1890  12.0s  532.051s berlalu780/1890  13.0s  624.851s berlalu840/1890  14.0s  661.917s berlalu900/1890  15.0s  697.98s berlalu960/1890  16.0s  735.092s berlalu1020/1890  17.0s  770.319s berlalu1080/1890  18.0s  809.012s berlalu1140/1890  19.0s  844.849s berlalu1200/1890  20.0s  880.441s berlalu1260/1890  21.0s  926.764s berlalu1320/1890  22.0s  984.146s berlalu1380/1890  23.0s  1021.806s berlalu1440/1890  24.0s  1059.744s berlalu1500/1890  25.0s  1112.15s berlalu1560/1890  26.0s  1168.23s berlalu1620/1890  27.0s  1204.43s berlalu1680/1890  28.0s  1252.968s berlalu1740/1890  29.0s  1297.14s berlalu1800/1890  30.0s  1361.142s berlalu1860/1890  31.0s  1397.875s berlalu
+selesai — 1890 frame dalam 1415.7 detik
+frame terender: 1890 (target 1890)
+== gabung video + mux VO ==
+jobs/render-doa-bangmotion-001.sh: line 33: ffmpeg: command not found
+=== Selesai. Kode keluar: 1 ===
