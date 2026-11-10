@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="id">
+<!-- Tes animasi web: Mie Instan Tengah Malam — mode kartun panggung (Bang Motion), karakter Chibi pilihan Icul. -->
+<head>
+<meta charset="utf-8">
+<title>Mie Instan Tengah Malam — Tes Animasi Web</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;height:100%;background:#10161D;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:1080px;height:1920px;overflow:hidden;background:#22354A}
+#world{position:absolute;inset:0;will-change:filter}
+#title{position:absolute;left:0;right:0;bottom:120px;text-align:center;font-family:'Fredoka',sans-serif;font-weight:600;font-size:64px;letter-spacing:6px;color:#FFF3DC;opacity:0;text-shadow:0 4px 0 rgba(0,0,0,.25)}
+#dbg{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);display:none;gap:12px;align-items:center;padding:10px 16px;border-radius:14px;background:rgba(14,16,22,.9);color:#cfd5e3;font:13px system-ui;z-index:50}
+#dbg input{width:420px}#dbg span{font-variant-numeric:tabular-nums;min-width:7ch}
+</style>
+</head>
+<body>
+<div id="stage"><div id="world"><svg id="scene" width="1080" height="1920" viewBox="0 0 1080 1920" style="position:absolute;inset:0" font-family="system-ui,sans-serif"></svg></div>
+<div id="title">MIE INSTAN TENGAH MALAM</div>
+<div id="dbg"><button id="dPlay">Pause</button><input id="dScrub" type="range" min="0" max="1000" value="0"><span id="dClock">0.00s</span></div></div>
+<audio id="vo" src="" preload="auto"></audio>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+const $=(s,r=document)=>r.querySelector(s);
+const W=1080,H=1920,DUR=14,NS='http://www.w3.org/2000/svg',XL='http://www.w3.org/1999/xlink';
+/* palet flat — dapur malam: biru malam, krem hangat, aksen kuning mie + oranye api */
+const C={night:'#22354A',night2:'#2E4A63',sky:'#16283D',cream:'#FFF3DC',paper:'#F6E7C8',white:'#FFFDF5',
+  navy:'#345867',deep:'#172E3C',teal:'#2E7D74',mint:'#8DD3C3',gold:'#F4BC52',noodle:'#FFC93C',flame:'#FF9F43',
+  coral:'#E0714F',rust:'#C86545',ink:'#263746',skin:'#F2B183',skin2:'#E89B6A',hair:'#3A2A20',hair2:'#191410',
+  shirt:'#2E7D74',shirt2:'#E0714F',pants:'#5A4632',wood:'#8A6844',wood2:'#75552F',metal:'#A9B5B3',steam:'#F7F4EA',
+  cab:'#E8DCC2',cab2:'#D8C8A4',fridge:'#B9CDD6',pink:'#F2A0A0'};
+function fit(){const s=Math.min(innerWidth/W,innerHeight/H);$('#stage').style.transform=`translate(-50%,-50%) scale(${s})`;}addEventListener('resize',fit);fit();
+
+const S=$('#scene');
+function N(tag,a={},p=S){const n=document.createElementNS(NS,tag);for(const k in a)n.setAttribute(k,a[k]);p.appendChild(n);return n;}
+const G=(a={},p=S)=>N('g',a,p),R=(x,y,w,h,f,rx=0,p=S,a={})=>N('rect',{x,y,width:w,height:h,rx,fill:f,...a},p),
+  CI=(cx,cy,r,f,p=S,a={})=>N('circle',{cx,cy,r,fill:f,...a},p),EL=(cx,cy,rx,ry,f,p=S,a={})=>N('ellipse',{cx,cy,rx,ry,fill:f,...a},p),
+  PA=(d,f,p=S,a={})=>N('path',{d,fill:f||'none',...a},p),
+  LN=(d,st,w,p=S,a={})=>N('path',{d,fill:'none',stroke:st,'stroke-width':w,'stroke-linecap':'round','stroke-linejoin':'round',...a},p),
+  TX=(x,y,t,size,f,p=S,a={})=>{const n=N('text',{x,y,'font-size':size,fill:f,'font-weight':700,'text-anchor':'middle',...a},p);n.textContent=t;return n;},
+  shadow=(x,y,rx,p=S)=>EL(x,y,rx,16,C.deep,p,{opacity:.16}),
+  sh=(hex,f)=>{const n=parseInt(hex.slice(1),16);const r=Math.round(((n>>16)&255)*f),g=Math.round(((n>>8)&255)*f),b=Math.round((n&255)*f);return '#'+((1<<24)+(r<<16)+(g<<8)+b).toString(16).slice(1);};
+function J(el,tx=0,ty=0){const j={el,tx,ty,x:0,y:0,r:0,sx:1,sy:1,apply(){el.setAttribute('transform',`translate(${j.tx+j.x},${j.ty+j.y}) rotate(${j.r}) scale(${j.sx},${j.sy})`);}};j.apply();return j;}
+const defsS=N('defs',{},S);
+
+/* ---------- panggung & kamera ---------- */
+const scenes=[];
+function scene(name){const g=G({'data-name':name},S);g.style.display='none';const sc={name,g,cam:{x:540,y:960,z:1.15,ox:0,oy:0},
+  apply(){const c=sc.cam;g.setAttribute('transform',`translate(${540-(c.x+c.ox)*c.z},${960-(c.y+c.oy)*c.z}) scale(${c.z})`);}};sc.apply();scenes.push(sc);return sc;}
+
+/* ---------- KARAKTER CHIBI: rig sendi + 4 wajah bertukar ---------- */
+function chibi(p,x,ground,scale,{shirt=C.shirt,skin=C.skin,hair=C.hair,flip=1}={}){
+  const sd=shadow(x,ground+4,74*scale,p),place=G({transform:`translate(${x},${ground}) scale(${scale*flip},${scale})`},p),rootEl=G({},place),root=J(rootEl),ref={root,place,scale,sd,faces:{}};
+  for(const side of ['R','L']){const sx=side==='L'?-26:26,dk=side==='R'?.88:1;
+    const tEl=G({},rootEl),thigh=J(tEl,sx,-214);R(-25,-10,50,74,sh(C.pants,dk),20,tEl);           // celana pendek
+    const sEl=G({},tEl),shin=J(sEl,0,58);R(-20,-6,40,108,sh(skin,dk),17,sEl);                        // betis kulit
+    const fEl=G({},sEl),foot=J(fEl,0,96);PA('M -24 -10 L 16 -10 C 24 4 46 4 50 16 L 50 26 L -26 26 Z','#2C2A2E',fEl);
+    ref[side+'thigh']=thigh;ref[side+'shin']=shin;ref[side+'foot']=foot;}
+  const tEl=G({},rootEl),torso=J(tEl,0,-214);ref.torso=torso;
+  const arm=(side,front)=>{const s=side==='L'?-1:1,aEl=G({},tEl),a=J(aEl,50*s,-126);R(-17,-16,34,98,front?shirt:sh(shirt,.86),16,aEl);
+    const fEl=G({},aEl),f=J(fEl,0,78);R(-15,-12,30,90,front?skin:sh(skin,.9),14,fEl);const hEl=G({},fEl),h=J(hEl,0,74);EL(0,4,17,21,front?skin:sh(skin,.9),hEl);
+    ref[side+'arm']=a;ref[side+'fore']=f;ref[side+'hand']=h;};
+  arm('R',false);
+  PA('M -48 -152 C -64 -144 -70 -112 -66 -76 L -58 8 C -28 22 32 22 60 8 L 67 -76 C 71 -112 60 -144 45 -152 Z',shirt,tEl);
+  PA('M 46 -146 C 64 -130 68 -100 64 -62 L 57 8 L 36 12 L 40 -140 Z',sh(shirt,.88),tEl);R(-15,-178,30,40,skin,12,tEl);R(-58,-2,117,22,sh(shirt,.82),9,tEl);
+  arm('L',true);
+  const hEl=G({},tEl),head=J(hEl,0,-160);ref.head=head;
+  /* wajah: basis sama (telinga, kepala, rambut poni chibi), fitur per ekspresi */
+  const mkFace=(name,draw)=>{const g=G({opacity:0},hEl);
+    EL(-76,-72,13,20,skin,g);EL(76,-72,13,20,skin,g);
+    PA('M -78 -118 C -80 -186 80 -186 78 -118 L 78 -58 C 78 -2 -78 -2 -78 -58 Z',skin,g);
+    PA('M -80 -106 C -84 -182 84 -182 80 -106 L 66 -100 C 30 -128 6 -118 -18 -104 C -38 -94 -58 -100 -80 -106 Z',hair,g);
+    draw(g);ref.faces[name]=g;return g;};
+  const brows=(g,y1,y2)=>{LN(`M -42 ${y1} C -34 ${y1-6} -22 ${y1-6} -14 ${y2}`,C.ink,4.5,g);LN(`M 14 ${y2} C 22 ${y1-6} 34 ${y1-6} 42 ${y1}`,C.ink,4.5,g);};
+  mkFace('senyum',g=>{brows(g,-104,-106);
+    LN('M -38 -84 C -30 -94 -18 -94 -12 -84',C.ink,5,g);LN('M 12 -84 C 18 -94 30 -94 38 -84',C.ink,5,g);
+    CI(-46,-58,9,C.pink,g,{opacity:.45});CI(46,-58,9,C.pink,g,{opacity:.45});
+    LN('M -17 -44 C -6 -33 6 -33 17 -44',C.ink,5.5,g);});
+  mkFace('cemas',g=>{LN('M -42 -108 C -33 -100 -23 -99 -14 -103',C.ink,4.5,g);LN('M 14 -103 C 23 -99 33 -100 42 -108',C.ink,4.5,g);
+    CI(-24,-84,6.5,C.ink,g);CI(32,-84,6.5,C.ink,g);
+    LN('M -13 -40 C -6 -45 0 -35 7 -40 C 12 -44 16 -37 20 -40',C.ink,4.5,g);});
+  mkFace('kaget',g=>{brows(g,-116,-118);
+    CI(-27,-84,11.5,C.white,g);CI(27,-84,11.5,C.white,g);CI(-27,-83,4.6,C.ink,g);CI(27,-83,4.6,C.ink,g);
+    CI(0,-38,9.5,'#7A3B2E',g);});
+  mkFace('pasrah',g=>{LN('M -42 -100 C -33 -107 -23 -107 -14 -102',C.ink,4.5,g);LN('M 14 -110 C 23 -104 33 -103 42 -108',C.ink,4.5,g);
+    CI(-27,-80,6,C.ink,g);CI(27,-80,6,C.ink,g);LN('M -40 -90 C -32 -93 -20 -93 -13 -90',C.ink,4,g);LN('M 13 -90 C 20 -93 32 -93 40 -90',C.ink,4,g);
+    LN('M -15 -42 C -4 -34 8 -36 17 -46',C.ink,5,g);});
+  mkFace('tegas',g=>{LN('M -42 -96 C -33 -104 -23 -105 -14 -108',C.ink,5,g);LN('M 14 -108 C 23 -105 33 -104 42 -96',C.ink,5,g);
+    CI(-27,-82,6.5,C.ink,g);CI(27,-82,6.5,C.ink,g);LN('M -13 -40 L 13 -40',C.ink,5,g);});
+  /* kedip: kelopak menutup (satu lapis untuk semua wajah) */
+  const bl=G({opacity:0},hEl);EL(-27,-84,13,8,skin,bl);EL(27,-84,13,8,skin,bl);
+  LN('M -39 -82 C -32 -76 -21 -76 -14 -82',C.ink,4.5,bl);LN('M 14 -82 C 21 -76 32 -76 39 -82',C.ink,4.5,bl);ref.blink=bl;
+  /* tetes keringat */
+  ref.sweat=PA('M 88 -96 C 100 -78 104 -68 96 -60 C 88 -68 76 -78 88 -96 Z','#7FC8E8',hEl,{opacity:0});
+  ref.faces.senyum.setAttribute('opacity',1);
+  return ref;}
+function setFace(ch,name,at){for(const k in ch.faces)tl.to(ch.faces[k],{opacity:k===name?1:0,duration:.07},at);}
+
+/* ---------- mesin ---------- */
+const tl=gsap.timeline({paused:true}),world=$('#world');
+const rot=(j,at,v,dur,ease='power2.inOut')=>tl.to(j,{r:v,duration:dur,ease,onUpdate:j.apply},at);
+const swayJ=(j,at,v,dur)=>tl.to(j,{r:v,duration:dur,ease:'sine.inOut',yoyo:true,repeat:-1,onUpdate:j.apply},at);
+const cam=(sc,at,x,y,z,dur=1.6,ease='sine.inOut')=>tl.to(sc.cam,{x,y,z,duration:dur,ease,onUpdate:sc.apply},at);
+function blinkLoop(ch,from){const kf=[{duration:3.35},{duration:.01},{duration:.12},{duration:.01}];
+  tl.to(ch.blink,{keyframes:kf.map((k,i)=>({opacity:i===1||i===2?1:0,...k})),repeat:-1,ease:'none'},from);}
+function idleChibi(ch,from){swayJ(ch.torso,from,1.0,1.8);swayJ(ch.head,from+.3,-1.6,2.4);blinkLoop(ch,from+.8);}
+function walkChibi(ch,at,dur,dx){const n=Math.max(1,Math.round(dur/.39));
+  tl.to(ch.root,{x:'+='+dx,duration:dur,ease:'none',onUpdate:ch.root.apply},at);tl.to(ch.sd,{x:'+='+dx*ch.scale,duration:dur,ease:'none'},at);
+  const leg=(j,a,b)=>tl.fromTo(j,{r:a},{r:b,duration:.39,ease:'sine.inOut',yoyo:true,repeat:n-1,onUpdate:j.apply,immediateRender:false},at);
+  leg(ch.Lthigh,-14,14);leg(ch.Rthigh,14,-14);leg(ch.Lshin,0,16);leg(ch.Rshin,16,0);leg(ch.Larm,10,-10);
+  tl.fromTo(ch.root,{y:0},{y:-4,duration:.195,ease:'sine.inOut',yoyo:true,repeat:n*2-1,onUpdate:ch.root.apply,immediateRender:false},at);
+  [ch.Lthigh,ch.Rthigh,ch.Lshin,ch.Rshin,ch.Larm].forEach(j=>rot(j,at+dur,0,.3));}
+/* partikel melayang (uap): gerak + opacity berkeyframe */
+const drift=(el,at,{y=-190,scale=null,dur=3,peak=.8}={})=>{const to={y,duration:dur,ease:'sine.out',repeat:-1,immediateRender:false};if(scale!=null)to.scale=scale;
+  tl.fromTo(el,{y:0,scale:scale!=null?.5:1,transformOrigin:'50% 50%'},to,at);tl.to(el,{keyframes:{opacity:[0,peak,peak,0],easeEach:'none'},duration:dur,repeat:-1,ease:'none'},at);};
+/* busur bunyi (dentang/berisik) di sekitar satu titik */
+function arcs(p,cx,cy,r0,col){const g=G({opacity:0},p),j=J(g,cx,cy);
+  [.55,.8,1.05].forEach((f,i)=>{const r=r0*f;PA(`M ${-r} ${-r*.3} A ${r} ${r} 0 0 1 ${-r*.3} ${-r}`,null,p===p?g:g,{fill:'none',stroke:col,'stroke-width':6,'stroke-linecap':'round',transform:`rotate(${-18+i*14})`});});
+  return j;}
+
+/* ================= PANGGUNG TUNGGAL — DAPUR MALAM ================= */
+const D=scene('dapur'),p=D.g,GY=1560;
+const warmOv=R(-320,-320,1740,2260,'#FFD9A0',0,p,{opacity:0});
+D.wall=R(-320,-320,1740,1880,C.night,0,p); warmOv.remove(); p.insertBefore(warmOv,p.children[1]);
+/* jendela + bulan + tirai */
+{const w=G({transform:'translate(66,250)'},p);R(0,0,276,326,C.cream,12,w);R(20,20,236,286,C.sky,6,w);
+ CI(182,88,31,'#F6E7C8',w);CI(197,76,27,C.sky,w);
+ [[52,60],[96,150],[60,240],[150,210],[210,150],[120,44]].forEach(([x,y])=>CI(x,y,3.5,C.cream,w,{opacity:.8}));
+ LN('M138 20 L138 306',C.cream,8,w);LN('M20 163 L256 163',C.cream,8,w);
+ const cl=G({},w),cloud=J(cl,30,86);EL(0,0,44,20,C.white,cl,{opacity:.85});EL(34,-8,32,16,C.white,cl,{opacity:.85});EL(-34,2,30,14,C.white,cl,{opacity:.85});D.cloud=cloud;
+ const cL=G({},w),curL=J(cL,26,14);PA('M0 0 L52 0 C58 90 44 190 54 292 L6 292 C-4 190 -6 90 0 0 Z','#B95F49',cL);D.curL=curL;
+ const cR=G({},w),curR=J(cR,250,14);PA('M0 0 L-52 0 C-58 90 -44 190 -54 292 L-6 292 C4 190 6 90 0 0 Z','#B95F49',cR);D.curR=curR;}
+/* jam dinding */
+{const ck=G({transform:'translate(876,388)'},p);CI(0,0,66,C.cream,ck);CI(0,0,54,C.white,ck);
+ [[0,-46],[46,0],[0,46],[-46,0]].forEach(([x,y])=>CI(x,y,4,C.ink,ck));
+ LN('M0 0 L-16 -26',C.ink,7,ck);LN('M0 0 L30 8',C.ink,7,ck);
+ const sh2=G({},ck),sec=J(sh2);LN('M0 10 L0 -44','#D64541',4,sh2);CI(0,0,6,C.ink,ck);D.sec=sec;}
+/* lampu gantung */
+{const lg=G({},p),lamp=J(lg,548,-4);R(-3,0,6,196,C.ink,0,lg);
+ D.glow=CI(0,232,72,'#FFE9A8',lg,{opacity:0});D.bulb=CI(0,218,13,'#D8C8A4',lg);
+ PA('M -58 226 L -20 178 L 20 178 L 58 226 C 30 240 -30 240 -58 226 Z',C.gold,lg);D.lamp=lamp;}
+/* lantai + karpet */
+R(-320,GY,1740,560,C.wood,0,p);[1660,1760,1860].forEach(y=>LN(`M-320 ${y} L1420 ${y}`,C.wood2,5,p,{opacity:.6}));
+EL(520,GY+22,310,28,'#6E4F30',p,{opacity:.85});
+/* meja dapur + kompor + panci */
+R(40,1180,660,380,C.cab,0,p);R(648,1180,52,380,C.cab2,0,p);R(24,1152,692,34,'#C9B184',6,p);
+[86,286,486].forEach(x=>{R(x,1230,170,260,'none',10,p,{stroke:C.cab2,'stroke-width':5});CI(x+146,1360,7,C.cab2,p);});
+CI(430,1169,27,'#33393F',p,{stroke:C.metal,'stroke-width':4});CI(566,1169,20,'#33393F',p,{stroke:C.metal,'stroke-width':4});
+D.flame=EL(430,1156,42,10,C.flame,p,{opacity:0});
+{const pg=G({},p),pot=J(pg,430,1148);
+ R(-76,-94,152,94,'#7E8A99',10,pg);R(-76,-94,152,20,'#93A2B2',8,pg);
+ PA('M -76 -60 C -102 -58 -102 -34 -76 -32',null,pg,{fill:'none',stroke:'#5E6B78','stroke-width':9});PA('M 76 -60 C 102 -58 102 -34 76 -32',null,pg,{fill:'none',stroke:'#5E6B78','stroke-width':9});
+ const lg2=G({},pg),lid=J(lg2,0,-94);PA('M -70 0 C -66 -26 -34 -38 0 -38 C 34 -38 66 -26 70 0 Z','#93A2B2',lg2);CI(0,-44,10,'#5E6B78',lg2);D.lid=lid;D.pot=pot;
+ D.bubbles=[[-30,-100],[4,-106],[34,-99]].map(([x,y])=>CI(x,y,7,C.steam,pg,{opacity:0}));
+ D.steamW=[0,1,2].map(i=>EL(408+i*24,1012-((i*37)%40),27,15,C.steam,p,{opacity:0}));}
+D.stream=PA('M 392 1096 C 420 1130 440 1170 448 1216',null,p,{stroke:C.noodle,'stroke-width':9,'stroke-linecap':'round',opacity:0});
+/* kulkas + kucing tidur di atasnya */
+R(772,660,168,900,C.fridge,14,p);LN('M772 906 L940 906',sh(C.fridge,.8),6,p);R(922,700,9,74,sh(C.fridge,.72),4,p);R(922,950,9,110,sh(C.fridge,.72),4,p);
+D.led=CI(796,694,5,'#7FC8E8',p);
+{const np=G({transform:'translate(838,772) rotate(-5)'},p);R(-26,-32,52,64,C.white,3,np);LN('M-16 -14 L16 -14','#98A4AE',4,np);LN('M-16 4 L10 4','#98A4AE',4,np);LN('M-16 22 L16 22','#98A4AE',4,np);}
+{const cg=G({},p),cat=J(cg,856,660);EL(0,-24,48,27,'#6B5138',cg);CI(38,-50,21,'#6B5138',cg);
+ PA('M24 -64 L28 -84 L42 -68 Z','#6B5138',cg);PA('M44 -68 L56 -82 L58 -62 Z','#6B5138',cg);
+ LN('M18 -48 C 26 -54 34 -54 40 -49','#3A2C20',4,cg);
+ const tg=G({},cg),tail=J(tg,-42,-34);PA('M0 0 C -22 6 -30 26 -22 44 C -14 30 -8 18 2 12 Z','#6B5138',tg);D.tail=tail;
+ D.zzz=[0,1].map(i=>TX(906+i*16,586-i*8,'Z',26-i*6,'#B9CDD6',p,{opacity:0}));}
+/* pintu kanan + cahaya tumpah */
+D.spill=R(958,872,206,688,'#FFE9A8',0,p,{opacity:0});
+R(958,872,206,688,'#1B2A3A',0,p,{stroke:C.cream,'stroke-width':8});
+{const dg=G({},p),door=J(dg,966,880);R(0,0,182,672,C.navy,0,dg);CI(158,340,9,C.gold,dg);R(18,60,64,180,'#2A4757',6,dg);D.door=door;}
+/* properti tokoh */
+D.lidArcs=arcs(p,548,1006,54,C.cream);
+{const pk=G({},p),packet=J(pk,503,1186);packet.r=-6;packet.sx=1.12;packet.sy=1.12;packet.apply();
+ R(-38,-52,76,104,C.noodle,8,pk);R(-38,-52,76,26,C.coral,8,pk);TX(0,-24,'MIE',24,'#7A3B2E',pk);
+ LN('M-24 6 L24 6','#D8A41C',5,pk);LN('M-24 24 L14 24','#D8A41C',5,pk);pk.setAttribute('opacity',0);D.packet=packet;}
+{const sg2=G({},p),spoon=J(sg2,690,1186);
+ PA('M0 0 L7 62',null,sg2,{stroke:C.metal,'stroke-width':8,'stroke-linecap':'round'});EL(0,-16,13,19,C.metal,sg2);sg2.setAttribute('opacity',0);D.spoon=spoon;}
+{const bg2=G({},p),bowl=J(bg2,452,1258);
+ PA('M -56 -18 L 56 -18 C 50 22 26 36 0 36 C -26 36 -50 22 -56 -18 Z',C.coral,bg2);R(-60,-24,120,10,C.white,5,bg2);
+ PA('M -40 -24 C -16 -36 18 -36 40 -24',null,bg2,{stroke:C.noodle,'stroke-width':8,'stroke-linecap':'round'});bg2.setAttribute('opacity',0);D.bowl=bowl;
+ D.bowlSteam=CI(452,1200,13,C.steam,p,{opacity:0});}
+D.sticks=G({opacity:0},p);LN('M520 1172 L470 1232',C.wood2,6,D.sticks);LN('M538 1180 L484 1240',C.wood2,6,D.sticks);
+D.strandUp=PA('M 458 1236 C 452 1196 478 1174 516 1162',null,p,{stroke:C.noodle,'stroke-width':8,'stroke-linecap':'round',opacity:0});
+D.strandHang=PA('M 522 1160 C 530 1216 516 1270 526 1322',null,p,{stroke:C.noodle,'stroke-width':8,'stroke-linecap':'round',opacity:0});
+/* senter penjaga */
+D.cone=PA('M 898 1318 L 268 1064 L 268 1470 Z','#FFF3B0',p,{opacity:0});
+const flashG=G({transform:'translate(898,1318) rotate(24)',opacity:0},p);R(-10,-30,20,60,'#37414A',7,flashG);R(-13,-38,26,14,C.gold,5,flashG);
+/* dua tokoh chibi */
+const hero=chibi(p,40,GY,1.22,{shirt:C.teal});
+const guard=chibi(p,1172,GY,1.22,{shirt:C.shirt2,hair:C.hair2});
+hero.faces.senyum.setAttribute('opacity',0);hero.faces.cemas.setAttribute('opacity',1);
+guard.faces.senyum.setAttribute('opacity',0);guard.faces.tegas.setAttribute('opacity',1);
+p.appendChild(flashG);p.appendChild(warmOv);
+
+/* ================= KOREOGRAFI — 14 detik ================= */
+tl.set(D.g,{display:'block'},0);D.cam.x=505;D.cam.y=1005;D.cam.z=1.26;D.apply();
+/* gerak latar hidup dari awal */
+tl.to(D.sec,{r:360,duration:10,ease:'none',repeat:-1,onUpdate:D.sec.apply},0);
+swayJ(D.curL,0,2.6,2.6);swayJ(D.curR,.4,-2.6,2.9);swayJ(D.lamp,0,1.6,3.4);swayJ(D.tail,.2,9,1.6);
+tl.fromTo(D.cloud,{x:-30},{x:170,duration:26,ease:'sine.inOut',yoyo:true,repeat:-1,onUpdate:D.cloud.apply},0);
+tl.to(D.led,{keyframes:{opacity:[1,1,.15,1,1,.15,1],easeEach:'none'},duration:2.6,repeat:-1,ease:'none'},0);
+D.zzz.forEach((z,i)=>drift(z,i*1.4,{y:-90,dur:3.4,peak:.75}));
+swayJ(hero.head,.3,-1.6,2.4);blinkLoop(hero,.9);
+/* 0,3–2,5 mengendap masuk */
+setFace(hero,'cemas',0);
+walkChibi(hero,.3,2.2,500);rot(hero.torso,.3,6,2.2);rot(hero.torso,2.55,0,.35);
+/* 2,6–3,1 menoleh kiri-kanan */
+rot(hero.head,2.6,-10,.22);rot(hero.head,2.86,10,.3);rot(hero.head,3.16,0,.25);
+/* 3,2–4,3 tutup panci beterbangan */
+rot(hero.Larm,3.2,92,.3);rot(hero.Lfore,3.2,14,.3);
+tl.to(D.lid,{y:-132,r:290,duration:.42,ease:'power2.out',onUpdate:D.lid.apply},3.55);
+tl.to(D.lid,{y:0,r:368,duration:.3,ease:'power2.in',onUpdate:D.lid.apply},4.02);
+tl.fromTo(D.lidArcs,{sx:.5,sy:.5},{sx:1.3,sy:1.3,duration:.5,ease:'power2.out',onUpdate:D.lidArcs.apply},3.55);
+tl.to(D.lidArcs.el,{keyframes:{opacity:[0,.95,.95,0],easeEach:'none'},duration:.55,ease:'none'},3.55);
+setFace(hero,'kaget',3.55);tl.to(hero.sweat,{opacity:1,duration:.1},3.6);tl.to(hero.sweat,{opacity:0,duration:.5},4.3);
+tl.to(hero.root,{y:-14,duration:.09,yoyo:true,repeat:1,onUpdate:hero.root.apply},3.55);
+rot(hero.Larm,3.55,150,.15);rot(hero.Rarm,3.55,-150,.15);
+rot(hero.Larm,4.25,0,.4);rot(hero.Rarm,4.25,0,.4);rot(hero.Lfore,4.25,0,.4);
+setFace(hero,'cemas',4.5);
+/* 4,7–6,4 bungkus mie: digoyang, dilirik, dituang */
+tl.to(D.packet.el,{opacity:1,duration:.2},4.7);
+rot(hero.Larm,4.7,40,.3);rot(hero.Rarm,4.7,-38,.3);
+[4.95,5.5].forEach(t0=>{tl.to(D.packet,{r:-14,duration:.09,yoyo:true,repeat:3,onUpdate:D.packet.apply},t0);
+  tl.to(D.packet,{r:-6,duration:.1,onUpdate:D.packet.apply},t0+.4);});
+rot(hero.head,5.85,12,.18);rot(hero.head,6.05,0,.2);
+tl.to(D.packet,{x:-72,y:-96,duration:.3,ease:'power2.in',onUpdate:D.packet.apply},6.15);
+tl.to(D.packet.el,{opacity:0,duration:.15},6.32);
+rot(hero.Larm,6.35,0,.35);rot(hero.Rarm,6.35,0,.35);
+/* 6,2–7,3 sendok jatuh, memantul, ditangkap */
+tl.set(D.spoon.el,{opacity:1},6.2);
+tl.to(D.spoon,{y:330,r:150,duration:.34,ease:'power2.in',onUpdate:D.spoon.apply},6.25);
+tl.to(D.spoon,{y:282,duration:.15,ease:'power2.out',onUpdate:D.spoon.apply},6.59);
+tl.to(D.spoon,{y:330,duration:.15,ease:'power2.in',onUpdate:D.spoon.apply},6.74);
+rot(hero.torso,6.55,13,.3);rot(hero.Rarm,6.55,-34,.3);tl.to(hero.root,{x:'+=16',duration:.3,onUpdate:hero.root.apply},6.55);
+tl.to(D.spoon,{x:8,y:222,r:205,duration:.25,ease:'power2.out',onUpdate:D.spoon.apply},6.9);
+setFace(hero,'senyum',7.0);
+rot(hero.torso,7.25,0,.35);rot(hero.Rarm,7.25,0,.35);tl.to(hero.root,{x:'-=16',duration:.35,onUpdate:hero.root.apply},7.25);
+tl.to(D.spoon.el,{opacity:0,duration:.2},7.3);
+/* 7,35–10,5 memasak: api, aduk, uap, gelembung, tutup bergetar */
+tl.to(D.flame,{opacity:.9,duration:.2},7.35);
+tl.to(D.flame,{scaleY:.68,transformOrigin:'50% 100%',duration:.13,yoyo:true,repeat:-1,ease:'sine.inOut'},7.35);
+rot(hero.Larm,7.4,98,.4);
+tl.fromTo(hero.Lfore,{r:-24},{r:14,duration:.5,ease:'sine.inOut',yoyo:true,repeat:11,onUpdate:hero.Lfore.apply},7.5);
+rot(hero.Lfore,10.55,0,.3);rot(hero.Larm,10.55,52,.3);
+D.steamW.forEach((w,i)=>drift(w,7.5+i*.7,{y:-210,scale:1.5,dur:2.8,peak:.55}));
+D.bubbles.forEach((b,i)=>{tl.fromTo(b,{scale:.4,transformOrigin:'50% 50%'},{scale:1.25,duration:.7+i*.17,yoyo:true,repeat:-1,ease:'sine.inOut'},7.6+i*.3);
+  tl.to(b,{opacity:.85,duration:.3},7.6+i*.3);});
+cam(D,7.4,525,995,1.42,2.8);
+tl.to(D.lid,{r:371,duration:.06,yoyo:true,repeat:9,onUpdate:D.lid.apply},9.7);
+tl.to(D.lid,{r:368,duration:.08,onUpdate:D.lid.apply},10.32);
+/* 10,55–11,3 tuang ke mangkuk + angkat mie */
+tl.to(D.pot,{r:-30,duration:.35,ease:'power2.inOut',onUpdate:D.pot.apply},10.55);
+tl.to(D.pot,{r:0,duration:.4,ease:'power2.inOut',onUpdate:D.pot.apply},11.2);
+tl.to(D.bowl.el,{opacity:1,duration:.2},10.55);
+tl.to(D.stream,{opacity:1,duration:.15},10.78);tl.to(D.stream,{opacity:0,duration:.2},11.05);
+tl.to(D.sticks,{opacity:1,duration:.2},10.9);rot(hero.Rarm,10.9,26,.3);
+tl.to(D.strandUp,{opacity:1,duration:.2},11.15);
+drift(D.bowlSteam,11.6,{y:-120,scale:1.4,dur:2.6,peak:.7});
+/* 11,4 LAMPU MENYALA — ketahuan */
+tl.to(warmOv,{opacity:.22,duration:.18},11.4);
+tl.to(D.wall,{attr:{fill:'#33506B'},duration:.3},11.4);
+tl.to(D.glow,{opacity:.45,duration:.18},11.4);tl.to(D.bulb,{attr:{fill:'#FFE9A8'},duration:.18},11.4);
+tl.to(D.spill,{opacity:.85,duration:.2},11.42);
+tl.to(D.door,{x:-170,duration:.45,ease:'power2.out',onUpdate:D.door.apply},11.42);
+setFace(hero,'kaget',11.45);
+tl.to(D.strandUp,{opacity:0,duration:.1},11.45);tl.to(D.strandHang,{opacity:1,duration:.1},11.45);
+cam(D,11.45,600,1000,1.1,.55);
+walkChibi(guard,11.55,.55,-200);swayJ(guard.head,12.2,-1.4,2.6);blinkLoop(guard,12.4);
+tl.to(D.cone,{opacity:.8,duration:.25},11.8);tl.to(flashG,{opacity:1,duration:.2},11.8);
+/* 12,3 pasrah menyodorkan mangkuk; 12,6 penjaga menepuk jidat */
+setFace(hero,'pasrah',12.3);
+rot(hero.Larm,12.3,64,.45);rot(hero.Rarm,12.3,-62,.45);rot(hero.head,12.3,-6,.4);
+tl.to(D.bowl,{x:36,duration:.45,ease:'power2.out',onUpdate:D.bowl.apply},12.3);
+tl.to(D.sticks,{opacity:0,duration:.3},12.3);tl.to(D.strandHang,{opacity:0,duration:.3},12.35);
+rot(guard.Larm,12.6,58,.35);rot(guard.Lfore,12.6,-128,.35);
+/* 13,3 judul penutup */
+tl.to('#title',{opacity:1,duration:.5,ease:'power2.out'},13.3);
+tl.to({},{duration:.01},DUR);
+
+/* ---------- kontrol: autoplay + loop tanpa player; ?debug=1 panel; ?clean=1 export ---------- */
+const q=new URLSearchParams(location.search),vo=$('#vo'),hasVO=!!vo.getAttribute('src');let audioOn=false;
+function applyAll(){scenes.forEach(s=>s.apply());}
+function start(){tl.play(0);if(hasVO){vo.currentTime=0;vo.play().then(()=>audioOn=true).catch(()=>{});}}
+tl.eventCallback('onComplete',()=>start());
+gsap.ticker.add(()=>{if(!audioOn||tl.paused())return;if(Math.abs(vo.currentTime-tl.time())>.12)vo.currentTime=tl.time();});
+window.OPENER={W,H,DURATION:DUR,tl,ready:false,seek(t){tl.pause(t,false);applyAll();if(gsap.ticker.tick)gsap.ticker.tick();},play:start};
+addEventListener('keydown',e=>{if(/^[rR]$/.test(e.key))start();if(e.code==='Space'){e.preventDefault();tl.paused()?tl.play():tl.pause();}});
+if(q.has('debug')){const dbg=$('#dbg');dbg.style.display='flex';const sc2=$('#dScrub'),ck=$('#dClock');let drag=false;
+  gsap.ticker.add(()=>{if(!drag)sc2.value=String(tl.time()/DUR*1000);ck.textContent=tl.time().toFixed(2)+'s';$('#dPlay').textContent=tl.paused()?'Play':'Pause';});
+  sc2.addEventListener('pointerdown',()=>{drag=true;tl.pause();});addEventListener('pointerup',()=>drag=false);
+  sc2.addEventListener('input',()=>{tl.pause();tl.time(sc2.value/1000*DUR);});$('#dPlay').onclick=()=>tl.paused()?tl.play():tl.pause();}
+document.fonts.ready.then(()=>{applyAll();window.OPENER.ready=true;if(q.has('clean'))return;if(!hasVO){start();return;}
+  vo.play().then(()=>{audioOn=true;vo.currentTime=0;tl.play(0);}).catch(()=>{const go=()=>{removeEventListener('pointerdown',go);removeEventListener('keydown',go);start();};addEventListener('pointerdown',go);addEventListener('keydown',go);});});
+</script>
+</body>
+</html>
