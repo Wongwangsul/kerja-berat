@@ -1,0 +1,43 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       966Mi        13Gi        41Mi       1.0Gi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   57G   88G  40% /
+Linux runnervmwuk1x 7.0.0-1019-azure #20-Ubuntu SMP PREEMPT Mon Oct 19 22:41:16 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/render-jangan-menilai-002.sh ===
+
+added 177 packages in 3s
+npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn install-scripts   esbuild@0.28.1 (postinstall: node install.js)
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+bundling...
+Downloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell
+Customize this behavior by adding a onBrowserDownload function to selectComposition().
+Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-158.0.8127.2.zip?clear
+Downloading Chrome Headless Shell - 9.6 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 19.1 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 28.6 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 38.2 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 47.7 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 57.3 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 66.8 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 76.4 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 85.9 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 95.5 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 102.5 Mb/102.5 Mb
+composition ok: JanganMenilai 1026 frames
+render progress: 19%
+render progress: 39%
+render progress: 59%
+render progress: 79%
+render progress: 100%
+DONE /home/runner/work/kerja-berat/kerja-berat/hasil-run/video-tanpa-suara.mp4
+total 1880
+drwxr-xr-x  2 runner runner    4096 Nov 10 02:06 .
+drwxr-xr-x 14 runner runner    4096 Nov 10 02:05 ..
+-rw-r--r--  1 runner runner    1923 Nov 10 02:06 log.txt
+-rw-r--r--  1 runner runner 1912796 Nov 10 02:06 video-tanpa-suara.mp4
+=== Selesai. Kode keluar: 0 ===
