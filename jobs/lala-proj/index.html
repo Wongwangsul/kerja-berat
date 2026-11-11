@@ -526,15 +526,15 @@
       </g><g id="armsInviteD1">
       <path d="M420 940 C 372 996, 362 1050, 392 1096" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
       <path d="M660 940 C 708 996, 718 1050, 688 1096" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
-      <circle cx="396" cy="1104" r="33" fill="#fffaf2"/>
-      <circle cx="684" cy="1104" r="33" fill="#fffaf2"/>
-      <g transform="translate(398 1114) rotate(-90)">
+      <circle cx="396" cy="1082" r="30" fill="#fffaf2"/>
+      <circle cx="684" cy="1082" r="30" fill="#fffaf2"/>
+      <g transform="translate(398 1112) rotate(-10)">
         <ellipse cx="0" cy="0" rx="30" ry="44" fill="#f7c48d"/>
         <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
           <line x1="-14" y1="-40" x2="-14" y2="-18"/><line x1="0" y1="-44" x2="0" y2="-20"/><line x1="14" y1="-40" x2="14" y2="-18"/>
         </g>
       </g>
-      <g transform="translate(682 1114) rotate(90)">
+      <g transform="translate(682 1112) rotate(10)">
         <ellipse cx="0" cy="0" rx="30" ry="44" fill="#f7c48d"/>
         <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
           <line x1="-14" y1="-40" x2="-14" y2="-18"/><line x1="0" y1="-44" x2="0" y2="-20"/><line x1="14" y1="-40" x2="14" y2="-18"/>
@@ -863,7 +863,7 @@
       <path d="M660 940 C 696 1024, 694 1120, 662 1204" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
       <circle cx="662" cy="1196" r="34" fill="#fffaf2"/>
       <circle cx="662" cy="1212" r="28" fill="#f7c48d"/>
-      <g id="eatArm">
+      <g id="eatArmA">
         <path d="M420 940 C 384 1012, 396 1082, 446 1122" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
         <circle cx="450" cy="1128" r="33" fill="#fffaf2"/>
         <circle cx="452" cy="1134" r="28" fill="#f7c48d"/>
@@ -872,6 +872,14 @@
           <ellipse cx="526" cy="1208" rx="24" ry="14" fill="#cfd8dc" stroke="#90a4ae" stroke-width="3" transform="rotate(38 526 1208)"/>
           <circle cx="522" cy="1202" r="9" fill="#ffffff"/>
         </g>
+      </g>
+      <g id="eatArmB" opacity="0">
+        <path d="M420 940 C 398 1036, 436 1096, 498 1062 C 540 1039, 550 952, 540 862" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
+        <circle cx="540" cy="852" r="33" fill="#fffaf2"/>
+        <circle cx="540" cy="846" r="28" fill="#f7c48d"/>
+        <line x1="536" y1="840" x2="524" y2="782" stroke="#90a4ae" stroke-width="11" stroke-linecap="round"/>
+        <ellipse cx="521" cy="770" rx="23" ry="13" fill="#cfd8dc" stroke="#90a4ae" stroke-width="3" transform="rotate(-78 521 770)"/>
+        <circle cx="524" cy="772" r="8" fill="#ffffff"/>
       </g>
       <g stroke="#ffffff" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.85">
         <path id="steamM1" d="M498 1186 C 484 1148, 512 1122, 498 1084"/>
@@ -1095,22 +1103,28 @@
         { opacity: 0.8, y: -14, duration: 1.15, ease: "sine.out", yoyo: true, repeat: 5 }, 21.1);
       tl.fromTo("#steamM2", { opacity: 0, y: 6 },
         { opacity: 0.8, y: -14, duration: 1.15, ease: "sine.out", yoyo: true, repeat: 5 }, 21.65);
-      tl.to("#eatArm", { x: 26, y: 52, rotation: 7, svgOrigin: "420 940", duration: 0.5, ease: "sine.out" }, 22.55);
-      tl.to("#eatArm", { x: 52, y: -320, rotation: -38, duration: 0.6, ease: "sine.inOut" }, 23.15);
+      tl.to("#eatArmA", { x: 26, y: 52, rotation: 7, svgOrigin: "420 940", duration: 0.5, ease: "sine.out" }, 22.55);
+      tl.to("#eatArmA", { opacity: 0, duration: 0.35, ease: "sine.inOut" }, 23.15);
+      tl.fromTo("#eatArmB", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "sine.inOut" }, 23.15);
       tl.to("#headMakan", { rotation: 3.5, y: 7, svgOrigin: "540 720", duration: 0.4, ease: "sine.out" }, 23.55);
       tl.to("#mEyes", { opacity: 0, duration: 0.2 }, 23.6);
       tl.to("#mEyesHappy", { opacity: 1, duration: 0.2 }, 23.6);
-      tl.to("#eatArm", { y: -306, duration: 0.3, ease: "sine.inOut", yoyo: true, repeat: 1 }, 23.8);
-      tl.to("#eatArm", { x: 0, y: 0, rotation: 0, duration: 0.55, ease: "sine.inOut" }, 24.5);
+      tl.to("#eatArmB", { y: -7, duration: 0.3, ease: "sine.inOut", yoyo: true, repeat: 1 }, 23.8);
+      tl.to("#eatArmB", { opacity: 0, duration: 0.35, ease: "sine.inOut" }, 24.5);
+      tl.set("#eatArmA", { x: 0, y: 0, rotation: 0 }, 24.5);
+      tl.to("#eatArmA", { opacity: 1, duration: 0.35, ease: "sine.inOut" }, 24.5);
       tl.to("#headMakan", { rotation: 0, y: 0, duration: 0.4, ease: "sine.inOut" }, 24.5);
       tl.to("#mEyesHappy", { opacity: 0, duration: 0.2 }, 24.65);
       tl.to("#mEyes", { opacity: 1, duration: 0.2 }, 24.65);
-      tl.to("#eatArm", { x: 26, y: 52, rotation: 7, duration: 0.5, ease: "sine.out" }, 25.3);
-      tl.to("#eatArm", { x: 52, y: -320, rotation: -38, duration: 0.6, ease: "sine.inOut" }, 25.9);
+      tl.to("#eatArmA", { x: 26, y: 52, rotation: 7, svgOrigin: "420 940", duration: 0.5, ease: "sine.out" }, 25.3);
+      tl.to("#eatArmA", { opacity: 0, duration: 0.35, ease: "sine.inOut" }, 25.9);
+      tl.fromTo("#eatArmB", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "sine.inOut" }, 25.9);
       tl.to("#headMakan", { rotation: 3.5, y: 7, svgOrigin: "540 720", duration: 0.4, ease: "sine.out" }, 26.15);
       tl.to("#mEyes", { opacity: 0, duration: 0.2 }, 26.2);
       tl.to("#mEyesHappy", { opacity: 1, duration: 0.2 }, 26.2);
-      tl.to("#eatArm", { x: 0, y: 0, rotation: 0, duration: 0.5, ease: "sine.inOut" }, 26.95);
+      tl.to("#eatArmB", { opacity: 0, duration: 0.35, ease: "sine.inOut" }, 26.95);
+      tl.set("#eatArmA", { x: 0, y: 0, rotation: 0 }, 26.95);
+      tl.to("#eatArmA", { opacity: 1, duration: 0.35, ease: "sine.inOut" }, 26.95);
       tl.to("#headMakan", { rotation: 0, y: 0, duration: 0.4, ease: "sine.inOut" }, 26.95);
       tl.to("#mEyesHappy", { opacity: 0, duration: 0.2 }, 27.15);
       tl.to("#mEyes", { opacity: 1, duration: 0.2 }, 27.15);
