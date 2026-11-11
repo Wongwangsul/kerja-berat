@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Render uji HyperFrames: "Doa Sebelum Makan" (LALA) vertikal 1080x1920 30fps, 31,5 detik, DENGAN narasi.
+# Revisi 2 (11 Nov 2026): adegan makan lengan menekuk + telapak ajakan diperbaiki di index.html.
 # Masukan proyek ada di jobs/lala-proj/ (dikirim dalam commit yang sama), termasuk assets/narasi.mp3.
 # Hasil besar (MP4) dikembalikan lewat GitHub Release; berkas kecil ke hasil-run/.
 set -x
