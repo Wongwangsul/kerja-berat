@@ -1,0 +1,1649 @@
+<!doctype html>
+<html lang="id" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Amiri";
+        src: url("assets/fonts/Amiri-Regular.ttf");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: "Amiri";
+        src: url("assets/fonts/Amiri-Bold.ttf");
+        font-weight: 700;
+      }
+      @font-face {
+        font-family: "Baloo 2";
+        src: url("assets/fonts/Baloo2.ttf");
+        font-weight: 400 800;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        margin: 0; width: 1080px; height: 1920px;
+        overflow: hidden; background: #a5dffb;
+      }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+      .clip { position: absolute; inset: 0; }
+      .clip svg { display: block; }
+      .cap {
+        inset: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 118px;
+        max-width: 920px;
+        background: rgba(255, 251, 244, 0.96);
+        border: 3px solid #f0c297;
+        border-radius: 30px;
+        padding: 20px 38px 24px;
+        text-align: center;
+        opacity: 0;
+        box-shadow: 0 10px 30px rgba(140, 84, 30, 0.18);
+      }
+      .cap .lat {
+        font-family: "Baloo 2", "DejaVu Sans", sans-serif;
+        font-weight: 700;
+        font-size: 47px;
+        line-height: 1.18;
+        color: #6b4423;
+      }
+      .cap .ar {
+        font-family: "Amiri", "Noto Naskh Arabic", serif;
+        font-weight: 700;
+        font-size: 68px;
+        line-height: 1.5;
+        color: #c9930a;
+        margin-bottom: 2px;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="44.1"
+         data-width="1080" data-height="1920">
+<div class="clip" data-start="0" data-duration="4.8" data-track-index="0"><svg width="1080" height="1920" viewBox="0 0 1080 1920">
+      <defs>
+        <linearGradient id="skyGrad1" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#a5dffb"/>
+          <stop offset="0.7" stop-color="#d8f4fd"/>
+          <stop offset="1" stop-color="#fdf3d8"/>
+        </linearGradient>
+        <radialGradient id="glowGradT1" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.95"/>
+          <stop offset="0.55" stop-color="#ffd968" stop-opacity="0.45"/>
+          <stop offset="1" stop-color="#ffd968" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="1080" height="1240" fill="url(#skyGrad1)"/>
+      <!-- matahari + awan -->
+      <circle cx="918" cy="238" r="86" fill="#ffd94d" opacity="0.35"/>
+      <circle cx="918" cy="238" r="56" fill="#ffd94d"/>
+      <g fill="#ffffff" opacity="0.95">
+        <ellipse cx="196" cy="300" rx="86" ry="30"/>
+        <ellipse cx="252" cy="278" rx="56" ry="26"/>
+        <ellipse cx="660" cy="168" rx="64" ry="22"/>
+        <ellipse cx="706" cy="150" rx="42" ry="18"/>
+      </g>
+      <!-- taman hijau jauh -->
+      <ellipse cx="90" cy="1130" rx="190" ry="120" fill="#7cb350"/>
+      <ellipse cx="1000" cy="1120" rx="200" ry="130" fill="#7cb350"/>
+      <ellipse cx="330" cy="1180" rx="240" ry="90" fill="#8bc34a"/>
+      <ellipse cx="760" cy="1180" rx="240" ry="90" fill="#8bc34a"/>
+      <circle cx="120" cy="1000" r="62" fill="#689f38"/>
+      <circle cx="962" cy="986" r="70" fill="#689f38"/>
+      <rect x="112" y="1040" width="16" height="120" fill="#8a5a33"/>
+      <rect x="954" y="1030" width="16" height="130" fill="#8a5a33"/>
+      <!-- pagar teras -->
+      <g fill="#c98a54">
+        <rect x="40" y="980" width="18" height="290"/>
+        <rect x="300" y="980" width="18" height="290"/>
+        <rect x="762" y="980" width="18" height="290"/>
+        <rect x="1022" y="980" width="18" height="290"/>
+      </g>
+      <rect x="0" y="1006" width="1080" height="17" fill="#d99a5b"/>
+      <rect x="0" y="1116" width="1080" height="15" fill="#d99a5b"/>
+      <!-- tanaman gantung kiri atas -->
+      <g>
+        <line x1="96" y1="0" x2="96" y2="66" stroke="#8a5a33" stroke-width="6"/>
+        <path d="M52 66 L140 66 L124 128 L68 128 Z" fill="#c96a4a"/>
+        <g fill="#689f38">
+          <ellipse cx="66" cy="150" rx="17" ry="30" transform="rotate(18 66 150)"/>
+          <ellipse cx="100" cy="162" rx="17" ry="34"/>
+          <ellipse cx="132" cy="148" rx="17" ry="28" transform="rotate(-16 132 148)"/>
+          <ellipse cx="84" cy="128" rx="15" ry="24" transform="rotate(8 84 128)"/>
+          <ellipse cx="116" cy="126" rx="15" ry="22" transform="rotate(-8 116 126)"/>
+        </g>
+      </g>
+      <!-- lantai teras -->
+      <rect x="0" y="1240" width="1080" height="680" fill="#eec093"/>
+      <rect x="0" y="1240" width="1080" height="280" fill="#f3cf9e"/>
+      <g stroke="#dfa878" stroke-width="5" opacity="0.6">
+        <line x1="0" y1="1620" x2="1080" y2="1620"/>
+        <line x1="0" y1="1740" x2="1080" y2="1740"/>
+        <line x1="0" y1="1860" x2="1080" y2="1860"/>
+      </g>
+      <g id="charS1">
+      <defs>
+        <pattern id="florals1" width="118" height="118" patternUnits="userSpaceOnUse">
+          <g>
+            <g fill="#ffffff">
+              <circle cx="30" cy="22" r="7"/><circle cx="44" cy="30" r="7"/>
+              <circle cx="40" cy="44" r="7"/><circle cx="26" cy="44" r="7"/>
+              <circle cx="22" cy="30" r="7"/>
+            </g>
+            <circle cx="33" cy="33" r="5" fill="#ffd94d"/>
+            <g fill="#ffffff" opacity="0.9">
+              <circle cx="86" cy="80" r="5.5"/><circle cx="97" cy="87" r="5.5"/>
+              <circle cx="94" cy="98" r="5.5"/><circle cx="83" cy="98" r="5.5"/>
+              <circle cx="80" cy="87" r="5.5"/>
+            </g>
+            <circle cx="88" cy="89" r="4" fill="#ffd94d"/>
+            <circle cx="92" cy="24" r="3.5" fill="#ffffff" opacity="0.8"/>
+            <circle cx="16" cy="92" r="3.5" fill="#ffffff" opacity="0.8"/>
+          </g>
+        </pattern>
+      </defs>
+      <!-- gaun pink motif bunga -->
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="#f5a9be"/>
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="url(#florals1)" opacity="0.95"/>
+      <path d="M640 890 C 690 1010, 706 1180, 714 1330 L640 1330 C 636 1180, 634 1020, 640 890 Z" fill="#e78ca6" opacity="0.22"/>
+      <!-- wajah -->
+      <ellipse cx="540" cy="650" rx="140" ry="152" fill="#f7c48d"/>
+      <!-- hijab peach-pink: bingkai wajah + lilitan bahu -->
+      <path fill-rule="evenodd" fill="#f8b795" d="
+        M540 404 C 398 404, 318 520, 318 674 C 318 792, 338 906, 326 1014 L754 1014 C 742 906, 762 792, 762 674 C 762 520, 682 404, 540 404 Z
+        M540 476 C 460 476, 406 552, 406 650 C 406 746, 460 814, 540 814 C 620 814, 674 746, 674 650 C 674 552, 620 476, 540 476 Z"/>
+      <path d="M424 596 C 434 508, 482 464, 540 464 C 598 464, 646 508, 656 596 C 636 522, 600 494, 540 494 C 480 494, 444 522, 424 596 Z" fill="#ef9c74" opacity="0.5"/>
+      <g stroke="#ef9c74" stroke-width="6" fill="none" opacity="0.45" stroke-linecap="round">
+        <path d="M352 760 C 348 850, 352 930, 346 990"/>
+        <path d="M728 760 C 732 850, 728 930, 734 990"/>
+      </g>
+      <!-- kerah putih -->
+      <path d="M540 902 C 512 884, 476 890, 460 914 C 476 944, 514 950, 540 926 Z" fill="#fffaf2"/>
+      <path d="M540 902 C 568 884, 604 890, 620 914 C 604 944, 566 950, 540 926 Z" fill="#fffaf2"/>
+      
+        <g stroke="#8a5a33" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.85">
+          <path d="M440 622 Q478 604 516 618"/>
+          <path d="M564 618 Q602 604 640 622"/>
+        </g>
+      <g id="s1Eyes">
+        <g>
+          <ellipse cx="490" cy="670" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="490" cy="673" r="17" fill="#7a4322"/>
+          <circle cx="490" cy="673" r="9" fill="#2a1508"/>
+          <circle cx="484" cy="663" r="5" fill="#ffffff"/>
+          <circle cx="497" cy="679" r="3" fill="#ffffff"/>
+          <path d="M461 658 Q 490 628 519 658" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g>
+        <g>
+          <ellipse cx="614" cy="670" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="614" cy="673" r="17" fill="#7a4322"/>
+          <circle cx="614" cy="673" r="9" fill="#2a1508"/>
+          <circle cx="608" cy="663" r="5" fill="#ffffff"/>
+          <circle cx="621" cy="679" r="3" fill="#ffffff"/>
+          <path d="M585 658 Q 614 628 643 658" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g></g>
+      <path d="M540 692 Q549 708 538 718" stroke="#dd9a68" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="414" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <ellipse cx="666" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <g id="s1Mouth"><path d="M505 742 Q540 772 575 742" stroke="#a34d2a" stroke-width="7" fill="none" stroke-linecap="round"/></g>
+      <g id="s1EyesHappy" opacity="0">
+        <g stroke="#4a2c14" stroke-width="8" stroke-linecap="round" fill="none">
+          <path d="M449 674 Q478 644 507 674"/>
+          <path d="M573 674 Q602 644 631 674"/>
+        </g></g><g id="s1MouthOpen" opacity="0">
+        <path d="M503 736 Q540 744 577 736 Q574 784 540 786 Q506 784 503 736 Z" fill="#8a3b22"/>
+        <ellipse cx="540" cy="772" rx="18" ry="8" fill="#e2705f"/></g></g><g transform="translate(742 1470)">
+      <g id="catPawS1">
+        <path d="M0 130 L0 -120" stroke="#f59e42" stroke-width="52" stroke-linecap="round"/>
+        <ellipse cx="0" cy="-140" rx="42" ry="32" fill="#f59e42"/>
+        <g stroke="#e8862e" stroke-width="4" stroke-linecap="round">
+          <line x1="-22" y1="-158" x2="-22" y2="-140"/>
+          <line x1="-4" y1="-164" x2="-4" y2="-144"/>
+          <line x1="14" y1="-158" x2="14" y2="-140"/>
+        </g>
+        <ellipse cx="0" cy="-122" rx="17" ry="12" fill="#f8b795"/>
+      </g></g><g transform="translate(884 1570)">
+      <g id="catHeadS1">
+        <g transform="translate(0 0) scale(0.92)">
+      
+        <g fill="#f59e42">
+          <polygon points="-66,-38 -104,-58 -44,-72"/>
+          <polygon points="66,-38 104,-58 44,-72"/>
+        </g>
+      <circle cx="0" cy="0" r="76" fill="#f59e42"/>
+      <g stroke="#e8862e" stroke-width="6" stroke-linecap="round">
+        <line x1="-14" y1="-66" x2="-14" y2="-48"/>
+        <line x1="4" y1="-70" x2="4" y2="-50"/>
+        <line x1="22" y1="-66" x2="22" y2="-48"/>
+      </g>
+      
+        <g>
+          <ellipse cx="-30" cy="-4" rx="12" ry="9" fill="#2a1508"/>
+          <ellipse cx="30" cy="-4" rx="12" ry="9" fill="#2a1508"/>
+          <path d="M-46 -20 L-14 -14 M46 -20 L14 -14" stroke="#4a2c14" stroke-width="6" stroke-linecap="round"/>
+        </g>
+      <path d="M-8 12 L8 12 L0 22 Z" fill="#e2705f"/>
+      <path d="M-12 30 Q0 24 12 30" stroke="#a34d2a" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <g stroke="#e8e2d4" stroke-width="3.5" stroke-linecap="round" opacity="0.9">
+        <line x1="-44" y1="14" x2="-82" y2="6"/>
+        <line x1="-44" y1="24" x2="-80" y2="26"/>
+        <line x1="44" y1="14" x2="82" y2="6"/>
+        <line x1="44" y1="24" x2="80" y2="26"/>
+      </g>
+      <ellipse cx="-48" cy="18" rx="13" ry="8" fill="#f28b74" opacity="0.45"/>
+      <ellipse cx="48" cy="18" rx="13" ry="8" fill="#f28b74" opacity="0.45"/></g>
+      </g></g>
+      <!-- meja + taplak (di depan tubuh Lala) -->
+      <g>
+        <path d="M92 1258 L988 1258 L988 1548 C 800 1596, 280 1596, 92 1548 Z" fill="#fff6ec"/>
+        <g stroke="#e2574c" stroke-width="10" opacity="0.13">
+          <line x1="252" y1="1258" x2="252" y2="1570"/><line x1="412" y1="1258" x2="412" y2="1590"/>
+          <line x1="572" y1="1258" x2="572" y2="1596"/><line x1="732" y1="1258" x2="732" y2="1590"/>
+          <line x1="892" y1="1258" x2="892" y2="1570"/>
+          <line x1="92" y1="1360" x2="988" y2="1360"/><line x1="92" y1="1460" x2="988" y2="1460"/>
+        </g>
+        <rect x="88" y="1224" width="904" height="36" rx="18" fill="#eaa96a"/>
+        <rect x="88" y="1224" width="904" height="14" rx="7" fill="#f4bc7e"/>
+      </g>
+      <g id="plateS1">
+        <!-- tangan Lala di tepi piring (sebagian tertutup piring) -->
+        <circle cx="443" cy="1254" r="32" fill="#fffaf2"/>
+        <circle cx="443" cy="1250" r="26" fill="#f7c48d"/>
+        <circle cx="637" cy="1254" r="32" fill="#fffaf2"/>
+        <circle cx="637" cy="1250" r="26" fill="#f7c48d"/>
+        <ellipse cx="540" cy="1242" rx="158" ry="36" fill="#ffffff" stroke="#e3d0ba" stroke-width="4"/>
+        <ellipse cx="540" cy="1238" rx="112" ry="24" fill="#fdf1dc"/>
+        <path d="M470 1238 C 470 1212, 496 1202, 520 1206 C 548 1202, 574 1214, 572 1236 C 540 1248, 500 1248, 470 1238 Z" fill="#ffffff" stroke="#ead9c2" stroke-width="3"/>
+        <circle cx="616" cy="1236" r="17" fill="#e8862e"/>
+        <circle cx="640" cy="1248" r="12" fill="#c96a1e"/>
+        <circle cx="452" cy="1246" r="9" fill="#7cb350"/>
+        <circle cx="470" cy="1252" r="8" fill="#8bc34a"/>
+        <circle cx="438" cy="1254" r="7" fill="#7cb350"/>
+        <path d="M592 1218 c14 -8 26 0 26 10 c-10 6 -24 2 -26 -10 Z" fill="#a85b2a"/>
+        
+      <g stroke="#ffffff" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.85">
+        <path id="steamS1a" d="M498 1186 C 484 1148, 512 1122, 498 1084"/>
+        <path id="steamS1b" d="M566 1186 C 552 1148, 580 1122, 566 1084"/>
+      </g>
+      </g>
+      <g id="glassS1">
+        <path d="M776 1152 L844 1152 L836 1246 L784 1246 Z" fill="#bfe3f2" opacity="0.5" stroke="#8fc3dd" stroke-width="4"/>
+        <path d="M781 1184 L839 1184 L836 1246 L784 1246 Z" fill="#7ec3e8" opacity="0.55"/>
+        <line x1="792" y1="1164" x2="788" y2="1232" stroke="#ffffff" stroke-width="7" opacity="0.7"/>
+      </g><g id="armRestS1" opacity="0">
+      <path d="M420 940 C 384 1024, 386 1120, 418 1204" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="418" cy="1196" r="34" fill="#fffaf2"/>
+      <circle cx="418" cy="1212" r="28" fill="#f7c48d"/></g>
+      <g id="armSpoonS1">
+        <path d="M420 940 C 398 1036, 436 1096, 498 1062 C 540 1039, 550 952, 540 862" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+        <circle cx="540" cy="852" r="33" fill="#fffaf2"/>
+        <circle cx="540" cy="846" r="28" fill="#f7c48d"/>
+        <line x1="536" y1="840" x2="524" y2="782" stroke="#90a4ae" stroke-width="11" stroke-linecap="round"/>
+        <ellipse cx="521" cy="770" rx="23" ry="13" fill="#cfd8dc" stroke="#90a4ae" stroke-width="3" transform="rotate(-78 521 770)"/>
+        <circle cx="524" cy="772" r="8" fill="#ffffff"/>
+      </g>
+      <path d="M660 940 C 696 1024, 694 1120, 662 1204" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="662" cy="1196" r="34" fill="#fffaf2"/>
+      <circle cx="662" cy="1212" r="28" fill="#f7c48d"/><g id="sparkS1"><path class="sparkS1-star" d="M296 1036 L302.72 1053.28 L320 1060 L302.72 1066.72 L296 1084 L289.28 1066.72 L272 1060 L289.28 1053.28 Z" fill="#ffd968" opacity="0"/><path class="sparkS1-star" d="M792 1010 L797.6 1024.4 L812 1030 L797.6 1035.6 L792 1050 L786.4 1035.6 L772 1030 L786.4 1024.4 Z" fill="#ffd968" opacity="0"/></g></svg></div>
+<div class="clip" data-start="4.8" data-duration="5.41" data-track-index="1"><svg width="1080" height="1920" viewBox="0 0 1080 1920">
+      <defs>
+        <linearGradient id="skyGrad2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#a5dffb"/>
+          <stop offset="0.7" stop-color="#d8f4fd"/>
+          <stop offset="1" stop-color="#fdf3d8"/>
+        </linearGradient>
+        <radialGradient id="glowGradT2" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.95"/>
+          <stop offset="0.55" stop-color="#ffd968" stop-opacity="0.45"/>
+          <stop offset="1" stop-color="#ffd968" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="1080" height="1240" fill="url(#skyGrad2)"/>
+      <!-- matahari + awan -->
+      <circle cx="918" cy="238" r="86" fill="#ffd94d" opacity="0.35"/>
+      <circle cx="918" cy="238" r="56" fill="#ffd94d"/>
+      <g fill="#ffffff" opacity="0.95">
+        <ellipse cx="196" cy="300" rx="86" ry="30"/>
+        <ellipse cx="252" cy="278" rx="56" ry="26"/>
+        <ellipse cx="660" cy="168" rx="64" ry="22"/>
+        <ellipse cx="706" cy="150" rx="42" ry="18"/>
+      </g>
+      <!-- taman hijau jauh -->
+      <ellipse cx="90" cy="1130" rx="190" ry="120" fill="#7cb350"/>
+      <ellipse cx="1000" cy="1120" rx="200" ry="130" fill="#7cb350"/>
+      <ellipse cx="330" cy="1180" rx="240" ry="90" fill="#8bc34a"/>
+      <ellipse cx="760" cy="1180" rx="240" ry="90" fill="#8bc34a"/>
+      <circle cx="120" cy="1000" r="62" fill="#689f38"/>
+      <circle cx="962" cy="986" r="70" fill="#689f38"/>
+      <rect x="112" y="1040" width="16" height="120" fill="#8a5a33"/>
+      <rect x="954" y="1030" width="16" height="130" fill="#8a5a33"/>
+      <!-- pagar teras -->
+      <g fill="#c98a54">
+        <rect x="40" y="980" width="18" height="290"/>
+        <rect x="300" y="980" width="18" height="290"/>
+        <rect x="762" y="980" width="18" height="290"/>
+        <rect x="1022" y="980" width="18" height="290"/>
+      </g>
+      <rect x="0" y="1006" width="1080" height="17" fill="#d99a5b"/>
+      <rect x="0" y="1116" width="1080" height="15" fill="#d99a5b"/>
+      <!-- tanaman gantung kiri atas -->
+      <g>
+        <line x1="96" y1="0" x2="96" y2="66" stroke="#8a5a33" stroke-width="6"/>
+        <path d="M52 66 L140 66 L124 128 L68 128 Z" fill="#c96a4a"/>
+        <g fill="#689f38">
+          <ellipse cx="66" cy="150" rx="17" ry="30" transform="rotate(18 66 150)"/>
+          <ellipse cx="100" cy="162" rx="17" ry="34"/>
+          <ellipse cx="132" cy="148" rx="17" ry="28" transform="rotate(-16 132 148)"/>
+          <ellipse cx="84" cy="128" rx="15" ry="24" transform="rotate(8 84 128)"/>
+          <ellipse cx="116" cy="126" rx="15" ry="22" transform="rotate(-8 116 126)"/>
+        </g>
+      </g>
+      <!-- lantai teras -->
+      <rect x="0" y="1240" width="1080" height="680" fill="#eec093"/>
+      <rect x="0" y="1240" width="1080" height="280" fill="#f3cf9e"/>
+      <g stroke="#dfa878" stroke-width="5" opacity="0.6">
+        <line x1="0" y1="1620" x2="1080" y2="1620"/>
+        <line x1="0" y1="1740" x2="1080" y2="1740"/>
+        <line x1="0" y1="1860" x2="1080" y2="1860"/>
+      </g>
+      
+      <g transform="translate(958 872)">
+      
+        <g fill="#f59e42">
+          <polygon points="-60,-46 -52,-108 -10,-70"/>
+          <polygon points="60,-46 52,-108 10,-70"/>
+        </g>
+        <g fill="#f8b795">
+          <polygon points="-50,-58 -46,-90 -22,-66"/>
+          <polygon points="50,-58 46,-90 22,-66"/>
+        </g>
+      <circle cx="0" cy="0" r="76" fill="#f59e42"/>
+      <g stroke="#e8862e" stroke-width="6" stroke-linecap="round">
+        <line x1="-14" y1="-66" x2="-14" y2="-48"/>
+        <line x1="4" y1="-70" x2="4" y2="-50"/>
+        <line x1="22" y1="-66" x2="22" y2="-48"/>
+      </g>
+      <g id="catPeekE">
+        <g>
+          <ellipse cx="-30" cy="-8" rx="13" ry="17" fill="#ffffff"/>
+          <circle cx="-30" cy="-5" r="8" fill="#2a1508"/>
+          <circle cx="-33" cy="-11" r="3" fill="#ffffff"/>
+          <ellipse cx="30" cy="-8" rx="13" ry="17" fill="#ffffff"/>
+          <circle cx="30" cy="-5" r="8" fill="#2a1508"/>
+          <circle cx="27" cy="-11" r="3" fill="#ffffff"/>
+        </g></g>
+        <g id="catPeekC" opacity="0" stroke="#4a2c14" stroke-width="6" stroke-linecap="round" fill="none">
+          <path d="M-46 -6 Q-31 6 -16 -6"/>
+          <path d="M16 -6 Q31 6 46 -6"/>
+        </g>
+      <path d="M-8 12 L8 12 L0 22 Z" fill="#e2705f"/>
+      
+        <path d="M0 20 Q-8 30 -18 24 M0 20 Q8 30 18 24" stroke="#a34d2a" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <g stroke="#e8e2d4" stroke-width="3.5" stroke-linecap="round" opacity="0.9">
+        <line x1="-44" y1="14" x2="-82" y2="6"/>
+        <line x1="-44" y1="24" x2="-80" y2="26"/>
+        <line x1="44" y1="14" x2="82" y2="6"/>
+        <line x1="44" y1="24" x2="80" y2="26"/>
+      </g>
+      <ellipse cx="-48" cy="18" rx="13" ry="8" fill="#f28b74" opacity="0.45"/>
+      <ellipse cx="48" cy="18" rx="13" ry="8" fill="#f28b74" opacity="0.45"/></g>
+      <g>
+        <ellipse cx="892" cy="920" rx="32" ry="17" fill="#f59e42"/>
+        <g stroke="#e8862e" stroke-width="3.5" stroke-linecap="round">
+          <line x1="876" y1="910" x2="876" y2="922"/><line x1="890" y1="907" x2="890" y2="920"/><line x1="904" y1="910" x2="904" y2="922"/>
+        </g>
+      </g>
+      <!-- kursi kayu kanan -->
+      <g>
+        <rect x="872" y="940" width="15" height="250" fill="#b57a45"/>
+        <rect x="1030" y="940" width="15" height="250" fill="#b57a45"/>
+        <rect x="856" y="936" width="204" height="34" rx="12" fill="#c98a54"/>
+        <rect x="856" y="1032" width="204" height="26" rx="10" fill="#c98a54"/>
+        <rect x="846" y="1150" width="222" height="32" rx="10" fill="#c98a54"/>
+        <rect x="862" y="1182" width="15" height="310" fill="#b57a45"/>
+        <rect x="1038" y="1182" width="15" height="310" fill="#b57a45"/>
+      </g><g id="charS2">
+      <defs>
+        <pattern id="florals2" width="118" height="118" patternUnits="userSpaceOnUse">
+          <g>
+            <g fill="#ffffff">
+              <circle cx="30" cy="22" r="7"/><circle cx="44" cy="30" r="7"/>
+              <circle cx="40" cy="44" r="7"/><circle cx="26" cy="44" r="7"/>
+              <circle cx="22" cy="30" r="7"/>
+            </g>
+            <circle cx="33" cy="33" r="5" fill="#ffd94d"/>
+            <g fill="#ffffff" opacity="0.9">
+              <circle cx="86" cy="80" r="5.5"/><circle cx="97" cy="87" r="5.5"/>
+              <circle cx="94" cy="98" r="5.5"/><circle cx="83" cy="98" r="5.5"/>
+              <circle cx="80" cy="87" r="5.5"/>
+            </g>
+            <circle cx="88" cy="89" r="4" fill="#ffd94d"/>
+            <circle cx="92" cy="24" r="3.5" fill="#ffffff" opacity="0.8"/>
+            <circle cx="16" cy="92" r="3.5" fill="#ffffff" opacity="0.8"/>
+          </g>
+        </pattern>
+      </defs>
+      <!-- gaun pink motif bunga -->
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="#f5a9be"/>
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="url(#florals2)" opacity="0.95"/>
+      <path d="M640 890 C 690 1010, 706 1180, 714 1330 L640 1330 C 636 1180, 634 1020, 640 890 Z" fill="#e78ca6" opacity="0.22"/>
+      <!-- wajah -->
+      <ellipse cx="540" cy="650" rx="140" ry="152" fill="#f7c48d"/>
+      <!-- hijab peach-pink: bingkai wajah + lilitan bahu -->
+      <path fill-rule="evenodd" fill="#f8b795" d="
+        M540 404 C 398 404, 318 520, 318 674 C 318 792, 338 906, 326 1014 L754 1014 C 742 906, 762 792, 762 674 C 762 520, 682 404, 540 404 Z
+        M540 476 C 460 476, 406 552, 406 650 C 406 746, 460 814, 540 814 C 620 814, 674 746, 674 650 C 674 552, 620 476, 540 476 Z"/>
+      <path d="M424 596 C 434 508, 482 464, 540 464 C 598 464, 646 508, 656 596 C 636 522, 600 494, 540 494 C 480 494, 444 522, 424 596 Z" fill="#ef9c74" opacity="0.5"/>
+      <g stroke="#ef9c74" stroke-width="6" fill="none" opacity="0.45" stroke-linecap="round">
+        <path d="M352 760 C 348 850, 352 930, 346 990"/>
+        <path d="M728 760 C 732 850, 728 930, 734 990"/>
+      </g>
+      <!-- kerah putih -->
+      <path d="M540 902 C 512 884, 476 890, 460 914 C 476 944, 514 950, 540 926 Z" fill="#fffaf2"/>
+      <path d="M540 902 C 568 884, 604 890, 620 914 C 604 944, 566 950, 540 926 Z" fill="#fffaf2"/>
+      
+        <g stroke="#8a5a33" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.85">
+          <path d="M440 622 Q478 604 516 618"/>
+          <path d="M564 618 Q602 604 640 622"/>
+        </g>
+      <g id="s2Eyes">
+        <g>
+          <ellipse cx="478" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="478" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="478" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="472" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="485" cy="674" r="3" fill="#ffffff"/>
+          <path d="M449 653 Q 478 623 507 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g>
+        <g>
+          <ellipse cx="602" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="602" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="602" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="596" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="609" cy="674" r="3" fill="#ffffff"/>
+          <path d="M573 653 Q 602 623 631 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g></g>
+      <path d="M540 692 Q549 708 538 718" stroke="#dd9a68" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="414" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <ellipse cx="666" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <g id="s2Mouth"><path d="M505 742 Q540 772 575 742" stroke="#a34d2a" stroke-width="7" fill="none" stroke-linecap="round"/></g>
+      </g>
+      <!-- meja + taplak (di depan tubuh Lala) -->
+      <g>
+        <path d="M92 1258 L988 1258 L988 1548 C 800 1596, 280 1596, 92 1548 Z" fill="#fff6ec"/>
+        <g stroke="#e2574c" stroke-width="10" opacity="0.13">
+          <line x1="252" y1="1258" x2="252" y2="1570"/><line x1="412" y1="1258" x2="412" y2="1590"/>
+          <line x1="572" y1="1258" x2="572" y2="1596"/><line x1="732" y1="1258" x2="732" y2="1590"/>
+          <line x1="892" y1="1258" x2="892" y2="1570"/>
+          <line x1="92" y1="1360" x2="988" y2="1360"/><line x1="92" y1="1460" x2="988" y2="1460"/>
+        </g>
+        <rect x="88" y="1224" width="904" height="36" rx="18" fill="#eaa96a"/>
+        <rect x="88" y="1224" width="904" height="14" rx="7" fill="#f4bc7e"/>
+      </g><g id="plateTableS2" opacity="0">
+      <g id="plateTableInS2">
+        <ellipse cx="540" cy="1242" rx="152" ry="35" fill="#ffffff" stroke="#e3d0ba" stroke-width="4"/>
+        <ellipse cx="540" cy="1238" rx="106" ry="23" fill="#fdfaf3"/>
+        <path d="M472 1232 A 92 20 0 0 1 560 1222" stroke="#e8e2d4" stroke-width="7" fill="none" stroke-linecap="round"/>
+      </g></g>
+      <g id="glassS2">
+        <path d="M776 1152 L844 1152 L836 1246 L784 1246 Z" fill="#bfe3f2" opacity="0.5" stroke="#8fc3dd" stroke-width="4"/>
+        <path d="M781 1184 L839 1184 L836 1246 L784 1246 Z" fill="#7ec3e8" opacity="0.55"/>
+        <line x1="792" y1="1164" x2="788" y2="1232" stroke="#ffffff" stroke-width="7" opacity="0.7"/>
+      </g><g id="bellyS2" opacity="0">
+      <g id="armBellyS2">
+        <path d="M420 940 C 388 1012, 416 1102, 480 1150" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+        <circle cx="490" cy="1158" r="33" fill="#fffaf2"/>
+        <circle cx="492" cy="1162" r="29" fill="#f7c48d"/>
+      </g></g><g id="restLS2" opacity="0">
+      <path d="M660 940 C 696 1024, 694 1120, 662 1204" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="662" cy="1196" r="34" fill="#fffaf2"/>
+      <circle cx="662" cy="1212" r="28" fill="#f7c48d"/></g><g id="holdS2">
+      <path d="M420 940 C 380 990, 372 1030, 378 1072" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="380" cy="1084" r="30" fill="#fffaf2"/>
+      <path d="M660 940 C 700 990, 708 1030, 702 1072" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="700" cy="1084" r="30" fill="#fffaf2"/>
+      <g id="plateHeldS2">
+        <circle cx="366" cy="1096" r="34" fill="#fffaf2"/>
+        <circle cx="366" cy="1090" r="27" fill="#f7c48d"/>
+        <circle cx="714" cy="1096" r="34" fill="#fffaf2"/>
+        <circle cx="714" cy="1090" r="27" fill="#f7c48d"/>
+        <ellipse cx="540" cy="1088" rx="198" ry="48" fill="#ffffff" stroke="#e3d0ba" stroke-width="5"/>
+        <ellipse cx="540" cy="1082" rx="142" ry="32" fill="#fdfaf3"/>
+        <path d="M440 1070 A 128 28 0 0 1 590 1058" stroke="#e8e2d4" stroke-width="8" fill="none" stroke-linecap="round"/>
+      </g></g><g id="sparkS2"><path class="sparkS2-star" d="M376 974 L382.16 989.84 L398 996 L382.16 1002.16 L376 1018 L369.84 1002.16 L354 996 L369.84 989.84 Z" fill="#ffd968" opacity="0"/><path class="sparkS2-star" d="M706 960 L713.28 978.72 L732 986 L713.28 993.28 L706 1012 L698.72 993.28 L680 986 L698.72 978.72 Z" fill="#ffd968" opacity="0"/><path class="sparkS2-star" d="M540 904 L545.04 916.96 L558 922 L545.04 927.04 L540 940 L534.96 927.04 L522 922 L534.96 916.96 Z" fill="#ffd968" opacity="0"/></g></svg></div>
+<div class="clip" data-start="10.21" data-duration="5.87" data-track-index="2"><svg width="1080" height="1920" viewBox="0 0 1080 1920">
+      <defs>
+        <linearGradient id="skyGrad3" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#a5dffb"/>
+          <stop offset="0.7" stop-color="#d8f4fd"/>
+          <stop offset="1" stop-color="#fdf3d8"/>
+        </linearGradient>
+        <radialGradient id="glowGradT3" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.95"/>
+          <stop offset="0.55" stop-color="#ffd968" stop-opacity="0.45"/>
+          <stop offset="1" stop-color="#ffd968" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="1080" height="1240" fill="url(#skyGrad3)"/>
+      <!-- matahari + awan -->
+      <circle cx="918" cy="238" r="86" fill="#ffd94d" opacity="0.35"/>
+      <circle cx="918" cy="238" r="56" fill="#ffd94d"/>
+      <g fill="#ffffff" opacity="0.95">
+        <ellipse cx="196" cy="300" rx="86" ry="30"/>
+        <ellipse cx="252" cy="278" rx="56" ry="26"/>
+        <ellipse cx="660" cy="168" rx="64" ry="22"/>
+        <ellipse cx="706" cy="150" rx="42" ry="18"/>
+      </g>
+      <!-- taman hijau jauh -->
+      <ellipse cx="90" cy="1130" rx="190" ry="120" fill="#7cb350"/>
+      <ellipse cx="1000" cy="1120" rx="200" ry="130" fill="#7cb350"/>
+      <ellipse cx="330" cy="1180" rx="240" ry="90" fill="#8bc34a"/>
+      <ellipse cx="760" cy="1180" rx="240" ry="90" fill="#8bc34a"/>
+      <circle cx="120" cy="1000" r="62" fill="#689f38"/>
+      <circle cx="962" cy="986" r="70" fill="#689f38"/>
+      <rect x="112" y="1040" width="16" height="120" fill="#8a5a33"/>
+      <rect x="954" y="1030" width="16" height="130" fill="#8a5a33"/>
+      <!-- pagar teras -->
+      <g fill="#c98a54">
+        <rect x="40" y="980" width="18" height="290"/>
+        <rect x="300" y="980" width="18" height="290"/>
+        <rect x="762" y="980" width="18" height="290"/>
+        <rect x="1022" y="980" width="18" height="290"/>
+      </g>
+      <rect x="0" y="1006" width="1080" height="17" fill="#d99a5b"/>
+      <rect x="0" y="1116" width="1080" height="15" fill="#d99a5b"/>
+      <!-- tanaman gantung kiri atas -->
+      <g>
+        <line x1="96" y1="0" x2="96" y2="66" stroke="#8a5a33" stroke-width="6"/>
+        <path d="M52 66 L140 66 L124 128 L68 128 Z" fill="#c96a4a"/>
+        <g fill="#689f38">
+          <ellipse cx="66" cy="150" rx="17" ry="30" transform="rotate(18 66 150)"/>
+          <ellipse cx="100" cy="162" rx="17" ry="34"/>
+          <ellipse cx="132" cy="148" rx="17" ry="28" transform="rotate(-16 132 148)"/>
+          <ellipse cx="84" cy="128" rx="15" ry="24" transform="rotate(8 84 128)"/>
+          <ellipse cx="116" cy="126" rx="15" ry="22" transform="rotate(-8 116 126)"/>
+        </g>
+      </g>
+      <!-- lantai teras -->
+      <rect x="0" y="1240" width="1080" height="680" fill="#eec093"/>
+      <rect x="0" y="1240" width="1080" height="280" fill="#f3cf9e"/>
+      <g stroke="#dfa878" stroke-width="5" opacity="0.6">
+        <line x1="0" y1="1620" x2="1080" y2="1620"/>
+        <line x1="0" y1="1740" x2="1080" y2="1740"/>
+        <line x1="0" y1="1860" x2="1080" y2="1860"/>
+      </g>
+      
+      <!-- kursi kayu kanan -->
+      <g>
+        <rect x="872" y="940" width="15" height="250" fill="#b57a45"/>
+        <rect x="1030" y="940" width="15" height="250" fill="#b57a45"/>
+        <rect x="856" y="936" width="204" height="34" rx="12" fill="#c98a54"/>
+        <rect x="856" y="1032" width="204" height="26" rx="10" fill="#c98a54"/>
+        <rect x="846" y="1150" width="222" height="32" rx="10" fill="#c98a54"/>
+        <rect x="862" y="1182" width="15" height="310" fill="#b57a45"/>
+        <rect x="1038" y="1182" width="15" height="310" fill="#b57a45"/>
+      </g><g id="catS3" transform="translate(958 1058) scale(0.92)">
+      <g id="catTailS3"><path d="M100 50 C 168 66, 196 22, 184 -28" stroke="#f59e42" stroke-width="30" fill="none" stroke-linecap="round"/><path d="M188 -18 C 190 -8, 188 2, 184 10" stroke="#e8862e" stroke-width="30" fill="none" stroke-linecap="round"/></g>
+      <ellipse cx="0" cy="0" rx="118" ry="102" fill="#f59e42"/>
+      <ellipse cx="0" cy="30" rx="68" ry="58" fill="#ffdfae"/>
+      <g stroke="#e8862e" stroke-width="9" stroke-linecap="round" fill="none">
+        <path d="M-104 -28 Q-84 -18 -100 2"/>
+        <path d="M104 -28 Q84 -18 100 2"/>
+      </g>
+      <g fill="#f59e42">
+        <rect x="-66" y="74" width="36" height="48" rx="15"/>
+        <rect x="30" y="74" width="36" height="48" rx="15"/>
+      </g>
+      <g stroke="#e8862e" stroke-width="3.5" stroke-linecap="round">
+        <line x1="-54" y1="112" x2="-54" y2="100"/><line x1="-42" y1="112" x2="-42" y2="100"/>
+        <line x1="42" y1="112" x2="42" y2="100"/><line x1="54" y1="112" x2="54" y2="100"/>
+      </g>
+      
+      <g transform="translate(0 -128)">
+      
+        <g fill="#f59e42">
+          <polygon points="-60,-46 -52,-108 -10,-70"/>
+          <polygon points="60,-46 52,-108 10,-70"/>
+        </g>
+        <g fill="#f8b795">
+          <polygon points="-50,-58 -46,-90 -22,-66"/>
+          <polygon points="50,-58 46,-90 22,-66"/>
+        </g>
+      <circle cx="0" cy="0" r="76" fill="#f59e42"/>
+      <g stroke="#e8862e" stroke-width="6" stroke-linecap="round">
+        <line x1="-14" y1="-66" x2="-14" y2="-48"/>
+        <line x1="4" y1="-70" x2="4" y2="-50"/>
+        <line x1="22" y1="-66" x2="22" y2="-48"/>
+      </g>
+      
+        <g>
+          <ellipse cx="-30" cy="-8" rx="13" ry="17" fill="#ffffff"/>
+          <circle cx="-30" cy="-5" r="8" fill="#2a1508"/>
+          <circle cx="-33" cy="-11" r="3" fill="#ffffff"/>
+          <ellipse cx="30" cy="-8" rx="13" ry="17" fill="#ffffff"/>
+          <circle cx="30" cy="-5" r="8" fill="#2a1508"/>
+          <circle cx="27" cy="-11" r="3" fill="#ffffff"/>
+        </g>
+      <path d="M-8 12 L8 12 L0 22 Z" fill="#e2705f"/>
+      
+        <path d="M0 20 Q-8 30 -18 24 M0 20 Q8 30 18 24" stroke="#a34d2a" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <g stroke="#e8e2d4" stroke-width="3.5" stroke-linecap="round" opacity="0.9">
+        <line x1="-44" y1="14" x2="-82" y2="6"/>
+        <line x1="-44" y1="24" x2="-80" y2="26"/>
+        <line x1="44" y1="14" x2="82" y2="6"/>
+        <line x1="44" y1="24" x2="80" y2="26"/>
+      </g>
+      <ellipse cx="-48" cy="18" rx="13" ry="8" fill="#f28b74" opacity="0.45"/>
+      <ellipse cx="48" cy="18" rx="13" ry="8" fill="#f28b74" opacity="0.45"/></g></g><g id="charS3">
+      <defs>
+        <pattern id="florals3" width="118" height="118" patternUnits="userSpaceOnUse">
+          <g>
+            <g fill="#ffffff">
+              <circle cx="30" cy="22" r="7"/><circle cx="44" cy="30" r="7"/>
+              <circle cx="40" cy="44" r="7"/><circle cx="26" cy="44" r="7"/>
+              <circle cx="22" cy="30" r="7"/>
+            </g>
+            <circle cx="33" cy="33" r="5" fill="#ffd94d"/>
+            <g fill="#ffffff" opacity="0.9">
+              <circle cx="86" cy="80" r="5.5"/><circle cx="97" cy="87" r="5.5"/>
+              <circle cx="94" cy="98" r="5.5"/><circle cx="83" cy="98" r="5.5"/>
+              <circle cx="80" cy="87" r="5.5"/>
+            </g>
+            <circle cx="88" cy="89" r="4" fill="#ffd94d"/>
+            <circle cx="92" cy="24" r="3.5" fill="#ffffff" opacity="0.8"/>
+            <circle cx="16" cy="92" r="3.5" fill="#ffffff" opacity="0.8"/>
+          </g>
+        </pattern>
+      </defs>
+      <!-- gaun pink motif bunga -->
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="#f5a9be"/>
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="url(#florals3)" opacity="0.95"/>
+      <path d="M640 890 C 690 1010, 706 1180, 714 1330 L640 1330 C 636 1180, 634 1020, 640 890 Z" fill="#e78ca6" opacity="0.22"/>
+      <!-- wajah -->
+      <ellipse cx="540" cy="650" rx="140" ry="152" fill="#f7c48d"/>
+      <!-- hijab peach-pink: bingkai wajah + lilitan bahu -->
+      <path fill-rule="evenodd" fill="#f8b795" d="
+        M540 404 C 398 404, 318 520, 318 674 C 318 792, 338 906, 326 1014 L754 1014 C 742 906, 762 792, 762 674 C 762 520, 682 404, 540 404 Z
+        M540 476 C 460 476, 406 552, 406 650 C 406 746, 460 814, 540 814 C 620 814, 674 746, 674 650 C 674 552, 620 476, 540 476 Z"/>
+      <path d="M424 596 C 434 508, 482 464, 540 464 C 598 464, 646 508, 656 596 C 636 522, 600 494, 540 494 C 480 494, 444 522, 424 596 Z" fill="#ef9c74" opacity="0.5"/>
+      <g stroke="#ef9c74" stroke-width="6" fill="none" opacity="0.45" stroke-linecap="round">
+        <path d="M352 760 C 348 850, 352 930, 346 990"/>
+        <path d="M728 760 C 732 850, 728 930, 734 990"/>
+      </g>
+      <!-- kerah putih -->
+      <path d="M540 902 C 512 884, 476 890, 460 914 C 476 944, 514 950, 540 926 Z" fill="#fffaf2"/>
+      <path d="M540 902 C 568 884, 604 890, 620 914 C 604 944, 566 950, 540 926 Z" fill="#fffaf2"/>
+      
+        <g stroke="#8a5a33" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.85">
+          <path d="M440 622 Q478 604 516 618"/>
+          <path d="M564 618 Q602 604 640 622"/>
+        </g>
+      <g id="s3Eyes">
+        <g>
+          <ellipse cx="478" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="478" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="478" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="472" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="485" cy="674" r="3" fill="#ffffff"/>
+          <path d="M449 653 Q 478 623 507 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g>
+        <g>
+          <ellipse cx="602" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="602" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="602" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="596" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="609" cy="674" r="3" fill="#ffffff"/>
+          <path d="M573 653 Q 602 623 631 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g></g>
+      <path d="M540 692 Q549 708 538 718" stroke="#dd9a68" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="414" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <ellipse cx="666" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <g id="s3Mouth"><path d="M505 742 Q540 772 575 742" stroke="#a34d2a" stroke-width="7" fill="none" stroke-linecap="round"/></g>
+      </g>
+      <!-- meja + taplak (di depan tubuh Lala) -->
+      <g>
+        <path d="M92 1258 L988 1258 L988 1548 C 800 1596, 280 1596, 92 1548 Z" fill="#fff6ec"/>
+        <g stroke="#e2574c" stroke-width="10" opacity="0.13">
+          <line x1="252" y1="1258" x2="252" y2="1570"/><line x1="412" y1="1258" x2="412" y2="1590"/>
+          <line x1="572" y1="1258" x2="572" y2="1596"/><line x1="732" y1="1258" x2="732" y2="1590"/>
+          <line x1="892" y1="1258" x2="892" y2="1570"/>
+          <line x1="92" y1="1360" x2="988" y2="1360"/><line x1="92" y1="1460" x2="988" y2="1460"/>
+        </g>
+        <rect x="88" y="1224" width="904" height="36" rx="18" fill="#eaa96a"/>
+        <rect x="88" y="1224" width="904" height="14" rx="7" fill="#f4bc7e"/>
+      </g>
+      <g id="plateS3">
+        <ellipse cx="540" cy="1242" rx="152" ry="35" fill="#ffffff" stroke="#e3d0ba" stroke-width="4"/>
+        <ellipse cx="540" cy="1238" rx="106" ry="23" fill="#fdfaf3"/>
+        <path d="M472 1232 A 92 20 0 0 1 560 1222" stroke="#e8e2d4" stroke-width="7" fill="none" stroke-linecap="round"/>
+      </g>
+      <g id="glassS3">
+        <path d="M776 1152 L844 1152 L836 1246 L784 1246 Z" fill="#bfe3f2" opacity="0.5" stroke="#8fc3dd" stroke-width="4"/>
+        <path d="M781 1184 L839 1184 L836 1246 L784 1246 Z" fill="#7ec3e8" opacity="0.55"/>
+        <line x1="792" y1="1164" x2="788" y2="1232" stroke="#ffffff" stroke-width="7" opacity="0.7"/>
+      </g>
+      <path d="M420 940 C 384 1024, 386 1120, 418 1204" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="418" cy="1196" r="34" fill="#fffaf2"/>
+      <circle cx="418" cy="1212" r="28" fill="#f7c48d"/>
+      <path d="M660 940 C 696 1024, 694 1120, 662 1204" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="662" cy="1196" r="34" fill="#fffaf2"/>
+      <circle cx="662" cy="1212" r="28" fill="#f7c48d"/>
+      <g id="momHandsS3" opacity="0">
+        <path d="M246 -40 C 320 400, 384 820, 424 1186" stroke="#5f8d87" stroke-width="62" fill="none" stroke-linecap="round"/>
+        <path d="M834 -40 C 760 400, 696 820, 656 1186" stroke="#5f8d87" stroke-width="62" fill="none" stroke-linecap="round"/>
+        <circle cx="426" cy="1180" r="35" fill="#fffaf2" opacity="0.9"/>
+        <circle cx="654" cy="1180" r="35" fill="#fffaf2" opacity="0.9"/>
+        <g id="plateInHandsS3" opacity="0">
+          <ellipse cx="540" cy="1246" rx="152" ry="35" fill="#ffffff" stroke="#e3d0ba" stroke-width="4"/>
+          <ellipse cx="540" cy="1242" rx="106" ry="23" fill="#fdfaf3"/>
+        </g>
+        <g>
+          <ellipse cx="428" cy="1226" rx="30" ry="40" fill="#f7c48d" transform="rotate(18 428 1226)"/>
+          <ellipse cx="652" cy="1226" rx="30" ry="40" fill="#f7c48d" transform="rotate(-18 652 1226)"/>
+          <g fill="#f7c48d">
+            <circle cx="452" cy="1252" r="11"/><circle cx="470" cy="1258" r="11"/>
+            <circle cx="628" cy="1252" r="11"/><circle cx="610" cy="1258" r="11"/>
+          </g>
+        </g>
+      </g></svg></div>
+<div class="clip" data-start="16.08" data-duration="5.68" data-track-index="3"><svg width="1080" height="1920" viewBox="0 0 1080 1920">
+      <defs>
+        <linearGradient id="skyGrad4" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#a5dffb"/>
+          <stop offset="0.7" stop-color="#d8f4fd"/>
+          <stop offset="1" stop-color="#fdf3d8"/>
+        </linearGradient>
+        <radialGradient id="glowGradT4" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.95"/>
+          <stop offset="0.55" stop-color="#ffd968" stop-opacity="0.45"/>
+          <stop offset="1" stop-color="#ffd968" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="1080" height="1240" fill="url(#skyGrad4)"/>
+      <!-- matahari + awan -->
+      <circle cx="918" cy="238" r="86" fill="#ffd94d" opacity="0.35"/>
+      <circle cx="918" cy="238" r="56" fill="#ffd94d"/>
+      <g fill="#ffffff" opacity="0.95">
+        <ellipse cx="196" cy="300" rx="86" ry="30"/>
+        <ellipse cx="252" cy="278" rx="56" ry="26"/>
+        <ellipse cx="660" cy="168" rx="64" ry="22"/>
+        <ellipse cx="706" cy="150" rx="42" ry="18"/>
+      </g>
+      <!-- taman hijau jauh -->
+      <ellipse cx="90" cy="1130" rx="190" ry="120" fill="#7cb350"/>
+      <ellipse cx="1000" cy="1120" rx="200" ry="130" fill="#7cb350"/>
+      <ellipse cx="330" cy="1180" rx="240" ry="90" fill="#8bc34a"/>
+      <ellipse cx="760" cy="1180" rx="240" ry="90" fill="#8bc34a"/>
+      <circle cx="120" cy="1000" r="62" fill="#689f38"/>
+      <circle cx="962" cy="986" r="70" fill="#689f38"/>
+      <rect x="112" y="1040" width="16" height="120" fill="#8a5a33"/>
+      <rect x="954" y="1030" width="16" height="130" fill="#8a5a33"/>
+      <!-- pagar teras -->
+      <g fill="#c98a54">
+        <rect x="40" y="980" width="18" height="290"/>
+        <rect x="300" y="980" width="18" height="290"/>
+        <rect x="762" y="980" width="18" height="290"/>
+        <rect x="1022" y="980" width="18" height="290"/>
+      </g>
+      <rect x="0" y="1006" width="1080" height="17" fill="#d99a5b"/>
+      <rect x="0" y="1116" width="1080" height="15" fill="#d99a5b"/>
+      <!-- tanaman gantung kiri atas -->
+      <g>
+        <line x1="96" y1="0" x2="96" y2="66" stroke="#8a5a33" stroke-width="6"/>
+        <path d="M52 66 L140 66 L124 128 L68 128 Z" fill="#c96a4a"/>
+        <g fill="#689f38">
+          <ellipse cx="66" cy="150" rx="17" ry="30" transform="rotate(18 66 150)"/>
+          <ellipse cx="100" cy="162" rx="17" ry="34"/>
+          <ellipse cx="132" cy="148" rx="17" ry="28" transform="rotate(-16 132 148)"/>
+          <ellipse cx="84" cy="128" rx="15" ry="24" transform="rotate(8 84 128)"/>
+          <ellipse cx="116" cy="126" rx="15" ry="22" transform="rotate(-8 116 126)"/>
+        </g>
+      </g>
+      <!-- lantai teras -->
+      <rect x="0" y="1240" width="1080" height="680" fill="#eec093"/>
+      <rect x="0" y="1240" width="1080" height="280" fill="#f3cf9e"/>
+      <g stroke="#dfa878" stroke-width="5" opacity="0.6">
+        <line x1="0" y1="1620" x2="1080" y2="1620"/>
+        <line x1="0" y1="1740" x2="1080" y2="1740"/>
+        <line x1="0" y1="1860" x2="1080" y2="1860"/>
+      </g>
+      <ellipse id="glowS4" cx="540" cy="640" rx="360" ry="360" fill="url(#glowGradT4)" opacity="0"/>
+      <!-- kursi kayu kanan -->
+      <g>
+        <rect x="872" y="940" width="15" height="250" fill="#b57a45"/>
+        <rect x="1030" y="940" width="15" height="250" fill="#b57a45"/>
+        <rect x="856" y="936" width="204" height="34" rx="12" fill="#c98a54"/>
+        <rect x="856" y="1032" width="204" height="26" rx="10" fill="#c98a54"/>
+        <rect x="846" y="1150" width="222" height="32" rx="10" fill="#c98a54"/>
+        <rect x="862" y="1182" width="15" height="310" fill="#b57a45"/>
+        <rect x="1038" y="1182" width="15" height="310" fill="#b57a45"/>
+      </g><g id="charS4">
+      <defs>
+        <pattern id="florals4" width="118" height="118" patternUnits="userSpaceOnUse">
+          <g>
+            <g fill="#ffffff">
+              <circle cx="30" cy="22" r="7"/><circle cx="44" cy="30" r="7"/>
+              <circle cx="40" cy="44" r="7"/><circle cx="26" cy="44" r="7"/>
+              <circle cx="22" cy="30" r="7"/>
+            </g>
+            <circle cx="33" cy="33" r="5" fill="#ffd94d"/>
+            <g fill="#ffffff" opacity="0.9">
+              <circle cx="86" cy="80" r="5.5"/><circle cx="97" cy="87" r="5.5"/>
+              <circle cx="94" cy="98" r="5.5"/><circle cx="83" cy="98" r="5.5"/>
+              <circle cx="80" cy="87" r="5.5"/>
+            </g>
+            <circle cx="88" cy="89" r="4" fill="#ffd94d"/>
+            <circle cx="92" cy="24" r="3.5" fill="#ffffff" opacity="0.8"/>
+            <circle cx="16" cy="92" r="3.5" fill="#ffffff" opacity="0.8"/>
+          </g>
+        </pattern>
+      </defs>
+      <!-- gaun pink motif bunga -->
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="#f5a9be"/>
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="url(#florals4)" opacity="0.95"/>
+      <path d="M640 890 C 690 1010, 706 1180, 714 1330 L640 1330 C 636 1180, 634 1020, 640 890 Z" fill="#e78ca6" opacity="0.22"/>
+      <!-- wajah -->
+      <ellipse cx="540" cy="650" rx="140" ry="152" fill="#f7c48d"/>
+      <!-- hijab peach-pink: bingkai wajah + lilitan bahu -->
+      <path fill-rule="evenodd" fill="#f8b795" d="
+        M540 404 C 398 404, 318 520, 318 674 C 318 792, 338 906, 326 1014 L754 1014 C 742 906, 762 792, 762 674 C 762 520, 682 404, 540 404 Z
+        M540 476 C 460 476, 406 552, 406 650 C 406 746, 460 814, 540 814 C 620 814, 674 746, 674 650 C 674 552, 620 476, 540 476 Z"/>
+      <path d="M424 596 C 434 508, 482 464, 540 464 C 598 464, 646 508, 656 596 C 636 522, 600 494, 540 494 C 480 494, 444 522, 424 596 Z" fill="#ef9c74" opacity="0.5"/>
+      <g stroke="#ef9c74" stroke-width="6" fill="none" opacity="0.45" stroke-linecap="round">
+        <path d="M352 760 C 348 850, 352 930, 346 990"/>
+        <path d="M728 760 C 732 850, 728 930, 734 990"/>
+      </g>
+      <!-- kerah putih -->
+      <path d="M540 902 C 512 884, 476 890, 460 914 C 476 944, 514 950, 540 926 Z" fill="#fffaf2"/>
+      <path d="M540 902 C 568 884, 604 890, 620 914 C 604 944, 566 950, 540 926 Z" fill="#fffaf2"/>
+      
+        <g stroke="#8a5a33" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.85">
+          <path d="M440 622 Q478 604 516 618"/>
+          <path d="M564 618 Q602 604 640 622"/>
+        </g>
+      <g id="s4Eyes">
+        <g>
+          <ellipse cx="478" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="478" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="478" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="472" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="485" cy="674" r="3" fill="#ffffff"/>
+          <path d="M449 653 Q 478 623 507 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g>
+        <g>
+          <ellipse cx="602" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="602" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="602" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="596" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="609" cy="674" r="3" fill="#ffffff"/>
+          <path d="M573 653 Q 602 623 631 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g></g>
+      <path d="M540 692 Q549 708 538 718" stroke="#dd9a68" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="414" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <ellipse cx="666" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <g id="s4Mouth"><path d="M505 742 Q540 772 575 742" stroke="#a34d2a" stroke-width="7" fill="none" stroke-linecap="round"/></g>
+      </g>
+      <!-- meja + taplak (di depan tubuh Lala) -->
+      <g>
+        <path d="M92 1258 L988 1258 L988 1548 C 800 1596, 280 1596, 92 1548 Z" fill="#fff6ec"/>
+        <g stroke="#e2574c" stroke-width="10" opacity="0.13">
+          <line x1="252" y1="1258" x2="252" y2="1570"/><line x1="412" y1="1258" x2="412" y2="1590"/>
+          <line x1="572" y1="1258" x2="572" y2="1596"/><line x1="732" y1="1258" x2="732" y2="1590"/>
+          <line x1="892" y1="1258" x2="892" y2="1570"/>
+          <line x1="92" y1="1360" x2="988" y2="1360"/><line x1="92" y1="1460" x2="988" y2="1460"/>
+        </g>
+        <rect x="88" y="1224" width="904" height="36" rx="18" fill="#eaa96a"/>
+        <rect x="88" y="1224" width="904" height="14" rx="7" fill="#f4bc7e"/>
+      </g>
+      <g id="glassS4">
+        <path d="M776 1152 L844 1152 L836 1246 L784 1246 Z" fill="#bfe3f2" opacity="0.5" stroke="#8fc3dd" stroke-width="4"/>
+        <path d="M781 1184 L839 1184 L836 1246 L784 1246 Z" fill="#7ec3e8" opacity="0.55"/>
+        <line x1="792" y1="1164" x2="788" y2="1232" stroke="#ffffff" stroke-width="7" opacity="0.7"/>
+      </g><g id="restLS4">
+      <path d="M660 940 C 696 1024, 694 1120, 662 1204" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="662" cy="1196" r="34" fill="#fffaf2"/>
+      <circle cx="662" cy="1212" r="28" fill="#f7c48d"/></g><g id="armFingerG">
+      <g id="armFingerS4">
+        <path d="M420 940 C 358 884, 338 792, 350 692" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+        <circle cx="352" cy="676" r="34" fill="#fffaf2"/>
+        <circle cx="352" cy="668" r="29" fill="#f7c48d"/>
+        <path d="M352 664 L352 588" stroke="#f7c48d" stroke-width="19" stroke-linecap="round"/>
+        <g fill="#f7c48d">
+          <circle cx="330" cy="652" r="10"/>
+          <circle cx="374" cy="652" r="10"/>
+        </g>
+      </g></g><g id="armsInviteS4" opacity="0">
+      <path d="M420 940 C 372 996, 362 1050, 392 1096" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <path d="M660 940 C 708 996, 718 1050, 688 1096" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="396" cy="1082" r="30" fill="#fffaf2"/>
+      <circle cx="684" cy="1082" r="30" fill="#fffaf2"/>
+      <g transform="translate(398 1112) rotate(-10)">
+        <ellipse cx="0" cy="0" rx="30" ry="44" fill="#f7c48d"/>
+        <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
+          <line x1="-14" y1="-40" x2="-14" y2="-18"/><line x1="0" y1="-44" x2="0" y2="-20"/><line x1="14" y1="-40" x2="14" y2="-18"/>
+        </g>
+      </g>
+      <g transform="translate(682 1112) rotate(10)">
+        <ellipse cx="0" cy="0" rx="30" ry="44" fill="#f7c48d"/>
+        <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
+          <line x1="-14" y1="-40" x2="-14" y2="-18"/><line x1="0" y1="-44" x2="0" y2="-20"/><line x1="14" y1="-40" x2="14" y2="-18"/>
+        </g>
+      </g></g><g id="armsDoaS4" opacity="0">
+      <path d="M420 946 C 434 986, 452 980, 472 946" stroke="#f5a9be" stroke-width="60" fill="none" stroke-linecap="round"/>
+      <path d="M660 946 C 646 986, 628 980, 608 946" stroke="#f5a9be" stroke-width="60" fill="none" stroke-linecap="round"/>
+      <circle cx="478" cy="940" r="31" fill="#fffaf2"/>
+      <circle cx="602" cy="940" r="31" fill="#fffaf2"/>
+      
+      <g transform="translate(484 884) rotate(13)">
+        <ellipse cx="0" cy="0" rx="31" ry="48" fill="#f7c48d"/>
+        <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
+          <line x1="-15" y1="-44" x2="-15" y2="-20"/>
+          <line x1="0" y1="-48" x2="0" y2="-22"/>
+          <line x1="15" y1="-44" x2="15" y2="-20"/>
+        </g>
+      </g>
+      
+      <g transform="translate(596 884) rotate(-13)">
+        <ellipse cx="0" cy="0" rx="31" ry="48" fill="#f7c48d"/>
+        <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
+          <line x1="-15" y1="-44" x2="-15" y2="-20"/>
+          <line x1="0" y1="-48" x2="0" y2="-22"/>
+          <line x1="15" y1="-44" x2="15" y2="-20"/>
+        </g>
+      </g></g><g transform="translate(908 1392) scale(0.95)">
+      <g id="catTailS4"><path d="M100 50 C 168 66, 196 22, 184 -28" stroke="#f59e42" stroke-width="30" fill="none" stroke-linecap="round"/><path d="M188 -18 C 190 -8, 188 2, 184 10" stroke="#e8862e" stroke-width="30" fill="none" stroke-linecap="round"/></g>
+      <ellipse cx="0" cy="0" rx="118" ry="102" fill="#f59e42"/>
+      <ellipse cx="0" cy="30" rx="68" ry="58" fill="#ffdfae"/>
+      <g stroke="#e8862e" stroke-width="9" stroke-linecap="round" fill="none">
+        <path d="M-104 -28 Q-84 -18 -100 2"/>
+        <path d="M104 -28 Q84 -18 100 2"/>
+      </g>
+      <g fill="#f59e42">
+        <rect x="-66" y="74" width="36" height="48" rx="15"/>
+        <rect x="30" y="74" width="36" height="48" rx="15"/>
+      </g>
+      <g stroke="#e8862e" stroke-width="3.5" stroke-linecap="round">
+        <line x1="-54" y1="112" x2="-54" y2="100"/><line x1="-42" y1="112" x2="-42" y2="100"/>
+        <line x1="42" y1="112" x2="42" y2="100"/><line x1="54" y1="112" x2="54" y2="100"/>
+      </g>
+      
+      <g id="catPawsS4" opacity="0">
+        <path d="M-52 6 C -44 -26, -36 -44, -26 -62" stroke="#f59e42" stroke-width="30" fill="none" stroke-linecap="round"/>
+        <path d="M52 6 C 44 -26, 36 -44, 26 -62" stroke="#f59e42" stroke-width="30" fill="none" stroke-linecap="round"/>
+        <circle cx="-24" cy="-68" r="19" fill="#f59e42"/>
+        <circle cx="24" cy="-68" r="19" fill="#f59e42"/>
+        <g stroke="#e8862e" stroke-width="3.5" stroke-linecap="round">
+          <line x1="-31" y1="-78" x2="-31" y2="-66"/><line x1="-22" y1="-80" x2="-22" y2="-67"/>
+          <line x1="17" y1="-78" x2="17" y2="-66"/><line x1="26" y1="-80" x2="26" y2="-67"/>
+        </g>
+      </g>
+      <g transform="translate(0 -128)">
+      
+        <g fill="#f59e42">
+          <polygon points="-60,-46 -52,-108 -10,-70"/>
+          <polygon points="60,-46 52,-108 10,-70"/>
+        </g>
+        <g fill="#f8b795">
+          <polygon points="-50,-58 -46,-90 -22,-66"/>
+          <polygon points="50,-58 46,-90 22,-66"/>
+        </g>
+      <circle cx="0" cy="0" r="76" fill="#f59e42"/>
+      <g stroke="#e8862e" stroke-width="6" stroke-linecap="round">
+        <line x1="-14" y1="-66" x2="-14" y2="-48"/>
+        <line x1="4" y1="-70" x2="4" y2="-50"/>
+        <line x1="22" y1="-66" x2="22" y2="-48"/>
+      </g>
+      
+        <g>
+          <ellipse cx="-30" cy="-8" rx="13" ry="17" fill="#ffffff"/>
+          <circle cx="-30" cy="-5" r="8" fill="#2a1508"/>
+          <circle cx="-33" cy="-11" r="3" fill="#ffffff"/>
+          <ellipse cx="30" cy="-8" rx="13" ry="17" fill="#ffffff"/>
+          <circle cx="30" cy="-5" r="8" fill="#2a1508"/>
+          <circle cx="27" cy="-11" r="3" fill="#ffffff"/>
+        </g>
+      <path d="M-8 12 L8 12 L0 22 Z" fill="#e2705f"/>
+      
+        <path d="M0 20 Q-8 30 -18 24 M0 20 Q8 30 18 24" stroke="#a34d2a" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <g stroke="#e8e2d4" stroke-width="3.5" stroke-linecap="round" opacity="0.9">
+        <line x1="-44" y1="14" x2="-82" y2="6"/>
+        <line x1="-44" y1="24" x2="-80" y2="26"/>
+        <line x1="44" y1="14" x2="82" y2="6"/>
+        <line x1="44" y1="24" x2="80" y2="26"/>
+      </g>
+      <ellipse cx="-48" cy="18" rx="13" ry="8" fill="#f28b74" opacity="0.45"/>
+      <ellipse cx="48" cy="18" rx="13" ry="8" fill="#f28b74" opacity="0.45"/></g></g></svg></div>
+<div class="clip" data-start="21.76" data-duration="6.81" data-track-index="4"><svg width="1080" height="1920" viewBox="0 0 1080 1920"><g id="zoomS5">
+      <defs>
+        <linearGradient id="skyGrad5" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#a5dffb"/>
+          <stop offset="0.7" stop-color="#d8f4fd"/>
+          <stop offset="1" stop-color="#fdf3d8"/>
+        </linearGradient>
+        <radialGradient id="glowGradT5" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.95"/>
+          <stop offset="0.55" stop-color="#ffd968" stop-opacity="0.45"/>
+          <stop offset="1" stop-color="#ffd968" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="1080" height="1240" fill="url(#skyGrad5)"/>
+      <!-- matahari + awan -->
+      <circle cx="918" cy="238" r="86" fill="#ffd94d" opacity="0.35"/>
+      <circle cx="918" cy="238" r="56" fill="#ffd94d"/>
+      <g fill="#ffffff" opacity="0.95">
+        <ellipse cx="196" cy="300" rx="86" ry="30"/>
+        <ellipse cx="252" cy="278" rx="56" ry="26"/>
+        <ellipse cx="660" cy="168" rx="64" ry="22"/>
+        <ellipse cx="706" cy="150" rx="42" ry="18"/>
+      </g>
+      <!-- taman hijau jauh -->
+      <ellipse cx="90" cy="1130" rx="190" ry="120" fill="#7cb350"/>
+      <ellipse cx="1000" cy="1120" rx="200" ry="130" fill="#7cb350"/>
+      <ellipse cx="330" cy="1180" rx="240" ry="90" fill="#8bc34a"/>
+      <ellipse cx="760" cy="1180" rx="240" ry="90" fill="#8bc34a"/>
+      <circle cx="120" cy="1000" r="62" fill="#689f38"/>
+      <circle cx="962" cy="986" r="70" fill="#689f38"/>
+      <rect x="112" y="1040" width="16" height="120" fill="#8a5a33"/>
+      <rect x="954" y="1030" width="16" height="130" fill="#8a5a33"/>
+      <!-- pagar teras -->
+      <g fill="#c98a54">
+        <rect x="40" y="980" width="18" height="290"/>
+        <rect x="300" y="980" width="18" height="290"/>
+        <rect x="762" y="980" width="18" height="290"/>
+        <rect x="1022" y="980" width="18" height="290"/>
+      </g>
+      <rect x="0" y="1006" width="1080" height="17" fill="#d99a5b"/>
+      <rect x="0" y="1116" width="1080" height="15" fill="#d99a5b"/>
+      <!-- tanaman gantung kiri atas -->
+      <g>
+        <line x1="96" y1="0" x2="96" y2="66" stroke="#8a5a33" stroke-width="6"/>
+        <path d="M52 66 L140 66 L124 128 L68 128 Z" fill="#c96a4a"/>
+        <g fill="#689f38">
+          <ellipse cx="66" cy="150" rx="17" ry="30" transform="rotate(18 66 150)"/>
+          <ellipse cx="100" cy="162" rx="17" ry="34"/>
+          <ellipse cx="132" cy="148" rx="17" ry="28" transform="rotate(-16 132 148)"/>
+          <ellipse cx="84" cy="128" rx="15" ry="24" transform="rotate(8 84 128)"/>
+          <ellipse cx="116" cy="126" rx="15" ry="22" transform="rotate(-8 116 126)"/>
+        </g>
+      </g>
+      <!-- lantai teras -->
+      <rect x="0" y="1240" width="1080" height="680" fill="#eec093"/>
+      <rect x="0" y="1240" width="1080" height="280" fill="#f3cf9e"/>
+      <g stroke="#dfa878" stroke-width="5" opacity="0.6">
+        <line x1="0" y1="1620" x2="1080" y2="1620"/>
+        <line x1="0" y1="1740" x2="1080" y2="1740"/>
+        <line x1="0" y1="1860" x2="1080" y2="1860"/>
+      </g>
+      <ellipse id="glowS5" cx="540" cy="640" rx="360" ry="360" fill="url(#glowGradT5)" opacity="0"/>
+      <!-- kursi kayu kanan -->
+      <g>
+        <rect x="872" y="940" width="15" height="250" fill="#b57a45"/>
+        <rect x="1030" y="940" width="15" height="250" fill="#b57a45"/>
+        <rect x="856" y="936" width="204" height="34" rx="12" fill="#c98a54"/>
+        <rect x="856" y="1032" width="204" height="26" rx="10" fill="#c98a54"/>
+        <rect x="846" y="1150" width="222" height="32" rx="10" fill="#c98a54"/>
+        <rect x="862" y="1182" width="15" height="310" fill="#b57a45"/>
+        <rect x="1038" y="1182" width="15" height="310" fill="#b57a45"/>
+      </g><g id="charS5"><g transform="translate(0 10) rotate(2.5 540 720)">
+      <defs>
+        <pattern id="florals5" width="118" height="118" patternUnits="userSpaceOnUse">
+          <g>
+            <g fill="#ffffff">
+              <circle cx="30" cy="22" r="7"/><circle cx="44" cy="30" r="7"/>
+              <circle cx="40" cy="44" r="7"/><circle cx="26" cy="44" r="7"/>
+              <circle cx="22" cy="30" r="7"/>
+            </g>
+            <circle cx="33" cy="33" r="5" fill="#ffd94d"/>
+            <g fill="#ffffff" opacity="0.9">
+              <circle cx="86" cy="80" r="5.5"/><circle cx="97" cy="87" r="5.5"/>
+              <circle cx="94" cy="98" r="5.5"/><circle cx="83" cy="98" r="5.5"/>
+              <circle cx="80" cy="87" r="5.5"/>
+            </g>
+            <circle cx="88" cy="89" r="4" fill="#ffd94d"/>
+            <circle cx="92" cy="24" r="3.5" fill="#ffffff" opacity="0.8"/>
+            <circle cx="16" cy="92" r="3.5" fill="#ffffff" opacity="0.8"/>
+          </g>
+        </pattern>
+      </defs>
+      <!-- gaun pink motif bunga -->
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="#f5a9be"/>
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="url(#florals5)" opacity="0.95"/>
+      <path d="M640 890 C 690 1010, 706 1180, 714 1330 L640 1330 C 636 1180, 634 1020, 640 890 Z" fill="#e78ca6" opacity="0.22"/>
+      <!-- wajah -->
+      <ellipse cx="540" cy="650" rx="140" ry="152" fill="#f7c48d"/>
+      <!-- hijab peach-pink: bingkai wajah + lilitan bahu -->
+      <path fill-rule="evenodd" fill="#f8b795" d="
+        M540 404 C 398 404, 318 520, 318 674 C 318 792, 338 906, 326 1014 L754 1014 C 742 906, 762 792, 762 674 C 762 520, 682 404, 540 404 Z
+        M540 476 C 460 476, 406 552, 406 650 C 406 746, 460 814, 540 814 C 620 814, 674 746, 674 650 C 674 552, 620 476, 540 476 Z"/>
+      <path d="M424 596 C 434 508, 482 464, 540 464 C 598 464, 646 508, 656 596 C 636 522, 600 494, 540 494 C 480 494, 444 522, 424 596 Z" fill="#ef9c74" opacity="0.5"/>
+      <g stroke="#ef9c74" stroke-width="6" fill="none" opacity="0.45" stroke-linecap="round">
+        <path d="M352 760 C 348 850, 352 930, 346 990"/>
+        <path d="M728 760 C 732 850, 728 930, 734 990"/>
+      </g>
+      <!-- kerah putih -->
+      <path d="M540 902 C 512 884, 476 890, 460 914 C 476 944, 514 950, 540 926 Z" fill="#fffaf2"/>
+      <path d="M540 902 C 568 884, 604 890, 620 914 C 604 944, 566 950, 540 926 Z" fill="#fffaf2"/>
+      
+        <g stroke="#8a5a33" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.85">
+          <path d="M440 630 Q478 612 516 626"/>
+          <path d="M564 626 Q602 612 640 630"/>
+        </g>
+      <g id="s5Eyes">
+        <g stroke="#4a2c14" stroke-width="7" stroke-linecap="round" fill="none">
+          <path d="M450 664 Q478 682 506 664"/>
+          <path d="M574 664 Q602 682 630 664"/>
+        </g></g>
+      <path d="M540 692 Q549 708 538 718" stroke="#dd9a68" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="414" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <ellipse cx="666" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <g id="s5Mouth"><path d="M518 750 Q540 761 562 750" stroke="#a34d2a" stroke-width="6" fill="none" stroke-linecap="round"/></g>
+      </g></g>
+      <!-- meja + taplak (di depan tubuh Lala) -->
+      <g>
+        <path d="M92 1258 L988 1258 L988 1548 C 800 1596, 280 1596, 92 1548 Z" fill="#fff6ec"/>
+        <g stroke="#e2574c" stroke-width="10" opacity="0.13">
+          <line x1="252" y1="1258" x2="252" y2="1570"/><line x1="412" y1="1258" x2="412" y2="1590"/>
+          <line x1="572" y1="1258" x2="572" y2="1596"/><line x1="732" y1="1258" x2="732" y2="1590"/>
+          <line x1="892" y1="1258" x2="892" y2="1570"/>
+          <line x1="92" y1="1360" x2="988" y2="1360"/><line x1="92" y1="1460" x2="988" y2="1460"/>
+        </g>
+        <rect x="88" y="1224" width="904" height="36" rx="18" fill="#eaa96a"/>
+        <rect x="88" y="1224" width="904" height="14" rx="7" fill="#f4bc7e"/>
+      </g>
+      <g id="glassS5">
+        <path d="M776 1152 L844 1152 L836 1246 L784 1246 Z" fill="#bfe3f2" opacity="0.5" stroke="#8fc3dd" stroke-width="4"/>
+        <path d="M781 1184 L839 1184 L836 1246 L784 1246 Z" fill="#7ec3e8" opacity="0.55"/>
+        <line x1="792" y1="1164" x2="788" y2="1232" stroke="#ffffff" stroke-width="7" opacity="0.7"/>
+      </g>
+      <path d="M420 946 C 434 986, 452 980, 472 946" stroke="#f5a9be" stroke-width="60" fill="none" stroke-linecap="round"/>
+      <path d="M660 946 C 646 986, 628 980, 608 946" stroke="#f5a9be" stroke-width="60" fill="none" stroke-linecap="round"/>
+      <circle cx="478" cy="940" r="31" fill="#fffaf2"/>
+      <circle cx="602" cy="940" r="31" fill="#fffaf2"/>
+      
+      <g transform="translate(484 884) rotate(13)">
+        <ellipse cx="0" cy="0" rx="31" ry="48" fill="#f7c48d"/>
+        <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
+          <line x1="-15" y1="-44" x2="-15" y2="-20"/>
+          <line x1="0" y1="-48" x2="0" y2="-22"/>
+          <line x1="15" y1="-44" x2="15" y2="-20"/>
+        </g>
+      </g>
+      
+      <g transform="translate(596 884) rotate(-13)">
+        <ellipse cx="0" cy="0" rx="31" ry="48" fill="#f7c48d"/>
+        <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
+          <line x1="-15" y1="-44" x2="-15" y2="-20"/>
+          <line x1="0" y1="-48" x2="0" y2="-22"/>
+          <line x1="15" y1="-44" x2="15" y2="-20"/>
+        </g>
+      </g><g transform="translate(908 1400) scale(0.95)">
+      
+      <ellipse cx="0" cy="0" rx="118" ry="102" fill="#f59e42"/>
+      <ellipse cx="0" cy="30" rx="68" ry="58" fill="#ffdfae"/>
+      <g stroke="#e8862e" stroke-width="9" stroke-linecap="round" fill="none">
+        <path d="M-104 -28 Q-84 -18 -100 2"/>
+        <path d="M104 -28 Q84 -18 100 2"/>
+      </g>
+      <g fill="#f59e42">
+        <rect x="-66" y="74" width="36" height="48" rx="15"/>
+        <rect x="30" y="74" width="36" height="48" rx="15"/>
+      </g>
+      <g stroke="#e8862e" stroke-width="3.5" stroke-linecap="round">
+        <line x1="-54" y1="112" x2="-54" y2="100"/><line x1="-42" y1="112" x2="-42" y2="100"/>
+        <line x1="42" y1="112" x2="42" y2="100"/><line x1="54" y1="112" x2="54" y2="100"/>
+      </g>
+      
+      <g transform="translate(0 -128)"><g transform="rotate(16 0 70)">
+      
+        <g fill="#f59e42">
+          <polygon points="-60,-46 -52,-108 -10,-70"/>
+          <polygon points="60,-46 52,-108 10,-70"/>
+        </g>
+        <g fill="#f8b795">
+          <polygon points="-50,-58 -46,-90 -22,-66"/>
+          <polygon points="50,-58 46,-90 22,-66"/>
+        </g>
+      <circle cx="0" cy="0" r="76" fill="#f59e42"/>
+      <g stroke="#e8862e" stroke-width="6" stroke-linecap="round">
+        <line x1="-14" y1="-66" x2="-14" y2="-48"/>
+        <line x1="4" y1="-70" x2="4" y2="-50"/>
+        <line x1="22" y1="-66" x2="22" y2="-48"/>
+      </g>
+      
+        <g stroke="#4a2c14" stroke-width="6" stroke-linecap="round" fill="none">
+          <path d="M-46 -6 Q-31 6 -16 -6"/>
+          <path d="M16 -6 Q31 6 46 -6"/>
+        </g>
+      <path d="M-8 12 L8 12 L0 22 Z" fill="#e2705f"/>
+      <path d="M-10 26 Q0 32 10 26" stroke="#a34d2a" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <g stroke="#e8e2d4" stroke-width="3.5" stroke-linecap="round" opacity="0.9">
+        <line x1="-44" y1="14" x2="-82" y2="6"/>
+        <line x1="-44" y1="24" x2="-80" y2="26"/>
+        <line x1="44" y1="14" x2="82" y2="6"/>
+        <line x1="44" y1="24" x2="80" y2="26"/>
+      </g>
+      <ellipse cx="-48" cy="18" rx="13" ry="8" fill="#f28b74" opacity="0.45"/>
+      <ellipse cx="48" cy="18" rx="13" ry="8" fill="#f28b74" opacity="0.45"/></g></g></g></g></svg></div>
+<div class="clip" data-start="28.57" data-duration="15.53" data-track-index="5"><svg width="1080" height="1920" viewBox="0 0 1080 1920">
+      <defs>
+        <linearGradient id="skyGrad6" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#a5dffb"/>
+          <stop offset="0.7" stop-color="#d8f4fd"/>
+          <stop offset="1" stop-color="#fdf3d8"/>
+        </linearGradient>
+        <radialGradient id="glowGradT6" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.95"/>
+          <stop offset="0.55" stop-color="#ffd968" stop-opacity="0.45"/>
+          <stop offset="1" stop-color="#ffd968" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="1080" height="1240" fill="url(#skyGrad6)"/>
+      <!-- matahari + awan -->
+      <circle cx="918" cy="238" r="86" fill="#ffd94d" opacity="0.35"/>
+      <circle cx="918" cy="238" r="56" fill="#ffd94d"/>
+      <g fill="#ffffff" opacity="0.95">
+        <ellipse cx="196" cy="300" rx="86" ry="30"/>
+        <ellipse cx="252" cy="278" rx="56" ry="26"/>
+        <ellipse cx="660" cy="168" rx="64" ry="22"/>
+        <ellipse cx="706" cy="150" rx="42" ry="18"/>
+      </g>
+      <!-- taman hijau jauh -->
+      <ellipse cx="90" cy="1130" rx="190" ry="120" fill="#7cb350"/>
+      <ellipse cx="1000" cy="1120" rx="200" ry="130" fill="#7cb350"/>
+      <ellipse cx="330" cy="1180" rx="240" ry="90" fill="#8bc34a"/>
+      <ellipse cx="760" cy="1180" rx="240" ry="90" fill="#8bc34a"/>
+      <circle cx="120" cy="1000" r="62" fill="#689f38"/>
+      <circle cx="962" cy="986" r="70" fill="#689f38"/>
+      <rect x="112" y="1040" width="16" height="120" fill="#8a5a33"/>
+      <rect x="954" y="1030" width="16" height="130" fill="#8a5a33"/>
+      <!-- pagar teras -->
+      <g fill="#c98a54">
+        <rect x="40" y="980" width="18" height="290"/>
+        <rect x="300" y="980" width="18" height="290"/>
+        <rect x="762" y="980" width="18" height="290"/>
+        <rect x="1022" y="980" width="18" height="290"/>
+      </g>
+      <rect x="0" y="1006" width="1080" height="17" fill="#d99a5b"/>
+      <rect x="0" y="1116" width="1080" height="15" fill="#d99a5b"/>
+      <!-- tanaman gantung kiri atas -->
+      <g>
+        <line x1="96" y1="0" x2="96" y2="66" stroke="#8a5a33" stroke-width="6"/>
+        <path d="M52 66 L140 66 L124 128 L68 128 Z" fill="#c96a4a"/>
+        <g fill="#689f38">
+          <ellipse cx="66" cy="150" rx="17" ry="30" transform="rotate(18 66 150)"/>
+          <ellipse cx="100" cy="162" rx="17" ry="34"/>
+          <ellipse cx="132" cy="148" rx="17" ry="28" transform="rotate(-16 132 148)"/>
+          <ellipse cx="84" cy="128" rx="15" ry="24" transform="rotate(8 84 128)"/>
+          <ellipse cx="116" cy="126" rx="15" ry="22" transform="rotate(-8 116 126)"/>
+        </g>
+      </g>
+      <!-- lantai teras -->
+      <rect x="0" y="1240" width="1080" height="680" fill="#eec093"/>
+      <rect x="0" y="1240" width="1080" height="280" fill="#f3cf9e"/>
+      <g stroke="#dfa878" stroke-width="5" opacity="0.6">
+        <line x1="0" y1="1620" x2="1080" y2="1620"/>
+        <line x1="0" y1="1740" x2="1080" y2="1740"/>
+        <line x1="0" y1="1860" x2="1080" y2="1860"/>
+      </g>
+      <g transform="translate(958 988) scale(0.8)">
+      
+      <ellipse cx="0" cy="0" rx="118" ry="102" fill="#f59e42"/>
+      <ellipse cx="0" cy="30" rx="68" ry="58" fill="#ffdfae"/>
+      <g stroke="#e8862e" stroke-width="9" stroke-linecap="round" fill="none">
+        <path d="M-104 -28 Q-84 -18 -100 2"/>
+        <path d="M104 -28 Q84 -18 100 2"/>
+      </g>
+      <g fill="#f59e42">
+        <rect x="-66" y="74" width="36" height="48" rx="15"/>
+        <rect x="30" y="74" width="36" height="48" rx="15"/>
+      </g>
+      <g stroke="#e8862e" stroke-width="3.5" stroke-linecap="round">
+        <line x1="-54" y1="112" x2="-54" y2="100"/><line x1="-42" y1="112" x2="-42" y2="100"/>
+        <line x1="42" y1="112" x2="42" y2="100"/><line x1="54" y1="112" x2="54" y2="100"/>
+      </g>
+      
+      <g transform="translate(0 -128)">
+      
+        <g fill="#f59e42">
+          <polygon points="-60,-46 -52,-108 -10,-70"/>
+          <polygon points="60,-46 52,-108 10,-70"/>
+        </g>
+        <g fill="#f8b795">
+          <polygon points="-50,-58 -46,-90 -22,-66"/>
+          <polygon points="50,-58 46,-90 22,-66"/>
+        </g>
+      <circle cx="0" cy="0" r="76" fill="#f59e42"/>
+      <g stroke="#e8862e" stroke-width="6" stroke-linecap="round">
+        <line x1="-14" y1="-66" x2="-14" y2="-48"/>
+        <line x1="4" y1="-70" x2="4" y2="-50"/>
+        <line x1="22" y1="-66" x2="22" y2="-48"/>
+      </g>
+      
+        <g>
+          <ellipse cx="-30" cy="-8" rx="13" ry="17" fill="#ffffff"/>
+          <circle cx="-30" cy="-5" r="8" fill="#2a1508"/>
+          <circle cx="-33" cy="-11" r="3" fill="#ffffff"/>
+          <ellipse cx="30" cy="-8" rx="13" ry="17" fill="#ffffff"/>
+          <circle cx="30" cy="-5" r="8" fill="#2a1508"/>
+          <circle cx="27" cy="-11" r="3" fill="#ffffff"/>
+        </g>
+      <path d="M-8 12 L8 12 L0 22 Z" fill="#e2705f"/>
+      
+        <path d="M0 20 Q-8 30 -18 24 M0 20 Q8 30 18 24" stroke="#a34d2a" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <g stroke="#e8e2d4" stroke-width="3.5" stroke-linecap="round" opacity="0.9">
+        <line x1="-44" y1="14" x2="-82" y2="6"/>
+        <line x1="-44" y1="24" x2="-80" y2="26"/>
+        <line x1="44" y1="14" x2="82" y2="6"/>
+        <line x1="44" y1="24" x2="80" y2="26"/>
+      </g>
+      <ellipse cx="-48" cy="18" rx="13" ry="8" fill="#f28b74" opacity="0.45"/>
+      <ellipse cx="48" cy="18" rx="13" ry="8" fill="#f28b74" opacity="0.45"/></g></g>
+      <!-- kursi kayu kanan -->
+      <g>
+        <rect x="872" y="940" width="15" height="250" fill="#b57a45"/>
+        <rect x="1030" y="940" width="15" height="250" fill="#b57a45"/>
+        <rect x="856" y="936" width="204" height="34" rx="12" fill="#c98a54"/>
+        <rect x="856" y="1032" width="204" height="26" rx="10" fill="#c98a54"/>
+        <rect x="846" y="1150" width="222" height="32" rx="10" fill="#c98a54"/>
+        <rect x="862" y="1182" width="15" height="310" fill="#b57a45"/>
+        <rect x="1038" y="1182" width="15" height="310" fill="#b57a45"/>
+      </g>
+      <g id="catPawWaveS6">
+        <path d="M856 1010 C 848 962, 844 940, 846 900" stroke="#f59e42" stroke-width="30" fill="none" stroke-linecap="round"/>
+        <circle cx="846" cy="890" r="24" fill="#f59e42"/>
+        <g stroke="#e8862e" stroke-width="3.5" stroke-linecap="round">
+          <line x1="834" y1="874" x2="834" y2="886"/><line x1="846" y1="870" x2="846" y2="884"/><line x1="858" y1="874" x2="858" y2="886"/>
+        </g>
+      </g><g id="charS6">
+      <defs>
+        <pattern id="florals6" width="118" height="118" patternUnits="userSpaceOnUse">
+          <g>
+            <g fill="#ffffff">
+              <circle cx="30" cy="22" r="7"/><circle cx="44" cy="30" r="7"/>
+              <circle cx="40" cy="44" r="7"/><circle cx="26" cy="44" r="7"/>
+              <circle cx="22" cy="30" r="7"/>
+            </g>
+            <circle cx="33" cy="33" r="5" fill="#ffd94d"/>
+            <g fill="#ffffff" opacity="0.9">
+              <circle cx="86" cy="80" r="5.5"/><circle cx="97" cy="87" r="5.5"/>
+              <circle cx="94" cy="98" r="5.5"/><circle cx="83" cy="98" r="5.5"/>
+              <circle cx="80" cy="87" r="5.5"/>
+            </g>
+            <circle cx="88" cy="89" r="4" fill="#ffd94d"/>
+            <circle cx="92" cy="24" r="3.5" fill="#ffffff" opacity="0.8"/>
+            <circle cx="16" cy="92" r="3.5" fill="#ffffff" opacity="0.8"/>
+          </g>
+        </pattern>
+      </defs>
+      <!-- gaun pink motif bunga -->
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="#f5a9be"/>
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="url(#florals6)" opacity="0.95"/>
+      <path d="M640 890 C 690 1010, 706 1180, 714 1330 L640 1330 C 636 1180, 634 1020, 640 890 Z" fill="#e78ca6" opacity="0.22"/>
+      <!-- wajah -->
+      <ellipse cx="540" cy="650" rx="140" ry="152" fill="#f7c48d"/>
+      <!-- hijab peach-pink: bingkai wajah + lilitan bahu -->
+      <path fill-rule="evenodd" fill="#f8b795" d="
+        M540 404 C 398 404, 318 520, 318 674 C 318 792, 338 906, 326 1014 L754 1014 C 742 906, 762 792, 762 674 C 762 520, 682 404, 540 404 Z
+        M540 476 C 460 476, 406 552, 406 650 C 406 746, 460 814, 540 814 C 620 814, 674 746, 674 650 C 674 552, 620 476, 540 476 Z"/>
+      <path d="M424 596 C 434 508, 482 464, 540 464 C 598 464, 646 508, 656 596 C 636 522, 600 494, 540 494 C 480 494, 444 522, 424 596 Z" fill="#ef9c74" opacity="0.5"/>
+      <g stroke="#ef9c74" stroke-width="6" fill="none" opacity="0.45" stroke-linecap="round">
+        <path d="M352 760 C 348 850, 352 930, 346 990"/>
+        <path d="M728 760 C 732 850, 728 930, 734 990"/>
+      </g>
+      <!-- kerah putih -->
+      <path d="M540 902 C 512 884, 476 890, 460 914 C 476 944, 514 950, 540 926 Z" fill="#fffaf2"/>
+      <path d="M540 902 C 568 884, 604 890, 620 914 C 604 944, 566 950, 540 926 Z" fill="#fffaf2"/>
+      
+        <g stroke="#8a5a33" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.85">
+          <path d="M440 622 Q478 604 516 618"/>
+          <path d="M564 618 Q602 604 640 622"/>
+        </g>
+      <g id="s6Eyes">
+        <g>
+          <ellipse cx="478" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="478" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="478" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="472" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="485" cy="674" r="3" fill="#ffffff"/>
+          <path d="M449 653 Q 478 623 507 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g>
+        <g>
+          <ellipse cx="602" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="602" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="602" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="596" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="609" cy="674" r="3" fill="#ffffff"/>
+          <path d="M573 653 Q 602 623 631 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g></g>
+      <path d="M540 692 Q549 708 538 718" stroke="#dd9a68" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="414" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <ellipse cx="666" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <g id="s6Mouth">
+        <path d="M503 736 Q540 744 577 736 Q574 784 540 786 Q506 784 503 736 Z" fill="#8a3b22"/>
+        <ellipse cx="540" cy="772" rx="18" ry="8" fill="#e2705f"/></g>
+      </g>
+      <!-- meja + taplak (di depan tubuh Lala) -->
+      <g>
+        <path d="M92 1258 L988 1258 L988 1548 C 800 1596, 280 1596, 92 1548 Z" fill="#fff6ec"/>
+        <g stroke="#e2574c" stroke-width="10" opacity="0.13">
+          <line x1="252" y1="1258" x2="252" y2="1570"/><line x1="412" y1="1258" x2="412" y2="1590"/>
+          <line x1="572" y1="1258" x2="572" y2="1596"/><line x1="732" y1="1258" x2="732" y2="1590"/>
+          <line x1="892" y1="1258" x2="892" y2="1570"/>
+          <line x1="92" y1="1360" x2="988" y2="1360"/><line x1="92" y1="1460" x2="988" y2="1460"/>
+        </g>
+        <rect x="88" y="1224" width="904" height="36" rx="18" fill="#eaa96a"/>
+        <rect x="88" y="1224" width="904" height="14" rx="7" fill="#f4bc7e"/>
+      </g>
+      <g id="glassS6">
+        <path d="M776 1152 L844 1152 L836 1246 L784 1246 Z" fill="#bfe3f2" opacity="0.5" stroke="#8fc3dd" stroke-width="4"/>
+        <path d="M781 1184 L839 1184 L836 1246 L784 1246 Z" fill="#7ec3e8" opacity="0.55"/>
+        <line x1="792" y1="1164" x2="788" y2="1232" stroke="#ffffff" stroke-width="7" opacity="0.7"/>
+      </g><g id="thumbLS6">
+      <path d="M660 940 C 714 992, 724 1058, 696 1116" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="692" cy="1122" r="33" fill="#fffaf2"/>
+      <circle cx="694" cy="1130" r="29" fill="#f7c48d"/>
+      <path d="M704 1122 C 714 1086, 710 1054, 692 1044 C 676 1052, 678 1086, 680 1114 Z" fill="#f7c48d"/></g><g id="restRS6">
+      <path d="M420 940 C 384 1024, 386 1120, 418 1204" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="418" cy="1196" r="34" fill="#fffaf2"/>
+      <circle cx="418" cy="1212" r="28" fill="#f7c48d"/></g><g id="restLS6" opacity="0">
+      <path d="M660 940 C 696 1024, 694 1120, 662 1204" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="662" cy="1196" r="34" fill="#fffaf2"/>
+      <circle cx="662" cy="1212" r="28" fill="#f7c48d"/></g><g id="armsDoaS6" opacity="0">
+      <path d="M420 946 C 434 986, 452 980, 472 946" stroke="#f5a9be" stroke-width="60" fill="none" stroke-linecap="round"/>
+      <path d="M660 946 C 646 986, 628 980, 608 946" stroke="#f5a9be" stroke-width="60" fill="none" stroke-linecap="round"/>
+      <circle cx="478" cy="940" r="31" fill="#fffaf2"/>
+      <circle cx="602" cy="940" r="31" fill="#fffaf2"/>
+      
+      <g transform="translate(484 884) rotate(13)">
+        <ellipse cx="0" cy="0" rx="31" ry="48" fill="#f7c48d"/>
+        <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
+          <line x1="-15" y1="-44" x2="-15" y2="-20"/>
+          <line x1="0" y1="-48" x2="0" y2="-22"/>
+          <line x1="15" y1="-44" x2="15" y2="-20"/>
+        </g>
+      </g>
+      
+      <g transform="translate(596 884) rotate(-13)">
+        <ellipse cx="0" cy="0" rx="31" ry="48" fill="#f7c48d"/>
+        <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
+          <line x1="-15" y1="-44" x2="-15" y2="-20"/>
+          <line x1="0" y1="-48" x2="0" y2="-22"/>
+          <line x1="15" y1="-44" x2="15" y2="-20"/>
+        </g>
+      </g></g><g id="waveWrapS6" opacity="0">
+      <g id="armWaveS6">
+        <path d="M420 940 C 356 884, 324 796, 332 700" stroke="#f5a9be" stroke-width="64" fill="none" stroke-linecap="round"/>
+        <circle cx="334" cy="700" r="34" fill="#fffaf2"/>
+        <circle cx="334" cy="682" r="29" fill="#f7c48d"/>
+        <g fill="#f7c48d">
+          <circle cx="314" cy="656" r="10"/>
+          <circle cx="334" cy="650" r="10"/>
+          <circle cx="354" cy="656" r="10"/>
+        </g>
+      </g></g>
+      <g id="patHandS6" opacity="0">
+        <rect x="502" y="-340" width="76" height="660" rx="30" fill="#5f8d87"/>
+        <rect x="502" y="286" width="76" height="38" fill="#fffaf2" opacity="0.85"/>
+        <ellipse cx="540" cy="368" rx="47" ry="36" fill="#f7c48d"/>
+        <g fill="#f7c48d">
+          <circle cx="506" cy="392" r="13"/><circle cx="528" cy="400" r="13"/>
+          <circle cx="552" cy="400" r="13"/><circle cx="574" cy="392" r="13"/>
+        </g>
+      </g><g id="sparkS6"><path class="sparkS6-star" d="M250 496 L256.72 513.28 L274 520 L256.72 526.72 L250 544 L243.28 526.72 L226 520 L243.28 513.28 Z" fill="#ffd968" opacity="0"/><path class="sparkS6-star" d="M840 444 L847.28 462.72 L866 470 L847.28 477.28 L840 496 L832.72 477.28 L814 470 L832.72 462.72 Z" fill="#ffd968" opacity="0"/><path class="sparkS6-star" d="M884 702 L889.04 714.96 L902 720 L889.04 725.04 L884 738 L878.96 725.04 L866 720 L878.96 714.96 Z" fill="#ffd968" opacity="0"/></g></svg></div>
+<div id="cap0" class="clip cap" data-start="0.0" data-duration="2.46" data-track-index="20"><div class="lat">Hai teman-teman, aku Lala!</div></div>
+<div id="cap1" class="clip cap" data-start="2.46" data-duration="2.34" data-track-index="21"><div class="lat">Aku sudah selesai makan, nih.</div></div>
+<div id="cap2" class="clip cap" data-start="4.8" data-duration="2.84" data-track-index="22"><div class="lat">Perut kenyang, hati pun senang!</div></div>
+<div id="cap3" class="clip cap" data-start="7.64" data-duration="2.57" data-track-index="23"><div class="lat">Lihat, piring Lala sampai bersih.</div></div>
+<div id="cap4" class="clip cap" data-start="10.21" data-duration="3.09" data-track-index="24"><div class="lat">Eh, tapi sebelum berdiri dari meja,</div></div>
+<div id="cap5" class="clip cap" data-start="13.3" data-duration="2.78" data-track-index="25"><div class="lat">ada satu hal yang tidak boleh lupa.</div></div>
+<div id="cap6" class="clip cap" data-start="16.08" data-duration="2.14" data-track-index="26"><div class="lat">Kita berdoa dulu, ya.</div></div>
+<div id="cap7" class="clip cap" data-start="18.22" data-duration="3.54" data-track-index="27"><div class="lat">Yuk, angkat kedua tangan, berdoa bersama-sama.</div></div>
+<div id="cap8" class="clip cap" data-start="21.76" data-duration="2.94" data-track-index="28"><div class="ar" dir="rtl" lang="ar">الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا</div><div class="lat">Alhamdulillaahilladzii ath'amanaa,</div></div>
+<div id="cap9" class="clip cap" data-start="24.7" data-duration="1.5" data-track-index="29"><div class="ar" dir="rtl" lang="ar">وَسَقَانَا</div><div class="lat">wa saqaanaa,</div></div>
+<div id="cap10" class="clip cap" data-start="26.2" data-duration="2.37" data-track-index="30"><div class="ar" dir="rtl" lang="ar">وَجَعَلَنَا مِنَ الْمُسْلِمِينَ</div><div class="lat">wa ja'alanaa minal muslimiin.</div></div>
+<div id="cap11" class="clip cap" data-start="28.57" data-duration="3.77" data-track-index="31"><div class="lat">Artinya: Segala puji bagi Allah,</div></div>
+<div id="cap12" class="clip cap" data-start="32.34" data-duration="2.44" data-track-index="32"><div class="lat">yang telah memberi kami makan dan minum,</div></div>
+<div id="cap13" class="clip cap" data-start="34.78" data-duration="2.46" data-track-index="33"><div class="lat">dan menjadikan kami orang-orang muslim.</div></div>
+<div id="cap14" class="clip cap" data-start="37.24" data-duration="1.26" data-track-index="34"><div class="lat">Aamiin!</div></div>
+<div id="cap15" class="clip cap" data-start="38.5" data-duration="3.22" data-track-index="35"><div class="lat">Sampai ketemu lagi dengan Lala di video berikutnya, ya.</div></div>
+<div id="cap16" class="clip cap" data-start="41.72" data-duration="2.38" data-track-index="36"><div class="lat">Dadah!</div></div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+
+      const tl = gsap.timeline({ paused: true });
+
+      // ADEGAN 1 - HOOK
+      tl.to("#charS1", { y: -5, duration: 0.8, ease: "sine.inOut", yoyo: true, repeat: 5 }, 0);
+      tl.fromTo("#steamS1a", { opacity: 0, y: 6 },
+        { opacity: 0.8, y: -14, duration: 1.15, ease: "sine.out", yoyo: true, repeat: 3 }, 0.2);
+      tl.fromTo("#steamS1b", { opacity: 0, y: 6 },
+        { opacity: 0.8, y: -14, duration: 1.15, ease: "sine.out", yoyo: true, repeat: 3 }, 0.75);
+      tl.fromTo("#catPawS1", { y: 60 },
+        { y: -185, duration: 0.85, ease: "sine.out" }, 1.05);
+      tl.to("#catPawS1", { y: 60, duration: 0.5, ease: "sine.in" }, 2.55);
+      tl.to("#armSpoonS1", { opacity: 0, duration: 0.3, ease: "sine.inOut" }, 2.3);
+      tl.to("#armRestS1", { opacity: 1, duration: 0.3, ease: "sine.inOut" }, 2.3);
+      tl.fromTo("#plateS1", { y: 0, x: 0, rotation: 0 },
+        { y: -305, x: 26, rotation: -4, svgOrigin: "540 1242", duration: 0.55, ease: "back.out(1.2)" }, 2.45);
+      tl.to("#s1Eyes", { opacity: 0, duration: 0.25 }, 2.5);
+      tl.to("#s1EyesHappy", { opacity: 1, duration: 0.25 }, 2.5);
+      tl.to("#s1Mouth", { opacity: 0, duration: 0.25 }, 2.5);
+      tl.to("#s1MouthOpen", { opacity: 1, duration: 0.25 }, 2.5);
+      tl.to(".sparkS1-star", { opacity: 0.95, duration: 0.45, stagger: 0.25, ease: "sine.out" }, 2.7);
+      tl.to(".sparkS1-star", { opacity: 0, duration: 0.5, ease: "sine.in" }, 3.9);
+      tl.fromTo("#catHeadS1", { y: 150 }, { y: 0, duration: 0.5, ease: "back.out(1.4)" }, 3.15);
+
+      // ADEGAN 2 - PIRING KOSONG
+      tl.to(".sparkS2-star", { opacity: 0.95, duration: 0.45, stagger: 0.25, ease: "sine.out" }, 5.5);
+      tl.to(".sparkS2-star", { opacity: 0, duration: 0.5, ease: "sine.in" }, 6.9);
+      tl.to("#catPeekE", { opacity: 0, duration: 0.07 }, 6.6);
+      tl.to("#catPeekC", { opacity: 1, duration: 0.07 }, 6.6);
+      tl.to("#catPeekE", { opacity: 1, duration: 0.07 }, 6.85);
+      tl.to("#catPeekC", { opacity: 0, duration: 0.07 }, 6.85);
+      tl.to("#catPeekE", { opacity: 0, duration: 0.07 }, 9.3);
+      tl.to("#catPeekC", { opacity: 1, duration: 0.07 }, 9.3);
+      tl.to("#catPeekE", { opacity: 1, duration: 0.07 }, 9.55);
+      tl.to("#catPeekC", { opacity: 0, duration: 0.07 }, 9.55);
+      tl.to("#holdS2", { opacity: 0, duration: 0.3, ease: "sine.inOut" }, 7.55);
+      tl.to("#plateTableS2", { opacity: 1, duration: 0.3, ease: "sine.inOut" }, 7.55);
+      tl.to("#bellyS2", { opacity: 1, duration: 0.3, ease: "sine.inOut" }, 7.6);
+      tl.to("#restLS2", { opacity: 1, duration: 0.3, ease: "sine.inOut" }, 7.6);
+      tl.fromTo("#armBellyS2", { rotation: -7 },
+        { rotation: 7, svgOrigin: "492 1162", duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 }, 7.95);
+
+      // ADEGAN 3 - TANGAN IBU + KUCING
+      tl.fromTo("#catTailS3", { rotation: -6 },
+        { rotation: 7, svgOrigin: "1050 1104", duration: 0.9, ease: "sine.inOut", yoyo: true, repeat: 5 }, 10.4);
+      tl.fromTo("#momHandsS3", { y: -430, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.9, ease: "sine.out" }, 11.1);
+      tl.set("#plateS3", { opacity: 0 }, 12.7);
+      tl.set("#plateInHandsS3", { opacity: 1 }, 12.7);
+      tl.to("#momHandsS3", { y: -620, x: -170, duration: 1.1, ease: "sine.in" }, 12.8);
+      tl.to("#momHandsS3", { opacity: 0, duration: 0.3, ease: "sine.in" }, 13.65);
+      tl.fromTo("#charS3", { rotation: -2.5 },
+        { rotation: 2.5, svgOrigin: "540 720", duration: 0.28, ease: "sine.inOut", yoyo: true, repeat: 3 }, 14.35);
+      tl.to("#glassS3", { x: -130, duration: 0.8, ease: "sine.inOut" }, 14.5);
+      tl.to("#catS3", { rotation: 3, svgOrigin: "958 1180", duration: 0.5, ease: "sine.out" }, 15.3);
+
+      // ADEGAN 4 - AJAKAN
+      tl.fromTo("#catTailS4", { rotation: -5 },
+        { rotation: 6, svgOrigin: "1003 1440", duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: 3 }, 16.3);
+      tl.to("#charS4", { rotation: 2, y: 4, svgOrigin: "540 720", duration: 0.5, ease: "sine.out" }, 16.4);
+      tl.to("#armFingerG", { opacity: 0, duration: 0.3, ease: "sine.inOut" }, 18.35);
+      tl.to("#restLS4", { opacity: 0, duration: 0.3, ease: "sine.inOut" }, 18.35);
+      tl.to("#armsInviteS4", { opacity: 1, duration: 0.3, ease: "sine.inOut" }, 18.35);
+      tl.to("#armsInviteS4", { opacity: 0, duration: 0.3, ease: "sine.inOut" }, 19.35);
+      tl.to("#armsDoaS4", { opacity: 1, duration: 0.3, ease: "sine.inOut" }, 19.35);
+      tl.fromTo("#glowS4", { opacity: 0 }, { opacity: 0.35, duration: 0.9, ease: "sine.out" }, 19.4);
+      tl.to("#catPawsS4", { opacity: 1, duration: 0.35, ease: "sine.out" }, 19.7);
+
+      // ADEGAN 5 - DOA (khusyuk, tanpa lelucon)
+      tl.fromTo("#zoomS5", { scale: 1 },
+        { scale: 1.055, svgOrigin: "540 1050", duration: 6.3, ease: "sine.inOut" }, 21.9);
+      tl.fromTo("#glowS5", { opacity: 0.45 },
+        { opacity: 0.75, duration: 2.2, ease: "sine.inOut", yoyo: true, repeat: 2 }, 21.9);
+
+      // ADEGAN 6 - ARTI + PENUTUP
+      tl.fromTo("#patHandS6", { y: -320, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5, ease: "sine.out" }, 30.05);
+      tl.to("#patHandS6", { y: 22, duration: 0.3, ease: "sine.inOut", yoyo: true, repeat: 3 }, 30.7);
+      tl.to("#charS6", { y: 7, duration: 0.3, ease: "sine.inOut", yoyo: true, repeat: 3 }, 30.72);
+      tl.to("#patHandS6", { y: -320, opacity: 0, duration: 0.5, ease: "sine.in" }, 32.25);
+      tl.to("#thumbLS6", { opacity: 0, duration: 0.25, ease: "sine.inOut" }, 37.2);
+      tl.to("#restRS6", { opacity: 0, duration: 0.25, ease: "sine.inOut" }, 37.2);
+      tl.to("#armsDoaS6", { opacity: 1, duration: 0.25, ease: "sine.inOut" }, 37.2);
+      tl.to("#armsDoaS6", { opacity: 0, duration: 0.25, ease: "sine.inOut" }, 38.35);
+      tl.to("#waveWrapS6", { opacity: 1, duration: 0.25, ease: "sine.inOut" }, 38.35);
+      tl.to("#restLS6", { opacity: 1, duration: 0.25, ease: "sine.inOut" }, 38.35);
+      tl.fromTo("#armWaveS6", { rotation: 8 },
+        { rotation: -11, svgOrigin: "420 940", duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 11 }, 38.6);
+      tl.to("#charS6", { y: -6, duration: 0.55, ease: "sine.inOut", yoyo: true, repeat: 9 }, 38.6);
+      tl.fromTo("#catPawWaveS6", { rotation: -14 },
+        { rotation: 14, svgOrigin: "856 1010", duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 10 }, 39.2);
+      tl.to(".sparkS6-star", { opacity: 0.95, duration: 0.45, stagger: 0.2, ease: "sine.out" }, 42.4);
+      tl.to(".sparkS6-star", { opacity: 0, duration: 0.5, ease: "sine.in" }, 43.6);
+
+      // TAKARIR (pudar masuk/keluar saja)
+      tl.fromTo("#cap0",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},0.0);
+      tl.to("#cap0",{opacity:0,duration:0.25,ease:"sine.in"},2.21);
+      tl.fromTo("#cap1",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},2.46);
+      tl.to("#cap1",{opacity:0,duration:0.25,ease:"sine.in"},4.55);
+      tl.fromTo("#cap2",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},4.8);
+      tl.to("#cap2",{opacity:0,duration:0.25,ease:"sine.in"},7.39);
+      tl.fromTo("#cap3",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},7.64);
+      tl.to("#cap3",{opacity:0,duration:0.25,ease:"sine.in"},9.96);
+      tl.fromTo("#cap4",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},10.21);
+      tl.to("#cap4",{opacity:0,duration:0.25,ease:"sine.in"},13.05);
+      tl.fromTo("#cap5",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},13.3);
+      tl.to("#cap5",{opacity:0,duration:0.25,ease:"sine.in"},15.83);
+      tl.fromTo("#cap6",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},16.08);
+      tl.to("#cap6",{opacity:0,duration:0.25,ease:"sine.in"},17.97);
+      tl.fromTo("#cap7",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},18.22);
+      tl.to("#cap7",{opacity:0,duration:0.25,ease:"sine.in"},21.51);
+      tl.fromTo("#cap8",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},21.76);
+      tl.to("#cap8",{opacity:0,duration:0.25,ease:"sine.in"},24.45);
+      tl.fromTo("#cap9",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},24.7);
+      tl.to("#cap9",{opacity:0,duration:0.25,ease:"sine.in"},25.95);
+      tl.fromTo("#cap10",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},26.2);
+      tl.to("#cap10",{opacity:0,duration:0.25,ease:"sine.in"},28.32);
+      tl.fromTo("#cap11",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},28.57);
+      tl.to("#cap11",{opacity:0,duration:0.25,ease:"sine.in"},32.09);
+      tl.fromTo("#cap12",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},32.34);
+      tl.to("#cap12",{opacity:0,duration:0.25,ease:"sine.in"},34.53);
+      tl.fromTo("#cap13",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},34.78);
+      tl.to("#cap13",{opacity:0,duration:0.25,ease:"sine.in"},36.99);
+      tl.fromTo("#cap14",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},37.24);
+      tl.to("#cap14",{opacity:0,duration:0.25,ease:"sine.in"},38.25);
+      tl.fromTo("#cap15",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},38.5);
+      tl.to("#cap15",{opacity:0,duration:0.25,ease:"sine.in"},41.47);
+      tl.fromTo("#cap16",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},41.72);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
