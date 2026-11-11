@@ -1,0 +1,14 @@
+{
+	"input_i" : "-14.38",
+	"input_tp" : "-0.99",
+	"input_lra" : "3.00",
+	"input_thresh" : "-24.84",
+	"output_i" : "-23.88",
+	"output_tp" : "-10.19",
+	"output_lra" : "2.70",
+	"output_thresh" : "-34.26",
+	"normalization_type" : "dynamic",
+	"target_offset" : "-0.12"
+}
+[out#0/null @ 0x56d086be8940] video:537KiB audio:16504KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame= 1323 fps=895 q=-0.0 Lsize=N/A time=00:00:44.10 bitrate=N/A speed=29.8x elapsed=0:00:01.47    
