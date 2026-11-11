@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Render uji HyperFrames: "Doa Setelah Makan" (LALA) vertikal 1080x1920 30fps, 44,1 detik, DENGAN narasi kloning.
 # Job baru dibuat 11 Nov 2026 (perubahan berkas .sh ini yang memicu workflow).
+# Revisi 2 (11 Nov 2026): kepala kucing adegan 1 disembunyikan sampai waktunya, uap piring tidak ikut terangkat, lengan ibu lebih ramping diagonal + pegangan tepi depan piring, telapak tepukan ibu lebih lebar menempel puncak hijab.
 # Masukan proyek ada di jobs/lala-setelah-proj/ (dikirim dalam commit yang sama), termasuk assets/narasi.b64.*.
 # Hasil besar (MP4) dikembalikan lewat GitHub Release; berkas kecil ke hasil-run/.
 set -x
