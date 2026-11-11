@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #79c4f2;
+      }
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+      }
+      .clip {
+        position: absolute;
+        inset: 0;
+      }
+      #skyDay {
+        background: linear-gradient(
+          to bottom,
+          #1f7fd1 0%,
+          #4aa8e8 34%,
+          #8fd0f7 62%,
+          #dff6ff 100%
+        );
+      }
+      #skyDawn {
+        background: linear-gradient(
+          to bottom,
+          #2c2a55 0%,
+          #7a3d63 30%,
+          #b84a6e 52%,
+          #ff9a5a 76%,
+          #ffd98a 100%
+        );
+      }
+      #sunWrap {
+        inset: auto;
+        left: 625px;
+        top: 235px;
+        width: 330px;
+        height: 330px;
+      }
+      #sunGlow {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 224, 110, 0.85) 0%,
+          rgba(255, 205, 70, 0.35) 45%,
+          rgba(255, 205, 70, 0) 70%
+        );
+      }
+      #sunCore {
+        position: absolute;
+        left: 70px;
+        top: 70px;
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 42% 38%, #fff3a6 0%, #ffd94d 55%, #ffb52e 100%);
+      }
+      .cloud {
+        inset: auto;
+        left: 0;
+        will-change: transform;
+      }
+      .streak {
+        inset: auto;
+        height: 7px;
+        border-radius: 4px;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.9) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        opacity: 0;
+      }
+      #stageSvg {
+        width: 1080px;
+        height: 1920px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="15"
+      data-width="1080"
+      data-height="1920"
+    >
+      <!-- bright day sky (revealed as dawn fades) -->
+      <div id="skyDay" class="clip" data-start="0" data-duration="15" data-track-index="0"></div>
+      <!-- dawn sky, fades out over the first 7 seconds -->
+      <div id="skyDawn" class="clip" data-start="0" data-duration="15" data-track-index="1"></div>
+
+      <!-- sun -->
+      <div id="sunWrap" class="clip" data-start="0" data-duration="15" data-track-index="2">
+        <div id="sunGlow"></div>
+        <div id="sunCore"></div>
+      </div>
+
+      <!-- drifting clouds -->
+      <div id="cloud1" class="cloud clip" data-start="0" data-duration="15" data-track-index="3" style="top: 190px; width: 360px;">
+        <svg width="360" height="170" viewBox="0 0 360 170">
+          <g fill="#ffffff" opacity="0.95">
+            <ellipse cx="95" cy="118" rx="78" ry="40" />
+            <ellipse cx="175" cy="84" rx="66" ry="54" />
+            <ellipse cx="252" cy="116" rx="74" ry="40" />
+            <rect x="40" y="104" width="290" height="42" rx="21" />
+          </g>
+        </svg>
+      </div>
+      <div id="cloud2" class="cloud clip" data-start="0" data-duration="15" data-track-index="3" style="top: 540px; width: 260px;">
+        <svg width="260" height="124" viewBox="0 0 360 170">
+          <g fill="#ffffff" opacity="0.82">
+            <ellipse cx="95" cy="118" rx="78" ry="40" />
+            <ellipse cx="175" cy="84" rx="66" ry="54" />
+            <ellipse cx="252" cy="116" rx="74" ry="40" />
+            <rect x="40" y="104" width="290" height="42" rx="21" />
+          </g>
+        </svg>
+      </div>
+      <div id="cloud3" class="cloud clip" data-start="0" data-duration="15" data-track-index="3" style="top: 96px; width: 210px;">
+        <svg width="210" height="100" viewBox="0 0 360 170">
+          <g fill="#ffffff" opacity="0.75">
+            <ellipse cx="95" cy="118" rx="78" ry="40" />
+            <ellipse cx="175" cy="84" rx="66" ry="54" />
+            <ellipse cx="252" cy="116" rx="74" ry="40" />
+            <rect x="40" y="104" width="290" height="42" rx="21" />
+          </g>
+        </svg>
+      </div>
+      <div id="cloud4" class="cloud clip" data-start="0" data-duration="15" data-track-index="3" style="top: 800px; width: 300px;">
+        <svg width="300" height="142" viewBox="0 0 360 170">
+          <g fill="#ffffff" opacity="0.7">
+            <ellipse cx="95" cy="118" rx="78" ry="40" />
+            <ellipse cx="175" cy="84" rx="66" ry="54" />
+            <ellipse cx="252" cy="116" rx="74" ry="40" />
+            <rect x="40" y="104" width="290" height="42" rx="21" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- stage: hills, string, kite, stick figure -->
+      <div class="clip" data-start="0" data-duration="15" data-track-index="4">
+        <svg id="stageSvg" viewBox="0 0 1080 1920">
+          <!-- back hill -->
+          <path
+            d="M0 1540 C 240 1460, 420 1500, 640 1545 C 840 1585, 960 1555, 1080 1530 L1080 1920 L0 1920 Z"
+            fill="#8ed06a"
+          />
+          <!-- front hill -->
+          <path
+            d="M0 1680 C 200 1600, 430 1620, 640 1670 C 830 1715, 960 1660, 1080 1650 L1080 1920 L0 1920 Z"
+            fill="#57ab3d"
+          />
+          <!-- little flowers on the front hill -->
+          <g>
+            <circle cx="180" cy="1745" r="6" fill="#ffffff" />
+            <circle cx="330" cy="1702" r="5" fill="#ffd94d" />
+            <circle cx="700" cy="1738" r="6" fill="#ffffff" />
+            <circle cx="880" cy="1712" r="5" fill="#ff8fab" />
+            <circle cx="985" cy="1760" r="6" fill="#ffd94d" />
+            <circle cx="90" cy="1810" r="5" fill="#ff8fab" />
+          </g>
+
+          <!-- kite string: hand (508,1512) to kite centre (x2,y2 animated) -->
+          <line
+            id="kiteString"
+            x1="508"
+            y1="1512"
+            x2="300"
+            y2="1180"
+            stroke="rgba(38,44,38,0.78)"
+            stroke-width="3.5"
+          />
+
+          <!-- stick figure standing on the front hill, feet at (470,1670) -->
+          <g stroke="#20301e" stroke-width="10" stroke-linecap="round" fill="none">
+            <circle cx="470" cy="1522" r="21" fill="#20301e" stroke="none" />
+            <line x1="470" y1="1542" x2="470" y2="1608" />
+            <line x1="470" y1="1608" x2="444" y2="1670" />
+            <line x1="470" y1="1608" x2="496" y2="1670" />
+            <line x1="470" y1="1558" x2="440" y2="1592" />
+            <line x1="470" y1="1558" x2="508" y2="1512" />
+          </g>
+
+          <!-- kite: transform (translate/rotate/scale) driven by the timeline proxy -->
+          <g id="kiteGroup" transform="translate(300 1180) rotate(-6) scale(1.15)">
+            <!-- tail, sways around the kite's bottom vertex (0,125) -->
+            <g id="tailG">
+              <path
+                d="M0 125 C 26 175, -30 215, 2 268"
+                stroke="#6b3f1d"
+                stroke-width="4"
+                fill="none"
+              />
+              <g>
+                <polygon points="8,172 -8,163 -8,181" fill="#e63b2e" />
+                <polygon points="8,172 24,163 24,181" fill="#e63b2e" />
+                <polygon points="-8,222 -24,213 -24,231" fill="#2e86e6" />
+                <polygon points="-8,222 8,213 8,231" fill="#2e86e6" />
+                <polygon points="2,262 -14,253 -14,271" fill="#ffb703" />
+                <polygon points="2,262 18,253 18,271" fill="#ffb703" />
+              </g>
+            </g>
+            <!-- diamond body: red left half, yellow right half -->
+            <polygon points="0,-125 -95,0 0,125" fill="#e63b2e" />
+            <polygon points="0,-125 95,0 0,125" fill="#ffb703" />
+            <polygon points="0,-125 95,0 -95,0" fill="#ff5a3c" opacity="0.55" />
+            <!-- spars + outline -->
+            <line x1="0" y1="-125" x2="0" y2="125" stroke="#6b3f1d" stroke-width="5" />
+            <line x1="-95" y1="0" x2="95" y2="0" stroke="#6b3f1d" stroke-width="5" />
+            <polygon
+              points="0,-125 95,0 0,125 -95,0"
+              fill="none"
+              stroke="#5b3413"
+              stroke-width="4"
+            />
+          </g>
+        </svg>
+      </div>
+
+      <!-- wind streaks -->
+      <div id="streak1" class="streak clip" data-start="2.2" data-duration="2" data-track-index="5" style="top: 640px; left: 0; width: 240px;"></div>
+      <div id="streak2" class="streak clip" data-start="6.5" data-duration="2.2" data-track-index="6" style="top: 360px; left: 0; width: 280px;"></div>
+      <div id="streak3" class="streak clip" data-start="10.8" data-duration="2.2" data-track-index="7" style="top: 920px; left: 0; width: 220px;"></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // --- dawn sky fades into bright day ---
+      tl.to("#skyDawn", { opacity: 0, duration: 7, ease: "sine.inOut" }, 0);
+
+      // --- sun rises a little and brightens ---
+      tl.fromTo(
+        "#sunWrap",
+        { y: 80, opacity: 0.75, scale: 0.92 },
+        { y: 0, opacity: 1, scale: 1, duration: 8, ease: "sine.out" },
+        0
+      );
+
+      // --- clouds drift across the whole scene ---
+      tl.fromTo("#cloud1", { x: -400 }, { x: 1180, duration: 15, ease: "none" }, 0);
+      tl.fromTo("#cloud2", { x: 480 }, { x: 1240, duration: 15, ease: "none" }, 0);
+      tl.fromTo("#cloud3", { x: 880 }, { x: 1420, duration: 15, ease: "none" }, 0);
+      tl.fromTo("#cloud4", { x: -520 }, { x: 950, duration: 15, ease: "none" }, 0);
+
+      // --- kite flight: one proxy drives the kite transform AND the string end ---
+      const kiteGroup = document.getElementById("kiteGroup");
+      const kiteString = document.getElementById("kiteString");
+      const pos = { x: 300, y: 1180, r: -6 };
+      function applyPos() {
+        kiteGroup.setAttribute(
+          "transform",
+          "translate(" + pos.x + " " + pos.y + ") rotate(" + pos.r + ") scale(1.15)"
+        );
+        kiteString.setAttribute("x2", pos.x);
+        kiteString.setAttribute("y2", pos.y);
+      }
+      applyPos();
+      tl.to(
+        pos,
+        {
+          keyframes: [
+            { x: 390, y: 905, duration: 3, ease: "sine.inOut" },
+            { x: 505, y: 665, duration: 3, ease: "sine.inOut" },
+            { x: 600, y: 520, duration: 3, ease: "sine.inOut" },
+            { x: 655, y: 448, duration: 3, ease: "sine.inOut" },
+            { x: 628, y: 415, duration: 3, ease: "sine.inOut" }
+          ],
+          onUpdate: applyPos
+        },
+        0
+      );
+      tl.to(
+        pos,
+        {
+          keyframes: [
+            { r: 6, duration: 1.5, ease: "sine.inOut" },
+            { r: -6, duration: 1.5, ease: "sine.inOut" },
+            { r: 5, duration: 1.5, ease: "sine.inOut" },
+            { r: -7, duration: 1.5, ease: "sine.inOut" },
+            { r: 6, duration: 1.5, ease: "sine.inOut" },
+            { r: -5, duration: 1.5, ease: "sine.inOut" },
+            { r: 7, duration: 1.5, ease: "sine.inOut" },
+            { r: -6, duration: 1.5, ease: "sine.inOut" },
+            { r: 5, duration: 1.5, ease: "sine.inOut" },
+            { r: -4, duration: 1.5, ease: "sine.inOut" }
+          ],
+          onUpdate: applyPos
+        },
+        0
+      );
+
+      // --- tail sways around the kite's bottom vertex ---
+      tl.to(
+        "#tailG",
+        {
+          keyframes: [
+            { rotation: 10, duration: 1.875, ease: "sine.inOut" },
+            { rotation: -9, duration: 1.875, ease: "sine.inOut" },
+            { rotation: 8, duration: 1.875, ease: "sine.inOut" },
+            { rotation: -10, duration: 1.875, ease: "sine.inOut" },
+            { rotation: 9, duration: 1.875, ease: "sine.inOut" },
+            { rotation: -8, duration: 1.875, ease: "sine.inOut" },
+            { rotation: 10, duration: 1.875, ease: "sine.inOut" },
+            { rotation: -7, duration: 1.875, ease: "sine.inOut" }
+          ],
+          svgOrigin: "0 125"
+        },
+        0
+      );
+
+      // --- wind streaks sweep past ---
+      tl.fromTo(
+        "#streak1",
+        { x: -300, opacity: 0 },
+        {
+          keyframes: [
+            { opacity: 0.9, duration: 0.4, ease: "sine.out" },
+            { x: 1180, opacity: 0.9, duration: 1.2, ease: "power1.in" },
+            { x: 1180, opacity: 0, duration: 0.4, ease: "sine.in" }
+          ]
+        },
+        2.2
+      );
+      tl.fromTo(
+        "#streak2",
+        { x: -320, opacity: 0 },
+        {
+          keyframes: [
+            { opacity: 0.9, duration: 0.4, ease: "sine.out" },
+            { x: 1180, opacity: 0.9, duration: 1.4, ease: "power1.in" },
+            { x: 1180, opacity: 0, duration: 0.4, ease: "sine.in" }
+          ]
+        },
+        6.5
+      );
+      tl.fromTo(
+        "#streak3",
+        { x: -280, opacity: 0 },
+        {
+          keyframes: [
+            { opacity: 0.9, duration: 0.4, ease: "sine.out" },
+            { x: 1180, opacity: 0.9, duration: 1.4, ease: "power1.in" },
+            { x: 1180, opacity: 0, duration: 0.4, ease: "sine.in" }
+          ]
+        },
+        10.8
+      );
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
