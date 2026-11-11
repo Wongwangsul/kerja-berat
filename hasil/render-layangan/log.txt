@@ -1,0 +1,476 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       1.0Gi        13Gi        42Mi       1.0Gi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   57G   88G  40% /
+Linux runnervmwuk1x 7.0.0-1019-azure #20-Ubuntu SMP PREEMPT Mon Oct 19 22:41:16 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/render-layangan.sh ===
++++ dirname jobs/render-layangan.sh
+++ cd jobs/..
+++ pwd
++ ROOT=/home/runner/work/kerja-berat/kerja-berat
++ PROJ=/home/runner/work/kerja-berat/kerja-berat/jobs/layangan-proj
++ OUTDIR=/home/runner/work/kerja-berat/kerja-berat/hasil-run
++ mkdir -p /home/runner/work/kerja-berat/kerja-berat/hasil-run
++ cd /home/runner/work/kerja-berat/kerja-berat/jobs/layangan-proj
++ node_ok
++ node -e 'process.exit(parseInt(process.versions.node.split(".")[0],10)>=22?0:1)'
++ node_ok
++ node -e 'process.exit(parseInt(process.versions.node.split(".")[0],10)>=22?0:1)'
++ node --version
+v24.22.2
++ node_ok
++ node -e 'process.exit(parseInt(process.versions.node.split(".")[0],10)>=22?0:1)'
++ command -v ffmpeg
++ sudo apt-get update -qq
++ sudo apt-get install -y -qq ffmpeg libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2t64 libpango-1.0-0 libcairo2
++ ffmpeg -version
++ head -1
+ffmpeg version 8.0.1-3ubuntu2 Copyright (c) 2000-2025 the FFmpeg developers
++ export HYPERFRAMES_EXTRACT_CACHE_DIR=/home/runner/work/kerja-berat/kerja-berat/jobs/layangan-proj/.framecache
++ HYPERFRAMES_EXTRACT_CACHE_DIR=/home/runner/work/kerja-berat/kerja-berat/jobs/layangan-proj/.framecache
++ mkdir -p /home/runner/work/kerja-berat/kerja-berat/jobs/layangan-proj/.framecache
++ npx -y hyperframes@0.9.33 browser ensure
+
+  Hyperframes collects usage data to improve the tool, anonymous until you sign in.
+  File paths and composition content are never collected.
+  If you sign in to HeyGen, your account (email and username) is linked to your usage.
+
+  Disable anytime: hyperframes telemetry disable
+
+┌  hyperframes browser ensure
+Looking for an existing browser...
+Download complete
+
+   Source:  download
+   Path:    /home/runner/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell
+
+│
+└  Ready to render.
+
++ npx -y hyperframes@0.9.33 render -o renders/layangan.mp4 -f 30 -q delivery
+
+◆  Rendering layangan-proj → /home/runner/work/kerja-berat/kerja-berat/jobs/layangan-proj/renders/layangan.mp4
+   30fps · high · auto workers (4 cores detected)
+   GPU: browser GPU (auto-detect)
+
+
+  Lint: 0 error(s), 8 warning(s) — run `hyperframes lint` for full output.
+  Continuing render despite lint issues. Use --strict to block errors.
+
+Checking browser...
+Browser: cache
+[INFO] [Render] Pipeline started {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","platform":"linux","arch":"x64","nodeVersion":"v24.22.2","fps":{"num":30,"den":1},"format":"mp4","quality":"high","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeout":300000,"browserTimeout":120000,"pageNavigationTimeout":60000,"playerReadyTimeout":45000}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"pipeline","status":"checkpoint","elapsedMs":2,"message":"started","format":"mp4","quality":"high","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeoutMs":300000,"pageNavigationTimeoutMs":60000,"playerReadyTimeoutMs":45000,"requestedWorkers":"auto"}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"compile","status":"start","elapsedMs":4,"needsAlpha":false}
+  █░░░░░░░░░░░░░░░░░░░░░░░░  5%  Compiling composition
+@hf-progress {"code":"compile","pct":5}
+[INFO] Compiled composition metadata {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","entryFile":"index.html","staticDuration":15,"width":1080,"height":1920,"videoCount":0,"audioCount":0,"renderModeHints":{"recommendScreenshot":false,"reasons":[]}}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"compile","status":"end","elapsedMs":59,"durationMs":55,"needsAlpha":false}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"compile","status":"checkpoint","elapsedMs":59,"message":"composition metadata resolved","width":1080,"height":1920,"videoCount":0,"audioCount":0,"imageCount":0,"deviceScaleFactor":1,"forceScreenshot":false,"compositionHash":"fcac65f5aa4a48f5"}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"browser_probe","status":"start","elapsedMs":59,"forceScreenshot":false,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"browser_probe","status":"end","elapsedMs":67,"durationMs":7,"forceScreenshot":false,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"browser_probe","status":"checkpoint","elapsedMs":67,"message":"duration resolved","durationSeconds":15,"totalFrames":450,"compositionHash":"fcac65f5aa4a48f5","beginFrameStalled":false}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"video_extract","status":"start","elapsedMs":67,"videoCount":0}
+  ██░░░░░░░░░░░░░░░░░░░░░░░  10%  Extracting video frames
+@hf-progress {"code":"extract_video","pct":10}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"video_extract","status":"end","elapsedMs":68,"durationMs":0,"videoCount":0}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"video_extract","status":"checkpoint","elapsedMs":69,"message":"frames resolved","videoCount":0,"extractedVideoCount":0,"totalFramesExtracted":0,"maxFramesPerVideo":0,"avgFramesPerExtractedVideo":null,"vfrPreflightCount":null,"vfrPreflightMs":null,"cacheHits":null,"cacheMisses":null,"transientRetries":null,"minVideoFrameCoverageRatio":null,"authoredTimedClipCount":12}
+[INFO] [Render] No HDR sources detected, rendering SDR {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95"}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"hdr_detection","status":"checkpoint","elapsedMs":69,"message":"resolved","requestedHdrMode":"auto","effectiveHdr":"sdr","nativeHdrVideoCount":0,"nativeHdrImageCount":0}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"audio_process","status":"start","elapsedMs":69,"audioCount":0}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"file_server","status":"start","elapsedMs":70,"reused":false}
+  █████░░░░░░░░░░░░░░░░░░░░  20%  Processing audio tracks
+@hf-progress {"code":"process_audio","pct":20}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"audio_process","status":"end","elapsedMs":72,"durationMs":3,"audioCount":0}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Starting frame capture
+@hf-progress {"code":"start_browsers","pct":25}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"file_server","status":"end","elapsedMs":73,"durationMs":3}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Checking browser GPU
+@hf-progress {"code":"start_browsers","pct":25}
+[hyperframes] browserGpuMode probe → software (WebGL unavailable)
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Starting frame capture
+@hf-progress {"code":"start_browsers","pct":25}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"capture_calibration","status":"start","elapsedMs":1961,"stagePhase":"calibrating","forceScreenshot":false,"totalFrames":450,"framesCompleted":0,"captureMode":"beginframe","captureOperation":"beginFrame"}
+[INFO] [Render] Calibration config {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","protocolTimeout":30000,"parentProtocolTimeout":300000,"forceScreenshot":false,"totalFrames":450}
+[INFO] Launching browser for capture calibration... {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95"}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Measuring capture speed
+@hf-progress {"code":"start_browsers","pct":25}
+[INFO] Initializing calibration session... {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95"}
+[INFO] Calibration session ready, capturing test frames... {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95"}
+[INFO] Calibration: capturing test frame 1/5... {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95"}
+[INFO] Calibration: capturing test frame 2/5... {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95"}
+[INFO] Calibration: capturing test frame 3/5... {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95"}
+[INFO] Calibration: capturing test frame 4/5... {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95"}
+[INFO] Calibration: capturing test frame 5/5... {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95"}
+[INFO] Calibration complete, estimated cost: 66ms/frame (p95) {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95"}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"capture_calibration","status":"end","elapsedMs":2676,"durationMs":714,"stagePhase":"calibrating","forceScreenshot":false,"totalFrames":450,"framesCompleted":0,"captureMode":"beginframe","captureOperation":"beginFrame"}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"capture_calibration","status":"checkpoint","elapsedMs":2676,"message":"resolved","forceScreenshot":false,"multiplier":1,"p95Ms":66,"medianMs":49}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"worker_resolution","status":"checkpoint","elapsedMs":2678,"message":"resolved","workerCount":1}
+[INFO] streaming-encode gate {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","enabled":true,"reason":"single_worker","configFlag":true,"durationCapEnabled":false,"outputFormat":"mp4","workerCount":1,"durationSeconds":15,"maxDurationSeconds":240}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"capture_strategy","status":"checkpoint","elapsedMs":2679,"message":"resolved","workerCount":1,"forceScreenshot":false,"captureBeyondViewport":null,"useStreamingEncode":true,"useLayeredComposite":false,"usePageSideCompositing":false,"hasHdrContent":false,"hasShaderTransitions":false,"isPngSequence":false}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Starting frame capture
+@hf-progress {"code":"start_browsers","pct":25}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"capture_streaming","status":"start","elapsedMs":2679,"stagePhase":"capturing","workerCount":1,"forceScreenshot":false,"totalFrames":450,"framesCompleted":0,"captureMode":"beginframe","captureOperation":"beginFrame"}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Streaming frame 1/450
+@hf-progress {"code":"capture","done":1,"total":450,"pct":25}
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 6/450
+@hf-progress {"code":"capture","done":6,"total":450,"pct":26}
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 11/450
+@hf-progress {"code":"capture","done":11,"total":450,"pct":26}
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 15/450
+@hf-progress {"code":"capture","done":15,"total":450,"pct":27}
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 20/450
+@hf-progress {"code":"capture","done":20,"total":450,"pct":27}
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 25/450
+@hf-progress {"code":"capture","done":25,"total":450,"pct":28}
+  ███████░░░░░░░░░░░░░░░░░░  29%  Streaming frame 30/450
+@hf-progress {"code":"capture","done":30,"total":450,"pct":29}
+  ███████░░░░░░░░░░░░░░░░░░  29%  Streaming frame 35/450
+@hf-progress {"code":"capture","done":35,"total":450,"pct":29}
+  ███████░░░░░░░░░░░░░░░░░░  30%  Streaming frame 40/450
+@hf-progress {"code":"capture","done":40,"total":450,"pct":30}
+  ███████░░░░░░░░░░░░░░░░░░  31%  Streaming frame 45/450
+@hf-progress {"code":"capture","done":45,"total":450,"pct":31}
+  ███████░░░░░░░░░░░░░░░░░░  31%  Streaming frame 50/450
+@hf-progress {"code":"capture","done":50,"total":450,"pct":31}
+  ████████░░░░░░░░░░░░░░░░░  32%  Streaming frame 55/450
+@hf-progress {"code":"capture","done":55,"total":450,"pct":32}
+  ████████░░░░░░░░░░░░░░░░░  32%  Streaming frame 60/450
+@hf-progress {"code":"capture","done":60,"total":450,"pct":32}
+  ████████░░░░░░░░░░░░░░░░░  33%  Streaming frame 65/450
+@hf-progress {"code":"capture","done":65,"total":450,"pct":33}
+  ████████░░░░░░░░░░░░░░░░░  34%  Streaming frame 70/450
+@hf-progress {"code":"capture","done":70,"total":450,"pct":34}
+  ████████░░░░░░░░░░░░░░░░░  34%  Streaming frame 74/450
+@hf-progress {"code":"capture","done":74,"total":450,"pct":34}
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 78/450
+@hf-progress {"code":"capture","done":78,"total":450,"pct":35}
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 82/450
+@hf-progress {"code":"capture","done":82,"total":450,"pct":35}
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 86/450
+@hf-progress {"code":"capture","done":86,"total":450,"pct":36}
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 90/450
+@hf-progress {"code":"capture","done":90,"total":450,"pct":36}
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 94/450
+@hf-progress {"code":"capture","done":94,"total":450,"pct":36}
+  █████████░░░░░░░░░░░░░░░░  37%  Streaming frame 98/450
+@hf-progress {"code":"capture","done":98,"total":450,"pct":37}
+  █████████░░░░░░░░░░░░░░░░  37%  Streaming frame 102/450
+@hf-progress {"code":"capture","done":102,"total":450,"pct":37}
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 106/450
+@hf-progress {"code":"capture","done":106,"total":450,"pct":38}
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 110/450
+@hf-progress {"code":"capture","done":110,"total":450,"pct":38}
+  █████████░░░░░░░░░░░░░░░░  39%  Streaming frame 114/450
+@hf-progress {"code":"capture","done":114,"total":450,"pct":39}
+  █████████░░░░░░░░░░░░░░░░  39%  Streaming frame 118/450
+@hf-progress {"code":"capture","done":118,"total":450,"pct":39}
+  ██████████░░░░░░░░░░░░░░░  40%  Streaming frame 122/450
+@hf-progress {"code":"capture","done":122,"total":450,"pct":40}
+  ██████████░░░░░░░░░░░░░░░  40%  Streaming frame 126/450
+@hf-progress {"code":"capture","done":126,"total":450,"pct":40}
+  ██████████░░░░░░░░░░░░░░░  41%  Streaming frame 130/450
+@hf-progress {"code":"capture","done":130,"total":450,"pct":41}
+  ██████████░░░░░░░░░░░░░░░  41%  Streaming frame 134/450
+@hf-progress {"code":"capture","done":134,"total":450,"pct":41}
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 138/450
+@hf-progress {"code":"capture","done":138,"total":450,"pct":42}
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 142/450
+@hf-progress {"code":"capture","done":142,"total":450,"pct":42}
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 146/450
+@hf-progress {"code":"capture","done":146,"total":450,"pct":43}
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 150/450
+@hf-progress {"code":"capture","done":150,"total":450,"pct":43}
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 154/450
+@hf-progress {"code":"capture","done":154,"total":450,"pct":44}
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 158/450
+@hf-progress {"code":"capture","done":158,"total":450,"pct":44}
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 162/450
+@hf-progress {"code":"capture","done":162,"total":450,"pct":45}
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 166/450
+@hf-progress {"code":"capture","done":166,"total":450,"pct":45}
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 170/450
+@hf-progress {"code":"capture","done":170,"total":450,"pct":46}
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 174/450
+@hf-progress {"code":"capture","done":174,"total":450,"pct":46}
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 178/450
+@hf-progress {"code":"capture","done":178,"total":450,"pct":47}
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 182/450
+@hf-progress {"code":"capture","done":182,"total":450,"pct":47}
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 186/450
+@hf-progress {"code":"capture","done":186,"total":450,"pct":48}
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 190/450
+@hf-progress {"code":"capture","done":190,"total":450,"pct":48}
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 194/450
+@hf-progress {"code":"capture","done":194,"total":450,"pct":49}
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 198/450
+@hf-progress {"code":"capture","done":198,"total":450,"pct":49}
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 202/450
+@hf-progress {"code":"capture","done":202,"total":450,"pct":50}
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 207/450
+@hf-progress {"code":"capture","done":207,"total":450,"pct":50}
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 212/450
+@hf-progress {"code":"capture","done":212,"total":450,"pct":51}
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 217/450
+@hf-progress {"code":"capture","done":217,"total":450,"pct":52}
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 222/450
+@hf-progress {"code":"capture","done":222,"total":450,"pct":52}
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 227/450
+@hf-progress {"code":"capture","done":227,"total":450,"pct":53}
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 232/450
+@hf-progress {"code":"capture","done":232,"total":450,"pct":53}
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 237/450
+@hf-progress {"code":"capture","done":237,"total":450,"pct":54}
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 242/450
+@hf-progress {"code":"capture","done":242,"total":450,"pct":55}
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 248/450
+@hf-progress {"code":"capture","done":248,"total":450,"pct":55}
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 254/450
+@hf-progress {"code":"capture","done":254,"total":450,"pct":56}
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 259/450
+@hf-progress {"code":"capture","done":259,"total":450,"pct":57}
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 265/450
+@hf-progress {"code":"capture","done":265,"total":450,"pct":57}
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 271/450
+@hf-progress {"code":"capture","done":271,"total":450,"pct":58}
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 276/450
+@hf-progress {"code":"capture","done":276,"total":450,"pct":59}
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 282/450
+@hf-progress {"code":"capture","done":282,"total":450,"pct":59}
+  ███████████████░░░░░░░░░░  60%  Streaming frame 288/450
+@hf-progress {"code":"capture","done":288,"total":450,"pct":60}
+  ███████████████░░░░░░░░░░  61%  Streaming frame 294/450
+@hf-progress {"code":"capture","done":294,"total":450,"pct":61}
+  ███████████████░░░░░░░░░░  62%  Streaming frame 300/450
+@hf-progress {"code":"capture","done":300,"total":450,"pct":62}
+  ███████████████░░░░░░░░░░  62%  Streaming frame 305/450
+@hf-progress {"code":"capture","done":305,"total":450,"pct":62}
+  ███████████████░░░░░░░░░░  63%  Streaming frame 310/450
+@hf-progress {"code":"capture","done":310,"total":450,"pct":63}
+  ████████████████░░░░░░░░░  64%  Streaming frame 316/450
+@hf-progress {"code":"capture","done":316,"total":450,"pct":64}
+  ████████████████░░░░░░░░░  64%  Streaming frame 322/450
+@hf-progress {"code":"capture","done":322,"total":450,"pct":64}
+  ████████████████░░░░░░░░░  65%  Streaming frame 328/450
+@hf-progress {"code":"capture","done":328,"total":450,"pct":65}
+  ████████████████░░░░░░░░░  66%  Streaming frame 334/450
+@hf-progress {"code":"capture","done":334,"total":450,"pct":66}
+  ████████████████░░░░░░░░░  67%  Streaming frame 340/450
+@hf-progress {"code":"capture","done":340,"total":450,"pct":67}
+  ████████████████░░░░░░░░░  67%  Streaming frame 346/450
+@hf-progress {"code":"capture","done":346,"total":450,"pct":67}
+  █████████████████░░░░░░░░  68%  Streaming frame 352/450
+@hf-progress {"code":"capture","done":352,"total":450,"pct":68}
+  █████████████████░░░░░░░░  69%  Streaming frame 358/450
+@hf-progress {"code":"capture","done":358,"total":450,"pct":69}
+  █████████████████░░░░░░░░  69%  Streaming frame 364/450
+@hf-progress {"code":"capture","done":364,"total":450,"pct":69}
+  █████████████████░░░░░░░░  70%  Streaming frame 370/450
+@hf-progress {"code":"capture","done":370,"total":450,"pct":70}
+  █████████████████░░░░░░░░  71%  Streaming frame 376/450
+@hf-progress {"code":"capture","done":376,"total":450,"pct":71}
+  ██████████████████░░░░░░░  72%  Streaming frame 382/450
+@hf-progress {"code":"capture","done":382,"total":450,"pct":72}
+  ██████████████████░░░░░░░  72%  Streaming frame 388/450
+@hf-progress {"code":"capture","done":388,"total":450,"pct":72}
+  ██████████████████░░░░░░░  73%  Streaming frame 394/450
+@hf-progress {"code":"capture","done":394,"total":450,"pct":73}
+  ██████████████████░░░░░░░  74%  Streaming frame 400/450
+@hf-progress {"code":"capture","done":400,"total":450,"pct":74}
+  ██████████████████░░░░░░░  75%  Streaming frame 406/450
+@hf-progress {"code":"capture","done":406,"total":450,"pct":75}
+  ██████████████████░░░░░░░  75%  Streaming frame 412/450
+@hf-progress {"code":"capture","done":412,"total":450,"pct":75}
+  ███████████████████░░░░░░  76%  Streaming frame 418/450
+@hf-progress {"code":"capture","done":418,"total":450,"pct":76}
+  ███████████████████░░░░░░  77%  Streaming frame 424/450
+@hf-progress {"code":"capture","done":424,"total":450,"pct":77}
+  ███████████████████░░░░░░  78%  Streaming frame 430/450
+@hf-progress {"code":"capture","done":430,"total":450,"pct":78}
+  ███████████████████░░░░░░  78%  Streaming frame 436/450
+@hf-progress {"code":"capture","done":436,"total":450,"pct":78}
+  ███████████████████░░░░░░  79%  Streaming frame 442/450
+@hf-progress {"code":"capture","done":442,"total":450,"pct":79}
+  ████████████████████░░░░░  80%  Streaming frame 448/450
+@hf-progress {"code":"capture","done":448,"total":450,"pct":80}
+  ████████████████████░░░░░  80%  Streaming frame 450/450
+@hf-progress {"code":"capture","done":450,"total":450,"pct":80}
+  ██████████████████████░░░  89%  Encoding frame 412/450
+@hf-progress {"code":"encode","done":412,"total":450,"pct":89}
+  ██████████████████████░░░  90%  Encoding frame 450/450
+@hf-progress {"code":"encode","done":450,"total":450,"pct":90}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"capture_streaming","status":"end","elapsedMs":28207,"durationMs":25528,"stagePhase":"capturing","workerCount":1,"forceScreenshot":false,"totalFrames":450,"framesCompleted":450,"captureMode":"beginframe","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"assemble","status":"start","elapsedMs":28208,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":false,"totalFrames":450,"framesCompleted":450,"captureMode":"beginframe","captureOperation":"encode"}
+  ██████████████████████░░░  90%  Assembling final video
+@hf-progress {"code":"assemble","done":0,"total":15,"pct":90}
+  ████████████████████████░  99%  Assembling final video
+@hf-progress {"code":"assemble","done":15,"total":15,"pct":99}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"assemble","status":"end","elapsedMs":28256,"durationMs":48,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":false,"totalFrames":450,"framesCompleted":450,"captureMode":"beginframe","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"8cf087cb-d184-4402-a6a3-0fbe28791f95","phase":"pipeline","status":"checkpoint","elapsedMs":28300,"message":"artifact validated","totalElapsedMs":28300}
+  █████████████████████████  100%  Render complete
+
+◇  /home/runner/work/kerja-berat/kerja-berat/jobs/layangan-proj/renders/layangan.mp4
+   4.7 MB · 15.0s video · rendered in 28.3s
+   beginframe capture · software gpu · compile 0.1s · extract 0.0s · audio 0.0s · probe 0.0s · setup 2.6s · capture 25.5s · encode (during capture) 25.5s · assemble 0.0s
+@hf-result {"version":1,"operation":"render","reference_background":{"kind":"solid","rgb":[121,196,242]}}
++ ls -la renders/
+total 4772
+drwxr-xr-x 2 runner runner    4096 Nov 11 12:21 .
+drwxr-xr-x 6 runner runner    4096 Nov 11 12:21 ..
+-rw-r--r-- 1 runner runner 4876146 Nov 11 12:21 layangan.mp4
++ ffprobe -v error -show_format -show_streams renders/layangan.mp4
++ tee /home/runner/work/kerja-berat/kerja-berat/hasil-run/ffprobe.txt
+[STREAM]
+index=0
+codec_name=h264
+codec_long_name=H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+profile=High
+codec_type=video
+codec_tag_string=avc1
+codec_tag=0x31637661
+width=1080
+height=1920
+coded_width=1080
+coded_height=1920
+has_b_frames=0
+sample_aspect_ratio=1:1
+display_aspect_ratio=9:16
+pix_fmt=yuv420p
+level=40
+color_range=tv
+color_space=bt709
+color_transfer=bt709
+color_primaries=bt709
+chroma_location=left
+field_order=progressive
+refs=1
+is_avc=true
+nal_length_size=4
+id=0x1
+r_frame_rate=30/1
+avg_frame_rate=30/1
+time_base=1/15360
+start_pts=0
+start_time=0.000000
+duration_ts=230400
+duration=15.000000
+bit_rate=2598978
+max_bit_rate=N/A
+bits_per_raw_sample=8
+nb_frames=450
+nb_read_frames=N/A
+nb_read_packets=N/A
+extradata_size=51
+DISPOSITION:default=1
+DISPOSITION:dub=0
+DISPOSITION:original=0
+DISPOSITION:comment=0
+DISPOSITION:lyrics=0
+DISPOSITION:karaoke=0
+DISPOSITION:forced=0
+DISPOSITION:hearing_impaired=0
+DISPOSITION:visual_impaired=0
+DISPOSITION:clean_effects=0
+DISPOSITION:attached_pic=0
+DISPOSITION:timed_thumbnails=0
+DISPOSITION:non_diegetic=0
+DISPOSITION:captions=0
+DISPOSITION:descriptions=0
+DISPOSITION:metadata=0
+DISPOSITION:dependent=0
+DISPOSITION:still_image=0
+DISPOSITION:multilayer=0
+TAG:language=und
+TAG:handler_name=VideoHandler
+TAG:vendor_id=[0][0][0][0]
+TAG:encoder=Lavc62.11.100 libx264
+[/STREAM]
+[FORMAT]
+filename=renders/layangan.mp4
+nb_streams=1
+nb_programs=0
+nb_stream_groups=0
+format_name=mov,mp4,m4a,3gp,3g2,mj2
+format_long_name=QuickTime / MOV
+start_time=0.000000
+duration=15.000000
+size=4876146
+bit_rate=2600611
+probe_score=100
+TAG:minor_version=512
+TAG:major_brand=isom
+TAG:compatible_brands=isomiso2avc1mp41
+TAG:hyperframes_version=0.9.33
+TAG:hyperframes_renderer=hyperframes
+TAG:encoder=Lavf62.3.100
+[/FORMAT]
+++ date +%Y%m%d%H%M%S
++ TAG=layangan-uji-20261111122142
+++ git -C /home/runner/work/kerja-berat/kerja-berat config --get http.https://github.com/.extraheader
++ HDR='AUTHORIZATION: basic eC1hY2Nlc3MtdG9rZW46Z2hzXzE1MzY4X2V5SmhiR2NpT2lKRlV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUpoZFdRaU9pSmhkWFJvYm1RaUxDSmpkSGdpT2lKbk5HMDBORXBSZEhnNE5qUkpiSE42ZFZGZloySjZOR1pSWkhWdlEycGlUWE5XWWxVMVNtWnhlVXd3ZGxwUlZHOXJPRkozYjJJd0lpd2laWGh3SWpveE56azBOREF6TWpRekxDSnBZWFFpT2pFM09UUXpPVGsyTkRNc0ltbHpjeUk2SW1kcGRHaDFZaUlzSW1wMGFTSTZJamsyTTJJeE9HRmtMV1ExTjJRdE5EUTBOaTA1Tm1VeUxXUTBaVFkzWVRCbVpEa3hOQ0lzSW5abGNpSTZNMzAuZXZVZDIwS21BV0ZCc1JFOUtTeF84RzFybnBlRFdSMGN1MU1senRhQ1dkdUk3eXRYc2JVWjRHcTdXb21ISnFEM2JVYm1qNEFoWjNZRlF2eXNlVHFiSEE='
++ API=https://api.github.com/repos/Wongwangsul/kerja-berat
++ curl -s -X POST -H 'AUTHORIZATION: basic eC1hY2Nlc3MtdG9rZW46Z2hzXzE1MzY4X2V5SmhiR2NpT2lKRlV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUpoZFdRaU9pSmhkWFJvYm1RaUxDSmpkSGdpT2lKbk5HMDBORXBSZEhnNE5qUkpiSE42ZFZGZloySjZOR1pSWkhWdlEycGlUWE5XWWxVMVNtWnhlVXd3ZGxwUlZHOXJPRkozYjJJd0lpd2laWGh3SWpveE56azBOREF6TWpRekxDSnBZWFFpT2pFM09UUXpPVGsyTkRNc0ltbHpjeUk2SW1kcGRHaDFZaUlzSW1wMGFTSTZJamsyTTJJeE9HRmtMV1ExTjJRdE5EUTBOaTA1Tm1VeUxXUTBaVFkzWVRCbVpEa3hOQ0lzSW5abGNpSTZNMzAuZXZVZDIwS21BV0ZCc1JFOUtTeF84RzFybnBlRFdSMGN1MU1senRhQ1dkdUk3eXRYc2JVWjRHcTdXb21ISnFEM2JVYm1qNEFoWjNZRlF2eXNlVHFiSEE=' -H 'Accept: application/vnd.github+json' https://api.github.com/repos/Wongwangsul/kerja-berat/releases -d '{"tag_name":"layangan-uji-20261111122142","name":"Layangan HyperFrames Uji","body":"Render uji HyperFrames: layang-layang vertikal 1080x1920 30fps 15 detik."}' -o rel.json
++ cat rel.json
+{
+  "url": "https://api.github.com/repos/Wongwangsul/kerja-berat/releases/441656500",
+  "assets_url": "https://api.github.com/repos/Wongwangsul/kerja-berat/releases/441656500/assets",
+  "upload_url": "https://uploads.github.com/repos/Wongwangsul/kerja-berat/releases/441656500/assets{?name,label}",
+  "html_url": "https://github.com/Wongwangsul/kerja-berat/releases/tag/layangan-uji-20261111122142",
+  "id": 441656500,
+  "author": {
+    "login": "github-actions[bot]",
+    "id": 41898282,
+    "node_id": "MDM6Qm90NDE4OTgyODI=",
+    "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+    "html_url": "https://github.com/apps/github-actions",
+    "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "node_id": "RE_kwDOViDNB84aUyS0",
+  "tag_name": "layangan-uji-20261111122142",
+  "target_commitish": "main",
+  "name": "Layangan HyperFrames Uji",
+  "draft": false,
+  "immutable": false,
+  "prerelease": false,
+  "created_at": "2026-11-11T12:20:37Z",
+  "updated_at": "2026-11-11T12:21:42Z",
+  "published_at": "2026-11-11T12:21:42Z",
+  "assets": [
+
+  ],
+  "tarball_url": "https://api.github.com/repos/Wongwangsul/kerja-berat/tarball/layangan-uji-20261111122142",
+  "zipball_url": "https://api.github.com/repos/Wongwangsul/kerja-berat/zipball/layangan-uji-20261111122142",
+  "body": "Render uji HyperFrames: layang-layang vertikal 1080x1920 30fps 15 detik."
+}
+++ python3 -c 'import json;print(json.load(open('\''rel.json'\''))['\''id'\''])'
++ RID=441656500
++ echo 'release id: 441656500 tag: layangan-uji-20261111122142'
+release id: 441656500 tag: layangan-uji-20261111122142
+++ curl -s -o up.json -w '%{http_code}' -X POST -H 'AUTHORIZATION: basic eC1hY2Nlc3MtdG9rZW46Z2hzXzE1MzY4X2V5SmhiR2NpT2lKRlV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUpoZFdRaU9pSmhkWFJvYm1RaUxDSmpkSGdpT2lKbk5HMDBORXBSZEhnNE5qUkpiSE42ZFZGZloySjZOR1pSWkhWdlEycGlUWE5XWWxVMVNtWnhlVXd3ZGxwUlZHOXJPRkozYjJJd0lpd2laWGh3SWpveE56azBOREF6TWpRekxDSnBZWFFpT2pFM09UUXpPVGsyTkRNc0ltbHpjeUk2SW1kcGRHaDFZaUlzSW1wMGFTSTZJamsyTTJJeE9HRmtMV1ExTjJRdE5EUTBOaTA1Tm1VeUxXUTBaVFkzWVRCbVpEa3hOQ0lzSW5abGNpSTZNMzAuZXZVZDIwS21BV0ZCc1JFOUtTeF84RzFybnBlRFdSMGN1MU1senRhQ1dkdUk3eXRYc2JVWjRHcTdXb21ISnFEM2JVYm1qNEFoWjNZRlF2eXNlVHFiSEE=' -H 'Content-Type: video/mp4' --data-binary @renders/layangan.mp4 'https://uploads.github.com/repos/Wongwangsul/kerja-berat/releases/441656500/assets?name=layangan-hyperframes-uji.mp4'
++ CODE=201
++ echo 'upload http: 201'
+upload http: 201
++ cat up.json
+{"url":"https://api.github.com/repos/Wongwangsul/kerja-berat/releases/assets/735429156","id":735429156,"node_id":"RA_kwDOViDNB84r1cIk","name":"layangan-hyperframes-uji.mp4","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","avatar_url":"https://avatars.githubusercontent.com/in/15368?v=4","gravatar_id":"","url":"https://api.github.com/users/github-actions%5Bbot%5D","html_url":"https://github.com/apps/github-actions","followers_url":"https://api.github.com/users/github-actions%5Bbot%5D/followers","following_url":"https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}","gists_url":"https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}","starred_url":"https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/github-actions%5Bbot%5D/subscriptions","organizations_url":"https://api.github.com/users/github-actions%5Bbot%5D/orgs","repos_url":"https://api.github.com/users/github-actions%5Bbot%5D/repos","events_url":"https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}","received_events_url":"https://api.github.com/users/github-actions%5Bbot%5D/received_events","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"video/mp4","state":"uploaded","size":4876146,"digest":"sha256:f6ac84a92291ba069d52fdf0fabd749aa6913bfba10914db4ea44911fe091b9b","download_count":0,"created_at":"2026-11-11T12:21:43Z","updated_at":"2026-11-11T12:21:44Z","browser_download_url":"https://github.com/Wongwangsul/kerja-berat/releases/download/layangan-uji-20261111122142/layangan-hyperframes-uji.mp4"}+ echo 'tag: layangan-uji-20261111122142'
++ echo 'release_id: 441656500'
++ echo 'upload_http: 201'
++ '[' 201 = 201 ']'
++ echo 'SELESAI: MP4 terunggah ke Release tag layangan-uji-20261111122142'
+SELESAI: MP4 terunggah ke Release tag layangan-uji-20261111122142
+=== Selesai. Kode keluar: 0 ===
