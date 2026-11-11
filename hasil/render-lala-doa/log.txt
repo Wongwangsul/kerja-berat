@@ -1,0 +1,949 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       1.0Gi        13Gi        42Mi       1.0Gi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   57G   88G  40% /
+Linux runnervmwuk1x 7.0.0-1019-azure #20-Ubuntu SMP PREEMPT Mon Oct 19 22:41:16 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/render-lala-doa.sh ===
++++ dirname jobs/render-lala-doa.sh
+++ cd jobs/..
+++ pwd
++ ROOT=/home/runner/work/kerja-berat/kerja-berat
++ PROJ=/home/runner/work/kerja-berat/kerja-berat/jobs/lala-proj
++ OUTDIR=/home/runner/work/kerja-berat/kerja-berat/hasil-run
++ mkdir -p /home/runner/work/kerja-berat/kerja-berat/hasil-run
++ cd /home/runner/work/kerja-berat/kerja-berat/jobs/lala-proj
++ cat assets/narasi.b64.aa assets/narasi.b64.ab assets/narasi.b64.ac assets/narasi.b64.ad assets/narasi.b64.ae assets/narasi.b64.af
++ base64 -d
++ ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 assets/narasi.mp3
+jobs/render-lala-doa.sh: line 15: ffprobe: command not found
++ node_ok
++ node -e 'process.exit(parseInt(process.versions.node.split(".")[0],10)>=22?0:1)'
++ node_ok
++ node -e 'process.exit(parseInt(process.versions.node.split(".")[0],10)>=22?0:1)'
++ node --version
+v24.22.2
++ node_ok
++ node -e 'process.exit(parseInt(process.versions.node.split(".")[0],10)>=22?0:1)'
++ command -v ffmpeg
++ sudo apt-get update -qq
++ sudo apt-get install -y -qq ffmpeg libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2t64 libpango-1.0-0 libcairo2
++ ffmpeg -version
++ head -1
+ffmpeg version 8.0.1-3ubuntu2 Copyright (c) 2000-2025 the FFmpeg developers
++ mkdir -p assets/fonts
++ curl -fsSL https://raw.githubusercontent.com/google/fonts/main/ofl/amiri/Amiri-Regular.ttf -o assets/fonts/Amiri-Regular.ttf
++ curl -fsSL https://raw.githubusercontent.com/google/fonts/main/ofl/amiri/Amiri-Bold.ttf -o assets/fonts/Amiri-Bold.ttf
++ curl -fsSL https://raw.githubusercontent.com/google/fonts/main/ofl/baloo2/Baloo2%5Bwght%5D.ttf -o assets/fonts/Baloo2.ttf
++ ls -la assets/fonts/
+total 1504
+drwxr-xr-x 2 runner runner   4096 Nov 11 12:35 .
+drwxr-xr-x 3 runner runner   4096 Nov 11 12:35 ..
+-rw-r--r-- 1 runner runner 413480 Nov 11 12:35 Amiri-Bold.ttf
+-rw-r--r-- 1 runner runner 431116 Nov 11 12:35 Amiri-Regular.ttf
+-rw-r--r-- 1 runner runner 683200 Nov 11 12:35 Baloo2.ttf
++ export HYPERFRAMES_EXTRACT_CACHE_DIR=/home/runner/work/kerja-berat/kerja-berat/jobs/lala-proj/.framecache
++ HYPERFRAMES_EXTRACT_CACHE_DIR=/home/runner/work/kerja-berat/kerja-berat/jobs/lala-proj/.framecache
++ mkdir -p /home/runner/work/kerja-berat/kerja-berat/jobs/lala-proj/.framecache
++ npx -y hyperframes@0.9.33 browser ensure
+
+  Hyperframes collects usage data to improve the tool, anonymous until you sign in.
+  File paths and composition content are never collected.
+  If you sign in to HeyGen, your account (email and username) is linked to your usage.
+
+  Disable anytime: hyperframes telemetry disable
+
+┌  hyperframes browser ensure
+Looking for an existing browser...
+Download complete
+
+   Source:  download
+   Path:    /home/runner/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell
+
+│
+└  Ready to render.
+
++ npx -y hyperframes@0.9.33 render -o renders/lala.mp4 -f 30 -q delivery
+
+◆  Rendering lala-proj → /home/runner/work/kerja-berat/kerja-berat/jobs/lala-proj/renders/lala.mp4
+   30fps · high · auto workers (4 cores detected)
+   GPU: browser GPU (auto-detect)
+
+
+  Lint: 1 error(s), 21 warning(s) — run `hyperframes lint` for full output.
+  Continuing render despite lint issues. Use --strict to block errors.
+
+Checking browser...
+Browser: cache
+[INFO] [Render] Pipeline started {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","platform":"linux","arch":"x64","nodeVersion":"v24.22.2","fps":{"num":30,"den":1},"format":"mp4","quality":"high","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeout":300000,"browserTimeout":120000,"pageNavigationTimeout":60000,"playerReadyTimeout":45000}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"pipeline","status":"checkpoint","elapsedMs":4,"message":"started","format":"mp4","quality":"high","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeoutMs":300000,"pageNavigationTimeoutMs":60000,"playerReadyTimeoutMs":45000,"requestedWorkers":"auto"}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"compile","status":"start","elapsedMs":6,"needsAlpha":false}
+  █░░░░░░░░░░░░░░░░░░░░░░░░  5%  Compiling composition
+@hf-progress {"code":"compile","pct":5}
+[INFO] [Compiler] Fetched 11 font face(s) for "Inter" from Google Fonts (cached to /home/runner/.cache/hyperframes/fonts/inter)
+[INFO] [Compiler] Fetched 4 font face(s) for "Noto Naskh Arabic" from Google Fonts (cached to /home/runner/.cache/hyperframes/fonts/noto-naskh-arabic)
+[INFO] [Compiler] Injected deterministic @font-face rules for 2 requested font families
+[INFO] Compiled composition metadata {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","entryFile":"index.html","staticDuration":31.5,"width":1080,"height":1920,"videoCount":0,"audioCount":0,"renderModeHints":{"recommendScreenshot":false,"reasons":[]}}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"compile","status":"end","elapsedMs":970,"durationMs":964,"needsAlpha":false}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"compile","status":"checkpoint","elapsedMs":977,"message":"composition metadata resolved","width":1080,"height":1920,"videoCount":0,"audioCount":0,"imageCount":0,"deviceScaleFactor":1,"forceScreenshot":false,"compositionHash":"0091729ace30fb29"}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"browser_probe","status":"start","elapsedMs":978,"forceScreenshot":false,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"browser_probe","status":"end","elapsedMs":1022,"durationMs":44,"forceScreenshot":false,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"browser_probe","status":"checkpoint","elapsedMs":1028,"message":"duration resolved","durationSeconds":31.5,"totalFrames":945,"compositionHash":"0091729ace30fb29","beginFrameStalled":false}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"video_extract","status":"start","elapsedMs":1028,"videoCount":0}
+  ██░░░░░░░░░░░░░░░░░░░░░░░  10%  Extracting video frames
+@hf-progress {"code":"extract_video","pct":10}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"video_extract","status":"end","elapsedMs":1029,"durationMs":1,"videoCount":0}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"video_extract","status":"checkpoint","elapsedMs":1040,"message":"frames resolved","videoCount":0,"extractedVideoCount":0,"totalFramesExtracted":0,"maxFramesPerVideo":0,"avgFramesPerExtractedVideo":null,"vfrPreflightCount":null,"vfrPreflightMs":null,"cacheHits":null,"cacheMisses":null,"transientRetries":null,"minVideoFrameCoverageRatio":null,"authoredTimedClipCount":20}
+[INFO] [Render] No HDR sources detected, rendering SDR {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8"}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"hdr_detection","status":"checkpoint","elapsedMs":1041,"message":"resolved","requestedHdrMode":"auto","effectiveHdr":"sdr","nativeHdrVideoCount":0,"nativeHdrImageCount":0}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"audio_process","status":"start","elapsedMs":1041,"audioCount":0}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"file_server","status":"start","elapsedMs":1041,"reused":false}
+  █████░░░░░░░░░░░░░░░░░░░░  20%  Processing audio tracks
+@hf-progress {"code":"process_audio","pct":20}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"audio_process","status":"end","elapsedMs":1045,"durationMs":4,"audioCount":0}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Starting frame capture
+@hf-progress {"code":"start_browsers","pct":25}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"file_server","status":"end","elapsedMs":1046,"durationMs":4}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Checking browser GPU
+@hf-progress {"code":"start_browsers","pct":25}
+[hyperframes] browserGpuMode probe → software (WebGL unavailable)
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Starting frame capture
+@hf-progress {"code":"start_browsers","pct":25}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"capture_calibration","status":"start","elapsedMs":1415,"stagePhase":"calibrating","forceScreenshot":false,"totalFrames":945,"framesCompleted":0,"captureMode":"beginframe","captureOperation":"beginFrame"}
+[INFO] [Render] Calibration config {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","protocolTimeout":30000,"parentProtocolTimeout":300000,"forceScreenshot":false,"totalFrames":945}
+[INFO] Launching browser for capture calibration... {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8"}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Measuring capture speed
+@hf-progress {"code":"start_browsers","pct":25}
+[INFO] Initializing calibration session... {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8"}
+[INFO] Calibration session ready, capturing test frames... {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8"}
+[INFO] Calibration: capturing test frame 1/5... {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8"}
+[INFO] Calibration: capturing test frame 2/5... {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8"}
+[INFO] Calibration: capturing test frame 3/5... {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8"}
+[INFO] Calibration: capturing test frame 4/5... {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8"}
+[INFO] Calibration: capturing test frame 5/5... {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8"}
+[INFO] Calibration complete, estimated cost: 79ms/frame (p95) {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8"}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"capture_calibration","status":"end","elapsedMs":2847,"durationMs":1431,"stagePhase":"calibrating","forceScreenshot":false,"totalFrames":945,"framesCompleted":0,"captureMode":"beginframe","captureOperation":"beginFrame"}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"capture_calibration","status":"checkpoint","elapsedMs":2847,"message":"resolved","forceScreenshot":false,"multiplier":1,"p95Ms":79,"medianMs":65}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"worker_resolution","status":"checkpoint","elapsedMs":2849,"message":"resolved","workerCount":1}
+[INFO] streaming-encode gate {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","enabled":true,"reason":"single_worker","configFlag":true,"durationCapEnabled":false,"outputFormat":"mp4","workerCount":1,"durationSeconds":31.5,"maxDurationSeconds":240}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"capture_strategy","status":"checkpoint","elapsedMs":2850,"message":"resolved","workerCount":1,"forceScreenshot":false,"captureBeyondViewport":null,"useStreamingEncode":true,"useLayeredComposite":false,"usePageSideCompositing":false,"hasHdrContent":false,"hasShaderTransitions":false,"isPngSequence":false}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Starting frame capture
+@hf-progress {"code":"start_browsers","pct":25}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"capture_streaming","status":"start","elapsedMs":2850,"stagePhase":"capturing","workerCount":1,"forceScreenshot":false,"totalFrames":945,"framesCompleted":0,"captureMode":"beginframe","captureOperation":"beginFrame"}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Streaming frame 1/945
+@hf-progress {"code":"capture","done":1,"total":945,"pct":25}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Streaming frame 5/945
+@hf-progress {"code":"capture","done":5,"total":945,"pct":25}
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 10/945
+@hf-progress {"code":"capture","done":10,"total":945,"pct":26}
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 15/945
+@hf-progress {"code":"capture","done":15,"total":945,"pct":26}
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 19/945
+@hf-progress {"code":"capture","done":19,"total":945,"pct":26}
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 24/945
+@hf-progress {"code":"capture","done":24,"total":945,"pct":26}
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 29/945
+@hf-progress {"code":"capture","done":29,"total":945,"pct":27}
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 33/945
+@hf-progress {"code":"capture","done":33,"total":945,"pct":27}
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 37/945
+@hf-progress {"code":"capture","done":37,"total":945,"pct":27}
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 42/945
+@hf-progress {"code":"capture","done":42,"total":945,"pct":27}
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 47/945
+@hf-progress {"code":"capture","done":47,"total":945,"pct":28}
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 51/945
+@hf-progress {"code":"capture","done":51,"total":945,"pct":28}
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 56/945
+@hf-progress {"code":"capture","done":56,"total":945,"pct":28}
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 60/945
+@hf-progress {"code":"capture","done":60,"total":945,"pct":28}
+  ███████░░░░░░░░░░░░░░░░░░  29%  Streaming frame 64/945
+@hf-progress {"code":"capture","done":64,"total":945,"pct":29}
+  ███████░░░░░░░░░░░░░░░░░░  29%  Streaming frame 68/945
+@hf-progress {"code":"capture","done":68,"total":945,"pct":29}
+  ███████░░░░░░░░░░░░░░░░░░  29%  Streaming frame 72/945
+@hf-progress {"code":"capture","done":72,"total":945,"pct":29}
+  ███████░░░░░░░░░░░░░░░░░░  29%  Streaming frame 76/945
+@hf-progress {"code":"capture","done":76,"total":945,"pct":29}
+  ███████░░░░░░░░░░░░░░░░░░  30%  Streaming frame 80/945
+@hf-progress {"code":"capture","done":80,"total":945,"pct":30}
+  ███████░░░░░░░░░░░░░░░░░░  30%  Streaming frame 84/945
+@hf-progress {"code":"capture","done":84,"total":945,"pct":30}
+  ███████░░░░░░░░░░░░░░░░░░  30%  Streaming frame 88/945
+@hf-progress {"code":"capture","done":88,"total":945,"pct":30}
+  ███████░░░░░░░░░░░░░░░░░░  30%  Streaming frame 93/945
+@hf-progress {"code":"capture","done":93,"total":945,"pct":30}
+  ███████░░░░░░░░░░░░░░░░░░  31%  Streaming frame 97/945
+@hf-progress {"code":"capture","done":97,"total":945,"pct":31}
+  ███████░░░░░░░░░░░░░░░░░░  31%  Streaming frame 102/945
+@hf-progress {"code":"capture","done":102,"total":945,"pct":31}
+  ███████░░░░░░░░░░░░░░░░░░  31%  Streaming frame 107/945
+@hf-progress {"code":"capture","done":107,"total":945,"pct":31}
+  ███████░░░░░░░░░░░░░░░░░░  31%  Streaming frame 111/945
+@hf-progress {"code":"capture","done":111,"total":945,"pct":31}
+  ████████░░░░░░░░░░░░░░░░░  32%  Streaming frame 115/945
+@hf-progress {"code":"capture","done":115,"total":945,"pct":32}
+  ████████░░░░░░░░░░░░░░░░░  32%  Streaming frame 120/945
+@hf-progress {"code":"capture","done":120,"total":945,"pct":32}
+  ████████░░░░░░░░░░░░░░░░░  32%  Streaming frame 124/945
+@hf-progress {"code":"capture","done":124,"total":945,"pct":32}
+  ████████░░░░░░░░░░░░░░░░░  32%  Streaming frame 128/945
+@hf-progress {"code":"capture","done":128,"total":945,"pct":32}
+  ████████░░░░░░░░░░░░░░░░░  33%  Streaming frame 132/945
+@hf-progress {"code":"capture","done":132,"total":945,"pct":33}
+  ████████░░░░░░░░░░░░░░░░░  33%  Streaming frame 136/945
+@hf-progress {"code":"capture","done":136,"total":945,"pct":33}
+  ████████░░░░░░░░░░░░░░░░░  33%  Streaming frame 141/945
+@hf-progress {"code":"capture","done":141,"total":945,"pct":33}
+  ████████░░░░░░░░░░░░░░░░░  33%  Streaming frame 145/945
+@hf-progress {"code":"capture","done":145,"total":945,"pct":33}
+  ████████░░░░░░░░░░░░░░░░░  34%  Streaming frame 150/945
+@hf-progress {"code":"capture","done":150,"total":945,"pct":34}
+  ████████░░░░░░░░░░░░░░░░░  34%  Streaming frame 154/945
+@hf-progress {"code":"capture","done":154,"total":945,"pct":34}
+  ████████░░░░░░░░░░░░░░░░░  34%  Streaming frame 159/945
+@hf-progress {"code":"capture","done":159,"total":945,"pct":34}
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 164/945
+@hf-progress {"code":"capture","done":164,"total":945,"pct":35}
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 168/945
+@hf-progress {"code":"capture","done":168,"total":945,"pct":35}
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 172/945
+@hf-progress {"code":"capture","done":172,"total":945,"pct":35}
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 177/945
+@hf-progress {"code":"capture","done":177,"total":945,"pct":35}
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 182/945
+@hf-progress {"code":"capture","done":182,"total":945,"pct":36}
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 186/945
+@hf-progress {"code":"capture","done":186,"total":945,"pct":36}
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 190/945
+@hf-progress {"code":"capture","done":190,"total":945,"pct":36}
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 194/945
+@hf-progress {"code":"capture","done":194,"total":945,"pct":36}
+  █████████░░░░░░░░░░░░░░░░  37%  Streaming frame 198/945
+@hf-progress {"code":"capture","done":198,"total":945,"pct":37}
+  █████████░░░░░░░░░░░░░░░░  37%  Streaming frame 202/945
+@hf-progress {"code":"capture","done":202,"total":945,"pct":37}
+  █████████░░░░░░░░░░░░░░░░  37%  Streaming frame 206/945
+@hf-progress {"code":"capture","done":206,"total":945,"pct":37}
+  █████████░░░░░░░░░░░░░░░░  37%  Streaming frame 210/945
+@hf-progress {"code":"capture","done":210,"total":945,"pct":37}
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 215/945
+@hf-progress {"code":"capture","done":215,"total":945,"pct":38}
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 220/945
+@hf-progress {"code":"capture","done":220,"total":945,"pct":38}
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 225/945
+@hf-progress {"code":"capture","done":225,"total":945,"pct":38}
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 230/945
+@hf-progress {"code":"capture","done":230,"total":945,"pct":38}
+  █████████░░░░░░░░░░░░░░░░  39%  Streaming frame 235/945
+@hf-progress {"code":"capture","done":235,"total":945,"pct":39}
+  █████████░░░░░░░░░░░░░░░░  39%  Streaming frame 241/945
+@hf-progress {"code":"capture","done":241,"total":945,"pct":39}
+  █████████░░░░░░░░░░░░░░░░  39%  Streaming frame 246/945
+@hf-progress {"code":"capture","done":246,"total":945,"pct":39}
+  ██████████░░░░░░░░░░░░░░░  40%  Streaming frame 251/945
+@hf-progress {"code":"capture","done":251,"total":945,"pct":40}
+  ██████████░░░░░░░░░░░░░░░  40%  Streaming frame 256/945
+@hf-progress {"code":"capture","done":256,"total":945,"pct":40}
+  ██████████░░░░░░░░░░░░░░░  40%  Streaming frame 260/945
+@hf-progress {"code":"capture","done":260,"total":945,"pct":40}
+  ██████████░░░░░░░░░░░░░░░  40%  Streaming frame 265/945
+@hf-progress {"code":"capture","done":265,"total":945,"pct":40}
+  ██████████░░░░░░░░░░░░░░░  41%  Streaming frame 270/945
+@hf-progress {"code":"capture","done":270,"total":945,"pct":41}
+  ██████████░░░░░░░░░░░░░░░  41%  Streaming frame 275/945
+@hf-progress {"code":"capture","done":275,"total":945,"pct":41}
+  ██████████░░░░░░░░░░░░░░░  41%  Streaming frame 279/945
+@hf-progress {"code":"capture","done":279,"total":945,"pct":41}
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 284/945
+@hf-progress {"code":"capture","done":284,"total":945,"pct":42}
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 288/945
+@hf-progress {"code":"capture","done":288,"total":945,"pct":42}
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 292/945
+@hf-progress {"code":"capture","done":292,"total":945,"pct":42}
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 296/945
+@hf-progress {"code":"capture","done":296,"total":945,"pct":42}
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 301/945
+@hf-progress {"code":"capture","done":301,"total":945,"pct":43}
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 306/945
+@hf-progress {"code":"capture","done":306,"total":945,"pct":43}
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 311/945
+@hf-progress {"code":"capture","done":311,"total":945,"pct":43}
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 316/945
+@hf-progress {"code":"capture","done":316,"total":945,"pct":43}
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 320/945
+@hf-progress {"code":"capture","done":320,"total":945,"pct":44}
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 325/945
+@hf-progress {"code":"capture","done":325,"total":945,"pct":44}
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 330/945
+@hf-progress {"code":"capture","done":330,"total":945,"pct":44}
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 335/945
+@hf-progress {"code":"capture","done":335,"total":945,"pct":44}
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 340/945
+@hf-progress {"code":"capture","done":340,"total":945,"pct":45}
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 345/945
+@hf-progress {"code":"capture","done":345,"total":945,"pct":45}
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 349/945
+@hf-progress {"code":"capture","done":349,"total":945,"pct":45}
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 354/945
+@hf-progress {"code":"capture","done":354,"total":945,"pct":46}
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 359/945
+@hf-progress {"code":"capture","done":359,"total":945,"pct":46}
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 364/945
+@hf-progress {"code":"capture","done":364,"total":945,"pct":46}
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 369/945
+@hf-progress {"code":"capture","done":369,"total":945,"pct":46}
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 373/945
+@hf-progress {"code":"capture","done":373,"total":945,"pct":47}
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 377/945
+@hf-progress {"code":"capture","done":377,"total":945,"pct":47}
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 381/945
+@hf-progress {"code":"capture","done":381,"total":945,"pct":47}
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 386/945
+@hf-progress {"code":"capture","done":386,"total":945,"pct":47}
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 390/945
+@hf-progress {"code":"capture","done":390,"total":945,"pct":48}
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 395/945
+@hf-progress {"code":"capture","done":395,"total":945,"pct":48}
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 400/945
+@hf-progress {"code":"capture","done":400,"total":945,"pct":48}
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 404/945
+@hf-progress {"code":"capture","done":404,"total":945,"pct":49}
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 408/945
+@hf-progress {"code":"capture","done":408,"total":945,"pct":49}
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 413/945
+@hf-progress {"code":"capture","done":413,"total":945,"pct":49}
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 417/945
+@hf-progress {"code":"capture","done":417,"total":945,"pct":49}
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 422/945
+@hf-progress {"code":"capture","done":422,"total":945,"pct":50}
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 426/945
+@hf-progress {"code":"capture","done":426,"total":945,"pct":50}
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 433/945
+@hf-progress {"code":"capture","done":433,"total":945,"pct":50}
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 438/945
+@hf-progress {"code":"capture","done":438,"total":945,"pct":50}
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 442/945
+@hf-progress {"code":"capture","done":442,"total":945,"pct":51}
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 447/945
+@hf-progress {"code":"capture","done":447,"total":945,"pct":51}
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 451/945
+@hf-progress {"code":"capture","done":451,"total":945,"pct":51}
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 455/945
+@hf-progress {"code":"capture","done":455,"total":945,"pct":51}
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 459/945
+@hf-progress {"code":"capture","done":459,"total":945,"pct":52}
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 463/945
+@hf-progress {"code":"capture","done":463,"total":945,"pct":52}
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 467/945
+@hf-progress {"code":"capture","done":467,"total":945,"pct":52}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"capture_streaming","status":"checkpoint","elapsedMs":32851,"message":"stage still running","stagePhase":"capturing","workerCount":1,"forceScreenshot":false,"totalFrames":945,"framesCompleted":468,"captureMode":"beginframe","captureOperation":"beginFrame","heartbeatIndex":1,"stageElapsedMs":30000}
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 471/945
+@hf-progress {"code":"capture","done":471,"total":945,"pct":52}
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 475/945
+@hf-progress {"code":"capture","done":475,"total":945,"pct":53}
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 479/945
+@hf-progress {"code":"capture","done":479,"total":945,"pct":53}
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 483/945
+@hf-progress {"code":"capture","done":483,"total":945,"pct":53}
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 487/945
+@hf-progress {"code":"capture","done":487,"total":945,"pct":53}
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 491/945
+@hf-progress {"code":"capture","done":491,"total":945,"pct":54}
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 495/945
+@hf-progress {"code":"capture","done":495,"total":945,"pct":54}
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 499/945
+@hf-progress {"code":"capture","done":499,"total":945,"pct":54}
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 503/945
+@hf-progress {"code":"capture","done":503,"total":945,"pct":54}
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 507/945
+@hf-progress {"code":"capture","done":507,"total":945,"pct":55}
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 511/945
+@hf-progress {"code":"capture","done":511,"total":945,"pct":55}
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 515/945
+@hf-progress {"code":"capture","done":515,"total":945,"pct":55}
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 519/945
+@hf-progress {"code":"capture","done":519,"total":945,"pct":55}
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 523/945
+@hf-progress {"code":"capture","done":523,"total":945,"pct":55}
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 527/945
+@hf-progress {"code":"capture","done":527,"total":945,"pct":56}
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 531/945
+@hf-progress {"code":"capture","done":531,"total":945,"pct":56}
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 535/945
+@hf-progress {"code":"capture","done":535,"total":945,"pct":56}
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 540/945
+@hf-progress {"code":"capture","done":540,"total":945,"pct":56}
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 544/945
+@hf-progress {"code":"capture","done":544,"total":945,"pct":57}
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 548/945
+@hf-progress {"code":"capture","done":548,"total":945,"pct":57}
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 552/945
+@hf-progress {"code":"capture","done":552,"total":945,"pct":57}
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 556/945
+@hf-progress {"code":"capture","done":556,"total":945,"pct":57}
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 560/945
+@hf-progress {"code":"capture","done":560,"total":945,"pct":58}
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 564/945
+@hf-progress {"code":"capture","done":564,"total":945,"pct":58}
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 568/945
+@hf-progress {"code":"capture","done":568,"total":945,"pct":58}
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 572/945
+@hf-progress {"code":"capture","done":572,"total":945,"pct":58}
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 576/945
+@hf-progress {"code":"capture","done":576,"total":945,"pct":59}
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 580/945
+@hf-progress {"code":"capture","done":580,"total":945,"pct":59}
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 584/945
+@hf-progress {"code":"capture","done":584,"total":945,"pct":59}
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 589/945
+@hf-progress {"code":"capture","done":589,"total":945,"pct":59}
+  ███████████████░░░░░░░░░░  60%  Streaming frame 593/945
+@hf-progress {"code":"capture","done":593,"total":945,"pct":60}
+  ███████████████░░░░░░░░░░  60%  Streaming frame 597/945
+@hf-progress {"code":"capture","done":597,"total":945,"pct":60}
+  ███████████████░░░░░░░░░░  60%  Streaming frame 601/945
+@hf-progress {"code":"capture","done":601,"total":945,"pct":60}
+  ███████████████░░░░░░░░░░  60%  Streaming frame 606/945
+@hf-progress {"code":"capture","done":606,"total":945,"pct":60}
+  ███████████████░░░░░░░░░░  61%  Streaming frame 610/945
+@hf-progress {"code":"capture","done":610,"total":945,"pct":61}
+  ███████████████░░░░░░░░░░  61%  Streaming frame 614/945
+@hf-progress {"code":"capture","done":614,"total":945,"pct":61}
+  ███████████████░░░░░░░░░░  61%  Streaming frame 618/945
+@hf-progress {"code":"capture","done":618,"total":945,"pct":61}
+  ███████████████░░░░░░░░░░  61%  Streaming frame 622/945
+@hf-progress {"code":"capture","done":622,"total":945,"pct":61}
+  ███████████████░░░░░░░░░░  61%  Streaming frame 626/945
+@hf-progress {"code":"capture","done":626,"total":945,"pct":61}
+  ███████████████░░░░░░░░░░  62%  Streaming frame 630/945
+@hf-progress {"code":"capture","done":630,"total":945,"pct":62}
+  ███████████████░░░░░░░░░░  62%  Streaming frame 635/945
+@hf-progress {"code":"capture","done":635,"total":945,"pct":62}
+  ███████████████░░░░░░░░░░  62%  Streaming frame 640/945
+@hf-progress {"code":"capture","done":640,"total":945,"pct":62}
+  ███████████████░░░░░░░░░░  63%  Streaming frame 645/945
+@hf-progress {"code":"capture","done":645,"total":945,"pct":63}
+  ███████████████░░░░░░░░░░  63%  Streaming frame 650/945
+@hf-progress {"code":"capture","done":650,"total":945,"pct":63}
+  ███████████████░░░░░░░░░░  63%  Streaming frame 655/945
+@hf-progress {"code":"capture","done":655,"total":945,"pct":63}
+  ███████████████░░░░░░░░░░  63%  Streaming frame 660/945
+@hf-progress {"code":"capture","done":660,"total":945,"pct":63}
+  ████████████████░░░░░░░░░  64%  Streaming frame 665/945
+@hf-progress {"code":"capture","done":665,"total":945,"pct":64}
+  ████████████████░░░░░░░░░  64%  Streaming frame 670/945
+@hf-progress {"code":"capture","done":670,"total":945,"pct":64}
+  ████████████████░░░░░░░░░  64%  Streaming frame 675/945
+@hf-progress {"code":"capture","done":675,"total":945,"pct":64}
+  ████████████████░░░░░░░░░  65%  Streaming frame 680/945
+@hf-progress {"code":"capture","done":680,"total":945,"pct":65}
+  ████████████████░░░░░░░░░  65%  Streaming frame 684/945
+@hf-progress {"code":"capture","done":684,"total":945,"pct":65}
+  ████████████████░░░░░░░░░  65%  Streaming frame 689/945
+@hf-progress {"code":"capture","done":689,"total":945,"pct":65}
+  ████████████████░░░░░░░░░  65%  Streaming frame 694/945
+@hf-progress {"code":"capture","done":694,"total":945,"pct":65}
+  ████████████████░░░░░░░░░  66%  Streaming frame 699/945
+@hf-progress {"code":"capture","done":699,"total":945,"pct":66}
+  ████████████████░░░░░░░░░  66%  Streaming frame 704/945
+@hf-progress {"code":"capture","done":704,"total":945,"pct":66}
+  ████████████████░░░░░░░░░  66%  Streaming frame 709/945
+@hf-progress {"code":"capture","done":709,"total":945,"pct":66}
+  ████████████████░░░░░░░░░  67%  Streaming frame 714/945
+@hf-progress {"code":"capture","done":714,"total":945,"pct":67}
+  ████████████████░░░░░░░░░  67%  Streaming frame 718/945
+@hf-progress {"code":"capture","done":718,"total":945,"pct":67}
+  ████████████████░░░░░░░░░  67%  Streaming frame 723/945
+@hf-progress {"code":"capture","done":723,"total":945,"pct":67}
+  ████████████████░░░░░░░░░  67%  Streaming frame 728/945
+@hf-progress {"code":"capture","done":728,"total":945,"pct":67}
+  █████████████████░░░░░░░░  68%  Streaming frame 733/945
+@hf-progress {"code":"capture","done":733,"total":945,"pct":68}
+  █████████████████░░░░░░░░  68%  Streaming frame 738/945
+@hf-progress {"code":"capture","done":738,"total":945,"pct":68}
+  █████████████████░░░░░░░░  68%  Streaming frame 742/945
+@hf-progress {"code":"capture","done":742,"total":945,"pct":68}
+  █████████████████░░░░░░░░  68%  Streaming frame 747/945
+@hf-progress {"code":"capture","done":747,"total":945,"pct":68}
+  █████████████████░░░░░░░░  69%  Streaming frame 751/945
+@hf-progress {"code":"capture","done":751,"total":945,"pct":69}
+  █████████████████░░░░░░░░  69%  Streaming frame 756/945
+@hf-progress {"code":"capture","done":756,"total":945,"pct":69}
+  █████████████████░░░░░░░░  69%  Streaming frame 760/945
+@hf-progress {"code":"capture","done":760,"total":945,"pct":69}
+  █████████████████░░░░░░░░  70%  Streaming frame 765/945
+@hf-progress {"code":"capture","done":765,"total":945,"pct":70}
+  █████████████████░░░░░░░░  70%  Streaming frame 770/945
+@hf-progress {"code":"capture","done":770,"total":945,"pct":70}
+  █████████████████░░░░░░░░  70%  Streaming frame 774/945
+@hf-progress {"code":"capture","done":774,"total":945,"pct":70}
+  █████████████████░░░░░░░░  70%  Streaming frame 779/945
+@hf-progress {"code":"capture","done":779,"total":945,"pct":70}
+  █████████████████░░░░░░░░  71%  Streaming frame 783/945
+@hf-progress {"code":"capture","done":783,"total":945,"pct":71}
+  █████████████████░░░░░░░░  71%  Streaming frame 788/945
+@hf-progress {"code":"capture","done":788,"total":945,"pct":71}
+  █████████████████░░░░░░░░  71%  Streaming frame 792/945
+@hf-progress {"code":"capture","done":792,"total":945,"pct":71}
+  █████████████████░░░░░░░░  71%  Streaming frame 797/945
+@hf-progress {"code":"capture","done":797,"total":945,"pct":71}
+  ██████████████████░░░░░░░  72%  Streaming frame 802/945
+@hf-progress {"code":"capture","done":802,"total":945,"pct":72}
+  ██████████████████░░░░░░░  72%  Streaming frame 807/945
+@hf-progress {"code":"capture","done":807,"total":945,"pct":72}
+  ██████████████████░░░░░░░  72%  Streaming frame 812/945
+@hf-progress {"code":"capture","done":812,"total":945,"pct":72}
+  ██████████████████░░░░░░░  72%  Streaming frame 816/945
+@hf-progress {"code":"capture","done":816,"total":945,"pct":72}
+  ██████████████████░░░░░░░  73%  Streaming frame 821/945
+@hf-progress {"code":"capture","done":821,"total":945,"pct":73}
+  ██████████████████░░░░░░░  73%  Streaming frame 825/945
+@hf-progress {"code":"capture","done":825,"total":945,"pct":73}
+  ██████████████████░░░░░░░  73%  Streaming frame 829/945
+@hf-progress {"code":"capture","done":829,"total":945,"pct":73}
+  ██████████████████░░░░░░░  73%  Streaming frame 833/945
+@hf-progress {"code":"capture","done":833,"total":945,"pct":73}
+  ██████████████████░░░░░░░  74%  Streaming frame 837/945
+@hf-progress {"code":"capture","done":837,"total":945,"pct":74}
+  ██████████████████░░░░░░░  74%  Streaming frame 841/945
+@hf-progress {"code":"capture","done":841,"total":945,"pct":74}
+  ██████████████████░░░░░░░  74%  Streaming frame 846/945
+@hf-progress {"code":"capture","done":846,"total":945,"pct":74}
+  ██████████████████░░░░░░░  75%  Streaming frame 851/945
+@hf-progress {"code":"capture","done":851,"total":945,"pct":75}
+  ██████████████████░░░░░░░  75%  Streaming frame 855/945
+@hf-progress {"code":"capture","done":855,"total":945,"pct":75}
+  ██████████████████░░░░░░░  75%  Streaming frame 860/945
+@hf-progress {"code":"capture","done":860,"total":945,"pct":75}
+  ██████████████████░░░░░░░  75%  Streaming frame 864/945
+@hf-progress {"code":"capture","done":864,"total":945,"pct":75}
+  ███████████████████░░░░░░  76%  Streaming frame 869/945
+@hf-progress {"code":"capture","done":869,"total":945,"pct":76}
+  ███████████████████░░░░░░  76%  Streaming frame 873/945
+@hf-progress {"code":"capture","done":873,"total":945,"pct":76}
+  ███████████████████░░░░░░  76%  Streaming frame 877/945
+@hf-progress {"code":"capture","done":877,"total":945,"pct":76}
+  ███████████████████░░░░░░  76%  Streaming frame 882/945
+@hf-progress {"code":"capture","done":882,"total":945,"pct":76}
+  ███████████████████░░░░░░  77%  Streaming frame 887/945
+@hf-progress {"code":"capture","done":887,"total":945,"pct":77}
+  ███████████████████░░░░░░  77%  Streaming frame 893/945
+@hf-progress {"code":"capture","done":893,"total":945,"pct":77}
+  ███████████████████░░░░░░  77%  Streaming frame 898/945
+@hf-progress {"code":"capture","done":898,"total":945,"pct":77}
+  ███████████████████░░░░░░  78%  Streaming frame 903/945
+@hf-progress {"code":"capture","done":903,"total":945,"pct":78}
+  ███████████████████░░░░░░  78%  Streaming frame 907/945
+@hf-progress {"code":"capture","done":907,"total":945,"pct":78}
+  ███████████████████░░░░░░  78%  Streaming frame 911/945
+@hf-progress {"code":"capture","done":911,"total":945,"pct":78}
+  ███████████████████░░░░░░  78%  Streaming frame 916/945
+@hf-progress {"code":"capture","done":916,"total":945,"pct":78}
+  ███████████████████░░░░░░  79%  Streaming frame 920/945
+@hf-progress {"code":"capture","done":920,"total":945,"pct":79}
+  ███████████████████░░░░░░  79%  Streaming frame 925/945
+@hf-progress {"code":"capture","done":925,"total":945,"pct":79}
+  ███████████████████░░░░░░  79%  Streaming frame 929/945
+@hf-progress {"code":"capture","done":929,"total":945,"pct":79}
+  ███████████████████░░░░░░  79%  Streaming frame 934/945
+@hf-progress {"code":"capture","done":934,"total":945,"pct":79}
+  ████████████████████░░░░░  80%  Streaming frame 938/945
+@hf-progress {"code":"capture","done":938,"total":945,"pct":80}
+  ████████████████████░░░░░  80%  Streaming frame 943/945
+@hf-progress {"code":"capture","done":943,"total":945,"pct":80}
+  ████████████████████░░░░░  80%  Streaming frame 945/945
+@hf-progress {"code":"capture","done":945,"total":945,"pct":80}
+  ██████████████████████░░░  90%  Encoding frame 909/945
+@hf-progress {"code":"encode","done":909,"total":945,"pct":90}
+  ██████████████████████░░░  90%  Encoding frame 945/945
+@hf-progress {"code":"encode","done":945,"total":945,"pct":90}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"capture_streaming","status":"end","elapsedMs":62733,"durationMs":59882,"stagePhase":"capturing","workerCount":1,"forceScreenshot":false,"totalFrames":945,"framesCompleted":945,"captureMode":"beginframe","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"assemble","status":"start","elapsedMs":62735,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":false,"totalFrames":945,"framesCompleted":945,"captureMode":"beginframe","captureOperation":"encode"}
+  ██████████████████████░░░  90%  Assembling final video
+@hf-progress {"code":"assemble","done":0,"total":31.5,"pct":90}
+  ████████████████████████░  99%  Assembling final video
+@hf-progress {"code":"assemble","done":31.5,"total":31.5,"pct":99}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"assemble","status":"end","elapsedMs":62803,"durationMs":68,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":false,"totalFrames":945,"framesCompleted":945,"captureMode":"beginframe","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"c722b969-2c1b-4932-9f3c-5cd9f0740de8","phase":"pipeline","status":"checkpoint","elapsedMs":62865,"message":"artifact validated","totalElapsedMs":62865}
+  █████████████████████████  100%  Render complete
+
+◇  /home/runner/work/kerja-berat/kerja-berat/jobs/lala-proj/renders/lala.mp4
+   3.3 MB · 31.5s video · rendered in 1m 2.9s
+   beginframe capture · software gpu · compile 1.0s · extract 0.0s · audio 0.0s · probe 0.0s · setup 1.8s · capture 59.9s · encode (during capture) 59.9s · assemble 0.1s
+@hf-result {"version":1,"operation":"render","reference_background":{"kind":"solid","rgb":[255,231,196]}}
++ ls -la renders/
+total 3428
+drwxr-xr-x 2 runner runner    4096 Nov 11 12:36 .
+drwxr-xr-x 6 runner runner    4096 Nov 11 12:35 ..
+-rw-r--r-- 1 runner runner 3498161 Nov 11 12:36 lala.mp4
++ ffprobe -v error -show_format -show_streams renders/lala.mp4
++ tee /home/runner/work/kerja-berat/kerja-berat/hasil-run/ffprobe-video.txt
+[STREAM]
+index=0
+codec_name=h264
+codec_long_name=H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+profile=High
+codec_type=video
+codec_tag_string=avc1
+codec_tag=0x31637661
+width=1080
+height=1920
+coded_width=1080
+coded_height=1920
+has_b_frames=0
+sample_aspect_ratio=1:1
+display_aspect_ratio=9:16
+pix_fmt=yuv420p
+level=40
+color_range=tv
+color_space=bt709
+color_transfer=bt709
+color_primaries=bt709
+chroma_location=left
+field_order=progressive
+refs=1
+is_avc=true
+nal_length_size=4
+id=0x1
+r_frame_rate=30/1
+avg_frame_rate=30/1
+time_base=1/15360
+start_pts=0
+start_time=0.000000
+duration_ts=483840
+duration=31.500000
+bit_rate=887143
+max_bit_rate=N/A
+bits_per_raw_sample=8
+nb_frames=945
+nb_read_frames=N/A
+nb_read_packets=N/A
+extradata_size=51
+DISPOSITION:default=1
+DISPOSITION:dub=0
+DISPOSITION:original=0
+DISPOSITION:comment=0
+DISPOSITION:lyrics=0
+DISPOSITION:karaoke=0
+DISPOSITION:forced=0
+DISPOSITION:hearing_impaired=0
+DISPOSITION:visual_impaired=0
+DISPOSITION:clean_effects=0
+DISPOSITION:attached_pic=0
+DISPOSITION:timed_thumbnails=0
+DISPOSITION:non_diegetic=0
+DISPOSITION:captions=0
+DISPOSITION:descriptions=0
+DISPOSITION:metadata=0
+DISPOSITION:dependent=0
+DISPOSITION:still_image=0
+DISPOSITION:multilayer=0
+TAG:language=und
+TAG:handler_name=VideoHandler
+TAG:vendor_id=[0][0][0][0]
+TAG:encoder=Lavc62.11.100 libx264
+[/STREAM]
+[FORMAT]
+filename=renders/lala.mp4
+nb_streams=1
+nb_programs=0
+nb_stream_groups=0
+format_name=mov,mp4,m4a,3gp,3g2,mj2
+format_long_name=QuickTime / MOV
+start_time=0.000000
+duration=31.500000
+size=3498161
+bit_rate=888421
+probe_score=100
+TAG:minor_version=512
+TAG:major_brand=isom
+TAG:compatible_brands=isomiso2avc1mp41
+TAG:hyperframes_version=0.9.33
+TAG:hyperframes_renderer=hyperframes
+TAG:encoder=Lavf62.3.100
+[/FORMAT]
++ ffmpeg -y -i renders/lala.mp4 -i assets/narasi.mp3 -filter_complex '[1:a]loudnorm=I=-14:TP=-1.0:LRA=11:measured_I=-19.86:measured_TP=-1.97:measured_LRA=10.20:measured_thresh=-30.56:offset=-0.01:linear=false,aresample=48000,apad=whole_dur=31.5[a]' -map 0:v -map '[a]' -c:v copy -c:a aac -b:a 192k -t 31.5 renders/lala-final.mp4
+ffmpeg version 8.0.1-3ubuntu2 Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15 (Ubuntu 15.2.0-13ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu2 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-pocketsphinx --disable-libcaca --disable-libmfx --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libdvdnav --enable-libdvdread --enable-libjack --enable-libjxl --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-librsvg --enable-shared
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'renders/lala.mp4':
+  Metadata:
+    minor_version   : 512
+    major_brand     : isom
+    compatible_brands: isomiso2avc1mp41
+    hyperframes_version: 0.9.33
+    hyperframes_renderer: hyperframes
+    encoder         : Lavf62.3.100
+  Duration: 00:00:31.50, start: 0.000000, bitrate: 888 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920 [SAR 1:1 DAR 9:16], 887 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+[mp3 @ 0x559fda7f5780] Estimating duration from bitrate, this may be inaccurate
+Input #1, mp3, from 'assets/narasi.mp3':
+  Metadata:
+    encoder         : Lavf63.1.102
+  Duration: 00:00:30.67, start: 0.000000, bitrate: 128 kb/s
+  Stream #1:0: Audio: mp3 (mp3float), 44100 Hz, mono, fltp, 128 kb/s
+Stream mapping:
+  Stream #1:0 (mp3float) -> loudnorm:default
+  Stream #0:0 -> #0:0 (copy)
+  apad:default -> Stream #0:1 (aac)
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'renders/lala-final.mp4':
+  Metadata:
+    minor_version   : 512
+    major_brand     : isom
+    compatible_brands: isomiso2avc1mp41
+    hyperframes_version: 0.9.33
+    hyperframes_renderer: hyperframes
+    encoder         : Lavf62.3.100
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920 [SAR 1:1 DAR 9:16], q=2-31, 887 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 192 kb/s
+    Metadata:
+      encoder         : Lavc62.11.100 aac
+frame=  646 fps=0.0 q=-1.0 size=    2560KiB time=00:00:21.41 bitrate= 979.1kbits/s speed=42.8x elapsed=0:00:00.50    [out#0/mp4 @ 0x559fda7eb4c0] video:3411KiB audio:657KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.687386%
+frame=  945 fps=0.0 q=-1.0 Lsize=    4097KiB time=00:00:31.50 bitrate=1065.4kbits/s speed=  42x elapsed=0:00:00.74    
+[aac @ 0x559fda7ef180] Qavg: 54818.938
++ ls -la renders/
+total 7528
+drwxr-xr-x 2 runner runner    4096 Nov 11 12:36 .
+drwxr-xr-x 6 runner runner    4096 Nov 11 12:35 ..
+-rw-r--r-- 1 runner runner 4195004 Nov 11 12:36 lala-final.mp4
+-rw-r--r-- 1 runner runner 3498161 Nov 11 12:36 lala.mp4
++ ffprobe -v error -show_format -show_streams renders/lala-final.mp4
++ tee /home/runner/work/kerja-berat/kerja-berat/hasil-run/ffprobe.txt
+[STREAM]
+index=0
+codec_name=h264
+codec_long_name=H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+profile=High
+codec_type=video
+codec_tag_string=avc1
+codec_tag=0x31637661
+width=1080
+height=1920
+coded_width=1080
+coded_height=1920
+has_b_frames=0
+sample_aspect_ratio=1:1
+display_aspect_ratio=9:16
+pix_fmt=yuv420p
+level=40
+color_range=tv
+color_space=bt709
+color_transfer=bt709
+color_primaries=bt709
+chroma_location=left
+field_order=progressive
+refs=1
+is_avc=true
+nal_length_size=4
+id=0x1
+r_frame_rate=30/1
+avg_frame_rate=30/1
+time_base=1/15360
+start_pts=0
+start_time=0.000000
+duration_ts=483840
+duration=31.500000
+bit_rate=887143
+max_bit_rate=N/A
+bits_per_raw_sample=8
+nb_frames=945
+nb_read_frames=N/A
+nb_read_packets=N/A
+extradata_size=51
+DISPOSITION:default=1
+DISPOSITION:dub=0
+DISPOSITION:original=0
+DISPOSITION:comment=0
+DISPOSITION:lyrics=0
+DISPOSITION:karaoke=0
+DISPOSITION:forced=0
+DISPOSITION:hearing_impaired=0
+DISPOSITION:visual_impaired=0
+DISPOSITION:clean_effects=0
+DISPOSITION:attached_pic=0
+DISPOSITION:timed_thumbnails=0
+DISPOSITION:non_diegetic=0
+DISPOSITION:captions=0
+DISPOSITION:descriptions=0
+DISPOSITION:metadata=0
+DISPOSITION:dependent=0
+DISPOSITION:still_image=0
+DISPOSITION:multilayer=0
+TAG:language=und
+TAG:handler_name=VideoHandler
+TAG:vendor_id=[0][0][0][0]
+TAG:encoder=Lavc62.11.100 libx264
+[/STREAM]
+[STREAM]
+index=1
+codec_name=aac
+codec_long_name=AAC (Advanced Audio Coding)
+profile=LC
+codec_type=audio
+codec_tag_string=mp4a
+codec_tag=0x6134706d
+sample_fmt=fltp
+sample_rate=48000
+channels=1
+channel_layout=mono
+bits_per_sample=0
+initial_padding=0
+id=0x2
+r_frame_rate=0/0
+avg_frame_rate=0/0
+time_base=1/48000
+start_pts=0
+start_time=0.000000
+duration_ts=1512000
+duration=31.500000
+bit_rate=170865
+max_bit_rate=N/A
+bits_per_raw_sample=N/A
+nb_frames=1477
+nb_read_frames=N/A
+nb_read_packets=N/A
+extradata_size=5
+DISPOSITION:default=1
+DISPOSITION:dub=0
+DISPOSITION:original=0
+DISPOSITION:comment=0
+DISPOSITION:lyrics=0
+DISPOSITION:karaoke=0
+DISPOSITION:forced=0
+DISPOSITION:hearing_impaired=0
+DISPOSITION:visual_impaired=0
+DISPOSITION:clean_effects=0
+DISPOSITION:attached_pic=0
+DISPOSITION:timed_thumbnails=0
+DISPOSITION:non_diegetic=0
+DISPOSITION:captions=0
+DISPOSITION:descriptions=0
+DISPOSITION:metadata=0
+DISPOSITION:dependent=0
+DISPOSITION:still_image=0
+DISPOSITION:multilayer=0
+TAG:language=und
+TAG:handler_name=SoundHandler
+TAG:vendor_id=[0][0][0][0]
+[/STREAM]
+[FORMAT]
+filename=renders/lala-final.mp4
+nb_streams=2
+nb_programs=0
+nb_stream_groups=0
+format_name=mov,mp4,m4a,3gp,3g2,mj2
+format_long_name=QuickTime / MOV
+start_time=0.000000
+duration=31.500000
+size=4195004
+bit_rate=1065397
+probe_score=100
+TAG:major_brand=isom
+TAG:minor_version=512
+TAG:compatible_brands=isomiso2avc1mp41
+TAG:encoder=Lavf62.3.100
+[/FORMAT]
++ ffmpeg -hide_banner -i renders/lala-final.mp4 -af loudnorm=print_format=json -f null -
++ tail -14
++ tee /home/runner/work/kerja-berat/kerja-berat/hasil-run/loudnorm-final.txt
+{
+	"input_i" : "-15.33",
+	"input_tp" : "-0.96",
+	"input_lra" : "6.90",
+	"input_thresh" : "-25.86",
+	"output_i" : "-23.49",
+	"output_tp" : "-8.04",
+	"output_lra" : "6.50",
+	"output_thresh" : "-33.97",
+	"normalization_type" : "dynamic",
+	"target_offset" : "-0.51"
+}
+[out#0/null @ 0x5abb8c2c2fc0] video:384KiB audio:11808KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=  945 fps=814 q=-0.0 Lsize=N/A time=00:00:31.50 bitrate=N/A speed=27.1x elapsed=0:00:01.16    
+++ date +%Y%m%d%H%M%S
++ TAG=lala-doa-uji-20261111123640
+++ git -C /home/runner/work/kerja-berat/kerja-berat config --get http.https://github.com/.extraheader
++ HDR='AUTHORIZATION: basic eC1hY2Nlc3MtdG9rZW46Z2hzXzE1MzY4X2V5SmhiR2NpT2lKRlV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUpoZFdRaU9pSmhkWFJvYm1RaUxDSmpkSGdpT2lKa1VUQjFSREpWZEdVMmNWOVVhVXAxVmw5MmFFRmlTMDlHUkU0eVJrcEdRblZuWDJRelRXTkhhemRNT1ZRNWVuWm1aVkF3VlRkUklpd2laWGh3SWpveE56azBOREEwTVRBMUxDSnBZWFFpT2pFM09UUTBNREExTURVc0ltbHpjeUk2SW1kcGRHaDFZaUlzSW1wMGFTSTZJalk0WVRVeVlUQmpMV1ZtWVRZdE5EZzBNaTFoWm1JM0xXTmxZelZqWlRReU0ySmlNaUlzSW5abGNpSTZNMzAuTVl2ck5IYzNZU1lNUmVONmRUMzN1dkljSlZrLTJRLUktX2VjUUVhSndtS2pkMUJqLVoyY2ZqNE1UNFFpejNhSTQ2NDlzUUVyc240a1ByTnYxSkJ0dlE='
++ API=https://api.github.com/repos/Wongwangsul/kerja-berat
++ curl -s -X POST -H 'AUTHORIZATION: basic eC1hY2Nlc3MtdG9rZW46Z2hzXzE1MzY4X2V5SmhiR2NpT2lKRlV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUpoZFdRaU9pSmhkWFJvYm1RaUxDSmpkSGdpT2lKa1VUQjFSREpWZEdVMmNWOVVhVXAxVmw5MmFFRmlTMDlHUkU0eVJrcEdRblZuWDJRelRXTkhhemRNT1ZRNWVuWm1aVkF3VlRkUklpd2laWGh3SWpveE56azBOREEwTVRBMUxDSnBZWFFpT2pFM09UUTBNREExTURVc0ltbHpjeUk2SW1kcGRHaDFZaUlzSW1wMGFTSTZJalk0WVRVeVlUQmpMV1ZtWVRZdE5EZzBNaTFoWm1JM0xXTmxZelZqWlRReU0ySmlNaUlzSW5abGNpSTZNMzAuTVl2ck5IYzNZU1lNUmVONmRUMzN1dkljSlZrLTJRLUktX2VjUUVhSndtS2pkMUJqLVoyY2ZqNE1UNFFpejNhSTQ2NDlzUUVyc240a1ByTnYxSkJ0dlE=' -H 'Accept: application/vnd.github+json' https://api.github.com/repos/Wongwangsul/kerja-berat/releases -d '{"tag_name":"lala-doa-uji-20261111123640","name":"Lala Doa Sebelum Makan HyperFrames Uji","body":"Render uji HyperFrames: Doa Sebelum Makan (LALA) vertikal 1080x1920 30fps 31,5 detik dengan narasi asli."}' -o rel.json
++ cat rel.json
+{
+  "url": "https://api.github.com/repos/Wongwangsul/kerja-berat/releases/441672619",
+  "assets_url": "https://api.github.com/repos/Wongwangsul/kerja-berat/releases/441672619/assets",
+  "upload_url": "https://uploads.github.com/repos/Wongwangsul/kerja-berat/releases/441672619/assets{?name,label}",
+  "html_url": "https://github.com/Wongwangsul/kerja-berat/releases/tag/lala-doa-uji-20261111123640",
+  "id": 441672619,
+  "author": {
+    "login": "github-actions[bot]",
+    "id": 41898282,
+    "node_id": "MDM6Qm90NDE4OTgyODI=",
+    "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+    "html_url": "https://github.com/apps/github-actions",
+    "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "node_id": "RE_kwDOViDNB84aU2Or",
+  "tag_name": "lala-doa-uji-20261111123640",
+  "target_commitish": "main",
+  "name": "Lala Doa Sebelum Makan HyperFrames Uji",
+  "draft": false,
+  "immutable": false,
+  "prerelease": false,
+  "created_at": "2026-11-11T12:35:00Z",
+  "updated_at": "2026-11-11T12:36:41Z",
+  "published_at": "2026-11-11T12:36:41Z",
+  "assets": [
+
+  ],
+  "tarball_url": "https://api.github.com/repos/Wongwangsul/kerja-berat/tarball/lala-doa-uji-20261111123640",
+  "zipball_url": "https://api.github.com/repos/Wongwangsul/kerja-berat/zipball/lala-doa-uji-20261111123640",
+  "body": "Render uji HyperFrames: Doa Sebelum Makan (LALA) vertikal 1080x1920 30fps 31,5 detik dengan narasi asli."
+}
+++ python3 -c 'import json;print(json.load(open('\''rel.json'\''))['\''id'\''])'
++ RID=441672619
++ echo 'release id: 441672619 tag: lala-doa-uji-20261111123640'
+release id: 441672619 tag: lala-doa-uji-20261111123640
+++ curl -s -o up.json -w '%{http_code}' -X POST -H 'AUTHORIZATION: basic eC1hY2Nlc3MtdG9rZW46Z2hzXzE1MzY4X2V5SmhiR2NpT2lKRlV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUpoZFdRaU9pSmhkWFJvYm1RaUxDSmpkSGdpT2lKa1VUQjFSREpWZEdVMmNWOVVhVXAxVmw5MmFFRmlTMDlHUkU0eVJrcEdRblZuWDJRelRXTkhhemRNT1ZRNWVuWm1aVkF3VlRkUklpd2laWGh3SWpveE56azBOREEwTVRBMUxDSnBZWFFpT2pFM09UUTBNREExTURVc0ltbHpjeUk2SW1kcGRHaDFZaUlzSW1wMGFTSTZJalk0WVRVeVlUQmpMV1ZtWVRZdE5EZzBNaTFoWm1JM0xXTmxZelZqWlRReU0ySmlNaUlzSW5abGNpSTZNMzAuTVl2ck5IYzNZU1lNUmVONmRUMzN1dkljSlZrLTJRLUktX2VjUUVhSndtS2pkMUJqLVoyY2ZqNE1UNFFpejNhSTQ2NDlzUUVyc240a1ByTnYxSkJ0dlE=' -H 'Content-Type: video/mp4' --data-binary @renders/lala-final.mp4 'https://uploads.github.com/repos/Wongwangsul/kerja-berat/releases/441672619/assets?name=lala-doa-hyperframes-uji.mp4'
++ CODE=201
++ echo 'upload http: 201'
+upload http: 201
++ cat up.json
+{"url":"https://api.github.com/repos/Wongwangsul/kerja-berat/releases/assets/735475089","id":735475089,"node_id":"RA_kwDOViDNB84r1nWR","name":"lala-doa-hyperframes-uji.mp4","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","avatar_url":"https://avatars.githubusercontent.com/in/15368?v=4","gravatar_id":"","url":"https://api.github.com/users/github-actions%5Bbot%5D","html_url":"https://github.com/apps/github-actions","followers_url":"https://api.github.com/users/github-actions%5Bbot%5D/followers","following_url":"https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}","gists_url":"https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}","starred_url":"https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/github-actions%5Bbot%5D/subscriptions","organizations_url":"https://api.github.com/users/github-actions%5Bbot%5D/orgs","repos_url":"https://api.github.com/users/github-actions%5Bbot%5D/repos","events_url":"https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}","received_events_url":"https://api.github.com/users/github-actions%5Bbot%5D/received_events","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"video/mp4","state":"uploaded","size":4195004,"digest":"sha256:1b1acfbd8847fd9a48b528d1fd99a65977487354e4a16614526f284455ede556","download_count":0,"created_at":"2026-11-11T12:36:42Z","updated_at":"2026-11-11T12:36:42Z","browser_download_url":"https://github.com/Wongwangsul/kerja-berat/releases/download/lala-doa-uji-20261111123640/lala-doa-hyperframes-uji.mp4"}+ echo 'tag: lala-doa-uji-20261111123640'
++ echo 'release_id: 441672619'
++ echo 'upload_http: 201'
++ '[' 201 = 201 ']'
++ echo 'SELESAI: MP4 terunggah ke Release tag lala-doa-uji-20261111123640'
+SELESAI: MP4 terunggah ke Release tag lala-doa-uji-20261111123640
+=== Selesai. Kode keluar: 0 ===
