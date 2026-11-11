@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="id" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Amiri";
+        src: url("assets/fonts/Amiri-Regular.ttf");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: "Amiri";
+        src: url("assets/fonts/Amiri-Bold.ttf");
+        font-weight: 700;
+      }
+      @font-face {
+        font-family: "Baloo 2";
+        src: url("assets/fonts/Baloo2.ttf");
+        font-weight: 400 800;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        margin: 0; width: 1080px; height: 1920px;
+        overflow: hidden; background: #ffe7c4;
+      }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+      .clip { position: absolute; inset: 0; }
+      .clip svg { display: block; }
+      .cap {
+        inset: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 118px;
+        max-width: 920px;
+        background: rgba(255, 251, 244, 0.96);
+        border: 3px solid #f0c297;
+        border-radius: 30px;
+        padding: 20px 38px 24px;
+        text-align: center;
+        opacity: 0;
+        box-shadow: 0 10px 30px rgba(140, 84, 30, 0.18);
+      }
+      .cap .lat {
+        font-family: "Baloo 2", "DejaVu Sans", sans-serif;
+        font-weight: 700;
+        font-size: 47px;
+        line-height: 1.18;
+        color: #6b4423;
+        white-space: nowrap;
+      }
+      .cap .ar {
+        font-family: "Amiri", "Noto Naskh Arabic", serif;
+        font-weight: 700;
+        font-size: 68px;
+        line-height: 1.5;
+        color: #c9930a;
+        margin-bottom: 2px;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="31.5"
+         data-width="1080" data-height="1920">
+<div class="clip" data-start="0" data-duration="4.74" data-track-index="0"><svg width="1080" height="1920" viewBox="0 0 1080 1920">
+      <defs>
+        <linearGradient id="wallGrad1" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff6e2"/>
+          <stop offset="1" stop-color="#ffe7c4"/>
+        </linearGradient>
+        <radialGradient id="glowGrad1" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.95"/>
+          <stop offset="0.55" stop-color="#ffd968" stop-opacity="0.45"/>
+          <stop offset="1" stop-color="#ffd968" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="1080" height="1520" fill="url(#wallGrad1)"/>
+      <rect x="0" y="1150" width="1080" height="10" fill="#f3cf9e"/>
+      <rect x="0" y="1520" width="1080" height="400" fill="#eec093"/>
+      <g stroke="#dfa878" stroke-width="5" opacity="0.6">
+        <line x1="0" y1="1620" x2="1080" y2="1620"/>
+        <line x1="0" y1="1740" x2="1080" y2="1740"/>
+        <line x1="0" y1="1860" x2="1080" y2="1860"/>
+      </g>
+      <!-- jendela kiri -->
+      <g>
+        <rect x="58" y="238" width="306" height="520" rx="26" fill="#ffffff" stroke="#dfa06a" stroke-width="10"/>
+        <rect x="82" y="262" width="258" height="472" rx="16" fill="#bde4fb"/>
+        <circle cx="150" cy="340" r="34" fill="#ffd94d"/>
+        <ellipse cx="238" cy="392" rx="58" ry="24" fill="#ffffff" opacity="0.92"/>
+        <ellipse cx="282" cy="368" rx="38" ry="20" fill="#ffffff" opacity="0.92"/>
+        <line x1="211" y1="262" x2="211" y2="734" stroke="#ffffff" stroke-width="10"/>
+        <line x1="82" y1="498" x2="340" y2="498" stroke="#ffffff" stroke-width="10"/>
+        <path d="M58 238 h64 v520 h-64 Z" fill="#ffb08a" opacity="0.85"/>
+        <path d="M300 238 h64 v520 h-64 Z" fill="#ffb08a" opacity="0.85"/>
+      </g>
+      <!-- bingkai gambar kanan -->
+      <g>
+        <rect x="756" y="292" width="252" height="252" rx="14" fill="#d99a5b"/>
+        <rect x="774" y="310" width="216" height="216" rx="8" fill="#fff8ec"/>
+        <circle cx="882" cy="392" r="26" fill="#ff8fab"/>
+        <g fill="#ffb3c6">
+          <circle cx="882" cy="356" r="15"/><circle cx="914" cy="378" r="15"/>
+          <circle cx="906" cy="412" r="15"/><circle cx="858" cy="412" r="15"/>
+          <circle cx="850" cy="378" r="15"/>
+        </g>
+        <path d="M882 418 C 882 452, 876 470, 862 492 M882 418 C 884 448, 894 466, 910 480" stroke="#7cb350" stroke-width="7" fill="none"/>
+      </g>
+      <!-- lampu gantung -->
+      <g>
+        <line x1="838" y1="0" x2="838" y2="128" stroke="#a9743f" stroke-width="7"/>
+        <path d="M772 210 L904 210 L862 128 L814 128 Z" fill="#ffb84d"/>
+        <ellipse cx="838" cy="216" rx="66" ry="12" fill="#ffdf8a"/>
+        <ellipse cx="838" cy="252" rx="130" ry="60" fill="#ffdf8a" opacity="0.25"/>
+      </g>
+      <!-- rak kecil kanan -->
+      <g>
+        <rect x="792" y="902" width="248" height="16" rx="8" fill="#c98a54"/>
+        <g fill="#ffffff" stroke="#e5c9a8" stroke-width="4">
+          <path d="M824 902 v-44 h44 v44 Z"/>
+          <path d="M892 902 v-56 h40 v56 Z"/>
+        </g>
+        <path d="M868 872 q18 -12 30 2" stroke="#e5c9a8" stroke-width="5" fill="none"/>
+        <path d="M812 902 v-30 h34 v30 Z" fill="#ffd9c2" stroke="#e5c9a8" stroke-width="4"/>
+      </g>
+      <g id="charSapa">
+      <!-- gaun -->
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="#f2ac2c"/>
+      <path d="M640 890 C 690 1010, 706 1180, 714 1330 L640 1330 C 636 1180, 634 1020, 640 890 Z" fill="#dd951f" opacity="0.35"/>
+      <!-- wajah -->
+      <ellipse cx="540" cy="650" rx="140" ry="152" fill="#f7c48d"/>
+      <!-- hijab: bingkai wajah + lilitan bahu -->
+      <path fill-rule="evenodd" fill="#f8b795" d="
+        M540 404 C 398 404, 318 520, 318 674 C 318 792, 338 906, 326 1014 L754 1014 C 742 906, 762 792, 762 674 C 762 520, 682 404, 540 404 Z
+        M540 476 C 460 476, 406 552, 406 650 C 406 746, 460 814, 540 814 C 620 814, 674 746, 674 650 C 674 552, 620 476, 540 476 Z"/>
+      <path d="M424 596 C 434 508, 482 464, 540 464 C 598 464, 646 508, 656 596 C 636 522, 600 494, 540 494 C 480 494, 444 522, 424 596 Z" fill="#ef9c74" opacity="0.5"/>
+      <g stroke="#ef9c74" stroke-width="6" fill="none" opacity="0.45" stroke-linecap="round">
+        <path d="M352 760 C 348 850, 352 930, 346 990"/>
+        <path d="M728 760 C 732 850, 728 930, 734 990"/>
+      </g>
+      <!-- kerah putih -->
+      <path d="M540 902 C 512 884, 476 890, 460 914 C 476 944, 514 950, 540 926 Z" fill="#fffaf2"/>
+      <path d="M540 902 C 568 884, 604 890, 620 914 C 604 944, 566 950, 540 926 Z" fill="#fffaf2"/>
+      
+        <g stroke="#8a5a33" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.85">
+          <path d="M440 622 Q478 604 516 618"/>
+          <path d="M564 618 Q602 604 640 622"/>
+        </g>
+      <g id="sEyes">
+        <g>
+          <ellipse cx="478" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="478" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="478" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="472" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="485" cy="674" r="3" fill="#ffffff"/>
+          <path d="M449 653 Q 478 623 507 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g>
+        <g>
+          <ellipse cx="602" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="602" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="602" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="596" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="609" cy="674" r="3" fill="#ffffff"/>
+          <path d="M573 653 Q 602 623 631 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g></g>
+      
+      <path d="M540 692 Q549 708 538 718" stroke="#dd9a68" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="414" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <ellipse cx="666" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <g id="sMouth">
+        <path d="M503 736 Q540 744 577 736 Q574 784 540 786 Q506 784 503 736 Z" fill="#8a3b22"/>
+        <ellipse cx="540" cy="772" rx="18" ry="8" fill="#e2705f"/></g></g>
+      <!-- meja + piring + gelas (di depan tubuh Lala) -->
+      <g>
+        <path d="M92 1258 L988 1258 L988 1548 C 800 1596, 280 1596, 92 1548 Z" fill="#fff6ec"/>
+        <g stroke="#e2574c" stroke-width="10" opacity="0.13">
+          <line x1="252" y1="1258" x2="252" y2="1570"/><line x1="412" y1="1258" x2="412" y2="1590"/>
+          <line x1="572" y1="1258" x2="572" y2="1596"/><line x1="732" y1="1258" x2="732" y2="1590"/>
+          <line x1="892" y1="1258" x2="892" y2="1570"/>
+          <line x1="92" y1="1360" x2="988" y2="1360"/><line x1="92" y1="1460" x2="988" y2="1460"/>
+        </g>
+        <rect x="88" y="1224" width="904" height="36" rx="18" fill="#eaa96a"/>
+        <rect x="88" y="1224" width="904" height="14" rx="7" fill="#f4bc7e"/>
+        <!-- mangkuk sup kiri -->
+        <g>
+          <path d="M178 1236 a78 26 0 0 0 156 0 Z" fill="#ff8a65"/>
+          <ellipse cx="256" cy="1236" rx="78" ry="20" fill="#ffb59d"/>
+          <ellipse cx="256" cy="1234" rx="58" ry="13" fill="#ffd9a8"/>
+        </g>
+        <!-- piring utama -->
+        <g>
+          <ellipse cx="540" cy="1242" rx="158" ry="36" fill="#ffffff" stroke="#e3d0ba" stroke-width="4"/>
+          <ellipse cx="540" cy="1238" rx="112" ry="24" fill="#fdf1dc"/>
+          <path d="M470 1238 C 470 1212, 496 1202, 520 1206 C 548 1202, 574 1214, 572 1236 C 540 1248, 500 1248, 470 1238 Z" fill="#ffffff" stroke="#ead9c2" stroke-width="3"/>
+          <circle cx="616" cy="1236" r="17" fill="#e8862e"/>
+          <circle cx="640" cy="1248" r="12" fill="#c96a1e"/>
+          <circle cx="452" cy="1246" r="9" fill="#7cb350"/>
+          <circle cx="470" cy="1252" r="8" fill="#8bc34a"/>
+          <circle cx="438" cy="1254" r="7" fill="#7cb350"/>
+          <path d="M592 1218 c14 -8 26 0 26 10 c-10 6 -24 2 -26 -10 Z" fill="#a85b2a"/>
+        </g>
+        <!-- gelas kanan -->
+        <g>
+          <path d="M776 1152 L844 1152 L836 1246 L784 1246 Z" fill="#bfe3f2" opacity="0.5" stroke="#8fc3dd" stroke-width="4"/>
+          <path d="M781 1184 L839 1184 L836 1246 L784 1246 Z" fill="#7ec3e8" opacity="0.55"/>
+          <line x1="792" y1="1164" x2="788" y2="1232" stroke="#ffffff" stroke-width="7" opacity="0.7"/>
+        </g>
+      </g>
+      <g id="armWaveSapa">
+        <path d="M420 940 C 356 884, 324 796, 332 700" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
+        <circle cx="334" cy="700" r="34" fill="#fffaf2"/>
+        <circle cx="334" cy="682" r="29" fill="#f7c48d"/>
+        <g fill="#f7c48d">
+          <circle cx="314" cy="656" r="10"/>
+          <circle cx="334" cy="650" r="10"/>
+          <circle cx="354" cy="656" r="10"/>
+        </g>
+      </g>
+      <path d="M660 940 C 696 1024, 694 1120, 662 1204" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="662" cy="1196" r="34" fill="#fffaf2"/>
+      <circle cx="662" cy="1212" r="28" fill="#f7c48d"/></svg></div>
+<div class="clip" data-start="4.74" data-duration="4.96" data-track-index="1"><svg width="1080" height="1920" viewBox="0 0 1080 1920">
+      <defs>
+        <linearGradient id="wallGrad2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff6e2"/>
+          <stop offset="1" stop-color="#ffe7c4"/>
+        </linearGradient>
+        <radialGradient id="glowGrad2" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.95"/>
+          <stop offset="0.55" stop-color="#ffd968" stop-opacity="0.45"/>
+          <stop offset="1" stop-color="#ffd968" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="1080" height="1520" fill="url(#wallGrad2)"/>
+      <rect x="0" y="1150" width="1080" height="10" fill="#f3cf9e"/>
+      <rect x="0" y="1520" width="1080" height="400" fill="#eec093"/>
+      <g stroke="#dfa878" stroke-width="5" opacity="0.6">
+        <line x1="0" y1="1620" x2="1080" y2="1620"/>
+        <line x1="0" y1="1740" x2="1080" y2="1740"/>
+        <line x1="0" y1="1860" x2="1080" y2="1860"/>
+      </g>
+      <!-- jendela kiri -->
+      <g>
+        <rect x="58" y="238" width="306" height="520" rx="26" fill="#ffffff" stroke="#dfa06a" stroke-width="10"/>
+        <rect x="82" y="262" width="258" height="472" rx="16" fill="#bde4fb"/>
+        <circle cx="150" cy="340" r="34" fill="#ffd94d"/>
+        <ellipse cx="238" cy="392" rx="58" ry="24" fill="#ffffff" opacity="0.92"/>
+        <ellipse cx="282" cy="368" rx="38" ry="20" fill="#ffffff" opacity="0.92"/>
+        <line x1="211" y1="262" x2="211" y2="734" stroke="#ffffff" stroke-width="10"/>
+        <line x1="82" y1="498" x2="340" y2="498" stroke="#ffffff" stroke-width="10"/>
+        <path d="M58 238 h64 v520 h-64 Z" fill="#ffb08a" opacity="0.85"/>
+        <path d="M300 238 h64 v520 h-64 Z" fill="#ffb08a" opacity="0.85"/>
+      </g>
+      <!-- bingkai gambar kanan -->
+      <g>
+        <rect x="756" y="292" width="252" height="252" rx="14" fill="#d99a5b"/>
+        <rect x="774" y="310" width="216" height="216" rx="8" fill="#fff8ec"/>
+        <circle cx="882" cy="392" r="26" fill="#ff8fab"/>
+        <g fill="#ffb3c6">
+          <circle cx="882" cy="356" r="15"/><circle cx="914" cy="378" r="15"/>
+          <circle cx="906" cy="412" r="15"/><circle cx="858" cy="412" r="15"/>
+          <circle cx="850" cy="378" r="15"/>
+        </g>
+        <path d="M882 418 C 882 452, 876 470, 862 492 M882 418 C 884 448, 894 466, 910 480" stroke="#7cb350" stroke-width="7" fill="none"/>
+      </g>
+      <!-- lampu gantung -->
+      <g>
+        <line x1="838" y1="0" x2="838" y2="128" stroke="#a9743f" stroke-width="7"/>
+        <path d="M772 210 L904 210 L862 128 L814 128 Z" fill="#ffb84d"/>
+        <ellipse cx="838" cy="216" rx="66" ry="12" fill="#ffdf8a"/>
+        <ellipse cx="838" cy="252" rx="130" ry="60" fill="#ffdf8a" opacity="0.25"/>
+      </g>
+      <!-- rak kecil kanan -->
+      <g>
+        <rect x="792" y="902" width="248" height="16" rx="8" fill="#c98a54"/>
+        <g fill="#ffffff" stroke="#e5c9a8" stroke-width="4">
+          <path d="M824 902 v-44 h44 v44 Z"/>
+          <path d="M892 902 v-56 h40 v56 Z"/>
+        </g>
+        <path d="M868 872 q18 -12 30 2" stroke="#e5c9a8" stroke-width="5" fill="none"/>
+        <path d="M812 902 v-30 h34 v30 Z" fill="#ffd9c2" stroke="#e5c9a8" stroke-width="4"/>
+      </g>
+      <g id="headTanya">
+      <!-- gaun -->
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="#f2ac2c"/>
+      <path d="M640 890 C 690 1010, 706 1180, 714 1330 L640 1330 C 636 1180, 634 1020, 640 890 Z" fill="#dd951f" opacity="0.35"/>
+      <!-- wajah -->
+      <ellipse cx="540" cy="650" rx="140" ry="152" fill="#f7c48d"/>
+      <!-- hijab: bingkai wajah + lilitan bahu -->
+      <path fill-rule="evenodd" fill="#f8b795" d="
+        M540 404 C 398 404, 318 520, 318 674 C 318 792, 338 906, 326 1014 L754 1014 C 742 906, 762 792, 762 674 C 762 520, 682 404, 540 404 Z
+        M540 476 C 460 476, 406 552, 406 650 C 406 746, 460 814, 540 814 C 620 814, 674 746, 674 650 C 674 552, 620 476, 540 476 Z"/>
+      <path d="M424 596 C 434 508, 482 464, 540 464 C 598 464, 646 508, 656 596 C 636 522, 600 494, 540 494 C 480 494, 444 522, 424 596 Z" fill="#ef9c74" opacity="0.5"/>
+      <g stroke="#ef9c74" stroke-width="6" fill="none" opacity="0.45" stroke-linecap="round">
+        <path d="M352 760 C 348 850, 352 930, 346 990"/>
+        <path d="M728 760 C 732 850, 728 930, 734 990"/>
+      </g>
+      <!-- kerah putih -->
+      <path d="M540 902 C 512 884, 476 890, 460 914 C 476 944, 514 950, 540 926 Z" fill="#fffaf2"/>
+      <path d="M540 902 C 568 884, 604 890, 620 914 C 604 944, 566 950, 540 926 Z" fill="#fffaf2"/>
+      
+        <g stroke="#8a5a33" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.85">
+          <path d="M440 622 Q478 604 516 618"/>
+          <path d="M564 618 Q602 604 640 622"/>
+        </g>
+      <g id="tEyes">
+        <g>
+          <ellipse cx="482" cy="659" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="482" cy="662" r="17" fill="#7a4322"/>
+          <circle cx="482" cy="662" r="9" fill="#2a1508"/>
+          <circle cx="476" cy="652" r="5" fill="#ffffff"/>
+          <circle cx="489" cy="668" r="3" fill="#ffffff"/>
+          <path d="M453 647 Q 482 617 511 647" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g>
+        <g>
+          <ellipse cx="606" cy="659" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="606" cy="662" r="17" fill="#7a4322"/>
+          <circle cx="606" cy="662" r="9" fill="#2a1508"/>
+          <circle cx="600" cy="652" r="5" fill="#ffffff"/>
+          <circle cx="613" cy="668" r="3" fill="#ffffff"/>
+          <path d="M577 647 Q 606 617 635 647" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g></g>
+      
+      <path d="M540 692 Q549 708 538 718" stroke="#dd9a68" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="414" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <ellipse cx="666" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <g id="tMouth"><circle cx="540" cy="752" r="12" fill="#8a3b22"/></g></g>
+      <!-- meja + piring + gelas (di depan tubuh Lala) -->
+      <g>
+        <path d="M92 1258 L988 1258 L988 1548 C 800 1596, 280 1596, 92 1548 Z" fill="#fff6ec"/>
+        <g stroke="#e2574c" stroke-width="10" opacity="0.13">
+          <line x1="252" y1="1258" x2="252" y2="1570"/><line x1="412" y1="1258" x2="412" y2="1590"/>
+          <line x1="572" y1="1258" x2="572" y2="1596"/><line x1="732" y1="1258" x2="732" y2="1590"/>
+          <line x1="892" y1="1258" x2="892" y2="1570"/>
+          <line x1="92" y1="1360" x2="988" y2="1360"/><line x1="92" y1="1460" x2="988" y2="1460"/>
+        </g>
+        <rect x="88" y="1224" width="904" height="36" rx="18" fill="#eaa96a"/>
+        <rect x="88" y="1224" width="904" height="14" rx="7" fill="#f4bc7e"/>
+        <!-- mangkuk sup kiri -->
+        <g>
+          <path d="M178 1236 a78 26 0 0 0 156 0 Z" fill="#ff8a65"/>
+          <ellipse cx="256" cy="1236" rx="78" ry="20" fill="#ffb59d"/>
+          <ellipse cx="256" cy="1234" rx="58" ry="13" fill="#ffd9a8"/>
+        </g>
+        <!-- piring utama -->
+        <g>
+          <ellipse cx="540" cy="1242" rx="158" ry="36" fill="#ffffff" stroke="#e3d0ba" stroke-width="4"/>
+          <ellipse cx="540" cy="1238" rx="112" ry="24" fill="#fdf1dc"/>
+          <path d="M470 1238 C 470 1212, 496 1202, 520 1206 C 548 1202, 574 1214, 572 1236 C 540 1248, 500 1248, 470 1238 Z" fill="#ffffff" stroke="#ead9c2" stroke-width="3"/>
+          <circle cx="616" cy="1236" r="17" fill="#e8862e"/>
+          <circle cx="640" cy="1248" r="12" fill="#c96a1e"/>
+          <circle cx="452" cy="1246" r="9" fill="#7cb350"/>
+          <circle cx="470" cy="1252" r="8" fill="#8bc34a"/>
+          <circle cx="438" cy="1254" r="7" fill="#7cb350"/>
+          <path d="M592 1218 c14 -8 26 0 26 10 c-10 6 -24 2 -26 -10 Z" fill="#a85b2a"/>
+        </g>
+        <!-- gelas kanan -->
+        <g>
+          <path d="M776 1152 L844 1152 L836 1246 L784 1246 Z" fill="#bfe3f2" opacity="0.5" stroke="#8fc3dd" stroke-width="4"/>
+          <path d="M781 1184 L839 1184 L836 1246 L784 1246 Z" fill="#7ec3e8" opacity="0.55"/>
+          <line x1="792" y1="1164" x2="788" y2="1232" stroke="#ffffff" stroke-width="7" opacity="0.7"/>
+        </g>
+      </g>
+      <path d="M420 940 C 372 1006, 398 1072, 458 1032 C 494 1008, 502 946, 494 884" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="492" cy="852" r="28" fill="#f7c48d"/>
+      <path d="M498 852 C 502 830, 502 818, 498 804" stroke="#f7c48d" stroke-width="17" stroke-linecap="round" fill="none"/>
+      <path d="M660 940 C 696 1024, 694 1120, 662 1204" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="662" cy="1196" r="34" fill="#fffaf2"/>
+      <circle cx="662" cy="1212" r="28" fill="#f7c48d"/>
+      <g id="bubbleTanya" opacity="0">
+        <circle cx="806" cy="420" r="76" fill="#ffffff" stroke="#f0c297" stroke-width="6"/>
+        <circle cx="752" cy="440" r="40" fill="#ffffff"/>
+        <circle cx="860" cy="438" r="44" fill="#ffffff"/>
+        <circle cx="806" cy="382" r="48" fill="#ffffff"/>
+        <circle cx="716" cy="492" r="15" fill="#ffffff" stroke="#f0c297" stroke-width="4"/>
+        <circle cx="694" cy="520" r="9" fill="#ffffff" stroke="#f0c297" stroke-width="4"/>
+        <text x="806" y="452" font-family="'Baloo 2','DejaVu Sans',sans-serif" font-weight="800" font-size="104" fill="#e8862e" text-anchor="middle">?</text>
+      </g></svg></div>
+<div class="clip" data-start="9.7" data-duration="5.16" data-track-index="2"><svg width="1080" height="1920" viewBox="0 0 1080 1920">
+      <defs>
+        <linearGradient id="wallGrad3" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff6e2"/>
+          <stop offset="1" stop-color="#ffe7c4"/>
+        </linearGradient>
+        <radialGradient id="glowGrad3" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.95"/>
+          <stop offset="0.55" stop-color="#ffd968" stop-opacity="0.45"/>
+          <stop offset="1" stop-color="#ffd968" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="1080" height="1520" fill="url(#wallGrad3)"/>
+      <rect x="0" y="1150" width="1080" height="10" fill="#f3cf9e"/>
+      <rect x="0" y="1520" width="1080" height="400" fill="#eec093"/>
+      <g stroke="#dfa878" stroke-width="5" opacity="0.6">
+        <line x1="0" y1="1620" x2="1080" y2="1620"/>
+        <line x1="0" y1="1740" x2="1080" y2="1740"/>
+        <line x1="0" y1="1860" x2="1080" y2="1860"/>
+      </g>
+      <!-- jendela kiri -->
+      <g>
+        <rect x="58" y="238" width="306" height="520" rx="26" fill="#ffffff" stroke="#dfa06a" stroke-width="10"/>
+        <rect x="82" y="262" width="258" height="472" rx="16" fill="#bde4fb"/>
+        <circle cx="150" cy="340" r="34" fill="#ffd94d"/>
+        <ellipse cx="238" cy="392" rx="58" ry="24" fill="#ffffff" opacity="0.92"/>
+        <ellipse cx="282" cy="368" rx="38" ry="20" fill="#ffffff" opacity="0.92"/>
+        <line x1="211" y1="262" x2="211" y2="734" stroke="#ffffff" stroke-width="10"/>
+        <line x1="82" y1="498" x2="340" y2="498" stroke="#ffffff" stroke-width="10"/>
+        <path d="M58 238 h64 v520 h-64 Z" fill="#ffb08a" opacity="0.85"/>
+        <path d="M300 238 h64 v520 h-64 Z" fill="#ffb08a" opacity="0.85"/>
+      </g>
+      <!-- bingkai gambar kanan -->
+      <g>
+        <rect x="756" y="292" width="252" height="252" rx="14" fill="#d99a5b"/>
+        <rect x="774" y="310" width="216" height="216" rx="8" fill="#fff8ec"/>
+        <circle cx="882" cy="392" r="26" fill="#ff8fab"/>
+        <g fill="#ffb3c6">
+          <circle cx="882" cy="356" r="15"/><circle cx="914" cy="378" r="15"/>
+          <circle cx="906" cy="412" r="15"/><circle cx="858" cy="412" r="15"/>
+          <circle cx="850" cy="378" r="15"/>
+        </g>
+        <path d="M882 418 C 882 452, 876 470, 862 492 M882 418 C 884 448, 894 466, 910 480" stroke="#7cb350" stroke-width="7" fill="none"/>
+      </g>
+      <!-- lampu gantung -->
+      <g>
+        <line x1="838" y1="0" x2="838" y2="128" stroke="#a9743f" stroke-width="7"/>
+        <path d="M772 210 L904 210 L862 128 L814 128 Z" fill="#ffb84d"/>
+        <ellipse cx="838" cy="216" rx="66" ry="12" fill="#ffdf8a"/>
+        <ellipse cx="838" cy="252" rx="130" ry="60" fill="#ffdf8a" opacity="0.25"/>
+      </g>
+      <!-- rak kecil kanan -->
+      <g>
+        <rect x="792" y="902" width="248" height="16" rx="8" fill="#c98a54"/>
+        <g fill="#ffffff" stroke="#e5c9a8" stroke-width="4">
+          <path d="M824 902 v-44 h44 v44 Z"/>
+          <path d="M892 902 v-56 h40 v56 Z"/>
+        </g>
+        <path d="M868 872 q18 -12 30 2" stroke="#e5c9a8" stroke-width="5" fill="none"/>
+        <path d="M812 902 v-30 h34 v30 Z" fill="#ffd9c2" stroke="#e5c9a8" stroke-width="4"/>
+      </g>
+      <ellipse id="glowDoa1" cx="540" cy="640" rx="360" ry="360" fill="url(#glowGrad3)" opacity="0"/><g id="headDoa1">
+      <!-- gaun -->
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="#f2ac2c"/>
+      <path d="M640 890 C 690 1010, 706 1180, 714 1330 L640 1330 C 636 1180, 634 1020, 640 890 Z" fill="#dd951f" opacity="0.35"/>
+      <!-- wajah -->
+      <ellipse cx="540" cy="650" rx="140" ry="152" fill="#f7c48d"/>
+      <!-- hijab: bingkai wajah + lilitan bahu -->
+      <path fill-rule="evenodd" fill="#f8b795" d="
+        M540 404 C 398 404, 318 520, 318 674 C 318 792, 338 906, 326 1014 L754 1014 C 742 906, 762 792, 762 674 C 762 520, 682 404, 540 404 Z
+        M540 476 C 460 476, 406 552, 406 650 C 406 746, 460 814, 540 814 C 620 814, 674 746, 674 650 C 674 552, 620 476, 540 476 Z"/>
+      <path d="M424 596 C 434 508, 482 464, 540 464 C 598 464, 646 508, 656 596 C 636 522, 600 494, 540 494 C 480 494, 444 522, 424 596 Z" fill="#ef9c74" opacity="0.5"/>
+      <g stroke="#ef9c74" stroke-width="6" fill="none" opacity="0.45" stroke-linecap="round">
+        <path d="M352 760 C 348 850, 352 930, 346 990"/>
+        <path d="M728 760 C 732 850, 728 930, 734 990"/>
+      </g>
+      <!-- kerah putih -->
+      <path d="M540 902 C 512 884, 476 890, 460 914 C 476 944, 514 950, 540 926 Z" fill="#fffaf2"/>
+      <path d="M540 902 C 568 884, 604 890, 620 914 C 604 944, 566 950, 540 926 Z" fill="#fffaf2"/>
+      
+        <g stroke="#8a5a33" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.85">
+          <path d="M440 622 Q478 604 516 618"/>
+          <path d="M564 618 Q602 604 640 622"/>
+        </g>
+      <g id="d1Eyes">
+        <g>
+          <ellipse cx="478" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="478" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="478" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="472" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="485" cy="674" r="3" fill="#ffffff"/>
+          <path d="M449 653 Q 478 623 507 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g>
+        <g>
+          <ellipse cx="602" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="602" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="602" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="596" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="609" cy="674" r="3" fill="#ffffff"/>
+          <path d="M573 653 Q 602 623 631 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g></g>
+      <g id="d1EyesClosed" opacity="0">
+        <g stroke="#4a2c14" stroke-width="7" stroke-linecap="round" fill="none">
+          <path d="M450 664 Q478 682 506 664"/>
+          <path d="M574 664 Q602 682 630 664"/>
+        </g></g><g id="d1MouthCalm" opacity="0"><path d="M518 750 Q540 761 562 750" stroke="#a34d2a" stroke-width="6" fill="none" stroke-linecap="round"/></g>
+      <path d="M540 692 Q549 708 538 718" stroke="#dd9a68" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="414" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <ellipse cx="666" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <g id="d1Mouth"><path d="M505 742 Q540 772 575 742" stroke="#a34d2a" stroke-width="7" fill="none" stroke-linecap="round"/></g></g>
+      <!-- meja + piring + gelas (di depan tubuh Lala) -->
+      <g>
+        <path d="M92 1258 L988 1258 L988 1548 C 800 1596, 280 1596, 92 1548 Z" fill="#fff6ec"/>
+        <g stroke="#e2574c" stroke-width="10" opacity="0.13">
+          <line x1="252" y1="1258" x2="252" y2="1570"/><line x1="412" y1="1258" x2="412" y2="1590"/>
+          <line x1="572" y1="1258" x2="572" y2="1596"/><line x1="732" y1="1258" x2="732" y2="1590"/>
+          <line x1="892" y1="1258" x2="892" y2="1570"/>
+          <line x1="92" y1="1360" x2="988" y2="1360"/><line x1="92" y1="1460" x2="988" y2="1460"/>
+        </g>
+        <rect x="88" y="1224" width="904" height="36" rx="18" fill="#eaa96a"/>
+        <rect x="88" y="1224" width="904" height="14" rx="7" fill="#f4bc7e"/>
+        <!-- mangkuk sup kiri -->
+        <g>
+          <path d="M178 1236 a78 26 0 0 0 156 0 Z" fill="#ff8a65"/>
+          <ellipse cx="256" cy="1236" rx="78" ry="20" fill="#ffb59d"/>
+          <ellipse cx="256" cy="1234" rx="58" ry="13" fill="#ffd9a8"/>
+        </g>
+        <!-- piring utama -->
+        <g>
+          <ellipse cx="540" cy="1242" rx="158" ry="36" fill="#ffffff" stroke="#e3d0ba" stroke-width="4"/>
+          <ellipse cx="540" cy="1238" rx="112" ry="24" fill="#fdf1dc"/>
+          <path d="M470 1238 C 470 1212, 496 1202, 520 1206 C 548 1202, 574 1214, 572 1236 C 540 1248, 500 1248, 470 1238 Z" fill="#ffffff" stroke="#ead9c2" stroke-width="3"/>
+          <circle cx="616" cy="1236" r="17" fill="#e8862e"/>
+          <circle cx="640" cy="1248" r="12" fill="#c96a1e"/>
+          <circle cx="452" cy="1246" r="9" fill="#7cb350"/>
+          <circle cx="470" cy="1252" r="8" fill="#8bc34a"/>
+          <circle cx="438" cy="1254" r="7" fill="#7cb350"/>
+          <path d="M592 1218 c14 -8 26 0 26 10 c-10 6 -24 2 -26 -10 Z" fill="#a85b2a"/>
+        </g>
+        <!-- gelas kanan -->
+        <g>
+          <path d="M776 1152 L844 1152 L836 1246 L784 1246 Z" fill="#bfe3f2" opacity="0.5" stroke="#8fc3dd" stroke-width="4"/>
+          <path d="M781 1184 L839 1184 L836 1246 L784 1246 Z" fill="#7ec3e8" opacity="0.55"/>
+          <line x1="792" y1="1164" x2="788" y2="1232" stroke="#ffffff" stroke-width="7" opacity="0.7"/>
+        </g>
+      </g><g id="armsInviteD1">
+      <path d="M420 940 C 372 996, 362 1050, 392 1096" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <path d="M660 940 C 708 996, 718 1050, 688 1096" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="396" cy="1104" r="33" fill="#fffaf2"/>
+      <circle cx="684" cy="1104" r="33" fill="#fffaf2"/>
+      <g transform="translate(398 1114) rotate(-90)">
+        <ellipse cx="0" cy="0" rx="30" ry="44" fill="#f7c48d"/>
+        <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
+          <line x1="-14" y1="-40" x2="-14" y2="-18"/><line x1="0" y1="-44" x2="0" y2="-20"/><line x1="14" y1="-40" x2="14" y2="-18"/>
+        </g>
+      </g>
+      <g transform="translate(682 1114) rotate(90)">
+        <ellipse cx="0" cy="0" rx="30" ry="44" fill="#f7c48d"/>
+        <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
+          <line x1="-14" y1="-40" x2="-14" y2="-18"/><line x1="0" y1="-44" x2="0" y2="-20"/><line x1="14" y1="-40" x2="14" y2="-18"/>
+        </g>
+      </g></g><g id="armsDoaD1" opacity="0">
+      <path d="M420 946 C 434 986, 452 980, 472 946" stroke="#f2ac2c" stroke-width="60" fill="none" stroke-linecap="round"/>
+      <path d="M660 946 C 646 986, 628 980, 608 946" stroke="#f2ac2c" stroke-width="60" fill="none" stroke-linecap="round"/>
+      <circle cx="478" cy="940" r="31" fill="#fffaf2"/>
+      <circle cx="602" cy="940" r="31" fill="#fffaf2"/>
+      
+      <g transform="translate(484 884) rotate(13)">
+        <ellipse cx="0" cy="0" rx="31" ry="48" fill="#f7c48d"/>
+        <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
+          <line x1="-15" y1="-44" x2="-15" y2="-20"/>
+          <line x1="0" y1="-48" x2="0" y2="-22"/>
+          <line x1="15" y1="-44" x2="15" y2="-20"/>
+        </g>
+      </g>
+      
+      <g transform="translate(596 884) rotate(-13)">
+        <ellipse cx="0" cy="0" rx="31" ry="48" fill="#f7c48d"/>
+        <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
+          <line x1="-15" y1="-44" x2="-15" y2="-20"/>
+          <line x1="0" y1="-48" x2="0" y2="-22"/>
+          <line x1="15" y1="-44" x2="15" y2="-20"/>
+        </g>
+      </g></g><g id="sparkD1"><path class="sparkD1-star" d="M268 444 L275.28 462.72 L294 470 L275.28 477.28 L268 496 L260.72 477.28 L242 470 L260.72 462.72 Z" fill="#ffd968" opacity="0"/><path class="sparkD1-star" d="M812 410 L817.6 424.4 L832 430 L817.6 435.6 L812 450 L806.4 435.6 L792 430 L806.4 424.4 Z" fill="#ffd968" opacity="0"/><path class="sparkD1-star" d="M848 624 L852.48 635.52 L864 640 L852.48 644.48 L848 656 L843.52 644.48 L832 640 L843.52 635.52 Z" fill="#ffd968" opacity="0"/></g></svg></div>
+<div class="clip" data-start="14.86" data-duration="6.02" data-track-index="3"><svg width="1080" height="1920" viewBox="0 0 1080 1920">
+      <defs>
+        <linearGradient id="wallGrad4" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff6e2"/>
+          <stop offset="1" stop-color="#ffe7c4"/>
+        </linearGradient>
+        <radialGradient id="glowGrad4" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.95"/>
+          <stop offset="0.55" stop-color="#ffd968" stop-opacity="0.45"/>
+          <stop offset="1" stop-color="#ffd968" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="1080" height="1520" fill="url(#wallGrad4)"/>
+      <rect x="0" y="1150" width="1080" height="10" fill="#f3cf9e"/>
+      <rect x="0" y="1520" width="1080" height="400" fill="#eec093"/>
+      <g stroke="#dfa878" stroke-width="5" opacity="0.6">
+        <line x1="0" y1="1620" x2="1080" y2="1620"/>
+        <line x1="0" y1="1740" x2="1080" y2="1740"/>
+        <line x1="0" y1="1860" x2="1080" y2="1860"/>
+      </g>
+      <!-- jendela kiri -->
+      <g>
+        <rect x="58" y="238" width="306" height="520" rx="26" fill="#ffffff" stroke="#dfa06a" stroke-width="10"/>
+        <rect x="82" y="262" width="258" height="472" rx="16" fill="#bde4fb"/>
+        <circle cx="150" cy="340" r="34" fill="#ffd94d"/>
+        <ellipse cx="238" cy="392" rx="58" ry="24" fill="#ffffff" opacity="0.92"/>
+        <ellipse cx="282" cy="368" rx="38" ry="20" fill="#ffffff" opacity="0.92"/>
+        <line x1="211" y1="262" x2="211" y2="734" stroke="#ffffff" stroke-width="10"/>
+        <line x1="82" y1="498" x2="340" y2="498" stroke="#ffffff" stroke-width="10"/>
+        <path d="M58 238 h64 v520 h-64 Z" fill="#ffb08a" opacity="0.85"/>
+        <path d="M300 238 h64 v520 h-64 Z" fill="#ffb08a" opacity="0.85"/>
+      </g>
+      <!-- bingkai gambar kanan -->
+      <g>
+        <rect x="756" y="292" width="252" height="252" rx="14" fill="#d99a5b"/>
+        <rect x="774" y="310" width="216" height="216" rx="8" fill="#fff8ec"/>
+        <circle cx="882" cy="392" r="26" fill="#ff8fab"/>
+        <g fill="#ffb3c6">
+          <circle cx="882" cy="356" r="15"/><circle cx="914" cy="378" r="15"/>
+          <circle cx="906" cy="412" r="15"/><circle cx="858" cy="412" r="15"/>
+          <circle cx="850" cy="378" r="15"/>
+        </g>
+        <path d="M882 418 C 882 452, 876 470, 862 492 M882 418 C 884 448, 894 466, 910 480" stroke="#7cb350" stroke-width="7" fill="none"/>
+      </g>
+      <!-- lampu gantung -->
+      <g>
+        <line x1="838" y1="0" x2="838" y2="128" stroke="#a9743f" stroke-width="7"/>
+        <path d="M772 210 L904 210 L862 128 L814 128 Z" fill="#ffb84d"/>
+        <ellipse cx="838" cy="216" rx="66" ry="12" fill="#ffdf8a"/>
+        <ellipse cx="838" cy="252" rx="130" ry="60" fill="#ffdf8a" opacity="0.25"/>
+      </g>
+      <!-- rak kecil kanan -->
+      <g>
+        <rect x="792" y="902" width="248" height="16" rx="8" fill="#c98a54"/>
+        <g fill="#ffffff" stroke="#e5c9a8" stroke-width="4">
+          <path d="M824 902 v-44 h44 v44 Z"/>
+          <path d="M892 902 v-56 h40 v56 Z"/>
+        </g>
+        <path d="M868 872 q18 -12 30 2" stroke="#e5c9a8" stroke-width="5" fill="none"/>
+        <path d="M812 902 v-30 h34 v30 Z" fill="#ffd9c2" stroke="#e5c9a8" stroke-width="4"/>
+      </g>
+      <ellipse id="glowDoa2" cx="540" cy="640" rx="360" ry="360" fill="url(#glowGrad4)" opacity="0"/><g id="charDoa2"><g transform="translate(0 10) rotate(2.5 540 720)">
+      <!-- gaun -->
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="#f2ac2c"/>
+      <path d="M640 890 C 690 1010, 706 1180, 714 1330 L640 1330 C 636 1180, 634 1020, 640 890 Z" fill="#dd951f" opacity="0.35"/>
+      <!-- wajah -->
+      <ellipse cx="540" cy="650" rx="140" ry="152" fill="#f7c48d"/>
+      <!-- hijab: bingkai wajah + lilitan bahu -->
+      <path fill-rule="evenodd" fill="#f8b795" d="
+        M540 404 C 398 404, 318 520, 318 674 C 318 792, 338 906, 326 1014 L754 1014 C 742 906, 762 792, 762 674 C 762 520, 682 404, 540 404 Z
+        M540 476 C 460 476, 406 552, 406 650 C 406 746, 460 814, 540 814 C 620 814, 674 746, 674 650 C 674 552, 620 476, 540 476 Z"/>
+      <path d="M424 596 C 434 508, 482 464, 540 464 C 598 464, 646 508, 656 596 C 636 522, 600 494, 540 494 C 480 494, 444 522, 424 596 Z" fill="#ef9c74" opacity="0.5"/>
+      <g stroke="#ef9c74" stroke-width="6" fill="none" opacity="0.45" stroke-linecap="round">
+        <path d="M352 760 C 348 850, 352 930, 346 990"/>
+        <path d="M728 760 C 732 850, 728 930, 734 990"/>
+      </g>
+      <!-- kerah putih -->
+      <path d="M540 902 C 512 884, 476 890, 460 914 C 476 944, 514 950, 540 926 Z" fill="#fffaf2"/>
+      <path d="M540 902 C 568 884, 604 890, 620 914 C 604 944, 566 950, 540 926 Z" fill="#fffaf2"/>
+      
+        <g stroke="#8a5a33" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.85">
+          <path d="M440 630 Q478 612 516 626"/>
+          <path d="M564 626 Q602 612 640 630"/>
+        </g>
+      <g id="d2Eyes">
+        <g stroke="#4a2c14" stroke-width="7" stroke-linecap="round" fill="none">
+          <path d="M450 664 Q478 682 506 664"/>
+          <path d="M574 664 Q602 682 630 664"/>
+        </g></g>
+      
+      <path d="M540 692 Q549 708 538 718" stroke="#dd9a68" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="414" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <ellipse cx="666" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <g id="d2Mouth"><path d="M518 750 Q540 761 562 750" stroke="#a34d2a" stroke-width="6" fill="none" stroke-linecap="round"/></g></g></g>
+      <!-- meja + piring + gelas (di depan tubuh Lala) -->
+      <g>
+        <path d="M92 1258 L988 1258 L988 1548 C 800 1596, 280 1596, 92 1548 Z" fill="#fff6ec"/>
+        <g stroke="#e2574c" stroke-width="10" opacity="0.13">
+          <line x1="252" y1="1258" x2="252" y2="1570"/><line x1="412" y1="1258" x2="412" y2="1590"/>
+          <line x1="572" y1="1258" x2="572" y2="1596"/><line x1="732" y1="1258" x2="732" y2="1590"/>
+          <line x1="892" y1="1258" x2="892" y2="1570"/>
+          <line x1="92" y1="1360" x2="988" y2="1360"/><line x1="92" y1="1460" x2="988" y2="1460"/>
+        </g>
+        <rect x="88" y="1224" width="904" height="36" rx="18" fill="#eaa96a"/>
+        <rect x="88" y="1224" width="904" height="14" rx="7" fill="#f4bc7e"/>
+        <!-- mangkuk sup kiri -->
+        <g>
+          <path d="M178 1236 a78 26 0 0 0 156 0 Z" fill="#ff8a65"/>
+          <ellipse cx="256" cy="1236" rx="78" ry="20" fill="#ffb59d"/>
+          <ellipse cx="256" cy="1234" rx="58" ry="13" fill="#ffd9a8"/>
+        </g>
+        <!-- piring utama -->
+        <g>
+          <ellipse cx="540" cy="1242" rx="158" ry="36" fill="#ffffff" stroke="#e3d0ba" stroke-width="4"/>
+          <ellipse cx="540" cy="1238" rx="112" ry="24" fill="#fdf1dc"/>
+          <path d="M470 1238 C 470 1212, 496 1202, 520 1206 C 548 1202, 574 1214, 572 1236 C 540 1248, 500 1248, 470 1238 Z" fill="#ffffff" stroke="#ead9c2" stroke-width="3"/>
+          <circle cx="616" cy="1236" r="17" fill="#e8862e"/>
+          <circle cx="640" cy="1248" r="12" fill="#c96a1e"/>
+          <circle cx="452" cy="1246" r="9" fill="#7cb350"/>
+          <circle cx="470" cy="1252" r="8" fill="#8bc34a"/>
+          <circle cx="438" cy="1254" r="7" fill="#7cb350"/>
+          <path d="M592 1218 c14 -8 26 0 26 10 c-10 6 -24 2 -26 -10 Z" fill="#a85b2a"/>
+        </g>
+        <!-- gelas kanan -->
+        <g>
+          <path d="M776 1152 L844 1152 L836 1246 L784 1246 Z" fill="#bfe3f2" opacity="0.5" stroke="#8fc3dd" stroke-width="4"/>
+          <path d="M781 1184 L839 1184 L836 1246 L784 1246 Z" fill="#7ec3e8" opacity="0.55"/>
+          <line x1="792" y1="1164" x2="788" y2="1232" stroke="#ffffff" stroke-width="7" opacity="0.7"/>
+        </g>
+      </g>
+      <path d="M420 946 C 434 986, 452 980, 472 946" stroke="#f2ac2c" stroke-width="60" fill="none" stroke-linecap="round"/>
+      <path d="M660 946 C 646 986, 628 980, 608 946" stroke="#f2ac2c" stroke-width="60" fill="none" stroke-linecap="round"/>
+      <circle cx="478" cy="940" r="31" fill="#fffaf2"/>
+      <circle cx="602" cy="940" r="31" fill="#fffaf2"/>
+      
+      <g transform="translate(484 884) rotate(13)">
+        <ellipse cx="0" cy="0" rx="31" ry="48" fill="#f7c48d"/>
+        <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
+          <line x1="-15" y1="-44" x2="-15" y2="-20"/>
+          <line x1="0" y1="-48" x2="0" y2="-22"/>
+          <line x1="15" y1="-44" x2="15" y2="-20"/>
+        </g>
+      </g>
+      
+      <g transform="translate(596 884) rotate(-13)">
+        <ellipse cx="0" cy="0" rx="31" ry="48" fill="#f7c48d"/>
+        <g stroke="#eda96f" stroke-width="4" stroke-linecap="round">
+          <line x1="-15" y1="-44" x2="-15" y2="-20"/>
+          <line x1="0" y1="-48" x2="0" y2="-22"/>
+          <line x1="15" y1="-44" x2="15" y2="-20"/>
+        </g>
+      </g><g id="sparkD2"><path class="sparkD2-star" d="M250 496 L256.72 513.28 L274 520 L256.72 526.72 L250 544 L243.28 526.72 L226 520 L243.28 513.28 Z" fill="#ffd968" opacity="0"/><path class="sparkD2-star" d="M836 472 L843.84 492.16 L864 500 L843.84 507.84 L836 528 L828.16 507.84 L808 500 L828.16 492.16 Z" fill="#ffd968" opacity="0"/><path class="sparkD2-star" d="M872 682 L877.04 694.96 L890 700 L877.04 705.04 L872 718 L866.96 705.04 L854 700 L866.96 694.96 Z" fill="#ffd968" opacity="0"/><path class="sparkD2-star" d="M214 714 L218.48 725.52 L230 730 L218.48 734.48 L214 746 L209.52 734.48 L198 730 L209.52 725.52 Z" fill="#ffd968" opacity="0"/></g></svg></div>
+<div class="clip" data-start="20.88" data-duration="6.72" data-track-index="4"><svg width="1080" height="1920" viewBox="0 0 1080 1920">
+      <defs>
+        <linearGradient id="wallGrad5" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff6e2"/>
+          <stop offset="1" stop-color="#ffe7c4"/>
+        </linearGradient>
+        <radialGradient id="glowGrad5" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.95"/>
+          <stop offset="0.55" stop-color="#ffd968" stop-opacity="0.45"/>
+          <stop offset="1" stop-color="#ffd968" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="1080" height="1520" fill="url(#wallGrad5)"/>
+      <rect x="0" y="1150" width="1080" height="10" fill="#f3cf9e"/>
+      <rect x="0" y="1520" width="1080" height="400" fill="#eec093"/>
+      <g stroke="#dfa878" stroke-width="5" opacity="0.6">
+        <line x1="0" y1="1620" x2="1080" y2="1620"/>
+        <line x1="0" y1="1740" x2="1080" y2="1740"/>
+        <line x1="0" y1="1860" x2="1080" y2="1860"/>
+      </g>
+      <!-- jendela kiri -->
+      <g>
+        <rect x="58" y="238" width="306" height="520" rx="26" fill="#ffffff" stroke="#dfa06a" stroke-width="10"/>
+        <rect x="82" y="262" width="258" height="472" rx="16" fill="#bde4fb"/>
+        <circle cx="150" cy="340" r="34" fill="#ffd94d"/>
+        <ellipse cx="238" cy="392" rx="58" ry="24" fill="#ffffff" opacity="0.92"/>
+        <ellipse cx="282" cy="368" rx="38" ry="20" fill="#ffffff" opacity="0.92"/>
+        <line x1="211" y1="262" x2="211" y2="734" stroke="#ffffff" stroke-width="10"/>
+        <line x1="82" y1="498" x2="340" y2="498" stroke="#ffffff" stroke-width="10"/>
+        <path d="M58 238 h64 v520 h-64 Z" fill="#ffb08a" opacity="0.85"/>
+        <path d="M300 238 h64 v520 h-64 Z" fill="#ffb08a" opacity="0.85"/>
+      </g>
+      <!-- bingkai gambar kanan -->
+      <g>
+        <rect x="756" y="292" width="252" height="252" rx="14" fill="#d99a5b"/>
+        <rect x="774" y="310" width="216" height="216" rx="8" fill="#fff8ec"/>
+        <circle cx="882" cy="392" r="26" fill="#ff8fab"/>
+        <g fill="#ffb3c6">
+          <circle cx="882" cy="356" r="15"/><circle cx="914" cy="378" r="15"/>
+          <circle cx="906" cy="412" r="15"/><circle cx="858" cy="412" r="15"/>
+          <circle cx="850" cy="378" r="15"/>
+        </g>
+        <path d="M882 418 C 882 452, 876 470, 862 492 M882 418 C 884 448, 894 466, 910 480" stroke="#7cb350" stroke-width="7" fill="none"/>
+      </g>
+      <!-- lampu gantung -->
+      <g>
+        <line x1="838" y1="0" x2="838" y2="128" stroke="#a9743f" stroke-width="7"/>
+        <path d="M772 210 L904 210 L862 128 L814 128 Z" fill="#ffb84d"/>
+        <ellipse cx="838" cy="216" rx="66" ry="12" fill="#ffdf8a"/>
+        <ellipse cx="838" cy="252" rx="130" ry="60" fill="#ffdf8a" opacity="0.25"/>
+      </g>
+      <!-- rak kecil kanan -->
+      <g>
+        <rect x="792" y="902" width="248" height="16" rx="8" fill="#c98a54"/>
+        <g fill="#ffffff" stroke="#e5c9a8" stroke-width="4">
+          <path d="M824 902 v-44 h44 v44 Z"/>
+          <path d="M892 902 v-56 h40 v56 Z"/>
+        </g>
+        <path d="M868 872 q18 -12 30 2" stroke="#e5c9a8" stroke-width="5" fill="none"/>
+        <path d="M812 902 v-30 h34 v30 Z" fill="#ffd9c2" stroke="#e5c9a8" stroke-width="4"/>
+      </g>
+      <g id="headMakan">
+      <!-- gaun -->
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="#f2ac2c"/>
+      <path d="M640 890 C 690 1010, 706 1180, 714 1330 L640 1330 C 636 1180, 634 1020, 640 890 Z" fill="#dd951f" opacity="0.35"/>
+      <!-- wajah -->
+      <ellipse cx="540" cy="650" rx="140" ry="152" fill="#f7c48d"/>
+      <!-- hijab: bingkai wajah + lilitan bahu -->
+      <path fill-rule="evenodd" fill="#f8b795" d="
+        M540 404 C 398 404, 318 520, 318 674 C 318 792, 338 906, 326 1014 L754 1014 C 742 906, 762 792, 762 674 C 762 520, 682 404, 540 404 Z
+        M540 476 C 460 476, 406 552, 406 650 C 406 746, 460 814, 540 814 C 620 814, 674 746, 674 650 C 674 552, 620 476, 540 476 Z"/>
+      <path d="M424 596 C 434 508, 482 464, 540 464 C 598 464, 646 508, 656 596 C 636 522, 600 494, 540 494 C 480 494, 444 522, 424 596 Z" fill="#ef9c74" opacity="0.5"/>
+      <g stroke="#ef9c74" stroke-width="6" fill="none" opacity="0.45" stroke-linecap="round">
+        <path d="M352 760 C 348 850, 352 930, 346 990"/>
+        <path d="M728 760 C 732 850, 728 930, 734 990"/>
+      </g>
+      <!-- kerah putih -->
+      <path d="M540 902 C 512 884, 476 890, 460 914 C 476 944, 514 950, 540 926 Z" fill="#fffaf2"/>
+      <path d="M540 902 C 568 884, 604 890, 620 914 C 604 944, 566 950, 540 926 Z" fill="#fffaf2"/>
+      
+        <g stroke="#8a5a33" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.85">
+          <path d="M440 622 Q478 604 516 618"/>
+          <path d="M564 618 Q602 604 640 622"/>
+        </g>
+      <g id="mEyes">
+        <g>
+          <ellipse cx="478" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="478" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="478" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="472" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="485" cy="674" r="3" fill="#ffffff"/>
+          <path d="M449 653 Q 478 623 507 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g>
+        <g>
+          <ellipse cx="602" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="602" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="602" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="596" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="609" cy="674" r="3" fill="#ffffff"/>
+          <path d="M573 653 Q 602 623 631 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g></g>
+      <g id="mEyesHappy" opacity="0">
+        <g stroke="#4a2c14" stroke-width="8" stroke-linecap="round" fill="none">
+          <path d="M449 674 Q478 644 507 674"/>
+          <path d="M573 674 Q602 644 631 674"/>
+        </g></g>
+      <path d="M540 692 Q549 708 538 718" stroke="#dd9a68" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="414" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <ellipse cx="666" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <g id="mMouth"><path d="M505 742 Q540 772 575 742" stroke="#a34d2a" stroke-width="7" fill="none" stroke-linecap="round"/></g></g>
+      <!-- meja + piring + gelas (di depan tubuh Lala) -->
+      <g>
+        <path d="M92 1258 L988 1258 L988 1548 C 800 1596, 280 1596, 92 1548 Z" fill="#fff6ec"/>
+        <g stroke="#e2574c" stroke-width="10" opacity="0.13">
+          <line x1="252" y1="1258" x2="252" y2="1570"/><line x1="412" y1="1258" x2="412" y2="1590"/>
+          <line x1="572" y1="1258" x2="572" y2="1596"/><line x1="732" y1="1258" x2="732" y2="1590"/>
+          <line x1="892" y1="1258" x2="892" y2="1570"/>
+          <line x1="92" y1="1360" x2="988" y2="1360"/><line x1="92" y1="1460" x2="988" y2="1460"/>
+        </g>
+        <rect x="88" y="1224" width="904" height="36" rx="18" fill="#eaa96a"/>
+        <rect x="88" y="1224" width="904" height="14" rx="7" fill="#f4bc7e"/>
+        <!-- mangkuk sup kiri -->
+        <g>
+          <path d="M178 1236 a78 26 0 0 0 156 0 Z" fill="#ff8a65"/>
+          <ellipse cx="256" cy="1236" rx="78" ry="20" fill="#ffb59d"/>
+          <ellipse cx="256" cy="1234" rx="58" ry="13" fill="#ffd9a8"/>
+        </g>
+        <!-- piring utama -->
+        <g>
+          <ellipse cx="540" cy="1242" rx="158" ry="36" fill="#ffffff" stroke="#e3d0ba" stroke-width="4"/>
+          <ellipse cx="540" cy="1238" rx="112" ry="24" fill="#fdf1dc"/>
+          <path d="M470 1238 C 470 1212, 496 1202, 520 1206 C 548 1202, 574 1214, 572 1236 C 540 1248, 500 1248, 470 1238 Z" fill="#ffffff" stroke="#ead9c2" stroke-width="3"/>
+          <circle cx="616" cy="1236" r="17" fill="#e8862e"/>
+          <circle cx="640" cy="1248" r="12" fill="#c96a1e"/>
+          <circle cx="452" cy="1246" r="9" fill="#7cb350"/>
+          <circle cx="470" cy="1252" r="8" fill="#8bc34a"/>
+          <circle cx="438" cy="1254" r="7" fill="#7cb350"/>
+          <path d="M592 1218 c14 -8 26 0 26 10 c-10 6 -24 2 -26 -10 Z" fill="#a85b2a"/>
+        </g>
+        <!-- gelas kanan -->
+        <g>
+          <path d="M776 1152 L844 1152 L836 1246 L784 1246 Z" fill="#bfe3f2" opacity="0.5" stroke="#8fc3dd" stroke-width="4"/>
+          <path d="M781 1184 L839 1184 L836 1246 L784 1246 Z" fill="#7ec3e8" opacity="0.55"/>
+          <line x1="792" y1="1164" x2="788" y2="1232" stroke="#ffffff" stroke-width="7" opacity="0.7"/>
+        </g>
+      </g>
+      <path d="M660 940 C 696 1024, 694 1120, 662 1204" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="662" cy="1196" r="34" fill="#fffaf2"/>
+      <circle cx="662" cy="1212" r="28" fill="#f7c48d"/>
+      <g id="eatArm">
+        <path d="M420 940 C 384 1012, 396 1082, 446 1122" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
+        <circle cx="450" cy="1128" r="33" fill="#fffaf2"/>
+        <circle cx="452" cy="1134" r="28" fill="#f7c48d"/>
+        <g id="spoon">
+          <line x1="458" y1="1138" x2="512" y2="1196" stroke="#90a4ae" stroke-width="11" stroke-linecap="round"/>
+          <ellipse cx="526" cy="1208" rx="24" ry="14" fill="#cfd8dc" stroke="#90a4ae" stroke-width="3" transform="rotate(38 526 1208)"/>
+          <circle cx="522" cy="1202" r="9" fill="#ffffff"/>
+        </g>
+      </g>
+      <g stroke="#ffffff" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.85">
+        <path id="steamM1" d="M498 1186 C 484 1148, 512 1122, 498 1084"/>
+        <path id="steamM2" d="M566 1186 C 552 1148, 580 1122, 566 1084"/>
+      </g></svg></div>
+<div class="clip" data-start="27.6" data-duration="3.9" data-track-index="5"><svg width="1080" height="1920" viewBox="0 0 1080 1920">
+      <defs>
+        <linearGradient id="wallGrad6" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff6e2"/>
+          <stop offset="1" stop-color="#ffe7c4"/>
+        </linearGradient>
+        <radialGradient id="glowGrad6" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.95"/>
+          <stop offset="0.55" stop-color="#ffd968" stop-opacity="0.45"/>
+          <stop offset="1" stop-color="#ffd968" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="1080" height="1520" fill="url(#wallGrad6)"/>
+      <rect x="0" y="1150" width="1080" height="10" fill="#f3cf9e"/>
+      <rect x="0" y="1520" width="1080" height="400" fill="#eec093"/>
+      <g stroke="#dfa878" stroke-width="5" opacity="0.6">
+        <line x1="0" y1="1620" x2="1080" y2="1620"/>
+        <line x1="0" y1="1740" x2="1080" y2="1740"/>
+        <line x1="0" y1="1860" x2="1080" y2="1860"/>
+      </g>
+      <!-- jendela kiri -->
+      <g>
+        <rect x="58" y="238" width="306" height="520" rx="26" fill="#ffffff" stroke="#dfa06a" stroke-width="10"/>
+        <rect x="82" y="262" width="258" height="472" rx="16" fill="#bde4fb"/>
+        <circle cx="150" cy="340" r="34" fill="#ffd94d"/>
+        <ellipse cx="238" cy="392" rx="58" ry="24" fill="#ffffff" opacity="0.92"/>
+        <ellipse cx="282" cy="368" rx="38" ry="20" fill="#ffffff" opacity="0.92"/>
+        <line x1="211" y1="262" x2="211" y2="734" stroke="#ffffff" stroke-width="10"/>
+        <line x1="82" y1="498" x2="340" y2="498" stroke="#ffffff" stroke-width="10"/>
+        <path d="M58 238 h64 v520 h-64 Z" fill="#ffb08a" opacity="0.85"/>
+        <path d="M300 238 h64 v520 h-64 Z" fill="#ffb08a" opacity="0.85"/>
+      </g>
+      <!-- bingkai gambar kanan -->
+      <g>
+        <rect x="756" y="292" width="252" height="252" rx="14" fill="#d99a5b"/>
+        <rect x="774" y="310" width="216" height="216" rx="8" fill="#fff8ec"/>
+        <circle cx="882" cy="392" r="26" fill="#ff8fab"/>
+        <g fill="#ffb3c6">
+          <circle cx="882" cy="356" r="15"/><circle cx="914" cy="378" r="15"/>
+          <circle cx="906" cy="412" r="15"/><circle cx="858" cy="412" r="15"/>
+          <circle cx="850" cy="378" r="15"/>
+        </g>
+        <path d="M882 418 C 882 452, 876 470, 862 492 M882 418 C 884 448, 894 466, 910 480" stroke="#7cb350" stroke-width="7" fill="none"/>
+      </g>
+      <!-- lampu gantung -->
+      <g>
+        <line x1="838" y1="0" x2="838" y2="128" stroke="#a9743f" stroke-width="7"/>
+        <path d="M772 210 L904 210 L862 128 L814 128 Z" fill="#ffb84d"/>
+        <ellipse cx="838" cy="216" rx="66" ry="12" fill="#ffdf8a"/>
+        <ellipse cx="838" cy="252" rx="130" ry="60" fill="#ffdf8a" opacity="0.25"/>
+      </g>
+      <!-- rak kecil kanan -->
+      <g>
+        <rect x="792" y="902" width="248" height="16" rx="8" fill="#c98a54"/>
+        <g fill="#ffffff" stroke="#e5c9a8" stroke-width="4">
+          <path d="M824 902 v-44 h44 v44 Z"/>
+          <path d="M892 902 v-56 h40 v56 Z"/>
+        </g>
+        <path d="M868 872 q18 -12 30 2" stroke="#e5c9a8" stroke-width="5" fill="none"/>
+        <path d="M812 902 v-30 h34 v30 Z" fill="#ffd9c2" stroke="#e5c9a8" stroke-width="4"/>
+      </g>
+      <g id="charTutup">
+      <!-- gaun -->
+      <path d="M402 905 C 384 1030, 366 1180, 356 1330 L724 1330 C 714 1180, 696 1030, 678 905 C 636 876, 444 876, 402 905 Z" fill="#f2ac2c"/>
+      <path d="M640 890 C 690 1010, 706 1180, 714 1330 L640 1330 C 636 1180, 634 1020, 640 890 Z" fill="#dd951f" opacity="0.35"/>
+      <!-- wajah -->
+      <ellipse cx="540" cy="650" rx="140" ry="152" fill="#f7c48d"/>
+      <!-- hijab: bingkai wajah + lilitan bahu -->
+      <path fill-rule="evenodd" fill="#f8b795" d="
+        M540 404 C 398 404, 318 520, 318 674 C 318 792, 338 906, 326 1014 L754 1014 C 742 906, 762 792, 762 674 C 762 520, 682 404, 540 404 Z
+        M540 476 C 460 476, 406 552, 406 650 C 406 746, 460 814, 540 814 C 620 814, 674 746, 674 650 C 674 552, 620 476, 540 476 Z"/>
+      <path d="M424 596 C 434 508, 482 464, 540 464 C 598 464, 646 508, 656 596 C 636 522, 600 494, 540 494 C 480 494, 444 522, 424 596 Z" fill="#ef9c74" opacity="0.5"/>
+      <g stroke="#ef9c74" stroke-width="6" fill="none" opacity="0.45" stroke-linecap="round">
+        <path d="M352 760 C 348 850, 352 930, 346 990"/>
+        <path d="M728 760 C 732 850, 728 930, 734 990"/>
+      </g>
+      <!-- kerah putih -->
+      <path d="M540 902 C 512 884, 476 890, 460 914 C 476 944, 514 950, 540 926 Z" fill="#fffaf2"/>
+      <path d="M540 902 C 568 884, 604 890, 620 914 C 604 944, 566 950, 540 926 Z" fill="#fffaf2"/>
+      
+        <g stroke="#8a5a33" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.85">
+          <path d="M440 622 Q478 604 516 618"/>
+          <path d="M564 618 Q602 604 640 622"/>
+        </g>
+      <g id="uEyes">
+        <g>
+          <ellipse cx="478" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="478" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="478" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="472" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="485" cy="674" r="3" fill="#ffffff"/>
+          <path d="M449 653 Q 478 623 507 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g>
+        <g>
+          <ellipse cx="602" cy="665" rx="27" ry="34" fill="#ffffff"/>
+          <circle cx="602" cy="668" r="17" fill="#7a4322"/>
+          <circle cx="602" cy="668" r="9" fill="#2a1508"/>
+          <circle cx="596" cy="658" r="5" fill="#ffffff"/>
+          <circle cx="609" cy="674" r="3" fill="#ffffff"/>
+          <path d="M573 653 Q 602 623 631 653" stroke="#4a2c14" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g></g>
+      
+      <path d="M540 692 Q549 708 538 718" stroke="#dd9a68" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="414" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <ellipse cx="666" cy="726" rx="36" ry="21" fill="#f28b74" opacity="0.5"/>
+      <g id="uMouth">
+        <path d="M503 736 Q540 744 577 736 Q574 784 540 786 Q506 784 503 736 Z" fill="#8a3b22"/>
+        <ellipse cx="540" cy="772" rx="18" ry="8" fill="#e2705f"/></g></g>
+      <!-- meja + piring + gelas (di depan tubuh Lala) -->
+      <g>
+        <path d="M92 1258 L988 1258 L988 1548 C 800 1596, 280 1596, 92 1548 Z" fill="#fff6ec"/>
+        <g stroke="#e2574c" stroke-width="10" opacity="0.13">
+          <line x1="252" y1="1258" x2="252" y2="1570"/><line x1="412" y1="1258" x2="412" y2="1590"/>
+          <line x1="572" y1="1258" x2="572" y2="1596"/><line x1="732" y1="1258" x2="732" y2="1590"/>
+          <line x1="892" y1="1258" x2="892" y2="1570"/>
+          <line x1="92" y1="1360" x2="988" y2="1360"/><line x1="92" y1="1460" x2="988" y2="1460"/>
+        </g>
+        <rect x="88" y="1224" width="904" height="36" rx="18" fill="#eaa96a"/>
+        <rect x="88" y="1224" width="904" height="14" rx="7" fill="#f4bc7e"/>
+        <!-- mangkuk sup kiri -->
+        <g>
+          <path d="M178 1236 a78 26 0 0 0 156 0 Z" fill="#ff8a65"/>
+          <ellipse cx="256" cy="1236" rx="78" ry="20" fill="#ffb59d"/>
+          <ellipse cx="256" cy="1234" rx="58" ry="13" fill="#ffd9a8"/>
+        </g>
+        <!-- piring utama -->
+        <g>
+          <ellipse cx="540" cy="1242" rx="158" ry="36" fill="#ffffff" stroke="#e3d0ba" stroke-width="4"/>
+          <ellipse cx="540" cy="1238" rx="112" ry="24" fill="#fdf1dc"/>
+          <path d="M470 1238 C 470 1212, 496 1202, 520 1206 C 548 1202, 574 1214, 572 1236 C 540 1248, 500 1248, 470 1238 Z" fill="#ffffff" stroke="#ead9c2" stroke-width="3"/>
+          <circle cx="616" cy="1236" r="17" fill="#e8862e"/>
+          <circle cx="640" cy="1248" r="12" fill="#c96a1e"/>
+          <circle cx="452" cy="1246" r="9" fill="#7cb350"/>
+          <circle cx="470" cy="1252" r="8" fill="#8bc34a"/>
+          <circle cx="438" cy="1254" r="7" fill="#7cb350"/>
+          <path d="M592 1218 c14 -8 26 0 26 10 c-10 6 -24 2 -26 -10 Z" fill="#a85b2a"/>
+        </g>
+        <!-- gelas kanan -->
+        <g>
+          <path d="M776 1152 L844 1152 L836 1246 L784 1246 Z" fill="#bfe3f2" opacity="0.5" stroke="#8fc3dd" stroke-width="4"/>
+          <path d="M781 1184 L839 1184 L836 1246 L784 1246 Z" fill="#7ec3e8" opacity="0.55"/>
+          <line x1="792" y1="1164" x2="788" y2="1232" stroke="#ffffff" stroke-width="7" opacity="0.7"/>
+        </g>
+      </g>
+      <path d="M420 940 C 366 992, 356 1058, 384 1116" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
+      <circle cx="388" cy="1122" r="33" fill="#fffaf2"/>
+      <circle cx="390" cy="1130" r="29" fill="#f7c48d"/>
+      <path d="M376 1122 C 366 1086, 370 1054, 388 1044 C 404 1052, 402 1086, 400 1114 Z" fill="#f7c48d"/>
+      <g id="armWaveTutup">
+        <path d="M660 940 C 724 884, 756 796, 748 700" stroke="#f2ac2c" stroke-width="64" fill="none" stroke-linecap="round"/>
+        <circle cx="746" cy="700" r="34" fill="#fffaf2"/>
+        <circle cx="746" cy="682" r="29" fill="#f7c48d"/>
+        <g fill="#f7c48d">
+          <circle cx="726" cy="656" r="10"/>
+          <circle cx="746" cy="650" r="10"/>
+          <circle cx="766" cy="656" r="10"/>
+        </g>
+      </g></svg></div>
+<div id="cap0" class="clip cap" data-start="0.0" data-duration="2.2" data-track-index="20"><div class="lat">Assalamu'alaikum, teman-teman!</div></div>
+<div id="cap1" class="clip cap" data-start="2.2" data-duration="2.54" data-track-index="21"><div class="lat">Hari ini aku mau makan.</div></div>
+<div id="cap2" class="clip cap" data-start="4.74" data-duration="1.78" data-track-index="22"><div class="lat">Tapi tunggu dulu!</div></div>
+<div id="cap3" class="clip cap" data-start="6.52" data-duration="3.18" data-track-index="23"><div class="lat">Apa ya yang harus kita baca sebelum makan?</div></div>
+<div id="cap4" class="clip cap" data-start="9.7" data-duration="2.58" data-track-index="24"><div class="lat">Yuk, kita berdoa bersama-sama!</div></div>
+<div id="cap5" class="clip cap" data-start="12.28" data-duration="2.58" data-track-index="25"><div class="ar" dir="rtl" lang="ar">اللَّهُمَّ بَارِكْ لَنَا</div><div class="lat">Allahumma barik lana</div></div>
+<div id="cap6" class="clip cap" data-start="14.86" data-duration="2.08" data-track-index="26"><div class="ar" dir="rtl" lang="ar">فِيمَا رَزَقْتَنَا</div><div class="lat">fima razaqtana</div></div>
+<div id="cap7" class="clip cap" data-start="16.94" data-duration="3.94" data-track-index="27"><div class="ar" dir="rtl" lang="ar">وَقِنَا عَذَابَ النَّارِ</div><div class="lat">waqina 'adzabannar</div></div>
+<div id="cap8" class="clip cap" data-start="20.88" data-duration="1.9" data-track-index="28"><div class="lat">Bismillahirrahmanirrahim</div></div>
+<div id="cap9" class="clip cap" data-start="22.78" data-duration="2.04" data-track-index="29"><div class="lat">Hmm, yummy!</div></div>
+<div id="cap10" class="clip cap" data-start="24.82" data-duration="2.78" data-track-index="30"><div class="lat">Alhamdulillah, makanannya enak.</div></div>
+<div id="cap11" class="clip cap" data-start="27.6" data-duration="1.62" data-track-index="31"><div class="lat">Jangan lupa baca doa ya, teman-teman.</div></div>
+<div id="cap12" class="clip cap" data-start="29.22" data-duration="2.28" data-track-index="32"><div class="lat">Dadah!</div></div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+
+      const tl = gsap.timeline({ paused: true });
+
+      // SAPA
+      tl.to("#charSapa", { y: -6, duration: 0.79, ease: "sine.inOut", yoyo: true, repeat: 5 }, 0);
+      tl.fromTo("#armWaveSapa", { rotation: -8 },
+        { rotation: 11, svgOrigin: "420 940", duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 9 }, 0.15);
+
+      // TANYA
+      tl.fromTo("#headTanya", { rotation: 0 },
+        { rotation: 3, svgOrigin: "540 720", duration: 0.8, ease: "sine.out" }, 4.95);
+      tl.fromTo("#bubbleTanya", { opacity: 0, scale: 0.4, svgOrigin: "806 420" },
+        { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.7)" }, 5.35);
+      tl.to("#bubbleTanya", { y: -12, duration: 1.05, ease: "sine.inOut", yoyo: true, repeat: 3 }, 5.85);
+      tl.to("#bubbleTanya", { opacity: 0, duration: 0.25, ease: "sine.in" }, 9.35);
+
+      // DOA-1
+      tl.fromTo("#armsInviteD1", { y: 0 },
+        { y: -8, duration: 0.9, ease: "sine.inOut", yoyo: true, repeat: 2 }, 9.8);
+      tl.to("#armsInviteD1", { opacity: 0, duration: 0.25, ease: "sine.inOut" }, 12.28);
+      tl.fromTo("#armsDoaD1", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "sine.inOut" }, 12.28);
+      tl.fromTo("#glowDoa1", { opacity: 0 }, { opacity: 0.5, duration: 0.9, ease: "sine.out" }, 12.3);
+      tl.to("#headDoa1", { rotation: 2.5, y: 6, svgOrigin: "540 720", duration: 1.0, ease: "sine.out" }, 12.35);
+      tl.to("#d1Eyes", { opacity: 0, duration: 0.4, ease: "sine.inOut" }, 13.6);
+      tl.to("#d1EyesClosed", { opacity: 1, duration: 0.4, ease: "sine.inOut" }, 13.6);
+      tl.to("#d1Mouth", { opacity: 0, duration: 0.4, ease: "sine.inOut" }, 13.6);
+      tl.to("#d1MouthCalm", { opacity: 1, duration: 0.4, ease: "sine.inOut" }, 13.6);
+      tl.to(".sparkD1-star", { opacity: 0.95, duration: 0.5, stagger: 0.3, ease: "sine.out" }, 13.1);
+      tl.to(".sparkD1-star", { opacity: 0, duration: 0.5, ease: "sine.in" }, 14.3);
+
+      // DOA-2
+      tl.fromTo("#glowDoa2", { opacity: 0.55 },
+        { opacity: 0.85, duration: 2.2, ease: "sine.inOut", yoyo: true, repeat: 2 }, 14.9);
+      tl.fromTo("#charDoa2", { scale: 1 },
+        { scale: 1.008, svgOrigin: "540 1330", duration: 1.9, ease: "sine.inOut", yoyo: true, repeat: 2 }, 14.86);
+      tl.to(".sparkD2-star", { opacity: 0.95, duration: 0.5, stagger: 0.35, ease: "sine.out" }, 15.5);
+      tl.to(".sparkD2-star", { opacity: 0.2, duration: 0.9, ease: "sine.inOut" }, 18.6);
+      tl.to(".sparkD2-star", { opacity: 0, duration: 0.5, ease: "sine.in" }, 20.25);
+
+      // MAKAN
+      tl.fromTo("#steamM1", { opacity: 0, y: 6 },
+        { opacity: 0.8, y: -14, duration: 1.15, ease: "sine.out", yoyo: true, repeat: 5 }, 21.1);
+      tl.fromTo("#steamM2", { opacity: 0, y: 6 },
+        { opacity: 0.8, y: -14, duration: 1.15, ease: "sine.out", yoyo: true, repeat: 5 }, 21.65);
+      tl.to("#eatArm", { x: 26, y: 52, rotation: 7, svgOrigin: "420 940", duration: 0.5, ease: "sine.out" }, 22.55);
+      tl.to("#eatArm", { x: 52, y: -320, rotation: -38, duration: 0.6, ease: "sine.inOut" }, 23.15);
+      tl.to("#headMakan", { rotation: 3.5, y: 7, svgOrigin: "540 720", duration: 0.4, ease: "sine.out" }, 23.55);
+      tl.to("#mEyes", { opacity: 0, duration: 0.2 }, 23.6);
+      tl.to("#mEyesHappy", { opacity: 1, duration: 0.2 }, 23.6);
+      tl.to("#eatArm", { y: -306, duration: 0.3, ease: "sine.inOut", yoyo: true, repeat: 1 }, 23.8);
+      tl.to("#eatArm", { x: 0, y: 0, rotation: 0, duration: 0.55, ease: "sine.inOut" }, 24.5);
+      tl.to("#headMakan", { rotation: 0, y: 0, duration: 0.4, ease: "sine.inOut" }, 24.5);
+      tl.to("#mEyesHappy", { opacity: 0, duration: 0.2 }, 24.65);
+      tl.to("#mEyes", { opacity: 1, duration: 0.2 }, 24.65);
+      tl.to("#eatArm", { x: 26, y: 52, rotation: 7, duration: 0.5, ease: "sine.out" }, 25.3);
+      tl.to("#eatArm", { x: 52, y: -320, rotation: -38, duration: 0.6, ease: "sine.inOut" }, 25.9);
+      tl.to("#headMakan", { rotation: 3.5, y: 7, svgOrigin: "540 720", duration: 0.4, ease: "sine.out" }, 26.15);
+      tl.to("#mEyes", { opacity: 0, duration: 0.2 }, 26.2);
+      tl.to("#mEyesHappy", { opacity: 1, duration: 0.2 }, 26.2);
+      tl.to("#eatArm", { x: 0, y: 0, rotation: 0, duration: 0.5, ease: "sine.inOut" }, 26.95);
+      tl.to("#headMakan", { rotation: 0, y: 0, duration: 0.4, ease: "sine.inOut" }, 26.95);
+      tl.to("#mEyesHappy", { opacity: 0, duration: 0.2 }, 27.15);
+      tl.to("#mEyes", { opacity: 1, duration: 0.2 }, 27.15);
+
+      // TUTUP
+      tl.to("#charTutup", { y: -6, duration: 0.65, ease: "sine.inOut", yoyo: true, repeat: 5 }, 27.6);
+      tl.fromTo("#armWaveTutup", { rotation: 8 },
+        { rotation: -11, svgOrigin: "660 940", duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 7 }, 27.75);
+
+      // TAKARIR (pudar masuk/keluar saja)
+      tl.fromTo("#cap0",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},0.0);
+      tl.to("#cap0",{opacity:0,duration:0.25,ease:"sine.in"},1.95);
+      tl.fromTo("#cap1",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},2.2);
+      tl.to("#cap1",{opacity:0,duration:0.25,ease:"sine.in"},4.49);
+      tl.fromTo("#cap2",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},4.74);
+      tl.to("#cap2",{opacity:0,duration:0.25,ease:"sine.in"},6.27);
+      tl.fromTo("#cap3",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},6.52);
+      tl.to("#cap3",{opacity:0,duration:0.25,ease:"sine.in"},9.45);
+      tl.fromTo("#cap4",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},9.7);
+      tl.to("#cap4",{opacity:0,duration:0.25,ease:"sine.in"},12.03);
+      tl.fromTo("#cap5",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},12.28);
+      tl.to("#cap5",{opacity:0,duration:0.25,ease:"sine.in"},14.61);
+      tl.fromTo("#cap6",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},14.86);
+      tl.to("#cap6",{opacity:0,duration:0.25,ease:"sine.in"},16.69);
+      tl.fromTo("#cap7",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},16.94);
+      tl.to("#cap7",{opacity:0,duration:0.25,ease:"sine.in"},20.63);
+      tl.fromTo("#cap8",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},20.88);
+      tl.to("#cap8",{opacity:0,duration:0.25,ease:"sine.in"},22.53);
+      tl.fromTo("#cap9",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},22.78);
+      tl.to("#cap9",{opacity:0,duration:0.25,ease:"sine.in"},24.57);
+      tl.fromTo("#cap10",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},24.82);
+      tl.to("#cap10",{opacity:0,duration:0.25,ease:"sine.in"},27.35);
+      tl.fromTo("#cap11",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},27.6);
+      tl.to("#cap11",{opacity:0,duration:0.25,ease:"sine.in"},28.97);
+      tl.fromTo("#cap12",{opacity:0},{opacity:1,duration:0.25,ease:"sine.out"},29.22);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
