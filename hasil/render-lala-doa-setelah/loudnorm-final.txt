@@ -10,5 +10,5 @@
 	"normalization_type" : "dynamic",
 	"target_offset" : "-0.12"
 }
-[out#0/null @ 0x5805e8e87940] video:537KiB audio:16504KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
-frame= 1323 fps=859 q=-0.0 Lsize=N/A time=00:00:44.10 bitrate=N/A speed=28.6x elapsed=0:00:01.53    
+[out#0/null @ 0x5958200ab940] video:537KiB audio:16504KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame= 1323 fps=1087 q=-0.0 Lsize=N/A time=00:00:44.10 bitrate=N/A speed=36.2x elapsed=0:00:01.21    
