@@ -1,7 +1,7 @@
 === Mesin runner GitHub Actions ===
 Inti CPU: 4
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       1.0Gi        13Gi        42Mi       1.0Gi        14Gi
+Mem:            15Gi       957Mi        13Gi        40Mi       1.0Gi        14Gi
 Swap:          3.0Gi          0B       3.0Gi
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/root       145G   57G   88G  40% /
@@ -18,12 +18,12 @@ Linux runnervmwuk1x 7.0.0-1019-azure #20-Ubuntu SMP PREEMPT Mon Oct 19 22:41:16 
 + free -m
 + head -2
                total        used        free      shared  buff/cache   available
-Mem:           15983        1002       14248          42        1059       14980
+Mem:           15982         957       14308          40        1041       15024
 + df -h .
 + tail -1
 /dev/root       145G   57G   88G  40% /
 + ls -la /tmp/ref-cahaya.wav
--rw-r--r-- 1 runner runner 216718 Nov 12 02:56 /tmp/ref-cahaya.wav
+-rw-r--r-- 1 runner runner 216718 Nov 12 02:59 /tmp/ref-cahaya.wav
 + PY=
 ++ command -v python3.12
 ++ command -v python3.11
@@ -64,83 +64,42 @@ Python 3.12.16
 ++ export PS1
 ++ hash -r
 + pip install -q --upgrade pip
-+ pip install -q torch --index-url https://download.pytorch.org/whl/cpu
++ pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
 + pip install -q 'voxcpm>=2.0.3' soundfile
++ python -c 'import torchaudio'
 + python -c 'import torch, voxcpm; print('\''torch'\'', torch.__version__, '\''| voxcpm OK'\'')'
-Traceback (most recent call last):
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torch/_ops.py", line 1587, in load_library
-    ctypes.CDLL(path)
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/ctypes/__init__.py", line 379, in __init__
-    self._handle = _dlopen(self._name, mode)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^
-OSError: libcudart.so.13: cannot open shared object file: No such file or directory
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/voxcpm/__init__.py", line 1, in <module>
-    from .core import VoxCPM
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/voxcpm/core.py", line 9, in <module>
-    from .model.voxcpm import VoxCPMModel, LoRAConfig
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/voxcpm/model/__init__.py", line 1, in <module>
-    from .voxcpm import VoxCPMModel
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/voxcpm/model/voxcpm.py", line 27, in <module>
-    import torchaudio
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torchaudio/__init__.py", line 7, in <module>
-    from . import _extension  # noqa  # usort: skip
-    ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torchaudio/_extension/__init__.py", line 30, in <module>
-    _IS_TORCHAUDIO_EXT_AVAILABLE = _load_lib("_torchaudio")
-                                   ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torchaudio/_extension/utils.py", line 56, in _load_lib
-    torch.ops.load_library(paths[0])
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torch/_ops.py", line 1589, in load_library
-    raise OSError(f"Could not load this library: {path}") from e
-OSError: Could not load this library: /home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torchaudio/lib/_torchaudio.so
+/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+torch 2.15.0+cpu | voxcpm OK
 + cat
 + REF_WAV=/tmp/ref-cahaya.wav
 + OUT_DIR=/home/runner/work/kerja-berat/kerja-berat/hasil-run
 + TOKENIZERS_PARALLELISM=false
 + python gen.py
-Traceback (most recent call last):
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torch/_ops.py", line 1587, in load_library
-    ctypes.CDLL(path)
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/ctypes/__init__.py", line 379, in __init__
-    self._handle = _dlopen(self._name, mode)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^
-OSError: libcudart.so.13: cannot open shared object file: No such file or directory
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/runner/work/kerja-berat/kerja-berat/gen.py", line 4, in <module>
-    from voxcpm import VoxCPM
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/voxcpm/__init__.py", line 1, in <module>
-    from .core import VoxCPM
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/voxcpm/core.py", line 9, in <module>
-    from .model.voxcpm import VoxCPMModel, LoRAConfig
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/voxcpm/model/__init__.py", line 1, in <module>
-    from .voxcpm import VoxCPMModel
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/voxcpm/model/voxcpm.py", line 27, in <module>
-    import torchaudio
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torchaudio/__init__.py", line 7, in <module>
-    from . import _extension  # noqa  # usort: skip
-    ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torchaudio/_extension/__init__.py", line 30, in <module>
-    _IS_TORCHAUDIO_EXT_AVAILABLE = _load_lib("_torchaudio")
-                                   ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torchaudio/_extension/utils.py", line 56, in _load_lib
-    torch.ops.load_library(paths[0])
-  File "/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torch/_ops.py", line 1589, in load_library
-    raise OSError(f"Could not load this library: {path}") from e
-OSError: Could not load this library: /home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torchaudio/lib/_torchaudio.so
+/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+loading VoxCPM2...
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 9 files:  11%|█         | 1/9 [00:00<00:00,  8.69it/s]Fetching 9 files:  67%|██████▋   | 6/9 [00:00<00:00, 30.47it/s]Fetching 9 files:  89%|████████▉ | 8/9 [00:20<00:00, 30.47it/s]Fetching 9 files: 100%|██████████| 9/9 [00:32<00:00,  4.65s/it]Fetching 9 files: 100%|██████████| 9/9 [00:32<00:00,  3.62s/it]
+voxcpm_model_path: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd, zipenhancer_model_path: None, enable_denoiser: False
+/home/runner/work/kerja-berat/kerja-berat/.venv-vox/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Loading AudioVAE from pytorch: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd/audiovae.pth
+Running on device: cpu, dtype: bfloat16
+Loading model from safetensors: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd/model.safetensors
+Loaded VoxCPM2Model
+loaded. peak RSS GB: 11.983468
+sample rate: 48000
+  0%|          | 0/316 [00:00<?, ?it/s]  0%|          | 1/316 [00:02<13:44,  2.62s/it]  1%|          | 2/316 [00:05<13:32,  2.59s/it]  1%|          | 3/316 [00:07<13:29,  2.59s/it]  1%|▏         | 4/316 [00:10<13:25,  2.58s/it]  2%|▏         | 5/316 [00:12<13:23,  2.58s/it]  2%|▏         | 6/316 [00:15<13:20,  2.58s/it]  2%|▏         | 7/316 [00:18<13:18,  2.58s/it]  3%|▎         | 8/316 [00:20<13:16,  2.59s/it]  3%|▎         | 9/316 [00:23<13:13,  2.58s/it]  3%|▎         | 10/316 [00:25<13:10,  2.58s/it]  3%|▎         | 11/316 [00:28<13:08,  2.58s/it]  4%|▍         | 12/316 [00:31<13:05,  2.59s/it]  4%|▍         | 13/316 [00:33<13:02,  2.58s/it]  4%|▍         | 14/316 [00:36<13:00,  2.58s/it]  5%|▍         | 15/316 [00:38<13:03,  2.60s/it]  5%|▌         | 16/316 [00:41<13:00,  2.60s/it]  5%|▌         | 17/316 [00:44<12:56,  2.60s/it]  6%|▌         | 18/316 [00:46<12:53,  2.59s/it]  6%|▌         | 19/316 [00:49<12:49,  2.59s/it]  6%|▋         | 20/316 [00:51<12:44,  2.58s/it]  7%|▋         | 21/316 [00:54<12:42,  2.59s/it]  7%|▋         | 22/316 [00:56<12:41,  2.59s/it]  7%|▋         | 23/316 [00:59<12:38,  2.59s/it]  8%|▊         | 24/316 [01:02<12:34,  2.59s/it]  8%|▊         | 25/316 [01:04<12:32,  2.59s/it]  8%|▊         | 26/316 [01:07<12:29,  2.59s/it]  9%|▊         | 27/316 [01:09<12:27,  2.59s/it]  9%|▉         | 28/316 [01:12<12:24,  2.59s/it]  9%|▉         | 29/316 [01:15<12:21,  2.58s/it]  9%|▉         | 30/316 [01:17<12:18,  2.58s/it] 10%|▉         | 31/316 [01:20<12:15,  2.58s/it] 10%|█         | 32/316 [01:22<12:12,  2.58s/it] 10%|█         | 33/316 [01:25<12:10,  2.58s/it] 11%|█         | 34/316 [01:27<12:08,  2.58s/it] 11%|█         | 35/316 [01:30<12:05,  2.58s/it] 11%|█▏        | 36/316 [01:33<12:02,  2.58s/it] 12%|█▏        | 37/316 [01:35<12:01,  2.59s/it] 12%|█▏        | 38/316 [01:38<12:09,  2.62s/it] 12%|█▏        | 39/316 [01:40<12:03,  2.61s/it] 13%|█▎        | 40/316 [01:43<11:57,  2.60s/it] 13%|█▎        | 41/316 [01:46<11:52,  2.59s/it] 13%|█▎        | 42/316 [01:48<11:49,  2.59s/it] 14%|█▎        | 43/316 [01:51<11:46,  2.59s/it] 14%|█▍        | 44/316 [01:53<11:44,  2.59s/it] 14%|█▍        | 45/316 [01:56<11:41,  2.59s/it] 14%|█▍        | 45/316 [01:58<11:52,  2.63s/it]
+samples: (353280,) duration_s: 7.36
+SAVED /home/runner/work/kerja-berat/kerja-berat/hasil-run/sampel-cahaya-voxcpm2.wav peak RSS GB: 11.983468
 + ffmpeg -y -i /home/runner/work/kerja-berat/kerja-berat/hasil-run/sampel-cahaya-voxcpm2.wav -codec:a libmp3lame -q:a 3 /home/runner/work/kerja-berat/kerja-berat/hasil-run/sampel-cahaya-voxcpm2.mp3
-jobs/voxcpm2-cahaya.sh: line 51: ffmpeg: command not found
+jobs/voxcpm2-cahaya.sh: line 52: ffmpeg: command not found
 + true
 + ls -la /home/runner/work/kerja-berat/kerja-berat/hasil-run
-total 20
-drwxr-xr-x  2 runner runner 4096 Nov 12 02:56 .
-drwxr-xr-x 15 runner runner 4096 Nov 12 02:58 ..
--rw-r--r--  1 runner runner 8615 Nov 12 02:58 log.txt
+total 712
+drwxr-xr-x  2 runner runner   4096 Nov 12 03:04 .
+drwxr-xr-x 15 runner runner   4096 Nov 12 03:00 ..
+-rw-r--r--  1 runner runner   8518 Nov 12 03:04 log.txt
+-rw-r--r--  1 runner runner 706604 Nov 12 03:04 sampel-cahaya-voxcpm2.wav
 === Selesai. Kode keluar: 0 ===
