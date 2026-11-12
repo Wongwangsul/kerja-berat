@@ -18,8 +18,9 @@ echo "PY=$PY"; "$PY" --version
 "$PY" -m venv "$PWD/.venv-vox"
 source "$PWD/.venv-vox/bin/activate"
 pip install -q --upgrade pip
-pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
 pip install -q "voxcpm>=2.0.3" soundfile
+python -c "import torchaudio" 2>/dev/null || pip install -q --force-reinstall --no-deps "torchaudio==$(python -c 'import torch; print(torch.__version__.split(chr(43))[0])')" --index-url https://download.pytorch.org/whl/cpu
 python -c "import torch, voxcpm; print('torch', torch.__version__, '| voxcpm OK')"
 
 cat > gen.py << 'PYEOF'
