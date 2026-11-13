@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>My Mom — paper fold</title>
+<style>
+  html,body{margin:0;padding:0;background:#101114;overflow:hidden}
+  #stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:#20242a;perspective:5200px}
+  #world{position:absolute;inset:0;perspective:5200px;will-change:transform}
+  .photo{position:absolute;inset:0;background-size:cover;background-position:center;display:none}
+  #ph1{display:block}
+  .slice{position:absolute;left:0;width:1080px;background-repeat:no-repeat;display:none;will-change:transform,filter}
+  .under{position:absolute;display:none;
+    background:linear-gradient(180deg,#b3aa9c 0%,#9d968a 55%,#8d867b 100%);
+    box-shadow:inset 0 18px 34px rgba(0,0,0,.24), inset 0 -14px 28px rgba(0,0,0,.18)}
+  .cshadow{position:absolute;left:0;width:1080px;display:none;pointer-events:none;
+    background:linear-gradient(180deg,rgba(20,16,12,.62) 0%,rgba(20,16,12,.28) 45%,rgba(20,16,12,0) 100%)}
+  .bshadow{position:absolute;left:0;width:1080px;display:none;pointer-events:none;
+    background:linear-gradient(180deg,rgba(20,16,12,.55) 0%,rgba(20,16,12,.22) 55%,rgba(20,16,12,0) 100%)}
+  .flapwrap{position:absolute;left:0;width:1080px;display:none;will-change:filter}
+  .flap{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
+  .flap .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background-repeat:no-repeat}
+  .flap .back{transform:rotateX(180deg);
+    background:linear-gradient(160deg,#f0e9db 0%,#e7ddcb 55%,#ddd2bd 100%)}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="world">
+    <div class="photo" id="ph1" style="background-image:url(assets/img1.jpg)"></div>
+    <div class="photo" id="ph2" style="background-image:url(assets/img2.jpg)"></div>
+    <div class="photo" id="ph3" style="background-image:url(assets/img3.jpg)"></div>
+    <div class="photo" id="ph4" style="background-image:url(assets/img4.jpg)"></div>
+    <div class="photo" id="ph5" style="background-image:url(assets/img5.jpg)"></div>
+    <div class="photo" id="ph6" style="background-image:url(assets/img6.jpg)"></div>
+  </div>
+</div>
+<script src="gsap.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var W=1080, H=1920, IMG_H=1935, YOFF=7.5;      // cover: 1080x1935, crop 7.5px top/bottom
+  var PT=260, C1=700, C2=1258, PB=1661;          // paper top, crease1, crease2, paper bottom (stage px)
+  var world=document.getElementById('world');
+  var ph=[null];
+  for(var i=1;i<=6;i++) ph.push(document.getElementById('ph'+i));
+
+  function slice(imgIdx, top, h, z, paper){
+    var d=document.createElement('div');
+    d.className='slice';
+    d.style.top=top+'px'; d.style.height=h+'px'; d.style.zIndex=z;
+    d.style.backgroundImage='url(assets/img'+imgIdx+'.jpg)';
+    d.style.backgroundSize=W+'px '+IMG_H+'px';
+    if(paper){ d.style.left='205px'; d.style.width='855px';
+      d.style.backgroundPosition='-205px '+(-(top+YOFF))+'px'; }
+    else d.style.backgroundPosition='0px '+(-(top+YOFF))+'px';
+    world.appendChild(d);
+    return d;
+  }
+  function under(top,h,z){
+    var d=document.createElement('div');
+    d.className='under';
+    d.style.top=top+'px'; d.style.height=h+'px'; d.style.zIndex=z;
+    d.style.left='205px'; d.style.width='855px';   // selebar kertas saja, bukan selebar bingkai
+    d.style.webkitMaskImage='linear-gradient(90deg,transparent 0,#000 26px,#000 829px,transparent 855px)';
+    d.style.maskImage='linear-gradient(90deg,transparent 0,#000 26px,#000 829px,transparent 855px)';
+    world.appendChild(d);
+    return d;
+  }
+  function shadow(cls, top, h, z){
+    var d=document.createElement('div');
+    d.className=cls;
+    d.style.top=top+'px'; d.style.height=h+'px'; d.style.zIndex=z;
+    world.appendChild(d);
+    return d;
+  }
+  function show(tl, els, t){ tl.set(els, {display:'block'}, t); }
+  function hide(tl, els, t){ tl.set(els, {display:'none'}, t); }
+
+  var tl = gsap.timeline({paused:true, defaults:{ease:'none'}});
+
+  /* ---------- Fold A: sheet below crease1 flips up/open, new sheet unfolds ---------- */
+  function foldA(t0, a, b){
+    var A=ph[a], B=ph[b];
+    var un   = under(C1, PB-C1, 50);
+    var stT  = slice(a, 0, C1, 60);
+    var stB  = slice(a, PB, H-PB, 60);
+    var sh   = shadow('cshadow', C1-4, 200, 55);
+    var pOut = slice(a, C1, PB-C1, 100, true);
+    var pIn  = slice(b, C1, PB-C1, 100, true);
+    pOut.style.transformOrigin='50% 0%';
+    pIn .style.transformOrigin='50% 0%';
+    gsap.set(pIn, {rotationX:86, filter:'brightness(0.55)'});
+    tl.set(B, {display:'block', zIndex:5}, t0);
+    show(tl, [un, stT, stB, sh, pOut], t0);
+    tl.set(A, {display:'none'}, t0);
+    tl.fromTo(pOut, {rotationX:0, filter:'brightness(1)'},
+      {rotationX:86, filter:'brightness(0.42)', duration:0.45, ease:'power2.in'}, t0);
+    tl.fromTo(sh, {opacity:0}, {opacity:0.5, duration:0.45, ease:'power1.in'}, t0);
+    tl.to([stT, stB], {opacity:0, duration:0.13, ease:'power1.inOut'}, t0+0.42);
+    tl.set(pOut, {display:'none'}, t0+0.50);
+    show(tl, [pIn], t0+0.45);
+    tl.fromTo(pIn, {rotationX:86, filter:'brightness(0.55)'},
+      {rotationX:0, filter:'brightness(1)', duration:0.45, ease:'power2.out'}, t0+0.47);
+    tl.to(sh, {opacity:0, duration:0.30, ease:'power1.out'}, t0+0.60);
+    tl.to(un, {opacity:0, duration:0.36, ease:'power1.inOut'}, t0+0.52);
+    hide(tl, [pOut, pIn, sh, un, stT, stB], t0+0.97);
+    tl.set(B, {zIndex:6}, t0+0.97);
+  }
+
+  /* ---------- Fold B: top flap folds DOWN over the band (shows paper back), then back up ---------- */
+  function foldB(t0, a, b){
+    var A=ph[a], B=ph[b];
+    var un   = under(PT, C1-PT, 50);
+    var stT  = slice(a, 0, PT, 60);
+    var stB  = slice(a, C1, H-C1, 60);
+    var bsh  = shadow('bshadow', C1-4, C2-C1+120, 55);
+    var wrap = document.createElement('div');
+    wrap.className='flapwrap';
+    wrap.style.top=PT+'px'; wrap.style.height=(C1-PT)+'px'; wrap.style.zIndex=100;
+    wrap.style.left='205px'; wrap.style.width='855px';
+    var flap = document.createElement('div');
+    flap.className='flap';
+    flap.style.transformOrigin='50% 100%';
+    var fA=document.createElement('div'); fA.className='face';
+    var fB=document.createElement('div'); fB.className='face';
+    var bk=document.createElement('div'); bk.className='face back';
+    [fA,fB].forEach(function(f){
+      f.style.backgroundSize=W+'px '+IMG_H+'px';
+      f.style.backgroundPosition='-205px '+(-(PT+YOFF))+'px';
+    });
+    fA.style.backgroundImage='url(assets/img'+a+'.jpg)';
+    fB.style.backgroundImage='url(assets/img'+b+'.jpg)';
+    gsap.set(fB, {opacity:0});
+    flap.appendChild(fB); flap.appendChild(fA); flap.appendChild(bk);
+    wrap.appendChild(flap);
+    world.appendChild(wrap);
+    tl.set(B, {display:'block', zIndex:5}, t0);
+    show(tl, [un, stT, stB, bsh, wrap], t0);
+    tl.set(A, {display:'none'}, t0);
+    tl.fromTo(flap, {rotationX:0}, {rotationX:-88, duration:0.17, ease:'power2.in'}, t0);
+    tl.to(flap, {rotationX:-176, duration:0.17, ease:'power1.out'}, t0+0.17);
+    tl.fromTo(wrap, {filter:'brightness(1)'}, {filter:'brightness(0.5)', duration:0.17, ease:'power2.in'}, t0);
+    tl.to(wrap, {filter:'brightness(0.92)', duration:0.17, ease:'power1.out'}, t0+0.17);
+    tl.fromTo(bsh, {opacity:0}, {opacity:0.38, duration:0.34, ease:'power1.in'}, t0);
+    tl.to([stT, stB], {opacity:0, duration:0.12, ease:'power1.inOut'}, t0+0.32);
+    tl.set(fA, {opacity:0}, t0+0.36);
+    tl.to(flap, {rotationX:-88, duration:0.17, ease:'power2.in'}, t0+0.44);
+    tl.to(flap, {rotationX:0, duration:0.17, ease:'power2.out'}, t0+0.61);
+    tl.to(wrap, {filter:'brightness(0.5)', duration:0.17, ease:'power2.in'}, t0+0.44);
+    tl.to(wrap, {filter:'brightness(1)', duration:0.17, ease:'power2.out'}, t0+0.61);
+    tl.to(bsh, {opacity:0, duration:0.34, ease:'power1.out'}, t0+0.44);
+    tl.to(un, {opacity:0, duration:0.08}, t0+0.70);
+    hide(tl, [wrap, bsh, un, stT, stB], t0+0.85);
+    tl.set(B, {zIndex:6}, t0+0.97);
+  }
+
+  /* ---------- Close: sheet flips away, photo crossfades to the small closed card ---------- */
+  function closeCard(t0, a, b){
+    var A=ph[a], B=ph[b];
+    var un   = under(C1, PB-C1, 50);
+    var stT  = slice(a, 0, C1, 60);
+    var stB  = slice(a, PB, H-PB, 60);
+    var sh   = shadow('cshadow', C1-4, 200, 55);
+    var pOut = slice(a, C1, PB-C1, 100, true);
+    pOut.style.transformOrigin='50% 0%';
+    tl.set(B, {display:'block', zIndex:5, scale:1.06, transformOrigin:'50% 46%'}, t0);
+    show(tl, [un, stT, stB, sh, pOut], t0);
+    tl.set(A, {display:'none'}, t0);
+    tl.fromTo(pOut, {rotationX:0, filter:'brightness(1)'},
+      {rotationX:86, filter:'brightness(0.42)', duration:0.50, ease:'power2.in'}, t0);
+    tl.fromTo(sh, {opacity:0}, {opacity:0.5, duration:0.50, ease:'power1.in'}, t0);
+    tl.to(pOut, {opacity:0, duration:0.08, ease:'power1.in'}, t0+0.44);
+    tl.set(pOut, {display:'none'}, t0+0.53);
+    tl.to([stT, stB], {opacity:0, duration:0.35, ease:'power1.inOut'}, t0+0.45);
+    tl.to(un, {opacity:0, duration:0.25, ease:'power1.inOut'}, t0+0.45);
+    tl.to(sh, {opacity:0, duration:0.35}, t0+0.55);
+    tl.to(B, {scale:1.0, duration:0.65, ease:'power2.out'}, t0+0.45);
+    hide(tl, [pOut, sh, un, stT, stB], t0+1.12);
+    tl.set(B, {zIndex:6}, t0+1.12);
+  }
+
+  foldA(2.00, 1, 2);
+  foldB(4.50, 2, 3);
+  foldA(7.00, 3, 4);
+  foldB(9.50, 4, 5);
+  closeCard(12.00, 5, 6);
+  tl.to({}, {duration:0.01}, 14.99); // pin end at 15.00
+
+  /* ---------- handheld sway: pure function of tl.time() ---------- */
+  function applySway(t){
+    var x = 4.5*Math.sin(t*1.70) + 3.0*Math.sin(t*2.90+1.3);
+    var y = 3.5*Math.sin(t*1.31+0.7) + 2.2*Math.sin(t*3.70+2.0);
+    var r = 0.20*Math.sin(t*0.90+2.1) + 0.08*Math.sin(t*2.30);
+    gsap.set(world, {x:x, y:y, rotation:r, scale:1.045});
+  }
+  tl.eventCallback('onUpdate', function(){ applySway(tl.time()); });
+  applySway(0);
+
+  window.OPENER = {
+    ready:false, W:W, H:H, DURATION:15, tl:tl,
+    seek:function(t){ tl.pause(t); applySway(t); }
+  };
+  var loaded=0;
+  for(var k=1;k<=6;k++){
+    var im=new Image();
+    im.onload=im.onerror=function(){ if(++loaded===6) window.OPENER.ready=true; };
+    im.src='assets/img'+k+'.jpg';
+  }
+  if(!/[?&]clean=1/.test(location.search)){
+    tl.eventCallback('onComplete', function(){ tl.play(0); });
+    tl.play(0);
+  }
+})();
+</script>
+</body>
+</html>
