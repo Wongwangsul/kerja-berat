@@ -1,0 +1,70 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       978Mi        13Gi        43Mi       1.1Gi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   58G   88G  40% /
+Linux runnervmccnms 7.0.0-1019-azure #20-Ubuntu SMP PREEMPT Mon Oct 19 22:41:16 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/papercraft-langit-biru.sh ===
+=== papercraft-langit-biru ===
+v24.22.2
+ffmpeg version 8.0.1-3ubuntu2 Copyright (c) 2000-2025 the FFmpeg developers
+-rw-r--r-- 1 runner runner 1193735 Nov 14 14:33 mix.mp3
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+PAGE error Failed to load resource: the server responded with a status of 404 (File not found)
+render 2236 frame @ 30 fps, durasi 74.5333
+frame 0 / 2236
+frame 150 / 2236
+frame 300 / 2236
+frame 450 / 2236
+frame 600 / 2236
+frame 750 / 2236
+frame 900 / 2236
+frame 1050 / 2236
+frame 1200 / 2236
+frame 1350 / 2236
+frame 1500 / 2236
+frame 1650 / 2236
+frame 1800 / 2236
+frame 1950 / 2236
+frame 2100 / 2236
+selesai 2236 frame
+jumlah frame: 2236
+[libx264 @ 0x5ac7fdd9d180] kb/s:909.00
+[aac @ 0x5ac7fdffc080] Qavg: 1649.809
+codec_name=h264
+width=1080
+height=1920
+codec_name=aac
+duration=74.533333
+size=9728107
+total 12728
+drwxr-xr-x  2 runner runner   4096 Nov 14 14:40 .
+drwxr-xr-x 16 runner runner   4096 Nov 14 14:40 ..
+-rw-r--r--  1 runner runner     86 Nov 14 14:40 info.txt
+-rw-r--r--  1 runner runner   1392 Nov 14 14:40 log.txt
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-000
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-001
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-002
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-003
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-004
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-005
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-006
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-007
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-008
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-009
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-010
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-011
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-012
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-013
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-014
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-015
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-016
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-017
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-018
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-019
+-rw-r--r--  1 runner runner 600000 Nov 14 14:40 part-020
+-rw-r--r--  1 runner runner 370812 Nov 14 14:40 part-021
+=== selesai ===
+=== Selesai. Kode keluar: 0 ===
