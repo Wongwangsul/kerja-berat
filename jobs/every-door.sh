@@ -13,7 +13,27 @@ SUM="$WS/hasil-run"
 mkdir -p "$SUM"
 
 echo "== Mesin runner =="
-nproc; node --version; ffmpeg -version 2>/dev/null | head -1; df -h / | tail -1
+nproc; node --version; df -h / | tail -1
+
+# --- PREFLIGHT alat (perbaikan run 1: ffmpeg tidak ada di runner) ---
+# ffmpeg TIDAK ada di image ubuntu-latest: pasang lewat apt SEBELUM apa pun yang
+# memakainya. Lalu gagalkan keras bila masih tidak ada — jangan sampai render
+# jalan dulu baru mati di segmen pertama.
+echo "== Pasang ffmpeg sistem =="
+sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg || {
+  echo "PERINGATAN: apt install ffmpeg gagal; coba fallback dari cache Playwright."
+  PW_FFMPEG="$(ls -d ~/.cache/ms-playwright/ffmpeg-*/ffmpeg 2>/dev/null | head -1)"
+  if [ -n "$PW_FFMPEG" ]; then
+    mkdir -p "$HOME/bin"
+    ln -sf "$PW_FFMPEG" "$HOME/bin/ffmpeg"
+    export PATH="$HOME/bin:$PATH"
+  fi
+}
+echo "== Preflight (gagal keras bila ada yang hilang) =="
+ffmpeg -version | head -1 || { echo "GAGAL PREFLIGHT: ffmpeg tidak ditemukan setelah instalasi."; exit 1; }
+node --version || { echo "GAGAL PREFLIGHT: node tidak ditemukan."; exit 1; }
+command -v npx >/dev/null || { echo "GAGAL PREFLIGHT: npx tidak ditemukan."; exit 1; }
+echo "Preflight lolos: ffmpeg + node + npx ada."
 
 # --- Token dari kredensial checkout, untuk membuat Release (fail-fast) ---
 HDR="$(git -C "$WS" config --get http.https://github.com/.extraheader || true)"
@@ -47,6 +67,7 @@ npm install --no-save --no-audit --no-fund playwright@1.65.1 || exit 1
 npx playwright install --with-deps chromium || npx playwright install chromium || exit 1
 
 # --- Render penuh ---
+ffmpeg -version >/dev/null || { echo "GAGAL PREFLIGHT AKHIR: ffmpeg hilang sebelum render."; exit 1; }
 echo "== Render mulai: $(date -u +%H:%M:%S) UTC =="
 node kit/tools/render.mjs films/every-door --fps 30
 PIC="$ED/films/every-door/out/picture.mp4"
