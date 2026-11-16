@@ -1,0 +1,1292 @@
+[
+ {
+  "id": "s01",
+  "act": "hook",
+  "type": "wide",
+  "cam": "majelis-wide",
+  "start": 0.0,
+  "end": 6.0,
+  "voice": null,
+  "caption": "Madinah, at dawn"
+ },
+ {
+  "id": "s02",
+  "act": "hook",
+  "type": "wide",
+  "cam": "majelis-mid",
+  "start": 6.0,
+  "end": 11.228,
+  "voice": null,
+  "caption": "a teacher, and a hall full of students"
+ },
+ {
+  "id": "s03",
+  "act": "hook",
+  "type": "macro",
+  "cam": "majelis-letter",
+  "start": 11.228,
+  "end": 15.833,
+  "voice": "A letter once arrived for the greatest scholar of Madinah.",
+  "caption": null
+ },
+ {
+  "id": "s04",
+  "act": "hook",
+  "type": "macro",
+  "cam": "majelis-read",
+  "start": 15.833,
+  "end": 18.311,
+  "voice": "It did not praise him.",
+  "caption": null
+ },
+ {
+  "id": "s05",
+  "act": "hook",
+  "type": "type",
+  "cam": "majelis-demand",
+  "start": 18.311,
+  "end": 21.64,
+  "voice": "It told him to stop teaching —",
+  "caption": null
+ },
+ {
+  "id": "s06",
+  "act": "hook",
+  "type": "wide",
+  "cam": "majelis-alone",
+  "start": 21.64,
+  "end": 24.543,
+  "voice": "and to go and worship alone.",
+  "caption": null
+ },
+ {
+  "id": "s07",
+  "act": "hook",
+  "type": "macro",
+  "cam": "majelis-letterclose",
+  "start": 24.543,
+  "end": 29.771,
+  "voice": null,
+  "caption": "the hall held its breath"
+ },
+ {
+  "id": "s08",
+  "act": "hook",
+  "type": "wide",
+  "cam": "majelis-birdaway",
+  "start": 29.771,
+  "end": 34.999,
+  "voice": null,
+  "caption": null
+ },
+ {
+  "id": "s09",
+  "act": "worshipper",
+  "type": "wide",
+  "cam": "mountain-wide",
+  "start": 34.999,
+  "end": 38.328,
+  "voice": "The man who wrote it was al-'Umari,",
+  "caption": null
+ },
+ {
+  "id": "s10",
+  "act": "worshipper",
+  "type": "compare",
+  "cam": "mountain-citybelow",
+  "start": 38.328,
+  "end": 42.082,
+  "voice": "a worshipper who had left the world behind.",
+  "caption": null
+ },
+ {
+  "id": "s11",
+  "act": "worshipper",
+  "type": "macro",
+  "cam": "mountain-rug",
+  "start": 42.082,
+  "end": 47.398,
+  "voice": null,
+  "caption": "alone with his Lord"
+ },
+ {
+  "id": "s12",
+  "act": "worshipper",
+  "type": "wide",
+  "cam": "mountain-stand",
+  "start": 47.398,
+  "end": 51.578,
+  "voice": "In his mountain solitude he prayed through the nights,",
+  "caption": null
+ },
+ {
+  "id": "s13",
+  "act": "worshipper",
+  "type": "macro",
+  "cam": "mountain-bow",
+  "start": 51.578,
+  "end": 56.894,
+  "voice": null,
+  "caption": "he bowed"
+ },
+ {
+  "id": "s14",
+  "act": "worshipper",
+  "type": "wide",
+  "cam": "mountain-prostrate",
+  "start": 56.894,
+  "end": 62.21,
+  "voice": null,
+  "caption": "he prostrated"
+ },
+ {
+  "id": "s15",
+  "act": "worshipper",
+  "type": "macro",
+  "cam": "mountain-face",
+  "start": 62.21,
+  "end": 64.41,
+  "voice": "certain that his path",
+  "caption": null
+ },
+ {
+  "id": "s16",
+  "act": "worshipper",
+  "type": "type",
+  "cam": "mountain-onlypath",
+  "start": 64.41,
+  "end": 66.61,
+  "voice": "was the only path.",
+  "caption": null
+ },
+ {
+  "id": "s17",
+  "act": "worshipper",
+  "type": "wide",
+  "cam": "mountain-cycle",
+  "start": 66.61,
+  "end": 72.457,
+  "voice": null,
+  "caption": "night after night"
+ },
+ {
+  "id": "s18",
+  "act": "worshipper",
+  "type": "macro",
+  "cam": "mountain-beads",
+  "start": 72.457,
+  "end": 78.304,
+  "voice": null,
+  "caption": "his beads, his breath, his Lord"
+ },
+ {
+  "id": "s19",
+  "act": "worshipper",
+  "type": "wide",
+  "cam": "mountain-peace",
+  "start": 78.304,
+  "end": 84.151,
+  "voice": null,
+  "caption": "alone, and at peace"
+ },
+ {
+  "id": "s20",
+  "act": "worshipper",
+  "type": "compare",
+  "cam": "mountain-twolights",
+  "start": 84.151,
+  "end": 89.998,
+  "voice": null,
+  "caption": null
+ },
+ {
+  "id": "s21",
+  "act": "demand",
+  "type": "macro",
+  "cam": "hut-writing",
+  "start": 89.998,
+  "end": 92.901,
+  "voice": "So he wrote to Imam Malik:",
+  "caption": null
+ },
+ {
+  "id": "s22",
+  "act": "demand",
+  "type": "wide",
+  "cam": "vision-circle",
+  "start": 92.901,
+  "end": 95.379,
+  "voice": "Leave your circle of students.",
+  "caption": null
+ },
+ {
+  "id": "s23",
+  "act": "demand",
+  "type": "macro",
+  "cam": "vision-book",
+  "start": 95.379,
+  "end": 97.579,
+  "voice": "Abandon your lessons.",
+  "caption": null
+ },
+ {
+  "id": "s24",
+  "act": "demand",
+  "type": "compare",
+  "cam": "vision-twoplaces",
+  "start": 97.579,
+  "end": 100.482,
+  "voice": "Come away, and worship your Lord",
+  "caption": null
+ },
+ {
+  "id": "s25",
+  "act": "demand",
+  "type": "wide",
+  "cam": "mountain-still",
+  "start": 100.482,
+  "end": 102.682,
+  "voice": "as I do.",
+  "caption": null
+ },
+ {
+  "id": "s26",
+  "act": "demand",
+  "type": "wide",
+  "cam": "vision-scattered",
+  "start": 102.682,
+  "end": 108.068,
+  "voice": null,
+  "caption": "the circle, scattered"
+ },
+ {
+  "id": "s27",
+  "act": "demand",
+  "type": "macro",
+  "cam": "vision-books",
+  "start": 108.068,
+  "end": 113.454,
+  "voice": null,
+  "caption": "the books, closed"
+ },
+ {
+  "id": "s28",
+  "act": "demand",
+  "type": "wide",
+  "cam": "vision-emptyhall",
+  "start": 113.454,
+  "end": 118.84,
+  "voice": null,
+  "caption": "the hall, empty"
+ },
+ {
+  "id": "s29",
+  "act": "demand",
+  "type": "wide",
+  "cam": "vision-lamps",
+  "start": 118.84,
+  "end": 124.226,
+  "voice": null,
+  "caption": "the lamps, unlit"
+ },
+ {
+  "id": "s30",
+  "act": "demand",
+  "type": "macro",
+  "cam": "vision-walking",
+  "start": 124.226,
+  "end": 129.612,
+  "voice": null,
+  "caption": null
+ },
+ {
+  "id": "s31",
+  "act": "demand",
+  "type": "type",
+  "cam": "hut-letterdone",
+  "start": 129.612,
+  "end": 134.998,
+  "voice": null,
+  "caption": "this is what the letter asked"
+ },
+ {
+  "id": "s32",
+  "act": "night",
+  "type": "macro",
+  "cam": "night-reading",
+  "start": 134.998,
+  "end": 137.476,
+  "voice": "Malik read the letter —",
+  "caption": null
+ },
+ {
+  "id": "s33",
+  "act": "night",
+  "type": "wide",
+  "cam": "night-calm",
+  "start": 137.476,
+  "end": 139.954,
+  "voice": "and he was not angry.",
+  "caption": null
+ },
+ {
+  "id": "s34",
+  "act": "night",
+  "type": "macro",
+  "cam": "night-lamp",
+  "start": 139.954,
+  "end": 145.256,
+  "voice": null,
+  "caption": "that night"
+ },
+ {
+  "id": "s35",
+  "act": "night",
+  "type": "wide",
+  "cam": "night-portico",
+  "start": 145.256,
+  "end": 148.585,
+  "voice": "That night he looked at his students,",
+  "caption": null
+ },
+ {
+  "id": "s36",
+  "act": "night",
+  "type": "macro",
+  "cam": "night-sleeper",
+  "start": 148.585,
+  "end": 150.785,
+  "voice": "asleep in the portico",
+  "caption": null
+ },
+ {
+  "id": "s37",
+  "act": "night",
+  "type": "macro",
+  "cam": "night-bookchest",
+  "start": 150.785,
+  "end": 153.688,
+  "voice": "with their books upon their chests.",
+  "caption": null
+ },
+ {
+  "id": "s38",
+  "act": "night",
+  "type": "wide",
+  "cam": "night-shelves",
+  "start": 153.688,
+  "end": 158.99,
+  "voice": null,
+  "caption": "he looked at his books"
+ },
+ {
+  "id": "s39",
+  "act": "night",
+  "type": "macro",
+  "cam": "night-desk",
+  "start": 158.99,
+  "end": 164.292,
+  "voice": null,
+  "caption": "ink, and patience"
+ },
+ {
+  "id": "s40",
+  "act": "night",
+  "type": "macro",
+  "cam": "night-pen",
+  "start": 164.292,
+  "end": 167.195,
+  "voice": "Then he took up his pen,",
+  "caption": null
+ },
+ {
+  "id": "s41",
+  "act": "night",
+  "type": "type",
+  "cam": "night-firststroke",
+  "start": 167.195,
+  "end": 169.395,
+  "voice": "and answered.",
+  "caption": null
+ },
+ {
+  "id": "s42",
+  "act": "night",
+  "type": "wide",
+  "cam": "night-writingwide",
+  "start": 169.395,
+  "end": 174.697,
+  "voice": null,
+  "caption": "the lamp burned low"
+ },
+ {
+  "id": "s43",
+  "act": "night",
+  "type": "macro",
+  "cam": "night-sleeper2",
+  "start": 174.697,
+  "end": 179.999,
+  "voice": null,
+  "caption": "asleep, and trusting"
+ },
+ {
+  "id": "s44",
+  "act": "doors",
+  "type": "macro",
+  "cam": "reply-writing",
+  "start": 179.999,
+  "end": 182.199,
+  "voice": "He wrote:",
+  "caption": null
+ },
+ {
+  "id": "s45",
+  "act": "doors",
+  "type": "wide",
+  "cam": "doors-sky",
+  "start": 182.199,
+  "end": 184.399,
+  "voice": "God has divided deeds",
+  "caption": null
+ },
+ {
+  "id": "s46",
+  "act": "doors",
+  "type": "diagram",
+  "cam": "doors-portions",
+  "start": 184.399,
+  "end": 187.302,
+  "voice": "just as He has divided provision.",
+  "caption": null
+ },
+ {
+  "id": "s47",
+  "act": "doors",
+  "type": "diagram",
+  "cam": "doors-vessels",
+  "start": 187.302,
+  "end": 192.589,
+  "voice": null,
+  "caption": "portions, measured and just"
+ },
+ {
+  "id": "s48",
+  "act": "doors",
+  "type": "wide",
+  "cam": "doors-arc",
+  "start": 192.589,
+  "end": 197.876,
+  "voice": null,
+  "caption": "five doors of light"
+ },
+ {
+  "id": "s49",
+  "act": "doors",
+  "type": "wide",
+  "cam": "doors-breath",
+  "start": 197.876,
+  "end": 203.163,
+  "voice": null,
+  "caption": "the plain held its breath"
+ },
+ {
+  "id": "s50",
+  "act": "doors",
+  "type": "compare",
+  "cam": "doors-survey",
+  "start": 203.163,
+  "end": 208.45,
+  "voice": null,
+  "caption": null
+ },
+ {
+  "id": "s51",
+  "act": "doors",
+  "type": "wide",
+  "cam": "door1-open",
+  "start": 208.45,
+  "end": 212.204,
+  "voice": "One man is opened the door of prayer,",
+  "caption": null
+ },
+ {
+  "id": "s52",
+  "act": "doors",
+  "type": "wide",
+  "cam": "door1-praying",
+  "start": 212.204,
+  "end": 215.107,
+  "voice": "and prays the night through —",
+  "caption": null
+ },
+ {
+  "id": "s53",
+  "act": "doors",
+  "type": "macro",
+  "cam": "door1-prostrate",
+  "start": 215.107,
+  "end": 219.913,
+  "voice": null,
+  "caption": "down to the ground"
+ },
+ {
+  "id": "s54",
+  "act": "doors",
+  "type": "wide",
+  "cam": "door1-rose",
+  "start": 219.913,
+  "end": 224.719,
+  "voice": null,
+  "caption": "he rose, and stood again"
+ },
+ {
+  "id": "s55",
+  "act": "doors",
+  "type": "macro",
+  "cam": "door1-fastinghard",
+  "start": 224.719,
+  "end": 227.622,
+  "voice": "yet fasting is hard for him.",
+  "caption": null
+ },
+ {
+  "id": "s56",
+  "act": "doors",
+  "type": "macro",
+  "cam": "door1-plate",
+  "start": 227.622,
+  "end": 232.428,
+  "voice": null,
+  "caption": "the plate, untouched"
+ },
+ {
+  "id": "s57",
+  "act": "doors",
+  "type": "diagram",
+  "cam": "door2-named",
+  "start": 232.428,
+  "end": 237.234,
+  "voice": null,
+  "caption": "the door of fasting"
+ },
+ {
+  "id": "s58",
+  "act": "doors",
+  "type": "wide",
+  "cam": "door2-open",
+  "start": 237.234,
+  "end": 240.563,
+  "voice": "Another is opened the door of fasting.",
+  "caption": null
+ },
+ {
+  "id": "s59",
+  "act": "doors",
+  "type": "wide",
+  "cam": "door2-waiting",
+  "start": 240.563,
+  "end": 245.369,
+  "voice": null,
+  "caption": "she waited for the call"
+ },
+ {
+  "id": "s60",
+  "act": "doors",
+  "type": "macro",
+  "cam": "door2-lamp",
+  "start": 245.369,
+  "end": 250.175,
+  "voice": null,
+  "caption": "the lamp, unlit till sunset"
+ },
+ {
+  "id": "s61",
+  "act": "doors",
+  "type": "macro",
+  "cam": "door2-date",
+  "start": 250.175,
+  "end": 254.981,
+  "voice": null,
+  "caption": "one date, broken in two"
+ },
+ {
+  "id": "s62",
+  "act": "doors",
+  "type": "diagram",
+  "cam": "door3-named",
+  "start": 254.981,
+  "end": 259.787,
+  "voice": null,
+  "caption": "the door of secret giving"
+ },
+ {
+  "id": "s63",
+  "act": "doors",
+  "type": "wide",
+  "cam": "door3-open",
+  "start": 259.787,
+  "end": 263.116,
+  "voice": "Another gives in secret, in the dark,",
+  "caption": null
+ },
+ {
+  "id": "s64",
+  "act": "doors",
+  "type": "macro",
+  "cam": "door3-gift",
+  "start": 263.116,
+  "end": 265.316,
+  "voice": "asking nothing back.",
+  "caption": null
+ },
+ {
+  "id": "s65",
+  "act": "doors",
+  "type": "macro",
+  "cam": "door3-received",
+  "start": 265.316,
+  "end": 270.122,
+  "voice": null,
+  "caption": "a knock he never traced"
+ },
+ {
+  "id": "s66",
+  "act": "doors",
+  "type": "wide",
+  "cam": "door3-street",
+  "start": 270.122,
+  "end": 274.928,
+  "voice": null,
+  "caption": "the street kept the secret"
+ },
+ {
+  "id": "s67",
+  "act": "doors",
+  "type": "diagram",
+  "cam": "door4-named",
+  "start": 274.928,
+  "end": 279.734,
+  "voice": null,
+  "caption": "the door of teaching"
+ },
+ {
+  "id": "s68",
+  "act": "doors",
+  "type": "wide",
+  "cam": "door4-open",
+  "start": 279.734,
+  "end": 282.637,
+  "voice": "Another teaches a child to read.",
+  "caption": null
+ },
+ {
+  "id": "s69",
+  "act": "doors",
+  "type": "macro",
+  "cam": "door4-letters",
+  "start": 282.637,
+  "end": 287.443,
+  "voice": null,
+  "caption": "letter by letter"
+ },
+ {
+  "id": "s70",
+  "act": "doors",
+  "type": "wide",
+  "cam": "door4-word",
+  "start": 287.443,
+  "end": 292.249,
+  "voice": null,
+  "caption": "sound by sound"
+ },
+ {
+  "id": "s71",
+  "act": "doors",
+  "type": "macro",
+  "cam": "door4-bookstay",
+  "start": 292.249,
+  "end": 297.055,
+  "voice": null,
+  "caption": "the book stayed open"
+ },
+ {
+  "id": "s72",
+  "act": "doors",
+  "type": "diagram",
+  "cam": "door5-named",
+  "start": 297.055,
+  "end": 301.861,
+  "voice": null,
+  "caption": "the door of service"
+ },
+ {
+  "id": "s73",
+  "act": "doors",
+  "type": "wide",
+  "cam": "door5-open",
+  "start": 301.861,
+  "end": 305.615,
+  "voice": "Another simply helps the old across the street.",
+  "caption": null
+ },
+ {
+  "id": "s74",
+  "act": "doors",
+  "type": "macro",
+  "cam": "door5-hands",
+  "start": 305.615,
+  "end": 310.421,
+  "voice": null,
+  "caption": "held, and holding"
+ },
+ {
+  "id": "s75",
+  "act": "doors",
+  "type": "wide",
+  "cam": "door5-tea",
+  "start": 310.421,
+  "end": 315.227,
+  "voice": null,
+  "caption": "the crossing ended in tea"
+ },
+ {
+  "id": "s76",
+  "act": "doors",
+  "type": "wide",
+  "cam": "door5-market",
+  "start": 315.227,
+  "end": 320.033,
+  "voice": null,
+  "caption": "the market never noticed"
+ },
+ {
+  "id": "s77",
+  "act": "doors",
+  "type": "compare",
+  "cam": "doors-all",
+  "start": 320.033,
+  "end": 325.32,
+  "voice": null,
+  "caption": "five doors, one light"
+ },
+ {
+  "id": "s78",
+  "act": "doors",
+  "type": "compare",
+  "cam": "doors-row",
+  "start": 325.32,
+  "end": 327.52,
+  "voice": "Every door is different.",
+  "caption": null
+ },
+ {
+  "id": "s79",
+  "act": "doors",
+  "type": "type",
+  "cam": "doors-goldline",
+  "start": 327.52,
+  "end": 329.998,
+  "voice": "And every door is gold.",
+  "caption": null
+ },
+ {
+  "id": "s80",
+  "act": "light",
+  "type": "macro",
+  "cam": "light-pen",
+  "start": 329.998,
+  "end": 332.476,
+  "voice": "And spreading knowledge, he wrote,",
+  "caption": null
+ },
+ {
+  "id": "s81",
+  "act": "light",
+  "type": "wide",
+  "cam": "light-majelis",
+  "start": 332.476,
+  "end": 335.805,
+  "voice": "is among the finest deeds of all.",
+  "caption": null
+ },
+ {
+  "id": "s82",
+  "act": "light",
+  "type": "macro",
+  "cam": "light-face",
+  "start": 335.805,
+  "end": 338.708,
+  "voice": "I am content with the door",
+  "caption": null
+ },
+ {
+  "id": "s83",
+  "act": "light",
+  "type": "wide",
+  "cam": "light-hisdoor",
+  "start": 338.708,
+  "end": 341.611,
+  "voice": "that God has opened for me.",
+  "caption": null
+ },
+ {
+  "id": "s84",
+  "act": "light",
+  "type": "wide",
+  "cam": "light-return",
+  "start": 341.611,
+  "end": 344.94,
+  "voice": "So he returned to his circle —",
+  "caption": null
+ },
+ {
+  "id": "s85",
+  "act": "light",
+  "type": "diagram",
+  "cam": "light-multiply",
+  "start": 344.94,
+  "end": 349.12,
+  "voice": "and the light of his door began to multiply:",
+  "caption": null
+ },
+ {
+  "id": "s86",
+  "act": "light",
+  "type": "macro",
+  "cam": "light-nopoorer",
+  "start": 349.12,
+  "end": 354.423,
+  "voice": null,
+  "caption": "no flame the poorer"
+ },
+ {
+  "id": "s87",
+  "act": "light",
+  "type": "macro",
+  "cam": "light-student",
+  "start": 354.423,
+  "end": 356.623,
+  "voice": "from student,",
+  "caption": null
+ },
+ {
+  "id": "s88",
+  "act": "light",
+  "type": "wide",
+  "cam": "light-carry",
+  "start": 356.623,
+  "end": 361.926,
+  "voice": null,
+  "caption": "cupped against the wind"
+ },
+ {
+  "id": "s89",
+  "act": "light",
+  "type": "wide",
+  "cam": "light-family",
+  "start": 361.926,
+  "end": 364.126,
+  "voice": "to family,",
+  "caption": null
+ },
+ {
+  "id": "s90",
+  "act": "light",
+  "type": "macro",
+  "cam": "light-children",
+  "start": 364.126,
+  "end": 369.429,
+  "voice": null,
+  "caption": "the children's faces"
+ },
+ {
+  "id": "s91",
+  "act": "light",
+  "type": "wide",
+  "cam": "light-city",
+  "start": 369.429,
+  "end": 373.183,
+  "voice": "to a whole city waking in the dark.",
+  "caption": null
+ },
+ {
+  "id": "s92",
+  "act": "light",
+  "type": "wide",
+  "cam": "light-streets",
+  "start": 373.183,
+  "end": 378.486,
+  "voice": null,
+  "caption": "street by street"
+ },
+ {
+  "id": "s93",
+  "act": "light",
+  "type": "macro",
+  "cam": "light-lampfromlamp",
+  "start": 378.486,
+  "end": 383.789,
+  "voice": null,
+  "caption": "lamp from lamp"
+ },
+ {
+  "id": "s94",
+  "act": "light",
+  "type": "wide",
+  "cam": "light-another",
+  "start": 383.789,
+  "end": 389.092,
+  "voice": null,
+  "caption": "and from that lamp, another"
+ },
+ {
+  "id": "s95",
+  "act": "light",
+  "type": "macro",
+  "cam": "light-firstlamp",
+  "start": 389.092,
+  "end": 394.395,
+  "voice": null,
+  "caption": "one lamp, first"
+ },
+ {
+  "id": "s96",
+  "act": "light",
+  "type": "wide",
+  "cam": "light-morning",
+  "start": 394.395,
+  "end": 399.698,
+  "voice": null,
+  "caption": "morning, arriving"
+ },
+ {
+  "id": "s97",
+  "act": "light",
+  "type": "wide",
+  "cam": "light-fullcircle",
+  "start": 399.698,
+  "end": 405.001,
+  "voice": null,
+  "caption": "the circle, full again"
+ },
+ {
+  "id": "s98",
+  "act": "peace",
+  "type": "compare",
+  "cam": "peace-split",
+  "start": 405.001,
+  "end": 409.181,
+  "voice": "And in the mountains, al-'Umari read the reply —",
+  "caption": null
+ },
+ {
+  "id": "s99",
+  "act": "peace",
+  "type": "macro",
+  "cam": "peace-readtwice",
+  "start": 409.181,
+  "end": 413.745,
+  "voice": null,
+  "caption": "he read it twice"
+ },
+ {
+  "id": "s100",
+  "act": "peace",
+  "type": "macro",
+  "cam": "peace-smile",
+  "start": 413.745,
+  "end": 415.945,
+  "voice": "and smiled,",
+  "caption": null
+ },
+ {
+  "id": "s101",
+  "act": "peace",
+  "type": "wide",
+  "cam": "peace-return",
+  "start": 415.945,
+  "end": 419.274,
+  "voice": "and returned to his prayers in peace.",
+  "caption": null
+ },
+ {
+  "id": "s102",
+  "act": "peace",
+  "type": "wide",
+  "cam": "peace-rug",
+  "start": 419.274,
+  "end": 423.838,
+  "voice": null,
+  "caption": "the same rug, a new heart"
+ },
+ {
+  "id": "s103",
+  "act": "peace",
+  "type": "macro",
+  "cam": "peace-lastlines",
+  "start": 423.838,
+  "end": 427.592,
+  "voice": "For Malik had ended his letter with this:",
+  "caption": null
+ },
+ {
+  "id": "s104",
+  "act": "peace",
+  "type": "compare",
+  "cam": "peace-level",
+  "start": 427.592,
+  "end": 431.772,
+  "voice": "I do not believe my path is beneath yours.",
+  "caption": null
+ },
+ {
+  "id": "s105",
+  "act": "peace",
+  "type": "wide",
+  "cam": "peace-onesky",
+  "start": 431.772,
+  "end": 435.526,
+  "voice": "I hope that we are both upon good.",
+  "caption": null
+ },
+ {
+  "id": "s106",
+  "act": "peace",
+  "type": "wide",
+  "cam": "peace-twolights",
+  "start": 435.526,
+  "end": 438.855,
+  "voice": "Let every one of us be content",
+  "caption": null
+ },
+ {
+  "id": "s107",
+  "act": "peace",
+  "type": "type",
+  "cam": "peace-apportioned",
+  "start": 438.855,
+  "end": 442.184,
+  "voice": "with what has been apportioned to him.",
+  "caption": null
+ },
+ {
+  "id": "s108",
+  "act": "peace",
+  "type": "wide",
+  "cam": "peace-ordinary",
+  "start": 442.184,
+  "end": 446.748,
+  "voice": null,
+  "caption": "and the night was ordinary again"
+ },
+ {
+  "id": "s109",
+  "act": "peace",
+  "type": "compare",
+  "cam": "peace-equals",
+  "start": 446.748,
+  "end": 451.312,
+  "voice": null,
+  "caption": "two men, one sky"
+ },
+ {
+  "id": "s110",
+  "act": "peace",
+  "type": "wide",
+  "cam": "peace-bird",
+  "start": 451.312,
+  "end": 455.876,
+  "voice": null,
+  "caption": "the reply, carried home"
+ },
+ {
+  "id": "s111",
+  "act": "peace",
+  "type": "macro",
+  "cam": "peace-lamps",
+  "start": 455.876,
+  "end": 460.44,
+  "voice": null,
+  "caption": "two lamps, one light"
+ },
+ {
+  "id": "s112",
+  "act": "peace",
+  "type": "wide",
+  "cam": "peace-landscape",
+  "start": 460.44,
+  "end": 465.004,
+  "voice": null,
+  "caption": null
+ },
+ {
+  "id": "s113",
+  "act": "city",
+  "type": "wide",
+  "cam": "city-pullback",
+  "start": 465.004,
+  "end": 467.907,
+  "voice": "So do not measure your life",
+  "caption": null
+ },
+ {
+  "id": "s114",
+  "act": "city",
+  "type": "compare",
+  "cam": "city-neighbours",
+  "start": 467.907,
+  "end": 470.107,
+  "voice": "by another man's door.",
+  "caption": null
+ },
+ {
+  "id": "s115",
+  "act": "city",
+  "type": "macro",
+  "cam": "city-ownlamp",
+  "start": 470.107,
+  "end": 475.237,
+  "voice": null,
+  "caption": "his own lamp, behind him"
+ },
+ {
+  "id": "s116",
+  "act": "city",
+  "type": "wide",
+  "cam": "city-yourdoor",
+  "start": 475.237,
+  "end": 479.417,
+  "voice": "The door that God has opened for you —",
+  "caption": null
+ },
+ {
+  "id": "s117",
+  "act": "city",
+  "type": "macro",
+  "cam": "city-stepthrough",
+  "start": 479.417,
+  "end": 481.617,
+  "voice": "walk through it,",
+  "caption": null
+ },
+ {
+  "id": "s118",
+  "act": "city",
+  "type": "wide",
+  "cam": "city-tending",
+  "start": 481.617,
+  "end": 483.817,
+  "voice": "and tend it well.",
+  "caption": null
+ },
+ {
+  "id": "s119",
+  "act": "city",
+  "type": "wide",
+  "cam": "city-enough",
+  "start": 483.817,
+  "end": 488.947,
+  "voice": null,
+  "caption": "enough light to live by"
+ },
+ {
+  "id": "s120",
+  "act": "city",
+  "type": "diagram",
+  "cam": "city-overall",
+  "start": 488.947,
+  "end": 494.077,
+  "voice": null,
+  "caption": "and over them all, the five doors"
+ },
+ {
+  "id": "s121",
+  "act": "city",
+  "type": "recap",
+  "cam": "city-recap",
+  "start": 494.077,
+  "end": 499.486,
+  "voice": null,
+  "caption": "every door is different — and every door is gold"
+ },
+ {
+  "id": "s122",
+  "act": "city",
+  "type": "wide",
+  "cam": "city-lane",
+  "start": 499.486,
+  "end": 504.616,
+  "voice": null,
+  "caption": "house after house"
+ },
+ {
+  "id": "s123",
+  "act": "city",
+  "type": "macro",
+  "cam": "city-wick",
+  "start": 504.616,
+  "end": 509.746,
+  "voice": null,
+  "caption": "tended, daily"
+ },
+ {
+  "id": "s124",
+  "act": "city",
+  "type": "wide",
+  "cam": "city-smallights",
+  "start": 509.746,
+  "end": 514.876,
+  "voice": null,
+  "caption": "a city of small lights"
+ },
+ {
+  "id": "s125",
+  "act": "city",
+  "type": "macro",
+  "cam": "city-morning",
+  "start": 514.876,
+  "end": 520.006,
+  "voice": null,
+  "caption": null
+ },
+ {
+  "id": "s126",
+  "act": "endcard",
+  "type": "wide",
+  "cam": "end-dim",
+  "start": 520.006,
+  "end": 525.006,
+  "voice": null,
+  "caption": null
+ },
+ {
+  "id": "s127",
+  "act": "endcard",
+  "type": "type",
+  "cam": "end-typein",
+  "start": 525.006,
+  "end": 531.006,
+  "voice": null,
+  "caption": null
+ },
+ {
+  "id": "s128",
+  "act": "endcard",
+  "type": "endcard",
+  "cam": "end-hold",
+  "start": 531.006,
+  "end": 537.006,
+  "voice": null,
+  "caption": null
+ },
+ {
+  "id": "s129",
+  "act": "endcard",
+  "type": "endcard",
+  "cam": "end-source",
+  "start": 537.006,
+  "end": 540.006,
+  "voice": null,
+  "caption": null
+ }
+]
