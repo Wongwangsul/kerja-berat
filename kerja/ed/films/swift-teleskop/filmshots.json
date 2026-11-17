@@ -1,0 +1,1242 @@
+[
+ {
+  "id": "s01",
+  "act": "hook",
+  "type": "wide",
+  "cam": "sumatra-wide",
+  "start": 0.0,
+  "end": 4.5,
+  "voice": null,
+  "caption": "Sumatra Utara — malam 4 November 2026"
+ },
+ {
+  "id": "s02",
+  "act": "hook",
+  "type": "wide",
+  "cam": "sumatra-wide",
+  "start": 4.5,
+  "end": 9.45,
+  "voice": "Malam itu, langit di atas Sumatra Utara tampak kayak malam-malam biasa.",
+  "caption": null
+ },
+ {
+  "id": "s03",
+  "act": "hook",
+  "type": "macro",
+  "cam": "sumatra-streak",
+  "start": 9.45,
+  "end": 14.85,
+  "voice": "Apa yang baru saja melintasi langit itu, membelah gelap lalu pecah berkeping-keping?",
+  "caption": null
+ },
+ {
+  "id": "s04",
+  "act": "hook",
+  "type": "wide",
+  "cam": "sumatra-wide",
+  "start": 14.85,
+  "end": 19.8,
+  "voice": "Sekitar pukul setengah delapan malam, sebuah cahaya terang melesat dari ketinggian.",
+  "caption": null
+ },
+ {
+  "id": "s05",
+  "act": "hook",
+  "type": "wide",
+  "cam": "sumatra-streak",
+  "start": 19.8,
+  "end": 24.3,
+  "voice": "Cahayanya memanjang, menyala makin terang, lalu pecah menjadi beberapa kilau.",
+  "caption": null
+ },
+ {
+  "id": "s06",
+  "act": "hook",
+  "type": "macro",
+  "cam": "sumatra-streak",
+  "start": 24.3,
+  "end": 27.9,
+  "voice": "Kilau-kilau itu berjatuhan sebentar, terus padam ditelan gelap.",
+  "caption": null
+ },
+ {
+  "id": "s07",
+  "act": "hook",
+  "type": "macro",
+  "cam": "sumatra-macro",
+  "start": 27.9,
+  "end": 32.85,
+  "voice": "Orang-orang menengadah ke langit, ponsel terangkat, merekam apa yang mereka lihat.",
+  "caption": null
+ },
+ {
+  "id": "s08",
+  "act": "hook",
+  "type": "wide",
+  "cam": "sumatra-wide",
+  "start": 32.85,
+  "end": 36.45,
+  "voice": "Nggak ada yang tahu pasti benda apa itu.",
+  "caption": null
+ },
+ {
+  "id": "s09",
+  "act": "hook",
+  "type": "wide",
+  "cam": "sumatra-wide",
+  "start": 36.45,
+  "end": 40.5,
+  "voice": "Jawabnya ternyata jauh lebih besar dari dugaan siapa pun.",
+  "caption": null
+ },
+ {
+  "id": "s10",
+  "act": "hook",
+  "type": "macro",
+  "cam": "sumatra-streak",
+  "start": 40.5,
+  "end": 45.9,
+  "voice": "Itu adalah teleskop luar angkasa milik NASA, yang sedang pulang ke Bumi.",
+  "caption": null
+ },
+ {
+  "id": "s11",
+  "act": "hook",
+  "type": "macro",
+  "cam": "sumatra-macro",
+  "start": 45.9,
+  "end": 50.85,
+  "voice": "Namanya Swift, dan malam itu perjalanannya berakhir tepat di atas Indonesia.",
+  "caption": null
+ },
+ {
+  "id": "s12",
+  "act": "swift",
+  "type": "wide",
+  "cam": "orbit-wide",
+  "start": 50.85,
+  "end": 56.7,
+  "voice": "Swift diluncurkan pada dua puluh November dua ribu empat, dari Cape Canaveral, Amerika.",
+  "caption": null
+ },
+ {
+  "id": "s13",
+  "act": "swift",
+  "type": "wide",
+  "cam": "orbit-wide",
+  "start": 56.7,
+  "end": 61.65,
+  "voice": "Ia berangkat menumpang roket Delta Dua, menuju orbit di atas Bumi.",
+  "caption": null
+ },
+ {
+  "id": "s14",
+  "act": "swift",
+  "type": "macro",
+  "cam": "orbit-macro",
+  "start": 61.65,
+  "end": 64.8,
+  "voice": "Nama resminya panjang: Neil Gehrels Swift Observatory.",
+  "caption": null
+ },
+ {
+  "id": "s15",
+  "act": "swift",
+  "type": "wide",
+  "cam": "orbit-wide",
+  "start": 64.8,
+  "end": 67.5,
+  "voice": "Tapi semua orang memanggilnya Swift saja.",
+  "caption": null
+ },
+ {
+  "id": "s16",
+  "act": "swift",
+  "type": "diagram",
+  "cam": "orbit-diagram",
+  "start": 67.5,
+  "end": 72.45,
+  "voice": "Rencana awalnya sederhana dan pendek: bekerja selama dua tahun, lalu selesai.",
+  "caption": null
+ },
+ {
+  "id": "s17",
+  "act": "swift",
+  "type": "diagram",
+  "cam": "orbit-diagram",
+  "start": 72.45,
+  "end": 76.05,
+  "voice": "Kenyataannya, ia bekerja hampir dua puluh dua tahun.",
+  "caption": null
+ },
+ {
+  "id": "s18",
+  "act": "swift",
+  "type": "macro",
+  "cam": "orbit-macro",
+  "start": 76.05,
+  "end": 81.0,
+  "voice": "Beratnya sekitar seribu empat ratus lima puluh kilogram, sebesar mobil keluarga.",
+  "caption": null
+ },
+ {
+  "id": "s19",
+  "act": "swift",
+  "type": "ui",
+  "cam": "panels-ui",
+  "start": 81.0,
+  "end": 85.95,
+  "voice": "Di badannya menempel tiga teleskop, dan ketiganya bekerja sebagai satu tim.",
+  "caption": null
+ },
+ {
+  "id": "s20",
+  "act": "swift",
+  "type": "ui",
+  "cam": "panels-ui",
+  "start": 85.95,
+  "end": 91.35,
+  "voice": "Yang pertama, BAT, adalah pemburu sinar gama, mata yang selalu mengawasi langit.",
+  "caption": null
+ },
+ {
+  "id": "s21",
+  "act": "swift",
+  "type": "diagram",
+  "cam": "panels-ui",
+  "start": 91.35,
+  "end": 94.95,
+  "voice": "Yang kedua, XRT, membaca ledakan itu dengan sinar-X.",
+  "caption": null
+ },
+ {
+  "id": "s22",
+  "act": "swift",
+  "type": "diagram",
+  "cam": "burst-diagram",
+  "start": 94.95,
+  "end": 99.0,
+  "voice": "Yang ketiga, UVOT, memotretnya dengan ultraviolet dan cahaya biasa.",
+  "caption": null
+ },
+ {
+  "id": "s23",
+  "act": "swift",
+  "type": "wide",
+  "cam": "burst-wide",
+  "start": 99.0,
+  "end": 103.05,
+  "voice": "Tugas utama tim ini satu: memburu semburan sinar gama.",
+  "caption": null
+ },
+ {
+  "id": "s24",
+  "act": "swift",
+  "type": "diagram",
+  "cam": "burst-diagram",
+  "start": 103.05,
+  "end": 108.9,
+  "voice": "Semburan sinar gama adalah ledakan paling dahsyat di alam semesta sejak Big Bang.",
+  "caption": null
+ },
+ {
+  "id": "s25",
+  "act": "swift",
+  "type": "macro",
+  "cam": "burst-macro",
+  "start": 108.9,
+  "end": 114.3,
+  "voice": "Ledakan itu lahir waktu bintang raksasa runtuh, atau dua bintang neutron bertabrakan.",
+  "caption": null
+ },
+ {
+  "id": "s26",
+  "act": "swift",
+  "type": "macro",
+  "cam": "burst-macro",
+  "start": 114.3,
+  "end": 117.9,
+  "voice": "Cahayanya cuma datang sebentar, lalu hilang untuk selamanya.",
+  "caption": null
+ },
+ {
+  "id": "s27",
+  "act": "swift",
+  "type": "diagram",
+  "cam": "burst-diagram",
+  "start": 117.9,
+  "end": 122.4,
+  "voice": "Karena itu Swift harus cepat, dan namanya memang berarti cekatan.",
+  "caption": null
+ },
+ {
+  "id": "s28",
+  "act": "swift",
+  "type": "diagram",
+  "cam": "orbit-diagram",
+  "start": 122.4,
+  "end": 127.35,
+  "voice": "Begitu BAT menangkap semburan, Swift berputar sendiri menghadap ke titik ledakan.",
+  "caption": null
+ },
+ {
+  "id": "s29",
+  "act": "swift",
+  "type": "macro",
+  "cam": "orbit-macro",
+  "start": 127.35,
+  "end": 132.3,
+  "voice": "Putaran itu cuma butuh dua puluh sampai tujuh puluh lima detik.",
+  "caption": null
+ },
+ {
+  "id": "s30",
+  "act": "swift",
+  "type": "diagram",
+  "cam": "orbit-diagram",
+  "start": 132.3,
+  "end": 136.8,
+  "voice": "Dua teleskop lainnya langsung mengunci sasaran, sebelum cahayanya keburu padam.",
+  "caption": null
+ },
+ {
+  "id": "s31",
+  "act": "swift",
+  "type": "diagram",
+  "cam": "orbit-diagram",
+  "start": 136.8,
+  "end": 142.65,
+  "voice": "Rata-rata, setiap dua sampai tiga hari, ada satu ledakan baru yang ia tangkap.",
+  "caption": null
+ },
+ {
+  "id": "s32",
+  "act": "swift",
+  "type": "macro",
+  "cam": "orbit-macro",
+  "start": 142.65,
+  "end": 147.6,
+  "voice": "Selama hidupnya, Swift mendeteksi lebih dari dua ribu semburan sinar gama.",
+  "caption": null
+ },
+ {
+  "id": "s33",
+  "act": "swift",
+  "type": "diagram",
+  "cam": "orbit-diagram",
+  "start": 147.6,
+  "end": 152.55,
+  "voice": "Ia juga mempelajari sedikitnya seribu empat ratus supernova, bintang yang meledak.",
+  "caption": null
+ },
+ {
+  "id": "s34",
+  "act": "swift",
+  "type": "wide",
+  "cam": "orbit-wide",
+  "start": 152.55,
+  "end": 157.5,
+  "voice": "Datanya mengalir ke sekitar tujuh ribu makalah ilmiah di seluruh dunia.",
+  "caption": null
+ },
+ {
+  "id": "s35",
+  "act": "swift",
+  "type": "macro",
+  "cam": "orbit-macro",
+  "start": 157.5,
+  "end": 161.55,
+  "voice": "Semua catatannya menumpuk menjadi arsip sekitar dua belas terabyte.",
+  "caption": null
+ },
+ {
+  "id": "s36",
+  "act": "swift",
+  "type": "wide",
+  "cam": "orbit-wide",
+  "start": 161.55,
+  "end": 166.5,
+  "voice": "Pada tahun dua ribu delapan belas, namanya ditambah nama Neil Gehrels.",
+  "caption": null
+ },
+ {
+  "id": "s37",
+  "act": "swift",
+  "type": "macro",
+  "cam": "orbit-macro",
+  "start": 166.5,
+  "end": 171.0,
+  "voice": "Neil Gehrels adalah pemimpin misi ini, yang wafat setahun sebelumnya.",
+  "caption": null
+ },
+ {
+  "id": "s38",
+  "act": "swift",
+  "type": "wide",
+  "cam": "orbit-wide",
+  "start": 171.0,
+  "end": 175.05,
+  "voice": "Sejak itu, teleskop ini membawa nama orang yang memimpikannya.",
+  "caption": null
+ },
+ {
+  "id": "s39",
+  "act": "fall",
+  "type": "wide",
+  "cam": "orbit-wide",
+  "start": 175.05,
+  "end": 180.9,
+  "voice": "Selama dua puluh dua tahun, Swift mengelilingi Bumi dari ketinggian enam ratus kilometer.",
+  "caption": null
+ },
+ {
+  "id": "s40",
+  "act": "fall",
+  "type": "diagram",
+  "cam": "orbit-diagram",
+  "start": 180.9,
+  "end": 185.4,
+  "voice": "Satu putaran penuh cuma butuh sekitar sembilan puluh tujuh menit.",
+  "caption": null
+ },
+ {
+  "id": "s41",
+  "act": "fall",
+  "type": "diagram",
+  "cam": "atmos-diagram",
+  "start": 185.4,
+  "end": 190.35,
+  "voice": "Di ketinggian itu, udara hampir nggak ada, tapi bukan berarti nol.",
+  "caption": null
+ },
+ {
+  "id": "s42",
+  "act": "fall",
+  "type": "macro",
+  "cam": "atmos-diagram",
+  "start": 190.35,
+  "end": 194.85,
+  "voice": "Setiap putaran, sisa udara yang tipis banget tetap menggesek badannya.",
+  "caption": null
+ },
+ {
+  "id": "s43",
+  "act": "fall",
+  "type": "macro",
+  "cam": "atmos-macro",
+  "start": 194.85,
+  "end": 199.35,
+  "voice": "Gesekan sekecil itu terdengar sepele, tapi ia bekerja tanpa henti.",
+  "caption": null
+ },
+ {
+  "id": "s44",
+  "act": "fall",
+  "type": "chart",
+  "cam": "chart-chart",
+  "start": 199.35,
+  "end": 203.4,
+  "voice": "Tahun demi tahun, orbit Swift turun sedikit demi sedikit.",
+  "caption": null
+ },
+ {
+  "id": "s45",
+  "act": "fall",
+  "type": "diagram",
+  "cam": "atmos-diagram",
+  "start": 203.4,
+  "end": 207.9,
+  "voice": "Lalu Matahari memasuki masa paling aktifnya, yang disebut maksimum matahari.",
+  "caption": null
+ },
+ {
+  "id": "s46",
+  "act": "fall",
+  "type": "diagram",
+  "cam": "atmos-diagram",
+  "start": 207.9,
+  "end": 211.95,
+  "voice": "Badai dari Matahari memanaskan lapisan atmosfer paling atas Bumi.",
+  "caption": null
+ },
+ {
+  "id": "s47",
+  "act": "fall",
+  "type": "macro",
+  "cam": "atmos-macro",
+  "start": 211.95,
+  "end": 216.45,
+  "voice": "Atmosfer yang panas itu mengembang, menjulur lebih tinggi dari biasanya.",
+  "caption": null
+ },
+ {
+  "id": "s48",
+  "act": "fall",
+  "type": "diagram",
+  "cam": "atmos-diagram",
+  "start": 216.45,
+  "end": 220.95,
+  "voice": "Akibatnya, udara tipis kini menggigit orbit yang dulu terasa aman.",
+  "caption": null
+ },
+ {
+  "id": "s49",
+  "act": "fall",
+  "type": "chart",
+  "cam": "chart-chart",
+  "start": 220.95,
+  "end": 225.0,
+  "voice": "Gesekan bertambah kuat, dan ketinggian Swift turun makin cepat.",
+  "caption": null
+ },
+ {
+  "id": "s50",
+  "act": "fall",
+  "type": "diagram",
+  "cam": "atmos-diagram",
+  "start": 225.0,
+  "end": 229.05,
+  "voice": "Semakin rendah ia turun, udara yang ditemuinya semakin tebal.",
+  "caption": null
+ },
+ {
+  "id": "s51",
+  "act": "fall",
+  "type": "macro",
+  "cam": "atmos-macro",
+  "start": 229.05,
+  "end": 232.65,
+  "voice": "Semakin tebal udaranya, semakin cepat pula ia jatuh.",
+  "caption": null
+ },
+ {
+  "id": "s52",
+  "act": "fall",
+  "type": "chart",
+  "cam": "chart-chart",
+  "start": 232.65,
+  "end": 237.6,
+  "voice": "Begitulah lingkaran jatuhnya satelit: pelan di awal, lalu berlari di akhir.",
+  "caption": null
+ },
+ {
+  "id": "s53",
+  "act": "fall",
+  "type": "diagram",
+  "cam": "atmos-diagram",
+  "start": 237.6,
+  "end": 241.65,
+  "voice": "Dan Swift nggak membawa pendorong untuk mengangkat orbitnya sendiri.",
+  "caption": null
+ },
+ {
+  "id": "s54",
+  "act": "fall",
+  "type": "wide",
+  "cam": "orbit-wide",
+  "start": 241.65,
+  "end": 245.7,
+  "voice": "Kalau nggak ada yang menolong, jatuhnya cuma soal waktu.",
+  "caption": null
+ },
+ {
+  "id": "s55",
+  "act": "rescue",
+  "type": "wide",
+  "cam": "rescue-wide",
+  "start": 245.7,
+  "end": 250.2,
+  "voice": "Di sinilah ceritanya menjadi nggak biasa: NASA memutuskan menyewa penolong.",
+  "caption": null
+ },
+ {
+  "id": "s56",
+  "act": "rescue",
+  "type": "compare",
+  "cam": "rescue-wide",
+  "start": 250.2,
+  "end": 252.9,
+  "voice": "September dua ribu dua puluh lima,",
+  "caption": null
+ },
+ {
+  "id": "s57",
+  "act": "rescue",
+  "type": "wide",
+  "cam": "rescue-wide",
+  "start": 252.9,
+  "end": 256.5,
+  "voice": "kontrak senilai sekitar tiga puluh juta dolar ditandatangani.",
+  "caption": null
+ },
+ {
+  "id": "s58",
+  "act": "rescue",
+  "type": "diagram",
+  "cam": "rescue-diagram",
+  "start": 256.5,
+  "end": 261.45,
+  "voice": "Yang menyanggupi adalah Katalyst Space Technologies, perusahaan antariksa muda dari Arizona.",
+  "caption": null
+ },
+ {
+  "id": "s59",
+  "act": "rescue",
+  "type": "diagram",
+  "cam": "rescue-diagram",
+  "start": 261.45,
+  "end": 266.4,
+  "voice": "Misinya diberi nama Swift Boost: menangkap Swift, lalu mendorongnya naik lagi.",
+  "caption": null
+ },
+ {
+  "id": "s60",
+  "act": "rescue",
+  "type": "wide",
+  "cam": "rescue-wide",
+  "start": 266.4,
+  "end": 271.8,
+  "voice": "Katalyst merancang wahana robotik penolong bernama LINK, dalam waktu kurang dari setahun.",
+  "caption": null
+ },
+ {
+  "id": "s61",
+  "act": "rescue",
+  "type": "diagram",
+  "cam": "rescue-diagram",
+  "start": 271.8,
+  "end": 277.65,
+  "voice": "Tiga Juli dua ribu dua puluh enam, LINK meluncur dengan roket Pegasus XL.",
+  "caption": null
+ },
+ {
+  "id": "s62",
+  "act": "rescue",
+  "type": "wide",
+  "cam": "rescue-wide",
+  "start": 277.65,
+  "end": 282.15,
+  "voice": "Itu adalah penerbangan terakhir sang roket, sebelum pensiun untuk selamanya.",
+  "caption": null
+ },
+ {
+  "id": "s63",
+  "act": "rescue",
+  "type": "diagram",
+  "cam": "rescue-diagram",
+  "start": 282.15,
+  "end": 284.85,
+  "voice": "Rencana LINK terdengar kayak adegan film.",
+  "caption": null
+ },
+ {
+  "id": "s64",
+  "act": "rescue",
+  "type": "diagram",
+  "cam": "rescue-diagram",
+  "start": 284.85,
+  "end": 289.8,
+  "voice": "Ia akan mendekati Swift perlahan di orbit, lalu membuka lengan-lengan robotnya.",
+  "caption": null
+ },
+ {
+  "id": "s65",
+  "act": "rescue",
+  "type": "compare",
+  "cam": "rescue-compare",
+  "start": 289.8,
+  "end": 293.85,
+  "voice": "Dengan lengan itu, ia mencengkeram badan Swift dan menahannya.",
+  "caption": null
+ },
+ {
+  "id": "s66",
+  "act": "rescue",
+  "type": "compare",
+  "cam": "rescue-compare",
+  "start": 293.85,
+  "end": 298.8,
+  "voice": "Lalu pendorongnya menyala, mengangkat keduanya kembali ke ketinggian enam ratus kilometer.",
+  "caption": null
+ },
+ {
+  "id": "s67",
+  "act": "rescue",
+  "type": "macro",
+  "cam": "rescue-macro",
+  "start": 298.8,
+  "end": 302.85,
+  "voice": "Masalahnya, Swift nggak pernah dirancang untuk ditangkap siapa pun.",
+  "caption": null
+ },
+ {
+  "id": "s68",
+  "act": "rescue",
+  "type": "diagram",
+  "cam": "rescue-diagram",
+  "start": 302.85,
+  "end": 307.8,
+  "voice": "Nggak ada pegangan khusus, nggak ada titik tambat untuk lengan robot.",
+  "caption": null
+ },
+ {
+  "id": "s69",
+  "act": "rescue",
+  "type": "macro",
+  "cam": "rescue-macro",
+  "start": 307.8,
+  "end": 312.3,
+  "voice": "Belum lagi ujian pertama datang bahkan sebelum LINK sempat mendekat.",
+  "caption": null
+ },
+ {
+  "id": "s70",
+  "act": "rescue",
+  "type": "macro",
+  "cam": "rescue-macro",
+  "start": 312.3,
+  "end": 315.45,
+  "voice": "Akhir Juli dua ribu dua puluh enam,",
+  "caption": null
+ },
+ {
+  "id": "s71",
+  "act": "rescue",
+  "type": "wide",
+  "cam": "rescue-macro",
+  "start": 315.45,
+  "end": 318.6,
+  "voice": "dua dari tiga roda reaksi LINK rusak.",
+  "caption": null
+ },
+ {
+  "id": "s72",
+  "act": "rescue",
+  "type": "diagram",
+  "cam": "rescue-diagram",
+  "start": 318.6,
+  "end": 324.45,
+  "voice": "Roda reaksi adalah roda berat yang membuat wahana bisa berputar tanpa bahan bakar.",
+  "caption": null
+ },
+ {
+  "id": "s73",
+  "act": "rescue",
+  "type": "macro",
+  "cam": "rescue-macro",
+  "start": 324.45,
+  "end": 328.95,
+  "voice": "Tanpa dua rodanya, LINK berputar tak terkendali di ruang angkasa.",
+  "caption": null
+ },
+ {
+  "id": "s74",
+  "act": "rescue",
+  "type": "diagram",
+  "cam": "rescue-diagram",
+  "start": 328.95,
+  "end": 332.1,
+  "voice": "Putarannya mencapai sekitar sembilan derajat setiap detik.",
+  "caption": null
+ },
+ {
+  "id": "s75",
+  "act": "rescue",
+  "type": "diagram",
+  "cam": "rescue-diagram",
+  "start": 332.1,
+  "end": 337.05,
+  "voice": "Di Bumi, para insinyur Katalyst berjuang berminggu-minggu menyelamatkan wahana mereka sendiri.",
+  "caption": null
+ },
+ {
+  "id": "s76",
+  "act": "rescue",
+  "type": "macro",
+  "cam": "rescue-macro",
+  "start": 337.05,
+  "end": 341.1,
+  "voice": "Mereka menulis ulang perangkat lunak kendalinya, langsung di orbit.",
+  "caption": null
+ },
+ {
+  "id": "s77",
+  "act": "rescue",
+  "type": "diagram",
+  "cam": "rescue-diagram",
+  "start": 341.1,
+  "end": 344.7,
+  "voice": "Awal Agustus, putaran liar itu berhasil dijinakkan sampai",
+  "caption": null
+ },
+ {
+  "id": "s78",
+  "act": "rescue",
+  "type": "diagram",
+  "cam": "rescue-diagram",
+  "start": 344.7,
+  "end": 347.4,
+  "voice": "sekitar satu setengah derajat per detik.",
+  "caption": null
+ },
+ {
+  "id": "s79",
+  "act": "rescue",
+  "type": "wide",
+  "cam": "rescue-diagram",
+  "start": 347.4,
+  "end": 351.0,
+  "voice": "Tapi cara menjinakkannya mahal: memakai pendorong kecil terus-menerus.",
+  "caption": null
+ },
+ {
+  "id": "s80",
+  "act": "rescue",
+  "type": "wide",
+  "cam": "rescue-wide",
+  "start": 351.0,
+  "end": 356.4,
+  "voice": "Bahan bakar yang terbakar adalah bahan bakar yang sama untuk mendorong Swift.",
+  "caption": null
+ },
+ {
+  "id": "s81",
+  "act": "rescue",
+  "type": "compare",
+  "cam": "rescue-compare",
+  "start": 356.4,
+  "end": 361.8,
+  "voice": "Sembilan belas Agustus dua ribu dua puluh enam, keputusan berat itu diumumkan.",
+  "caption": null
+ },
+ {
+  "id": "s82",
+  "act": "rescue",
+  "type": "compare",
+  "cam": "rescue-compare",
+  "start": 361.8,
+  "end": 365.85,
+  "voice": "NASA dan Katalyst resmi membatalkan penangkapan dan pendorongan Swift.",
+  "caption": null
+ },
+ {
+  "id": "s83",
+  "act": "rescue",
+  "type": "macro",
+  "cam": "rescue-macro",
+  "start": 365.85,
+  "end": 371.25,
+  "voice": "Bahan bakar LINK sudah nggak cukup untuk pulang membawa beban sebesar Swift.",
+  "caption": null
+ },
+ {
+  "id": "s84",
+  "act": "rescue",
+  "type": "wide",
+  "cam": "rescue-wide",
+  "start": 371.25,
+  "end": 375.75,
+  "voice": "LINK tetap menyelesaikan perjalanannya mendekati Swift, tapi cuma sebagai latihan.",
+  "caption": null
+ },
+ {
+  "id": "s85",
+  "act": "rescue",
+  "type": "wide",
+  "cam": "rescue-wide",
+  "start": 375.75,
+  "end": 381.6,
+  "voice": "Ia terbang sampai jarak dua belas hingga lima belas kilometer dari sang teleskop.",
+  "caption": null
+ },
+ {
+  "id": "s86",
+  "act": "rescue",
+  "type": "diagram",
+  "cam": "rescue-diagram",
+  "start": 381.6,
+  "end": 387.45,
+  "voice": "Di sana ia membuka lengan robotnya dan menyalakan pendorongnya, tanpa menyentuh apa pun.",
+  "caption": null
+ },
+ {
+  "id": "s87",
+  "act": "rescue",
+  "type": "wide",
+  "cam": "rescue-wide",
+  "start": 387.45,
+  "end": 391.95,
+  "voice": "Seolah penolong yang datang jauh-jauh, lalu cuma bisa melambaikan tangan.",
+  "caption": null
+ },
+ {
+  "id": "s88",
+  "act": "rescue",
+  "type": "macro",
+  "cam": "rescue-macro",
+  "start": 391.95,
+  "end": 396.45,
+  "voice": "September dua ribu dua puluh enam, giliran LINK yang jatuh.",
+  "caption": null
+ },
+ {
+  "id": "s89",
+  "act": "rescue",
+  "type": "wide",
+  "cam": "rescue-wide",
+  "start": 396.45,
+  "end": 400.95,
+  "voice": "Orbitnya ikut meluruh, dan ia terbakar masuk atmosfer lebih dulu.",
+  "caption": null
+ },
+ {
+  "id": "s90",
+  "act": "rescue",
+  "type": "wide",
+  "cam": "rescue-wide",
+  "start": 400.95,
+  "end": 406.35,
+  "voice": "Sang penolong pulang dua bulan lebih awal dari yang hendak ia selamatkan.",
+  "caption": null
+ },
+ {
+  "id": "s91",
+  "act": "final",
+  "type": "macro",
+  "cam": "orbit-macro",
+  "start": 406.35,
+  "end": 409.95,
+  "voice": "Sementara itu, Swift tetap bekerja sampai kesempatan terakhirnya.",
+  "caption": null
+ },
+ {
+  "id": "s92",
+  "act": "final",
+  "type": "diagram",
+  "cam": "orbit-diagram",
+  "start": 409.95,
+  "end": 415.8,
+  "voice": "Dua puluh Oktober dua ribu dua puluh enam, ia melakukan pengamatan sains terakhirnya.",
+  "caption": null
+ },
+ {
+  "id": "s93",
+  "act": "final",
+  "type": "diagram",
+  "cam": "orbit-diagram",
+  "start": 415.8,
+  "end": 420.75,
+  "voice": "Waktu itu ketinggiannya tinggal sekitar dua ratus tujuh puluh lima kilometer.",
+  "caption": null
+ },
+ {
+  "id": "s94",
+  "act": "final",
+  "type": "macro",
+  "cam": "atmos-macro",
+  "start": 420.75,
+  "end": 424.8,
+  "voice": "Di ketinggian serendah itu, gesekan udara mengguncang badannya terus-menerus.",
+  "caption": null
+ },
+ {
+  "id": "s95",
+  "act": "final",
+  "type": "macro",
+  "cam": "orbit-macro",
+  "start": 424.8,
+  "end": 428.85,
+  "voice": "Teleskopnya nggak bisa lagi menatap satu titik dengan tenang.",
+  "caption": null
+ },
+ {
+  "id": "s96",
+  "act": "final",
+  "type": "wide",
+  "cam": "orbit-wide",
+  "start": 428.85,
+  "end": 433.35,
+  "voice": "Beberapa hari sesudahnya, NASA resmi mengakhiri misi Swift untuk selamanya.",
+  "caption": null
+ },
+ {
+  "id": "s97",
+  "act": "final",
+  "type": "wide",
+  "cam": "orbit-wide",
+  "start": 433.35,
+  "end": 437.4,
+  "voice": "Sesudah itu, yang tersisa cuma menunggu malam jatuhnya tiba.",
+  "caption": null
+ },
+ {
+  "id": "s98",
+  "act": "final",
+  "type": "diagram",
+  "cam": "map-wide",
+  "start": 437.4,
+  "end": 441.45,
+  "voice": "Para ahli sudah menghitung kawasan jatuhnya, dan perkiraan malamnya.",
+  "caption": null
+ },
+ {
+  "id": "s99",
+  "act": "final",
+  "type": "wide",
+  "cam": "map-wide",
+  "start": 441.45,
+  "end": 446.4,
+  "voice": "Empat November dua ribu dua puluh enam, malam itu akhirnya datang.",
+  "caption": null
+ },
+ {
+  "id": "s100",
+  "act": "final",
+  "type": "diagram",
+  "cam": "map-diagram",
+  "start": 446.4,
+  "end": 451.35,
+  "voice": "Pukul sembilan belas lewat tiga puluh sembilan menit, waktu Indonesia barat.",
+  "caption": null
+ },
+ {
+  "id": "s101",
+  "act": "final",
+  "type": "macro",
+  "cam": "map-macro",
+  "start": 451.35,
+  "end": 455.85,
+  "voice": "Di atas Sumatra Utara, Swift memasuki lapisan atmosfer yang tebal.",
+  "caption": null
+ },
+ {
+  "id": "s102",
+  "act": "final",
+  "type": "diagram",
+  "cam": "map-diagram",
+  "start": 455.85,
+  "end": 460.35,
+  "voice": "Titik masuknya tercatat di tiga koma empat derajat lintang utara.",
+  "caption": null
+ },
+ {
+  "id": "s103",
+  "act": "final",
+  "type": "diagram",
+  "cam": "map-diagram",
+  "start": 460.35,
+  "end": 464.4,
+  "voice": "Dan sembilan puluh delapan koma enam derajat bujur timur,",
+  "caption": null
+ },
+ {
+  "id": "s104",
+  "act": "final",
+  "type": "wide",
+  "cam": "map-diagram",
+  "start": 464.4,
+  "end": 466.7,
+  "voice": "menurut Angkatan Luar Angkasa Amerika.",
+  "caption": null
+ },
+ {
+  "id": "s105",
+  "act": "final",
+  "type": "macro",
+  "cam": "map-macro",
+  "start": 466.7,
+  "end": 471.65,
+  "voice": "Kecepatannya waktu itu sekitar dua puluh delapan ribu kilometer per jam.",
+  "caption": null
+ },
+ {
+  "id": "s106",
+  "act": "final",
+  "type": "macro",
+  "cam": "atmos-macro",
+  "start": 471.65,
+  "end": 475.25,
+  "voice": "Itu lebih dari dua puluh kali kecepatan suara.",
+  "caption": null
+ },
+ {
+  "id": "s107",
+  "act": "final",
+  "type": "diagram",
+  "cam": "atmos-diagram",
+  "start": 475.25,
+  "end": 479.75,
+  "voice": "Udara di depannya nggak sempat menyingkir, lalu memanas dan menyala.",
+  "caption": null
+ },
+ {
+  "id": "s108",
+  "act": "final",
+  "type": "wide",
+  "cam": "sumatra-streak",
+  "start": 479.75,
+  "end": 484.25,
+  "voice": "Badan Swift pecah, dan sebagian besar terbakar habis di langit.",
+  "caption": null
+ },
+ {
+  "id": "s109",
+  "act": "final",
+  "type": "diagram",
+  "cam": "map-diagram",
+  "start": 484.25,
+  "end": 488.75,
+  "voice": "Persis kayak cahaya yang dilihat orang-orang Sumatra Utara malam itu.",
+  "caption": null
+ },
+ {
+  "id": "s110",
+  "act": "final",
+  "type": "diagram",
+  "cam": "map-diagram",
+  "start": 488.75,
+  "end": 493.25,
+  "voice": "Sebelumnya, NASA sudah menghitung risiko jatuhnya wahana ini bagi manusia.",
+  "caption": null
+ },
+ {
+  "id": "s111",
+  "act": "final",
+  "type": "wide",
+  "cam": "map-wide",
+  "start": 493.25,
+  "end": 498.65,
+  "voice": "Peluang ada orang yang celaka karenanya sekitar satu banding dua ribu seratus.",
+  "caption": null
+ },
+ {
+  "id": "s112",
+  "act": "final",
+  "type": "wide",
+  "cam": "sumatra-wide",
+  "start": 498.65,
+  "end": 502.7,
+  "voice": "Malam itu, angka kecil itu berpihak pada semua orang.",
+  "caption": null
+ },
+ {
+  "id": "s113",
+  "act": "final",
+  "type": "macro",
+  "cam": "map-macro",
+  "start": 502.7,
+  "end": 507.2,
+  "voice": "Nggak ada laporan kerusakan, dan nggak ada satu pun korban.",
+  "caption": null
+ },
+ {
+  "id": "s114",
+  "act": "final",
+  "type": "diagram",
+  "cam": "map-diagram",
+  "start": 507.2,
+  "end": 512.15,
+  "voice": "Sebagian kecil komponen padat mungkin selamat dari api dan mencapai permukaan.",
+  "caption": null
+ },
+ {
+  "id": "s115",
+  "act": "final",
+  "type": "wide",
+  "cam": "map-wide",
+  "start": 512.15,
+  "end": 517.55,
+  "voice": "Tapi sampai hari ini, nggak ada satu pun puingnya yang terkonfirmasi ditemukan.",
+  "caption": null
+ },
+ {
+  "id": "s116",
+  "act": "legacy",
+  "type": "wide",
+  "cam": "legacy-wide",
+  "start": 517.55,
+  "end": 522.5,
+  "voice": "Teleskopnya sudah tiada, tapi yang ia kumpulkan selama hidupnya tetap tinggal.",
+  "caption": null
+ },
+ {
+  "id": "s117",
+  "act": "legacy",
+  "type": "ui",
+  "cam": "legacy-panels",
+  "start": 522.5,
+  "end": 528.35,
+  "voice": "Dua belas terabyte data langit tersimpan rapi di arsip, terbuka untuk siapa pun.",
+  "caption": null
+ },
+ {
+  "id": "s118",
+  "act": "legacy",
+  "type": "ui",
+  "cam": "legacy-panels",
+  "start": 528.35,
+  "end": 532.4,
+  "voice": "Sekitar tujuh ribu makalah ilmiah sudah lahir dari pengamatannya.",
+  "caption": null
+ },
+ {
+  "id": "s119",
+  "act": "legacy",
+  "type": "wide",
+  "cam": "legacy-wide",
+  "start": 532.4,
+  "end": 537.35,
+  "voice": "Dan arsip itu masih terus dibaca, diteliti, dan dikutip sampai sekarang.",
+  "caption": null
+ },
+ {
+  "id": "s120",
+  "act": "legacy",
+  "type": "macro",
+  "cam": "legacy-macro",
+  "start": 537.35,
+  "end": 541.85,
+  "voice": "Swift mengajarkan kita cara membaca ledakan-ledakan terbesar di alam semesta.",
+  "caption": null
+ },
+ {
+  "id": "s121",
+  "act": "legacy",
+  "type": "wide",
+  "cam": "legacy-wide",
+  "start": 541.85,
+  "end": 545.9,
+  "voice": "Ia juga mengajarkan satu hal lain, tentang caranya pulang.",
+  "caption": null
+ },
+ {
+  "id": "s122",
+  "act": "legacy",
+  "type": "wide",
+  "cam": "legacy-wide",
+  "start": 545.9,
+  "end": 550.85,
+  "voice": "Dua puluh dua tahun ia menatap cahaya ledakan bintang yang jauh.",
+  "caption": null
+ },
+ {
+  "id": "s123",
+  "act": "legacy",
+  "type": "recap",
+  "cam": "legacy-wide",
+  "start": 550.85,
+  "end": 555.8,
+  "voice": "Malam itu, di atas Sumatra, ia sendiri menjadi cahaya di langit.",
+  "caption": null
+ },
+ {
+  "id": "s124",
+  "act": "legacy",
+  "type": "endcard",
+  "cam": "legacy-wide",
+  "start": 555.8,
+  "end": 559.85,
+  "voice": "Selamat jalan, Swift. Terima kasih sudah menjaga langit kita.",
+  "caption": null
+ }
+]
