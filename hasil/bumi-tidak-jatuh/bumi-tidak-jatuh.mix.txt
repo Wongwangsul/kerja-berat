@@ -1,0 +1,15 @@
+mix: -14.0 LUFS, range 5.3 LU, true peak -1.9 dBFS (7 effects, 6 voice stretches, master gain +2.6 dB)
+music lib/music/xceed_thru_johann.mp3 from 0.679s at -22 LUFS, duck -6 dB
+ 10.20s  -20.0 dB  peak   lib/sfx/tick_2.mp3  the cross strikes through the imagined 'down' arrow, as A denies it (times are retimed after the take; this draft uses the planned storyboard times)
+ 13.80s  -18.0 dB  peak   lib/sfx/pop_2.mp3  Earth's centre dot lights on the words 'pusat Bumi'
+ 18.90s  -20.0 dB  start  lib/sfx/whoosh_long_1.mp3  under Earth's slide toward the Sun in the bad-news shot, barely there
+ 22.00s  -12.0 dB  peak   lib/sfx/tick_2.mp3  the lightning crack under B's panic — a tick stands in for thunder, kept short
+ 28.10s  -16.0 dB  peak   lib/sfx/whoosh_fast_2.mp3  the sideways veer past the Sun, on the word 'menyamping'
+ 35.50s  -18.0 dB  peak   lib/sfx/shimmer_1.mp3  the orbit ellipse lights as the loop completes on 'orbit'
+ 36.40s  -20.0 dB  peak   lib/sfx/shimmer_1.mp3  the recap note lands over the still-looping Earth
+  0.03s  voice        take 0.38-3.65 s
+  3.31s  voice        take 3.83-6.00 s
+  5.47s  voice        take 6.21-14.88 s
+ 14.14s  voice        take 15.06-18.23 s
+ 17.32s  voice        take 18.66-27.34 s
+ 25.98s  voice        take 27.70-37.16 s
