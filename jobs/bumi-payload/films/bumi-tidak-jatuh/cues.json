@@ -1,0 +1,81 @@
+{
+ "events": [
+  {
+   "align": "peak",
+   "db": -20,
+   "file": "lib/sfx/tick_2.mp3",
+   "note": "the cross strikes through the imagined 'down' arrow, as A denies it (times are retimed after the take; this draft uses the planned storyboard times)",
+   "t": 10.2
+  },
+  {
+   "align": "peak",
+   "db": -18,
+   "file": "lib/sfx/pop_2.mp3",
+   "note": "Earth's centre dot lights on the words 'pusat Bumi'",
+   "t": 13.8
+  },
+  {
+   "align": "start",
+   "db": -20,
+   "fade": 1.0,
+   "file": "lib/sfx/whoosh_long_1.mp3",
+   "note": "under Earth's slide toward the Sun in the bad-news shot, barely there",
+   "t": 18.9,
+   "trim": [
+    0,
+    2.5
+   ]
+  },
+  {
+   "align": "peak",
+   "db": -12,
+   "file": "lib/sfx/tick_2.mp3",
+   "note": "the lightning crack under B's panic — a tick stands in for thunder, kept short",
+   "t": 22.0
+  },
+  {
+   "align": "peak",
+   "db": -16,
+   "file": "lib/sfx/whoosh_fast_2.mp3",
+   "note": "the sideways veer past the Sun, on the word 'menyamping'",
+   "t": 28.1
+  },
+  {
+   "align": "peak",
+   "db": -18,
+   "file": "lib/sfx/shimmer_1.mp3",
+   "note": "the orbit ellipse lights as the loop completes on 'orbit'",
+   "t": 35.5
+  },
+  {
+   "align": "peak",
+   "db": -20,
+   "file": "lib/sfx/shimmer_1.mp3",
+   "note": "the recap note lands over the still-looping Earth",
+   "t": 36.4
+  }
+ ],
+ "music": {
+  "duck_db": -6,
+  "fade_in": 0.01,
+  "fade_out": 1.8,
+  "file": "lib/music/xceed_thru_johann.mp3",
+  "lufs": -22,
+  "note": "86 BPM, started 0.679 s in so a beat falls on frame 0 (the kit's house track, same as the Keran episode). A quiet bed under two voices.",
+  "ride": [
+   [
+    0,
+    0
+   ],
+   [
+    39.16,
+    -1
+   ],
+   [
+    44.76,
+    -2
+   ]
+  ],
+  "start": 0.679
+ }
+}

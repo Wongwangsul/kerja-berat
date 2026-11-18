@@ -1,0 +1,426 @@
+{
+ "meta": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "dur": 44.76,
+  "clock": "voice",
+  "register": "kinetic",
+  "loop": false,
+  "bpm": 86,
+  "meter": "4/4",
+  "grid": "none",
+  "hookWaiver": null,
+  "vo": {
+   "status": "RENDERED",
+   "file": "voice/take.mp3",
+   "rateWps": 2.03
+  }
+ },
+ "objects": [
+  {
+   "id": "diorama",
+   "role": "constant",
+   "what": "The Sun, the dashed orbit ellipse and Earth on the petir stage"
+  },
+  {
+   "id": "earth",
+   "role": "hero",
+   "what": "Earth: rests, is denied a 'down', falls toward the Sun, veers and loops"
+  },
+  {
+   "id": "figures",
+   "role": "bridge",
+   "what": "A (amber) and B (violet), the format's two silhouettes"
+  }
+ ],
+ "vo": [
+  {
+   "id": "s01",
+   "text": "Bro, aku punya kabar baik dan kabar buruk.",
+   "from": 0,
+   "to": 3.58
+  },
+  {
+   "id": "s02",
+   "text": "Kabar baiknya dulu deh.",
+   "from": 3.58,
+   "to": 5.75
+  },
+  {
+   "id": "s03",
+   "text": "Kabar baiknya: Bumi nggak akan jatuh ke bawah.",
+   "from": 5.75,
+   "to": 9.25
+  },
+  {
+   "id": "s04",
+   "text": "Di luar angkasa nggak ada 'bawah' — semua benda justru ditarik ke pusat Bumi.",
+   "from": 9.25,
+   "to": 14.42
+  },
+  {
+   "id": "s05",
+   "text": "Wah, aman dong! Terus kabar buruknya?",
+   "from": 14.42,
+   "to": 17.59
+  },
+  {
+   "id": "s06",
+   "text": "Kabar buruknya… Bumi lagi jatuh. Terus-terusan. Ke arah Matahari.",
+   "from": 17.59,
+   "to": 21.89
+  },
+  {
+   "id": "s07",
+   "text": "Hah?! Kita bakal nabrak Matahari, dong?!",
+   "from": 21.89,
+   "to": 26.26
+  },
+  {
+   "id": "s08",
+   "text": "Tenang. Bumi juga melesat menyamping, tiga puluh kilometer per detik.",
+   "from": 26.26,
+   "to": 31.44
+  },
+  {
+   "id": "s09",
+   "text": "Jadi jatuhnya selalu meleset — dan memutar. Itulah orbit.",
+   "from": 31.44,
+   "to": 35.56
+  }
+ ],
+ "scenes": [
+  {
+   "id": "s01",
+   "start": 0,
+   "end": 3.58,
+   "beats": {},
+   "reads": [
+    {
+     "what": "Bro, aku punya kabar baik dan kabar buruk.",
+     "from": 0.3,
+     "to": 3.58
+    }
+   ],
+   "transitionOut": {
+    "type": "cut",
+    "dur": 0,
+    "why": "Cut on B's reply; the camera glides toward B.",
+    "bridge": "diorama"
+   }
+  },
+  {
+   "id": "s02",
+   "start": 3.58,
+   "end": 5.75,
+   "beats": {},
+   "reads": [
+    {
+     "what": "Kabar baiknya dulu deh.",
+     "from": 3.88,
+     "to": 5.75
+    }
+   ],
+   "transitionOut": {
+    "type": "cut",
+    "dur": 0,
+    "why": "Cut to the good news; the camera pushes toward Earth.",
+    "bridge": "diorama"
+   }
+  },
+  {
+   "id": "s03",
+   "start": 5.75,
+   "end": 9.25,
+   "beats": {},
+   "reads": [
+    {
+     "what": "Kabar baiknya: Bumi nggak akan jatuh ke bawah.",
+     "from": 6.05,
+     "to": 9.25
+    }
+   ],
+   "transitionOut": {
+    "type": "cut",
+    "dur": 0,
+    "why": "No cut in the argument: the same push holds into the denial.",
+    "bridge": "diorama"
+   }
+  },
+  {
+   "id": "s04",
+   "start": 9.25,
+   "end": 14.42,
+   "beats": {},
+   "reads": [
+    {
+     "what": "Di luar angkasa nggak ada 'bawah' — semua benda ditarik ke pusat Bumi.",
+     "from": 9.55,
+     "to": 14.42
+    }
+   ],
+   "transitionOut": {
+    "type": "cut",
+    "dur": 0,
+    "why": "Cut wide again on B's reply.",
+    "bridge": "diorama"
+   }
+  },
+  {
+   "id": "s05",
+   "start": 14.42,
+   "end": 17.59,
+   "beats": {},
+   "reads": [
+    {
+     "what": "Wah, aman dong! Terus, kabar buruknya?",
+     "from": 14.72,
+     "to": 17.59
+    }
+   ],
+   "transitionOut": {
+    "type": "cut",
+    "dur": 0,
+    "why": "Cut closer on A and Earth for the bad news.",
+    "bridge": "diorama"
+   }
+  },
+  {
+   "id": "s06",
+   "start": 17.59,
+   "end": 21.89,
+   "beats": {},
+   "reads": [
+    {
+     "what": "Kabar buruknya… Bumi lagi jatuh. Ke arah Matahari.",
+     "from": 17.89,
+     "to": 21.89
+    }
+   ],
+   "transitionOut": {
+    "type": "cut",
+    "dur": 0,
+    "why": "Cut to B's panic, Earth still creeping.",
+    "bridge": "diorama"
+   }
+  },
+  {
+   "id": "s07",
+   "start": 21.89,
+   "end": 26.26,
+   "beats": {},
+   "reads": [
+    {
+     "what": "Hah?! Kita bakal nabrak Matahari, dong?!",
+     "from": 22.19,
+     "to": 26.26
+    }
+   ],
+   "transitionOut": {
+    "type": "cut",
+    "dur": 0,
+    "why": "Cut wide for the explanation; Earth veers.",
+    "bridge": "diorama"
+   }
+  },
+  {
+   "id": "s08",
+   "start": 26.26,
+   "end": 31.44,
+   "beats": {},
+   "reads": [
+    {
+     "what": "Tenang. Bumi juga melesat menyamping, tiga puluh kilometer per detik.",
+     "from": 26.560000000000002,
+     "to": 31.44
+    }
+   ],
+   "transitionOut": {
+    "type": "cut",
+    "dur": 0,
+    "why": "No cut: the same wide holds as Earth settles onto the ellipse.",
+    "bridge": "diorama"
+   }
+  },
+  {
+   "id": "s09",
+   "start": 31.44,
+   "end": 35.56,
+   "beats": {},
+   "reads": [
+    {
+     "what": "Jadi jatuhnya selalu meleset — dan memutar. Itulah orbit.",
+     "from": 31.740000000000002,
+     "to": 35.56
+    }
+   ],
+   "transitionOut": {
+    "type": "cut",
+    "dur": 0,
+    "why": "No cut: the same wide holds into the silent recap beat.",
+    "bridge": "diorama"
+   }
+  },
+  {
+   "id": "s10",
+   "start": 35.56,
+   "end": 39.16,
+   "beats": {},
+   "reads": [
+    {
+     "what": "…dan putaran itu tidak pernah berhenti.",
+     "from": 35.86,
+     "to": 39.16
+    }
+   ],
+   "transitionOut": {
+    "type": "cut",
+    "dur": 0,
+    "why": "The stage dims under the end card; no cut.",
+    "bridge": "diorama"
+   }
+  },
+  {
+   "id": "s11",
+   "start": 39.16,
+   "end": 44.76,
+   "beats": {},
+   "reads": [
+    {
+     "what": "Jatuh terus, meleset terus — itulah orbit.",
+     "from": 39.459999999999994,
+     "to": 44.76
+    }
+   ],
+   "transitionOut": {
+    "type": "cut",
+    "dur": 0,
+    "why": "The film ends on this held poster frame.",
+    "bridge": "diorama"
+   }
+  }
+ ],
+ "cuts": [
+  3.58,
+  5.75,
+  9.25,
+  14.42,
+  17.59,
+  21.89,
+  26.26,
+  31.44,
+  35.56,
+  39.16
+ ],
+ "hero": {
+  "t": 35.23,
+  "what": "Earth completes its first full loop and the ellipse lights: itulah orbit"
+ },
+ "silences": [],
+ "sfx": [],
+ "captions": [
+  {
+   "from": 0,
+   "to": 3.58,
+   "text": "Bro, aku punya kabar baik dan kabar buruk.",
+   "src": "vo:s01"
+  },
+  {
+   "from": 3.58,
+   "to": 5.75,
+   "text": "Kabar baiknya dulu deh.",
+   "src": "vo:s02"
+  },
+  {
+   "from": 5.75,
+   "to": 9.25,
+   "text": "Kabar baiknya: Bumi nggak akan jatuh ke bawah.",
+   "src": "vo:s03"
+  },
+  {
+   "from": 9.25,
+   "to": 14.42,
+   "text": "Di luar angkasa nggak ada 'bawah' — semua benda justru ditarik ke pusat Bumi.",
+   "src": "vo:s04"
+  },
+  {
+   "from": 14.42,
+   "to": 17.59,
+   "text": "Wah, aman dong! Terus kabar buruknya?",
+   "src": "vo:s05"
+  },
+  {
+   "from": 17.59,
+   "to": 21.89,
+   "text": "Kabar buruknya… Bumi lagi jatuh. Terus-terusan. Ke arah Matahari.",
+   "src": "vo:s06"
+  },
+  {
+   "from": 21.89,
+   "to": 26.26,
+   "text": "Hah?! Kita bakal nabrak Matahari, dong?!",
+   "src": "vo:s07"
+  },
+  {
+   "from": 26.26,
+   "to": 31.44,
+   "text": "Tenang. Bumi juga melesat menyamping, tiga puluh kilometer per detik.",
+   "src": "vo:s08"
+  },
+  {
+   "from": 31.44,
+   "to": 35.56,
+   "text": "Jadi jatuhnya selalu meleset — dan memutar. Itulah orbit.",
+   "src": "vo:s09"
+  }
+ ],
+ "texts": [
+  {
+   "id": "hook",
+   "text": "Bro, aku punya kabar baik dan kabar buruk.",
+   "from": 1.2,
+   "to": 3.58,
+   "role": "hook",
+   "px": 88,
+   "box": [
+    84,
+    300,
+    912,
+    330
+   ]
+  },
+  {
+   "id": "term-orbit",
+   "text": "Itulah orbit.",
+   "from": 34.1592,
+   "to": 35.56,
+   "role": "term",
+   "px": 73,
+   "box": [
+    84,
+    300,
+    912,
+    260
+   ]
+  },
+  {
+   "id": "endcard",
+   "text": "Jatuh terus, meleset terus — itulah orbit.",
+   "from": 40.76,
+   "to": 44.76,
+   "role": "term",
+   "px": 104,
+   "box": [
+    64,
+    742,
+    952,
+    360
+   ]
+  }
+ ],
+ "terms": [
+  "orbit"
+ ],
+ "camera": []
+}

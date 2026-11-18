@@ -1,0 +1,85 @@
+/* "Kabar Baik, Kabar Buruk — Keran": a portrait dialogue gag on the petir-guntur stage.
+   Amber is A and the good news; violet is B and the water. What must be read stays
+   between x 64 and 1016, y 230 and 1490 (the app's covered bands left out). */
+:root {
+  --accent: #ffb347;
+  --accent-2: #a98bff;
+}
+#world {
+  image-rendering: auto;
+}
+/* The spoken words: a speaker chip, then the line in metal type, top third of the frame. */
+.dlg {
+  position: absolute;
+  left: 84px;
+  top: 238px;
+  width: 912px;
+}
+.who {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 26px 14px;
+  font-size: 34px;
+  margin-bottom: 26px;
+}
+.who .dot {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  flex: none;
+}
+.dot.da {
+  background: var(--accent);
+  box-shadow: 0 0 13px 2px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+.dot.db {
+  background: var(--accent-2);
+  box-shadow: 0 0 13px 2px color-mix(in srgb, var(--accent-2) 60%, transparent);
+}
+.line {
+  font-size: 73px;
+  line-height: 1.18;
+}
+.line .ln {
+  filter: drop-shadow(0 6px 18px rgb(0 0 0 / 0.8));
+}
+.line .key2 {
+  color: var(--accent-2);
+}
+/* s10's lettered beat: no speaker, set lower and quieter, over the stage. */
+#d10 {
+  top: 300px;
+}
+.line.note {
+  font-size: 66px;
+  text-align: center;
+}
+/* s07: the end card */
+.series {
+  position: absolute;
+  left: 64px;
+  width: 952px;
+  top: 656px;
+  color: var(--t2);
+  font: 500 33px / 1 var(--mono);
+  letter-spacing: 0.34em;
+  text-align: center;
+  white-space: nowrap;
+}
+#endline {
+  position: absolute;
+  left: 64px;
+  width: 952px;
+  top: 742px;
+  font-size: 104px;
+  line-height: 1.14;
+  text-align: center;
+}
+#endline .ln {
+  filter: drop-shadow(0 8px 24px rgb(0 0 0 / 0.85));
+}
+
+/* s01's opening line is the film's hook: lettered larger than the dialogue norm. */
+#line1 { font-size: 88px; }

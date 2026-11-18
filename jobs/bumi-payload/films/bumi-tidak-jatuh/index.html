@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kabar Baik, Kabar Buruk — Kenapa Bumi Tidak Jatuh?</title>
+    <link rel="stylesheet" href="../../kit/css/film.css" />
+    <link rel="stylesheet" href="film.css" />
+    <script type="importmap">
+      { "imports": { "three": "../../node_modules/three/build/three.module.min.js", "three/addons/": "../../node_modules/three/examples/jsm/" } }
+    </script>
+    <script src="../../node_modules/gsap/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <!-- The whole set is drawn on one canvas (world.js): the petir stage under a
+           space diorama — Sun, dashed orbit, Earth — with the two silhouettes below.
+           The HTML is only the spoken words and the end card. -->
+      <canvas id="world" width="1080" height="1920"></canvas>
+
+      <!-- s01: A's opening line (the hook, lettered larger) -->
+      <section class="scene dlg" id="d1">
+        <span class="chip who a"><i class="dot da"></i>A</span>
+        <h2 class="display line hookline" id="line1"><span class="ln">Bro, aku punya</span><span class="ln">kabar baik dan</span><span class="ln"><em class="key">kabar buruk</em>.</span></h2>
+      </section>
+
+      <!-- s02: B chooses -->
+      <section class="scene dlg" id="d2">
+        <span class="chip who b"><i class="dot db"></i>B</span>
+        <h2 class="display line" id="line2"><span class="ln">Kabar baiknya <em class="key2">dulu</em> deh.</span></h2>
+      </section>
+
+      <!-- s03: the good news, first half -->
+      <section class="scene dlg" id="d3">
+        <span class="chip who a"><i class="dot da"></i>A</span>
+        <h2 class="display line" id="line3">
+          <span class="ln" id="line3a">Kabar baiknya:</span><span class="ln" id="line3b">Bumi nggak akan jatuh</span><span class="ln" id="line3c">ke <em class="key">bawah</em>.</span>
+        </h2>
+      </section>
+
+      <!-- s04: the good news, second half -->
+      <section class="scene dlg" id="d4">
+        <span class="chip who a"><i class="dot da"></i>A</span>
+        <h2 class="display line" id="line4">
+          <span class="ln" id="line4a">Di luar angkasa</span><span class="ln" id="line4b">nggak ada <em class="key">'bawah'</em> —</span><span class="ln" id="line4c">semua benda ditarik</span><span class="ln" id="line4d">ke <em class="key">pusat Bumi</em>.</span>
+        </h2>
+      </section>
+
+      <!-- s05: B asks -->
+      <section class="scene dlg" id="d5">
+        <span class="chip who b"><i class="dot db"></i>B</span>
+        <h2 class="display line" id="line5"><span class="ln">Wah, aman dong! Terus,</span><span class="ln"><em class="key2">kabar buruknya</em>?</span></h2>
+      </section>
+
+      <!-- s06: the bad news, in three beats -->
+      <section class="scene dlg" id="d6">
+        <span class="chip who a"><i class="dot da"></i>A</span>
+        <h2 class="display line" id="line6">
+          <span class="ln" id="line6a">Kabar buruknya…</span><span class="ln" id="line6b">Bumi lagi <em class="key">jatuh</em>.</span><span class="ln" id="line6c">Terus-terusan.</span><span class="ln" id="line6d">Ke arah <em class="key">Matahari</em>.</span>
+        </h2>
+      </section>
+
+      <!-- s07: B panics -->
+      <section class="scene dlg" id="d7">
+        <span class="chip who b"><i class="dot db"></i>B</span>
+        <h2 class="display line" id="line7"><span class="ln">Hah?! Kita bakal <em class="key2">nabrak</em></span><span class="ln">Matahari, dong?!</span></h2>
+      </section>
+
+      <!-- s08: A explains — the sideways speed -->
+      <section class="scene dlg" id="d8">
+        <span class="chip who a"><i class="dot da"></i>A</span>
+        <h2 class="display line" id="line8">
+          <span class="ln" id="line8a">Tenang. Bumi juga</span><span class="ln" id="line8b">melesat <em class="key">menyamping</em>,</span><span class="ln" id="line8c"><em class="key">tiga puluh kilometer</em></span><span class="ln" id="line8d">per detik.</span>
+        </h2>
+      </section>
+
+      <!-- s09: A explains — the payoff -->
+      <section class="scene dlg" id="d9">
+        <span class="chip who a"><i class="dot da"></i>A</span>
+        <h2 class="display line" id="line9">
+          <span class="ln" id="line9a">Jadi jatuhnya selalu</span><span class="ln" id="line9b"><em class="key">meleset</em> — dan memutar.</span><span class="ln" id="line9c">Itulah <em class="key">orbit</em>.</span>
+        </h2>
+      </section>
+
+      <!-- s10: the recap, lettered without a speaker -->
+      <section class="scene dlg" id="d10">
+        <h2 class="display line note" id="line10"><span class="ln">…dan putaran itu</span><span class="ln"><em class="key2">tidak pernah berhenti</em>.</span></h2>
+      </section>
+
+      <!-- s11: the end card -->
+      <section class="scene" id="s11">
+        <p class="series" id="series">KABAR BAIK, KABAR BURUK</p>
+        <h1 class="display" id="endline">
+          <span class="ln" id="end-a">Jatuh terus,</span><span class="ln" id="end-a2">meleset terus —</span>
+          <span class="ln" id="end-b">itulah <em class="key">orbit</em>.</span>
+        </h1>
+      </section>
+    </div>
+    <script type="module" src="film.js"></script>
+  </body>
+</html>

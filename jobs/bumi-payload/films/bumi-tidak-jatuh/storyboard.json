@@ -1,0 +1,1485 @@
+{
+  "title": "Kabar Baik, Kabar Buruk — Kenapa Bumi Tidak Jatuh?",
+  "question": "Kenapa Bumi tidak jatuh — dan bisakah jawaban sainsnya hidup dalam format dialog Kabar Baik, Kabar Buruk gaya petir?",
+  "audience": "Penonton Shorts vertikal di ponsel, menonton sering tanpa suara; seluruh gag harus terbaca dari huruf dan gambar.",
+  "promise": "Kabar baiknya Bumi tidak akan jatuh ke bawah karena di luar angkasa tidak ada 'bawah'; kabar buruknya Bumi sebenarnya jatuh terus ke arah Matahari — tetapi selalu meleset, dan itulah orbit.",
+  "language": "id",
+  "format": "1080x1920",
+  "duration": 44.76,
+  "fps": 30,
+  "voice": {
+    "voice_id": "piper-id-duo-bumi",
+    "name": "Dua register Piper TTS lokal (id_ID-news_tts-medium): A dinaikkan x1.07 dan lebih cepat, B diturunkan x0.86 dan lebih lambat — pola dua suara episode orisinal yang tayang (15 Nov 2026).",
+    "model": "Piper TTS (rhasspy) id_ID-news_tts-medium, length-scale A 0.95 / B 1.05, pitch-shift ffmpeg dengan durasi dipulihkan",
+    "language": "id",
+    "note": "PENYIMPANGAN TERCATAT: episode uji Keran memakai dua desain OmniVoice via VoiceStudio, tetapi di VM ini generasi OmniVoice melewati batas komputasi 600 detik dua kali (job gugur) — satu baris 8 kata pun tidak selesai. Piper adalah mesin episode orisinal yang LOLOS dan tayang. Dialog digabung jadi satu take dengan jeda antarbaris (assemble.py); voice.mjs menyelaraskan kata-katanya: 85% selaras, kata yang perlu didengar Icul: nggak, ke pusat, Terus-terusan, tiga puluh kilometer. Tidak ada yang mendengarkan take ini."
+  },
+  "look": {
+    "accent": "#ffb347",
+    "accent2": "#a98bff",
+    "mood": "Panggung petir-guntur di bawah langit luar angkasa: dinding dan lantai grafit, Matahari amber menyala di tengah, elips orbit berputus-putus ungu, Bumi biru-hijau, dua tokoh siluet hitam bertepi cahaya ungu. Amber = tokoh A, Matahari dan kabar baik; ungu = tokoh B dan orbit."
+  },
+  "music": {
+    "track": "Xceed Thru Johann (Mixkit 556)",
+    "bpm": 86,
+    "beat": 0.697674,
+    "offset": 0,
+    "start": 0.679,
+    "note": "Bed yang sama dengan episode Keran: 86 BPM, naik halus, tanpa melodi utama, jadi dialog memimpin."
+  },
+  "facts": [
+    {
+      "id": "f1",
+      "claim": "Di luar angkasa tidak ada arah 'bawah' yang mutlak; bagi benda di Bumi, 'bawah' adalah arah ke pusat Bumi, ke situlah gravitasi Bumi menariknya.",
+      "source": "Fisika dasar gravitasi: arah jatuh ditentukan oleh pusat massa penarik (buku teks fisika umum)."
+    },
+    {
+      "id": "f2",
+      "claim": "Bumi terus-menerus jatuh ke arah Matahari karena gravitasi Matahari, tetapi gerak menyampingnya membuat jatuh itu selalu meleset; gabungan keduanya adalah orbit.",
+      "source": "Mekanika orbit Newton (gagasan meriam Newton): orbit adalah jatuh bebas yang terus-menerus meleset dari penariknya."
+    },
+    {
+      "id": "f3",
+      "claim": "Kecepatan orbit Bumi mengelilingi Matahari rata-rata sekitar 29,8 kilometer per detik, dibulatkan menjadi tiga puluh kilometer per detik.",
+      "source": "NASA Earth Facts: kecepatan orbit Bumi 29,78 km/detik."
+    }
+  ],
+  "acts": [
+    {
+      "id": "hook",
+      "title": "Pembuka",
+      "goal": "Perkenalkan diorama luar angkasa di panggung petir dan kalimat pembuka formatnya; B memilih kabar baik dulu."
+    },
+    {
+      "id": "baik",
+      "title": "Kabar Baik",
+      "goal": "Kabar baik disampaikan dengan kejadian visualnya: panah 'bawah' dicoret, apel jatuh ke pusat Bumi; B lega dan meminta kabar buruknya."
+    },
+    {
+      "id": "buruk",
+      "title": "Kabar Buruk",
+      "goal": "Putarannya: Bumi ternyata jatuh terus ke arah Matahari; B panik; A menjelaskan gerak menyamping 30 km/detik yang membuat jatuhnya selalu meleset — itulah orbit."
+    },
+    {
+      "id": "penutup",
+      "title": "Kartu Penutup",
+      "goal": "Satu kalimat penutup jenaka di atas panggung yang meredup, Bumi tetap berputar di orbitnya."
+    }
+  ],
+  "shots": [
+    {
+      "id": "s01",
+      "act": "hook",
+      "type": "wide",
+      "start": 0,
+      "end": 3.58,
+      "voice": "Bro, aku punya kabar baik dan kabar buruk.",
+      "caption": "Bro, aku punya kabar baik dan *kabar buruk*.",
+      "teaches": "The format's opening line, and the set: a space diorama on the petir stage — the Sun at centre, Earth resting at the left of its dashed orbit, the two figures below.",
+      "screen": "Wide on the petir stage at night. Graphite wall and floor, starfield, the Sun glowing amber at centre (540,690), a dashed violet orbit ellipse around it, Earth blue-green at the ellipse's left point (180,690). A at x 400 faces right, B at x 880 with folded arms. A's line in metal type, top third, amber chip.",
+      "motion": "Slow push-in (z 1.0 to 1.08). Earth bobs gently; the Sun's rays turn very slowly. A gestures as he speaks; B does not move.",
+      "carries": "The Sun, the orbit ellipse and Earth stay for the whole film; the figures stay on the floor line.",
+      "transition": "Cut on B's reply; the camera glides toward B.",
+      "sound": "Music bed under; the line sits on the voice.",
+      "check": "Frame 0 is a finished picture: both figures, Sun, Earth, orbit and the first words readable; nothing clipped.",
+      "facts": [
+        "f1"
+      ],
+      "frames": [
+        {
+          "at": 0,
+          "note": "Frame 0: the diorama complete, A turns to B.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "Bro, aku punya kabar baik\ndan kabar buruk.",
+              "size": 76,
+              "align": "middle",
+              "accent": "kabar buruk"
+            }
+          ]
+        },
+        {
+          "at": 0.5,
+          "note": "A gestures toward B; Earth bobs at the left.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            }
+          ]
+        },
+        {
+          "at": 1,
+          "note": "Held wide; the opening line is complete.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "act": "hook",
+      "type": "wide",
+      "start": 3.58,
+      "end": 5.75,
+      "voice": "Kabar baiknya dulu deh.",
+      "caption": "Kabar baiknya *dulu* deh.",
+      "teaches": "B chooses the good news first — the format's ritual beat.",
+      "screen": "Closer two-shot favouring B (camera glides right, z 1.16). B unfolds one arm and lifts a palm. His line in metal type with the violet chip. The diorama glows behind them.",
+      "motion": "B unfolds one arm and lifts a palm, unhurried, as he chooses; A settles into listening and does not move again.",
+      "carries": "The diorama stays; Earth's gentle bob continues behind them.",
+      "transition": "Cut to the good news; the camera pushes toward Earth.",
+      "sound": "Music bed under; the line sits on the voice.",
+      "check": "B's palm reads clearly; both figures fully in frame.",
+      "facts": [
+        "f1"
+      ],
+      "frames": [
+        {
+          "at": 0,
+          "note": "B lifts a palm: the good news first, please.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "Kabar baiknya dulu deh.",
+              "size": 76,
+              "align": "middle",
+              "accent": "dulu"
+            }
+          ]
+        },
+        {
+          "at": 0.5,
+          "note": "Held two-shot; A listens, B palm still up.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            }
+          ]
+        },
+        {
+          "at": 1,
+          "note": "The line complete; the camera settles.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "act": "baik",
+      "type": "macro",
+      "start": 5.75,
+      "end": 9.25,
+      "voice": "Kabar baiknya: Bumi nggak akan jatuh ke bawah.",
+      "caption": "Kabar baiknya: Bumi nggak akan jatuh ke *bawah*.",
+      "teaches": "The good news itself: Earth will not fall 'down'.",
+      "screen": "Camera pushes to Earth (z 1.45, centred 300,690). Under Earth a big amber down-arrow draws itself as A speaks — the fall everybody imagines — and hangs there, waiting to be denied.",
+      "motion": "The camera push runs the shot's first third; the down-arrow draws itself under Earth through the second half of the line.",
+      "carries": "Earth enlarged centre-left; the drawn arrow carries into the next shot to be crossed out.",
+      "transition": "No cut in the argument: the same push holds into the denial.",
+      "sound": "Music bed under; the line sits on the voice.",
+      "check": "The arrow's direction is unambiguous and it is large enough to read at phone size.",
+      "facts": [
+        "f1"
+      ],
+      "frames": [
+        {
+          "at": 0,
+          "note": "Push-in on Earth; A begins the good news.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "Bumi nggak akan jatuh\nke bawah.",
+              "size": 76,
+              "align": "middle",
+              "accent": "bawah"
+            }
+          ]
+        },
+        {
+          "at": 0.5,
+          "note": "The amber down-arrow draws under Earth.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "move": [
+                300,
+                800,
+                300,
+                940
+              ],
+              "text": "panah ke bawah"
+            }
+          ]
+        },
+        {
+          "at": 1,
+          "note": "The arrow complete, hanging under Earth.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "act": "baik",
+      "type": "macro",
+      "start": 9.25,
+      "end": 14.42,
+      "voice": "Di luar angkasa nggak ada 'bawah' — semua benda justru ditarik ke pusat Bumi.",
+      "caption": "Di luar angkasa nggak ada *'bawah'* — semua benda ditarik ke *pusat Bumi*.",
+      "teaches": "The first fact: there is no absolute 'down' in space; for things on Earth, 'down' is toward Earth's centre, where its gravity pulls.",
+      "screen": "The same macro on Earth. The amber arrow is crossed out in violet as 'nggak ada bawah' lands. A tiny figure stands on Earth's top; an apple drops from beside him along a curved arrow into the planet, ending at a bright centre dot that lights.",
+      "motion": "The cross strikes at the first clause; the apple falls through the second clause and the centre dot lights exactly on 'pusat Bumi'.",
+      "carries": "Earth stays enlarged; the lit centre dot stays for the rest of the film.",
+      "transition": "Cut wide again on B's reply.",
+      "sound": "Music bed under; a soft tick as the cross strikes; a tiny pop when the centre dot lights.",
+      "check": "The crossed arrow and the apple's path to the centre both read at phone size; no text over the bright Sun.",
+      "facts": [
+        "f1"
+      ],
+      "frames": [
+        {
+          "at": 0,
+          "note": "The cross strikes through the down-arrow.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "move": [
+                240,
+                800,
+                360,
+                940
+              ],
+              "text": "panah dicoret"
+            }
+          ]
+        },
+        {
+          "at": 0.45,
+          "note": "The apple falls from the surface figure.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "move": [
+                330,
+                620,
+                420,
+                690
+              ],
+              "text": "apel jatuh ke pusat"
+            }
+          ]
+        },
+        {
+          "at": 0.85,
+          "note": "The apple nears the centre; the dot brightens.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            }
+          ]
+        },
+        {
+          "at": 1,
+          "note": "The centre dot lights inside Earth.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "semua benda ditarik\nke pusat Bumi.",
+              "size": 76,
+              "align": "middle",
+              "accent": "pusat Bumi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "act": "baik",
+      "type": "wide",
+      "start": 14.42,
+      "end": 17.59,
+      "voice": "Wah, aman dong! Terus kabar buruknya?",
+      "caption": "Wah, aman dong! Terus, *kabar buruknya*?",
+      "teaches": "B relaxes — and asks for the bad news, the format's hinge.",
+      "screen": "Wide again (z 1.05). Earth rests at the left of the orbit; B, delighted, points toward A as he asks. A turns back toward the diorama.",
+      "motion": "B points at the line's turn toward the question; A turns from B back to the diorama as the question lands.",
+      "carries": "The diorama resets: Earth back at the left point, the crossed arrow gone.",
+      "transition": "Cut closer on A and Earth for the bad news.",
+      "sound": "Music bed under; the line sits on the voice.",
+      "check": "B's point reads; the question lands before the cut.",
+      "facts": [
+        "f2"
+      ],
+      "frames": [
+        {
+          "at": 0,
+          "note": "Wide again; B delighted by the good news.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "Wah, aman dong!",
+              "size": 76,
+              "align": "middle"
+            }
+          ]
+        },
+        {
+          "at": 0.5,
+          "note": "B points at A: and the bad news is?",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "Terus, kabar buruknya?",
+              "size": 76,
+              "align": "middle",
+              "accent": "kabar buruknya"
+            }
+          ]
+        },
+        {
+          "at": 1,
+          "note": "Held; A turns back to the diorama.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "act": "buruk",
+      "type": "macro",
+      "start": 17.59,
+      "end": 21.89,
+      "voice": "Kabar buruknya… Bumi lagi jatuh. Terus-terusan. Ke arah Matahari.",
+      "caption": "Kabar buruknya… Bumi lagi *jatuh*. Ke arah *Matahari*.",
+      "teaches": "The turn, and the second fact's first half: Earth really is falling, continuously, toward the Sun, pulled by the Sun's gravity.",
+      "screen": "Closer (z 1.22, centred on the diorama). As A speaks, Earth leaves the ellipse's left point and slides right toward the Sun along a dashed amber fall-arrow; the Sun's glow grows as Earth nears it.",
+      "motion": "Earth's slide starts on the word 'jatuh' and keeps creeping through 'terus-terusan'; the fall-arrow's dashes draw ahead of it toward the Sun.",
+      "carries": "Earth mid-fall, between the ellipse and the Sun; it does not stop falling for the rest of the film.",
+      "transition": "Cut to B's panic, Earth still creeping.",
+      "sound": "Music bed under, ridden down a touch; a low whoosh under the slide.",
+      "check": "Earth's motion direction is unambiguous: toward the Sun, not downward.",
+      "facts": [
+        "f2"
+      ],
+      "frames": [
+        {
+          "at": 0,
+          "note": "A delivers it flat; Earth still at the left.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "Bumi lagi jatuh.",
+              "size": 76,
+              "align": "middle",
+              "accent": "jatuh"
+            }
+          ]
+        },
+        {
+          "at": 0.45,
+          "note": "Earth slides toward the Sun on the arrow.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "move": [
+                260,
+                690,
+                430,
+                700
+              ],
+              "text": "jatuh ke Matahari"
+            }
+          ]
+        },
+        {
+          "at": 1,
+          "note": "Earth nearer the Sun, still falling inward.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "Ke arah Matahari.",
+              "size": 76,
+              "align": "middle",
+              "accent": "Matahari"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "act": "buruk",
+      "type": "wide",
+      "start": 21.89,
+      "end": 26.26,
+      "voice": "Hah?! Kita bakal nabrak Matahari, dong?!",
+      "caption": "Hah?! Kita bakal *nabrak* Matahari, dong?!",
+      "teaches": "B's panic — the question the explanation has to answer.",
+      "screen": "Two-shot favouring B. Both figures throw their hands up; a single violet-white lightning flash cracks behind the stage as B shouts. Earth hangs close to the Sun, trembling.",
+      "motion": "Hands go up exactly on 'Hah?!'; one lightning flash cracks at the shot's start; Earth trembles in place near the Sun throughout.",
+      "carries": "Earth close to the Sun, still falling — the danger is real until A answers.",
+      "transition": "Cut wide for the explanation; Earth veers.",
+      "sound": "A thunder tick under the flash; the line sits on the voice.",
+      "check": "The panic reads on mute; the flash is one beat, not a strobe.",
+      "facts": [
+        "f2"
+      ],
+      "frames": [
+        {
+          "at": 0,
+          "note": "Hands up; the lightning flash cracks.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "Hah?!",
+              "size": 76,
+              "align": "middle"
+            }
+          ]
+        },
+        {
+          "at": 0.5,
+          "note": "B shouts; Earth trembles beside the Sun.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "Kita bakal nabrak\nMatahari, dong?!",
+              "size": 76,
+              "align": "middle",
+              "accent": "nabrak"
+            }
+          ]
+        },
+        {
+          "at": 1,
+          "note": "Held panic; the flash has faded out.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "act": "buruk",
+      "type": "diagram",
+      "start": 26.26,
+      "end": 31.44,
+      "voice": "Tenang. Bumi juga melesat menyamping, tiga puluh kilometer per detik.",
+      "caption": "Tenang. Bumi juga melesat *menyamping*, *tiga puluh kilometer per detik*.",
+      "teaches": "The rescue's mechanism and the number: Earth also moves sideways at about thirty kilometres a second.",
+      "screen": "Wide (z 1.0). A raises an open palm — calm. Earth veers up and past the Sun, a violet speed-arrow tangent at its nose, motion lines trailing; B's arms slowly come down as he listens.",
+      "motion": "The veer lands on the word 'menyamping'; Earth passes above the Sun through the number and settles toward the ellipse's top point.",
+      "carries": "Earth above the Sun, aimed along the ellipse; the fall-arrow is gone, replaced by the speed-arrow.",
+      "transition": "No cut: the same wide holds as Earth settles onto the ellipse.",
+      "sound": "Music bed under; a whoosh rides the veer and fades as Earth settles.",
+      "check": "The sideways direction reads against the earlier fall: across, not down and not in.",
+      "facts": [
+        "f2",
+        "f3"
+      ],
+      "frames": [
+        {
+          "at": 0,
+          "note": "A, palm open: calm. Earth begins to veer.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "Tenang.",
+              "size": 76,
+              "align": "middle"
+            }
+          ]
+        },
+        {
+          "at": 0.45,
+          "note": "Earth swings past above the Sun, fast.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "move": [
+                430,
+                620,
+                620,
+                540
+              ],
+              "text": "melesat menyamping"
+            }
+          ]
+        },
+        {
+          "at": 1,
+          "note": "Earth settles toward the ellipse's top.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "tiga puluh kilometer\nper detik.",
+              "size": 76,
+              "align": "middle",
+              "accent": "tiga puluh kilometer per detik"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "act": "buruk",
+      "type": "wide",
+      "start": 31.44,
+      "end": 35.56,
+      "voice": "Jadi jatuhnya selalu meleset — dan memutar. Itulah orbit.",
+      "caption": "Jadi jatuhnya selalu *meleset* — dan memutar. Itulah *orbit*.",
+      "teaches": "The payoff and the term: falling plus forever missing, repeated, is an orbit — said and shown at the same moment.",
+      "screen": "The same wide. Earth settles onto the dashed ellipse, which lights up violet as Earth completes the loop and keeps going. A lowers his palm; B, arms down now, watches it go around.",
+      "motion": "The ellipse lights progressively as Earth travels it; the loop completes exactly on the word 'orbit' and Earth does not stop.",
+      "carries": "Earth on its lit orbit, looping for the rest of the film; the film's question is answered.",
+      "transition": "No cut: the same wide holds into the silent recap beat.",
+      "sound": "Music bed under; a shimmer rises as the ellipse lights up fully.",
+      "check": "The loop reads as a loop: Earth passes the Sun and comes around; 'orbit' is said and shown together.",
+      "facts": [
+        "f2"
+      ],
+      "frames": [
+        {
+          "at": 0,
+          "note": "Earth settles onto the dashed ellipse.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "jatuhnya selalu meleset",
+              "size": 76,
+              "align": "middle",
+              "accent": "meleset"
+            }
+          ]
+        },
+        {
+          "at": 0.5,
+          "note": "Half the loop travelled; the ellipse lighting.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            }
+          ]
+        },
+        {
+          "at": 0.82,
+          "note": "Three-quarter loop done; the ellipse nearly lit.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            }
+          ]
+        },
+        {
+          "at": 1,
+          "note": "The loop complete and lit: 'Itulah orbit.'",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "Itulah orbit.",
+              "size": 76,
+              "align": "middle",
+              "accent": "orbit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "act": "penutup",
+      "type": "recap",
+      "start": 35.56,
+      "end": 39.16,
+      "caption": "…dan putaran itu *tidak pernah berhenti*.",
+      "teaches": "The recap in one frame: Earth falls forever, misses forever, and the loop — the orbit — never stops.",
+      "screen": "The same wide, no voices. Earth keeps looping on the lit ellipse; the two figures watch it go around, heads turning with it. The note line letters in, lower and quieter, over the stage.",
+      "motion": "Earth completes another half loop while both heads track it; the note types in at 0.85 s and holds to the end of the shot.",
+      "carries": "Earth looping into the end card; the stage begins to dim.",
+      "transition": "The stage dims under the end card; no cut.",
+      "sound": "Music only, resolving; a soft shimmer as the note lands.",
+      "check": "The note is readable for at least two seconds; Earth visibly still moving.",
+      "facts": [
+        "f2"
+      ],
+      "frames": [
+        {
+          "at": 0,
+          "note": "Silent wide; Earth looping, heads tracking.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            }
+          ]
+        },
+        {
+          "at": 0.5,
+          "note": "The recap note letters in over the stage.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "…dan putaran itu\ntidak pernah berhenti.",
+              "size": 66,
+              "align": "middle",
+              "accent": "tidak pernah berhenti"
+            }
+          ]
+        },
+        {
+          "at": 1,
+          "note": "Held recap; the dim begins at the edges.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "act": "penutup",
+      "type": "endcard",
+      "start": 39.16,
+      "end": 44.76,
+      "caption": "Jatuh terus, meleset terus — itulah *orbit*.",
+      "teaches": "The closing line of the format, as a poster over the dimming stage: the whole science in one joke-shaped sentence.",
+      "screen": "The stage dims to near-night; Earth still loops on its lit ellipse behind the card. Centre frame, the closing line in metal type: 'Jatuh terus, meleset terus — itulah orbit.' with 'orbit' in amber; above it small, the series title 'KABAR BAIK, KABAR BURUK'.",
+      "motion": "The line types in over the first 1.2 s; a slow push (z 1.0 to 1.05) for the rest; Earth keeps looping behind the card to the last frame.",
+      "carries": "The last frame is the poster; nothing follows it in this film.",
+      "transition": "The film ends on this held poster frame.",
+      "sound": "Music resolves and fades under the card.",
+      "check": "Poster readable for at least two seconds; text exact; Earth still moving behind the card.",
+      "facts": [
+        "f2"
+      ],
+      "frames": [
+        {
+          "at": 0,
+          "note": "Dim stage; the line beginning to type in.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "Jatuh terus, meleset terus —\nitulah orbit.",
+              "size": 96,
+              "align": "middle",
+              "accent": "orbit"
+            }
+          ]
+        },
+        {
+          "at": 0.5,
+          "note": "Mid-card: the line half typed, Earth looping.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            }
+          ]
+        },
+        {
+          "at": 0.78,
+          "note": "The poster holds; Earth mid-loop behind it.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            }
+          ]
+        },
+        {
+          "at": 1,
+          "note": "The poster held: line complete, Earth looping.",
+          "draw": [
+            {
+              "glow": [
+                540,
+                690,
+                300
+              ]
+            },
+            {
+              "person": [
+                400,
+                1500,
+                640
+              ]
+            },
+            {
+              "person": [
+                880,
+                1500,
+                640
+              ]
+            },
+            {
+              "title": [
+                540,
+                430
+              ],
+              "text": "Jatuh terus, meleset terus —\nitulah orbit.",
+              "size": 96,
+              "align": "middle",
+              "accent": "orbit"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

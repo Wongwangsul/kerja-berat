@@ -1,0 +1,404 @@
+{
+ "words": [
+  {
+   "word": "Tekst",
+   "start": 0.0,
+   "end": 0.5
+  },
+  {
+   "word": "Bro,",
+   "start": 0.5,
+   "end": 0.76
+  },
+  {
+   "word": "aku",
+   "start": 0.98,
+   "end": 1.18
+  },
+  {
+   "word": "punya",
+   "start": 1.18,
+   "end": 1.56
+  },
+  {
+   "word": "kabar",
+   "start": 1.56,
+   "end": 1.92
+  },
+  {
+   "word": "baik",
+   "start": 1.92,
+   "end": 2.2
+  },
+  {
+   "word": "dan",
+   "start": 2.2,
+   "end": 2.46
+  },
+  {
+   "word": "kabar",
+   "start": 2.46,
+   "end": 2.88
+  },
+  {
+   "word": "buruk.",
+   "start": 2.88,
+   "end": 3.28
+  },
+  {
+   "word": "Tekst",
+   "start": 3.56,
+   "end": 4.2
+  },
+  {
+   "word": "kabar",
+   "start": 4.2,
+   "end": 4.56
+  },
+  {
+   "word": "baiknya",
+   "start": 4.56,
+   "end": 5.04
+  },
+  {
+   "word": "dulu",
+   "start": 5.04,
+   "end": 5.32
+  },
+  {
+   "word": "deh.",
+   "start": 5.32,
+   "end": 5.62
+  },
+  {
+   "word": "Tekst",
+   "start": 6.3,
+   "end": 6.58
+  },
+  {
+   "word": "kabar",
+   "start": 6.58,
+   "end": 6.92
+  },
+  {
+   "word": "baiknya,",
+   "start": 6.92,
+   "end": 7.4
+  },
+  {
+   "word": "bumi",
+   "start": 7.74,
+   "end": 7.94
+  },
+  {
+   "word": "gak",
+   "start": 7.94,
+   "end": 8.12
+  },
+  {
+   "word": "akan",
+   "start": 8.12,
+   "end": 8.44
+  },
+  {
+   "word": "jatuh",
+   "start": 8.44,
+   "end": 8.76
+  },
+  {
+   "word": "ke",
+   "start": 8.76,
+   "end": 8.9
+  },
+  {
+   "word": "bawah.",
+   "start": 8.9,
+   "end": 9.32
+  },
+  {
+   "word": "Tekst",
+   "start": 9.7,
+   "end": 10.08
+  },
+  {
+   "word": "di",
+   "start": 10.08,
+   "end": 10.2
+  },
+  {
+   "word": "luar",
+   "start": 10.2,
+   "end": 10.5
+  },
+  {
+   "word": "angkasa",
+   "start": 10.5,
+   "end": 10.92
+  },
+  {
+   "word": "gak",
+   "start": 10.92,
+   "end": 11.16
+  },
+  {
+   "word": "ada",
+   "start": 11.16,
+   "end": 11.42
+  },
+  {
+   "word": "bawah,",
+   "start": 11.42,
+   "end": 11.86
+  },
+  {
+   "word": "semua",
+   "start": 12.06,
+   "end": 12.3
+  },
+  {
+   "word": "benda",
+   "start": 12.3,
+   "end": 12.68
+  },
+  {
+   "word": "justru",
+   "start": 12.68,
+   "end": 13.1
+  },
+  {
+   "word": "ditarik",
+   "start": 13.1,
+   "end": 13.58
+  },
+  {
+   "word": "kepusat",
+   "start": 13.58,
+   "end": 14.04
+  },
+  {
+   "word": "bumi.",
+   "start": 14.04,
+   "end": 14.5
+  },
+  {
+   "word": "Tekst",
+   "start": 15.08,
+   "end": 15.44
+  },
+  {
+   "word": "Wah,",
+   "start": 15.44,
+   "end": 15.66
+  },
+  {
+   "word": "aman",
+   "start": 15.92,
+   "end": 16.08
+  },
+  {
+   "word": "dong,",
+   "start": 16.08,
+   "end": 16.38
+  },
+  {
+   "word": "terus",
+   "start": 16.68,
+   "end": 16.86
+  },
+  {
+   "word": "kabar",
+   "start": 16.86,
+   "end": 17.32
+  },
+  {
+   "word": "buruknya.",
+   "start": 17.32,
+   "end": 17.86
+  },
+  {
+   "word": "Tekst",
+   "start": 18.4,
+   "end": 19.04
+  },
+  {
+   "word": "kabar",
+   "start": 19.04,
+   "end": 19.38
+  },
+  {
+   "word": "buruknya",
+   "start": 19.38,
+   "end": 19.86
+  },
+  {
+   "word": "bumi",
+   "start": 19.86,
+   "end": 20.2
+  },
+  {
+   "word": "lagi",
+   "start": 20.2,
+   "end": 20.46
+  },
+  {
+   "word": "jatuh,",
+   "start": 20.46,
+   "end": 21.0
+  },
+  {
+   "word": "terus",
+   "start": 21.24,
+   "end": 21.5
+  },
+  {
+   "word": "terusan,",
+   "start": 21.5,
+   "end": 22.1
+  },
+  {
+   "word": "ke",
+   "start": 22.36,
+   "end": 22.46
+  },
+  {
+   "word": "arah",
+   "start": 22.46,
+   "end": 22.76
+  },
+  {
+   "word": "matahari.",
+   "start": 22.76,
+   "end": 23.26
+  },
+  {
+   "word": "Tekst",
+   "start": 23.78,
+   "end": 24.2
+  },
+  {
+   "word": "tahal,",
+   "start": 24.2,
+   "end": 24.58
+  },
+  {
+   "word": "kita",
+   "start": 24.88,
+   "end": 25.04
+  },
+  {
+   "word": "bakal",
+   "start": 25.04,
+   "end": 25.48
+  },
+  {
+   "word": "nabrak",
+   "start": 25.48,
+   "end": 25.82
+  },
+  {
+   "word": "matahari",
+   "start": 25.82,
+   "end": 26.4
+  },
+  {
+   "word": "dong.",
+   "start": 26.4,
+   "end": 26.96
+  },
+  {
+   "word": "Tekst",
+   "start": 27.64,
+   "end": 28.08
+  },
+  {
+   "word": "tenang,",
+   "start": 28.08,
+   "end": 28.52
+  },
+  {
+   "word": "bumi",
+   "start": 28.74,
+   "end": 29.06
+  },
+  {
+   "word": "juga",
+   "start": 29.06,
+   "end": 29.3
+  },
+  {
+   "word": "melesat",
+   "start": 29.3,
+   "end": 29.86
+  },
+  {
+   "word": "menyamping",
+   "start": 29.86,
+   "end": 30.46
+  },
+  {
+   "word": "30",
+   "start": 30.46,
+   "end": 31.1
+  },
+  {
+   "word": "km",
+   "start": 31.1,
+   "end": 31.68
+  },
+  {
+   "word": "per",
+   "start": 31.68,
+   "end": 32.22
+  },
+  {
+   "word": "detik.",
+   "start": 32.22,
+   "end": 32.66
+  },
+  {
+   "word": "Tekst",
+   "start": 32.88,
+   "end": 33.26
+  },
+  {
+   "word": "jadi",
+   "start": 33.26,
+   "end": 33.52
+  },
+  {
+   "word": "jatuhnya",
+   "start": 33.52,
+   "end": 34.12
+  },
+  {
+   "word": "selalu",
+   "start": 34.12,
+   "end": 34.52
+  },
+  {
+   "word": "meleset",
+   "start": 34.52,
+   "end": 35.08
+  },
+  {
+   "word": "dan",
+   "start": 35.08,
+   "end": 35.32
+  },
+  {
+   "word": "memutar,",
+   "start": 35.32,
+   "end": 35.9
+  },
+  {
+   "word": "itulah",
+   "start": 36.18,
+   "end": 36.66
+  },
+  {
+   "word": "orbit.",
+   "start": 36.66,
+   "end": 36.98
+  }
+ ]
+}

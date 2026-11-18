@@ -1,0 +1,924 @@
+{
+  "version": 2,
+  "voice": {
+    "voice_id": "piper-id-duo-bumi",
+    "name": "Dua register Piper TTS lokal (id_ID-news_tts-medium): A dinaikkan x1.07 dan lebih cepat, B diturunkan x0.86 dan lebih lambat — pola dua suara episode orisinal yang tayang (15 Nov 2026).",
+    "model": "Piper TTS (rhasspy) id_ID-news_tts-medium, length-scale A 0.95 / B 1.05, pitch-shift ffmpeg dengan durasi dipulihkan",
+    "language": "id",
+    "note": "PENYIMPANGAN TERCATAT: episode uji Keran memakai dua desain OmniVoice via VoiceStudio, tetapi di VM ini generasi OmniVoice melewati batas komputasi 600 detik dua kali (job gugur) — satu baris 8 kata pun tidak selesai. Piper adalah mesin episode orisinal yang LOLOS dan tayang. Dialog digabung jadi satu take dengan jeda antarbaris (assemble.py); voice.mjs menyelaraskan kata-katanya: 85% selaras, kata yang perlu didengar Icul: nggak, ke pusat, Terus-terusan, tiga puluh kilometer. Tidak ada yang mendengarkan take ini."
+  },
+  "sha": "ca9b63e564e5d78a",
+  "source": "take and transcription",
+  "take": {
+    "file": "take.mp3",
+    "duration": 37.221
+  },
+  "agreement": 0.851,
+  "missed": [
+    "nggak",
+    "nggak",
+    "—",
+    "ke",
+    "pusat",
+    "Terus-terusan.",
+    "Hah?!",
+    "tiga",
+    "puluh",
+    "kilometer",
+    "—"
+  ],
+  "lines": {
+    "s01": {
+      "text": "Bro, aku punya kabar baik dan kabar buruk.",
+      "from": 0.5,
+      "to": 3.28,
+      "words": [
+        [
+          0.5,
+          0.76,
+          "Bro,"
+        ],
+        [
+          0.98,
+          1.18,
+          "aku"
+        ],
+        [
+          1.18,
+          1.56,
+          "punya"
+        ],
+        [
+          1.56,
+          1.92,
+          "kabar"
+        ],
+        [
+          1.92,
+          2.2,
+          "baik"
+        ],
+        [
+          2.2,
+          2.46,
+          "dan"
+        ],
+        [
+          2.46,
+          2.88,
+          "kabar"
+        ],
+        [
+          2.88,
+          3.28,
+          "buruk."
+        ]
+      ]
+    },
+    "s02": {
+      "text": "Kabar baiknya dulu deh.",
+      "from": 4.2,
+      "to": 5.62,
+      "words": [
+        [
+          4.2,
+          4.56,
+          "Kabar"
+        ],
+        [
+          4.56,
+          5.04,
+          "baiknya"
+        ],
+        [
+          5.04,
+          5.32,
+          "dulu"
+        ],
+        [
+          5.32,
+          5.62,
+          "deh."
+        ]
+      ]
+    },
+    "s03": {
+      "text": "Kabar baiknya: Bumi nggak akan jatuh ke bawah.",
+      "from": 6.58,
+      "to": 9.32,
+      "words": [
+        [
+          6.58,
+          6.92,
+          "Kabar"
+        ],
+        [
+          6.92,
+          7.4,
+          "baiknya:"
+        ],
+        [
+          7.74,
+          7.94,
+          "Bumi"
+        ],
+        [
+          7.94,
+          8.12,
+          "nggak"
+        ],
+        [
+          8.12,
+          8.44,
+          "akan"
+        ],
+        [
+          8.44,
+          8.76,
+          "jatuh"
+        ],
+        [
+          8.76,
+          8.9,
+          "ke"
+        ],
+        [
+          8.9,
+          9.32,
+          "bawah."
+        ]
+      ]
+    },
+    "s04": {
+      "text": "Di luar angkasa nggak ada 'bawah' — semua benda justru ditarik ke pusat Bumi.",
+      "from": 10.08,
+      "to": 14.5,
+      "words": [
+        [
+          10.08,
+          10.2,
+          "Di"
+        ],
+        [
+          10.2,
+          10.5,
+          "luar"
+        ],
+        [
+          10.5,
+          10.92,
+          "angkasa"
+        ],
+        [
+          10.92,
+          11.16,
+          "nggak"
+        ],
+        [
+          11.16,
+          11.42,
+          "ada"
+        ],
+        [
+          11.42,
+          11.86,
+          "'bawah'"
+        ],
+        [
+          11.86,
+          12.06,
+          "—"
+        ],
+        [
+          12.06,
+          12.3,
+          "semua"
+        ],
+        [
+          12.3,
+          12.68,
+          "benda"
+        ],
+        [
+          12.68,
+          13.1,
+          "justru"
+        ],
+        [
+          13.1,
+          13.58,
+          "ditarik"
+        ],
+        [
+          13.58,
+          13.733,
+          "ke"
+        ],
+        [
+          13.733,
+          14.04,
+          "pusat"
+        ],
+        [
+          14.04,
+          14.5,
+          "Bumi."
+        ]
+      ]
+    },
+    "s05": {
+      "text": "Wah, aman dong! Terus kabar buruknya?",
+      "from": 15.44,
+      "to": 17.86,
+      "words": [
+        [
+          15.44,
+          15.66,
+          "Wah,"
+        ],
+        [
+          15.92,
+          16.08,
+          "aman"
+        ],
+        [
+          16.08,
+          16.38,
+          "dong!"
+        ],
+        [
+          16.68,
+          16.86,
+          "Terus"
+        ],
+        [
+          16.86,
+          17.32,
+          "kabar"
+        ],
+        [
+          17.32,
+          17.86,
+          "buruknya?"
+        ]
+      ]
+    },
+    "s06": {
+      "text": "Kabar buruknya… Bumi lagi jatuh. Terus-terusan. Ke arah Matahari.",
+      "from": 19.04,
+      "to": 23.26,
+      "words": [
+        [
+          19.04,
+          19.38,
+          "Kabar"
+        ],
+        [
+          19.38,
+          19.86,
+          "buruknya…"
+        ],
+        [
+          19.86,
+          20.2,
+          "Bumi"
+        ],
+        [
+          20.2,
+          20.46,
+          "lagi"
+        ],
+        [
+          20.46,
+          21,
+          "jatuh."
+        ],
+        [
+          21,
+          22.36,
+          "Terus-terusan."
+        ],
+        [
+          22.36,
+          22.46,
+          "Ke"
+        ],
+        [
+          22.46,
+          22.76,
+          "arah"
+        ],
+        [
+          22.76,
+          23.26,
+          "Matahari."
+        ]
+      ]
+    },
+    "s07": {
+      "text": "Hah?! Kita bakal nabrak Matahari, dong?!",
+      "from": 23.26,
+      "to": 26.96,
+      "words": [
+        [
+          23.26,
+          24.88,
+          "Hah?!"
+        ],
+        [
+          24.88,
+          25.04,
+          "Kita"
+        ],
+        [
+          25.04,
+          25.48,
+          "bakal"
+        ],
+        [
+          25.48,
+          25.82,
+          "nabrak"
+        ],
+        [
+          25.82,
+          26.4,
+          "Matahari,"
+        ],
+        [
+          26.4,
+          26.96,
+          "dong?!"
+        ]
+      ]
+    },
+    "s08": {
+      "text": "Tenang. Bumi juga melesat menyamping, tiga puluh kilometer per detik.",
+      "from": 28.08,
+      "to": 32.66,
+      "words": [
+        [
+          28.08,
+          28.52,
+          "Tenang."
+        ],
+        [
+          28.74,
+          29.06,
+          "Bumi"
+        ],
+        [
+          29.06,
+          29.3,
+          "juga"
+        ],
+        [
+          29.3,
+          29.86,
+          "melesat"
+        ],
+        [
+          29.86,
+          30.46,
+          "menyamping,"
+        ],
+        [
+          30.46,
+          30.75,
+          "tiga"
+        ],
+        [
+          30.75,
+          31.099,
+          "puluh"
+        ],
+        [
+          31.099,
+          31.68,
+          "kilometer"
+        ],
+        [
+          31.68,
+          32.22,
+          "per"
+        ],
+        [
+          32.22,
+          32.66,
+          "detik."
+        ]
+      ]
+    },
+    "s09": {
+      "text": "Jadi jatuhnya selalu meleset — dan memutar. Itulah orbit.",
+      "from": 33.26,
+      "to": 36.98,
+      "words": [
+        [
+          33.26,
+          33.52,
+          "Jadi"
+        ],
+        [
+          33.52,
+          34.12,
+          "jatuhnya"
+        ],
+        [
+          34.12,
+          34.52,
+          "selalu"
+        ],
+        [
+          34.52,
+          35.08,
+          "meleset"
+        ],
+        [
+          35.08,
+          35.08,
+          "—"
+        ],
+        [
+          35.08,
+          35.32,
+          "dan"
+        ],
+        [
+          35.32,
+          35.9,
+          "memutar."
+        ],
+        [
+          36.18,
+          36.66,
+          "Itulah"
+        ],
+        [
+          36.66,
+          36.98,
+          "orbit."
+        ]
+      ]
+    }
+  },
+  "pieces": [
+    {
+      "from": 0.38,
+      "at": 0.03,
+      "to": 3.655
+    },
+    {
+      "from": 3.825,
+      "at": 3.305,
+      "to": 5.995
+    },
+    {
+      "from": 6.205,
+      "at": 5.475,
+      "to": 14.875
+    },
+    {
+      "from": 15.065,
+      "at": 14.145,
+      "to": 18.235
+    },
+    {
+      "from": 18.665,
+      "at": 17.315,
+      "to": 27.335
+    },
+    {
+      "from": 27.705,
+      "at": 25.985,
+      "to": 37.16
+    }
+  ],
+  "film": {
+    "s01": {
+      "from": 0.15,
+      "to": 2.93,
+      "words": [
+        [
+          0.15,
+          0.41,
+          "Bro,"
+        ],
+        [
+          0.63,
+          0.83,
+          "aku"
+        ],
+        [
+          0.83,
+          1.21,
+          "punya"
+        ],
+        [
+          1.21,
+          1.57,
+          "kabar"
+        ],
+        [
+          1.57,
+          1.85,
+          "baik"
+        ],
+        [
+          1.85,
+          2.11,
+          "dan"
+        ],
+        [
+          2.11,
+          2.53,
+          "kabar"
+        ],
+        [
+          2.53,
+          2.93,
+          "buruk."
+        ]
+      ]
+    },
+    "s02": {
+      "from": 3.68,
+      "to": 5.1,
+      "words": [
+        [
+          3.68,
+          4.04,
+          "Kabar"
+        ],
+        [
+          4.04,
+          4.52,
+          "baiknya"
+        ],
+        [
+          4.52,
+          4.8,
+          "dulu"
+        ],
+        [
+          4.8,
+          5.1,
+          "deh."
+        ]
+      ]
+    },
+    "s03": {
+      "from": 5.85,
+      "to": 8.59,
+      "words": [
+        [
+          5.85,
+          6.19,
+          "Kabar"
+        ],
+        [
+          6.19,
+          6.67,
+          "baiknya:"
+        ],
+        [
+          7.01,
+          7.21,
+          "Bumi"
+        ],
+        [
+          7.21,
+          7.39,
+          "nggak"
+        ],
+        [
+          7.39,
+          7.71,
+          "akan"
+        ],
+        [
+          7.71,
+          8.03,
+          "jatuh"
+        ],
+        [
+          8.03,
+          8.17,
+          "ke"
+        ],
+        [
+          8.17,
+          8.59,
+          "bawah."
+        ]
+      ]
+    },
+    "s04": {
+      "from": 9.35,
+      "to": 13.77,
+      "words": [
+        [
+          9.35,
+          9.47,
+          "Di"
+        ],
+        [
+          9.47,
+          9.77,
+          "luar"
+        ],
+        [
+          9.77,
+          10.19,
+          "angkasa"
+        ],
+        [
+          10.19,
+          10.43,
+          "nggak"
+        ],
+        [
+          10.43,
+          10.69,
+          "ada"
+        ],
+        [
+          10.69,
+          11.13,
+          "'bawah'"
+        ],
+        [
+          11.13,
+          11.33,
+          "—"
+        ],
+        [
+          11.33,
+          11.57,
+          "semua"
+        ],
+        [
+          11.57,
+          11.95,
+          "benda"
+        ],
+        [
+          11.95,
+          12.37,
+          "justru"
+        ],
+        [
+          12.37,
+          12.85,
+          "ditarik"
+        ],
+        [
+          12.85,
+          13.003,
+          "ke"
+        ],
+        [
+          13.003,
+          13.31,
+          "pusat"
+        ],
+        [
+          13.31,
+          13.77,
+          "Bumi."
+        ]
+      ]
+    },
+    "s05": {
+      "from": 14.52,
+      "to": 16.94,
+      "words": [
+        [
+          14.52,
+          14.74,
+          "Wah,"
+        ],
+        [
+          15,
+          15.16,
+          "aman"
+        ],
+        [
+          15.16,
+          15.46,
+          "dong!"
+        ],
+        [
+          15.76,
+          15.94,
+          "Terus"
+        ],
+        [
+          15.94,
+          16.4,
+          "kabar"
+        ],
+        [
+          16.4,
+          16.94,
+          "buruknya?"
+        ]
+      ]
+    },
+    "s06": {
+      "from": 17.69,
+      "to": 21.91,
+      "words": [
+        [
+          17.69,
+          18.03,
+          "Kabar"
+        ],
+        [
+          18.03,
+          18.51,
+          "buruknya…"
+        ],
+        [
+          18.51,
+          18.85,
+          "Bumi"
+        ],
+        [
+          18.85,
+          19.11,
+          "lagi"
+        ],
+        [
+          19.11,
+          19.65,
+          "jatuh."
+        ],
+        [
+          19.65,
+          21.01,
+          "Terus-terusan."
+        ],
+        [
+          21.01,
+          21.11,
+          "Ke"
+        ],
+        [
+          21.11,
+          21.41,
+          "arah"
+        ],
+        [
+          21.41,
+          21.91,
+          "Matahari."
+        ]
+      ]
+    },
+    "s07": {
+      "from": 21.91,
+      "to": 25.61,
+      "words": [
+        [
+          21.91,
+          23.53,
+          "Hah?!"
+        ],
+        [
+          23.53,
+          23.69,
+          "Kita"
+        ],
+        [
+          23.69,
+          24.13,
+          "bakal"
+        ],
+        [
+          24.13,
+          24.47,
+          "nabrak"
+        ],
+        [
+          24.47,
+          25.05,
+          "Matahari,"
+        ],
+        [
+          25.05,
+          25.61,
+          "dong?!"
+        ]
+      ]
+    },
+    "s08": {
+      "from": 26.36,
+      "to": 30.94,
+      "words": [
+        [
+          26.36,
+          26.8,
+          "Tenang."
+        ],
+        [
+          27.02,
+          27.34,
+          "Bumi"
+        ],
+        [
+          27.34,
+          27.58,
+          "juga"
+        ],
+        [
+          27.58,
+          28.14,
+          "melesat"
+        ],
+        [
+          28.14,
+          28.74,
+          "menyamping,"
+        ],
+        [
+          28.74,
+          29.03,
+          "tiga"
+        ],
+        [
+          29.03,
+          29.379,
+          "puluh"
+        ],
+        [
+          29.379,
+          29.96,
+          "kilometer"
+        ],
+        [
+          29.96,
+          30.5,
+          "per"
+        ],
+        [
+          30.5,
+          30.94,
+          "detik."
+        ]
+      ]
+    },
+    "s09": {
+      "from": 31.54,
+      "to": 35.26,
+      "words": [
+        [
+          31.54,
+          31.8,
+          "Jadi"
+        ],
+        [
+          31.8,
+          32.4,
+          "jatuhnya"
+        ],
+        [
+          32.4,
+          32.8,
+          "selalu"
+        ],
+        [
+          32.8,
+          33.36,
+          "meleset"
+        ],
+        [
+          33.36,
+          33.36,
+          "—"
+        ],
+        [
+          33.36,
+          33.6,
+          "dan"
+        ],
+        [
+          33.6,
+          34.18,
+          "memutar."
+        ],
+        [
+          34.46,
+          34.94,
+          "Itulah"
+        ],
+        [
+          34.94,
+          35.26,
+          "orbit."
+        ]
+      ]
+    }
+  },
+  "duration": 44.76
+}

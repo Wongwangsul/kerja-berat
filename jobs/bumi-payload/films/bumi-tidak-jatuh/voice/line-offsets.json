@@ -1,0 +1,59 @@
+{
+ "duration": 37.221,
+ "lines": [
+  {
+   "file": "lines/A1-design.wav",
+   "speaker": "A",
+   "start": 0.15,
+   "dur": 3.182
+  },
+  {
+   "file": "lines/B1-design.wav",
+   "speaker": "B",
+   "start": 3.832,
+   "dur": 2.0
+  },
+  {
+   "file": "lines/A2.wav",
+   "speaker": "A",
+   "start": 6.282,
+   "dur": 3.175
+  },
+  {
+   "file": "lines/A3.wav",
+   "speaker": "A",
+   "start": 9.757,
+   "dur": 4.868
+  },
+  {
+   "file": "lines/B2.wav",
+   "speaker": "B",
+   "start": 15.125,
+   "dur": 3.041
+  },
+  {
+   "file": "lines/A4.wav",
+   "speaker": "A",
+   "start": 18.717,
+   "dur": 4.752
+  },
+  {
+   "file": "lines/B3.wav",
+   "speaker": "B",
+   "start": 23.818,
+   "dur": 3.462
+  },
+  {
+   "file": "lines/A5.wav",
+   "speaker": "A",
+   "start": 27.78,
+   "dur": 4.885
+  },
+  {
+   "file": "lines/A6.wav",
+   "speaker": "A",
+   "start": 32.966,
+   "dur": 4.255
+  }
+ ]
+}
