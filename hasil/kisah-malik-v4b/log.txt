@@ -1,0 +1,86 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       996Mi        13Gi        41Mi       1.1Gi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   58G   87G  40% /
+Linux runnervmccnms 7.0.0-1019-azure #20-Ubuntu SMP PREEMPT Mon Oct 19 22:41:16 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/kisah-malik-v4b.sh ===
++ mkdir -p hasil-run
++++ dirname jobs/kisah-malik-v4b.sh
+++ cd jobs
+++ pwd
++ DIR=/home/runner/work/kerja-berat/kerja-berat/jobs
+++ pwd
++ export HASIL_DIR=/home/runner/work/kerja-berat/kerja-berat/hasil-run
++ HASIL_DIR=/home/runner/work/kerja-berat/kerja-berat/hasil-run
++ BL=
++ for v in 5.3.0 5.2.0 5.1.0
++ ver_dir=Blender5.3
++ curl -fL --retry 2 -o /tmp/blender.tar.xz https://download.blender.org/release/Blender5.3/blender-5.3.0-linux-x64.tar.xz
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0 44 388.0M  44 174.4M   0      0 174.4M      0   00:02           00:02 174.4M100 388.0M 100 388.0M   0      0 206.6M      0   00:01   00:01         174.4M100 388.0M 100 388.0M   0      0 206.6M      0   00:01   00:01         174.4M100 388.0M 100 388.0M   0      0 206.6M      0   00:01   00:01         174.4M
++ mkdir -p /tmp/blender
++ tar -xf /tmp/blender.tar.xz -C /tmp/blender --strip-components=1
++ BL=/tmp/blender/blender
++ break
++ '[' -n /tmp/blender/blender ']'
++ /tmp/blender/blender --version
+Blender 5.3.0
+	build date: 2026-11-10
+	build time: 01:31:18
+	build commit date: 2026-11-09
+	build commit time: 22:11
+	build hash: 02f0899d78e3
+	build branch: blender-v5.3-release
+	build platform: Linux
+	build type: Release
+	build c flags:  -Wall -Werror=implicit-function-declaration -Wstrict-prototypes -Werror=return-type -Werror=vla -Wmissing-prototypes -Wno-char-subscripts -Wno-unknown-pragmas -Wpointer-arith -Wunused-parameter -Wwrite-strings -Wlogical-op -Wundef -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Wformat-signedness -Wrestrict -Wno-stringop-overread -Wno-stringop-overflow -Wnonnull -Wabsolute-value -Wuninitialized -Wredundant-decls -Wshadow -Wimplicit-fallthrough=5 -Wno-error=unused-but-set-variable  -march=x86-64-v2 -std=gnu11 -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffp-contract=off  
+	build c++ flags:  -Wuninitialized -Wredundant-decls -Wall -Wno-invalid-offsetof -Wno-sign-compare -Wlogical-op -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Werror=return-type -Wno-char-subscripts -Wno-unknown-pragmas -Wpointer-arith -Wunused-parameter -Wwrite-strings -Wundef -Wcomma-subscript -Wformat-signedness -Wrestrict -Wno-suggest-override -Wuninitialized -Wno-stringop-overread -Wno-stringop-overflow -Wimplicit-fallthrough=5 -Wundef -Wmissing-declarations  -march=x86-64-v2 -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffp-contract=off  
+	build link flags: 
+	build system: CMake
++ export KM_SAMPLES=256
++ KM_SAMPLES=256
++ /tmp/blender/blender -b --python /home/runner/work/kerja-berat/kerja-berat/jobs/kisah-malik-v4b.py
+00:01.221  cycles           | WARNING CUEW initialization failed: Error opening the library
+/home/runner/work/kerja-berat/kerja-berat/jobs/kisah-malik-v4b.py:40: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+/home/runner/work/kerja-berat/kerja-berat/jobs/kisah-malik-v4b.py:51: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('Plaster'); m.use_nodes = True
+/home/runner/work/kerja-berat/kerja-berat/jobs/kisah-malik-v4b.py:103: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('Stone'); m.use_nodes = True
+/home/runner/work/kerja-berat/kerja-berat/jobs/kisah-malik-v4b.py:95: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('Iron'); m.use_nodes = True
+/home/runner/work/kerja-berat/kerja-berat/jobs/kisah-malik-v4b.py:128: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('Rug'); m.use_nodes = True
+/home/runner/work/kerja-berat/kerja-berat/jobs/kisah-malik-v4b.py:144: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('FGDark'); m.use_nodes = True
+/home/runner/work/kerja-berat/kerja-berat/jobs/kisah-malik-v4b.py:151: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('PassBlack'); m.use_nodes = True
+/home/runner/work/kerja-berat/kerja-berat/jobs/kisah-malik-v4b.py:72: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('Wood%d' % seed_off); m.use_nodes = True
+/home/runner/work/kerja-berat/kerja-berat/jobs/kisah-malik-v4b.py:158: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('Emit'); m.use_nodes = True
+/home/runner/work/kerja-berat/kerja-berat/jobs/kisah-malik-v4b.py:168: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('AirVolume'); m.use_nodes = True
+19:27.272  render           | Saved: '/home/runner/work/kerja-berat/kerja-berat/hasil-run/plate.png'
+31:52.099  render           | Saved: '/home/runner/work/kerja-berat/kerja-berat/hasil-run/glow.png'
+33:35.390  render           | Saved: '/home/runner/work/kerja-berat/kerja-berat/hasil-run/fg.png'
+RENDERED plate.png
+RENDERED glow.png
+RENDERED fg.png
+ALL DONE -> /home/runner/work/kerja-berat/kerja-berat/hasil-run
+Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:31:18)
+
+Blender quit
++ ls -la hasil-run
+total 6456
+drwxr-xr-x  2 runner runner    4096 Nov 18 15:27 .
+drwxr-xr-x 16 runner runner    4096 Nov 18 14:53 ..
+-rw-r--r--  1 runner runner  954932 Nov 18 15:27 fg.png
+-rw-r--r--  1 runner runner 2328333 Nov 18 15:26 glow.png
+-rw-r--r--  1 runner runner    5977 Nov 18 15:27 log.txt
+-rw-r--r--  1 runner runner 3303559 Nov 18 15:13 plate.png
+=== Selesai. Kode keluar: 0 ===
