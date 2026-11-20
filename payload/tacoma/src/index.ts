@@ -1,11 +1,11 @@
 import React from "react";
 import { Composition, registerRoot } from "remotion";
-import { BridgeShort, BRIDGE_FRAMES } from "./videos/bridge/Bridge";
+import { TacomaShort, TACOMA_FRAMES } from "./videos/tacoma/Tacoma";
 
 const Root: React.FC = () => React.createElement(Composition, {
-  id: "BridgeShort",
-  component: BridgeShort,
-  durationInFrames: BRIDGE_FRAMES,
+  id: "TacomaShort",
+  component: TacomaShort,
+  durationInFrames: TACOMA_FRAMES,
   fps: 30,
   width: 1080,
   height: 1920,
