@@ -1,11 +1,11 @@
 === Mesin runner GitHub Actions ===
 Inti CPU: 4
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       1.1Gi        13Gi        42Mi       1.3Gi        14Gi
+Mem:            15Gi       1.1Gi        13Gi        43Mi       1.3Gi        14Gi
 Swap:          3.0Gi          0B       3.0Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/root       145G   58G   87G  40% /
-Linux runnervm0hi8g 7.0.0-1020-azure #21-Ubuntu SMP PREEMPT Tue Oct 27 22:34:38 UTC 2026 x86_64 GNU/Linux
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/cow-root  145G   55G   91G  38% /
+Linux ip-10-0-138-1 7.0.0-1016-aws #17-Ubuntu SMP PREEMPT Mon Oct 19 17:36:33 UTC 2026 x86_64 GNU/Linux
 === Mulai pekerjaan: jobs/ps3d-25nov.sh ===
 + cd ps3d
 + export REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp TEMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp TMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp
@@ -22,40 +22,97 @@ v24.22.3
 npm warn install-scripts
 npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
 + node render_all.mjs
-+ RC=1
++ RC=0
 + tail -40 render_all.log
-bundle_s 12.9
-node:internal/modules/run_main:107
-    triggerUncaughtException(
-    ^
-
-SymbolicateableError: Could not find composition with ID LebahPelikan. Available compositions: RubahLembut
-    at window.remotion_calculateComposition (http://localhost:3000/bundle.js:83055:13)
-    at __puppeteer_evaluation_script__:2:21 {
-  stackFrame: [
-    {
-      columnNumber: 13,
-      fileName: 'http://localhost:3000/bundle.js',
-      functionName: 'window.remotion_calculateComposition',
-      lineNumber: 83055
-    },
-    {
-      columnNumber: 21,
-      fileName: '__puppeteer_evaluation_script__',
-      functionName: null,
-      lineNumber: 2
-    }
-  ],
-  delayRenderCall: null,
-  frame: null,
-  chunk: null
-}
-
-Node.js v24.22.3
+KudaLautPaus progress 15% 77s
+KudaLautPaus progress 20% 103s
+KudaLautPaus progress 25% 128s
+KudaLautPaus progress 30% 153s
+KudaLautPaus progress 35% 178s
+KudaLautPaus progress 40% 203s
+KudaLautPaus progress 45% 228s
+KudaLautPaus progress 50% 253s
+KudaLautPaus progress 55% 278s
+KudaLautPaus progress 60% 302s
+KudaLautPaus progress 65% 328s
+KudaLautPaus progress 70% 353s
+KudaLautPaus progress 75% 379s
+KudaLautPaus progress 80% 404s
+KudaLautPaus progress 85% 431s
+KudaLautPaus progress 90% 456s
+KudaLautPaus progress 100% 475s
+DONE KudaLautPaus 1617 frames in 475.4s = 0.29s/frame size=16250343 sha256=43d1c7503754683c4b851e784cbd71e6b6ae8f6f92005e90c555e77ee790b1cc
+comp BadakJawa 1698 frames
+BadakJawa progress 5% 42s
+BadakJawa progress 10% 79s
+BadakJawa progress 15% 116s
+BadakJawa progress 20% 154s
+BadakJawa progress 25% 191s
+BadakJawa progress 30% 228s
+BadakJawa progress 35% 267s
+BadakJawa progress 40% 306s
+BadakJawa progress 45% 344s
+BadakJawa progress 50% 383s
+BadakJawa progress 55% 421s
+BadakJawa progress 60% 459s
+BadakJawa progress 65% 497s
+BadakJawa progress 70% 537s
+BadakJawa progress 75% 577s
+BadakJawa progress 80% 617s
+BadakJawa progress 85% 655s
+BadakJawa progress 90% 693s
+BadakJawa progress 100% 722s
+DONE BadakJawa 1698 frames in 721.7s = 0.43s/frame size=15262042 sha256=ce16fd2222bcd0712d9261b7f656db6a6c2790c2e2c832a2b7eaefe059bcf328
+ALL_DONE total_s 2447.8
 + mkdir -p ../hasil-run
 + cp render_all.log ../hasil-run/
-+ '[' 1 -ne 0 ']'
-+ echo 'RENDER FAILED rc=1'
-RENDER FAILED rc=1
-+ exit 1
-=== Selesai. Kode keluar: 1 ===
++ '[' 0 -ne 0 ']'
++ for f in out/lebah-pelikan.mp4 out/kelinci-singa.mp4 out/kudalaut-paus.mp4 out/badak-jawa.mp4
+++ basename out/lebah-pelikan.mp4 .mp4
++ slug=lebah-pelikan
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/lebah-pelikan.mp4
+jobs/ps3d-25nov.sh: line 21: ffprobe: command not found
++ true
++ sha256sum out/lebah-pelikan.mp4
+e94cdba1847607f8f401c81670c387ba94a933daea61986c06e0022d314eaac8  out/lebah-pelikan.mp4
++ split -b 20M -d -a 2 out/lebah-pelikan.mp4 ../hasil-run/lebah-pelikan-chunk-
++ for f in out/lebah-pelikan.mp4 out/kelinci-singa.mp4 out/kudalaut-paus.mp4 out/badak-jawa.mp4
+++ basename out/kelinci-singa.mp4 .mp4
++ slug=kelinci-singa
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/kelinci-singa.mp4
+jobs/ps3d-25nov.sh: line 21: ffprobe: command not found
++ true
++ sha256sum out/kelinci-singa.mp4
+06cf73be68694b7e68746a00398f4d7ce26d1f9440dd6a5739c16466ebd3a350  out/kelinci-singa.mp4
++ split -b 20M -d -a 2 out/kelinci-singa.mp4 ../hasil-run/kelinci-singa-chunk-
++ for f in out/lebah-pelikan.mp4 out/kelinci-singa.mp4 out/kudalaut-paus.mp4 out/badak-jawa.mp4
+++ basename out/kudalaut-paus.mp4 .mp4
++ slug=kudalaut-paus
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/kudalaut-paus.mp4
+jobs/ps3d-25nov.sh: line 21: ffprobe: command not found
++ true
++ sha256sum out/kudalaut-paus.mp4
+43d1c7503754683c4b851e784cbd71e6b6ae8f6f92005e90c555e77ee790b1cc  out/kudalaut-paus.mp4
++ split -b 20M -d -a 2 out/kudalaut-paus.mp4 ../hasil-run/kudalaut-paus-chunk-
++ for f in out/lebah-pelikan.mp4 out/kelinci-singa.mp4 out/kudalaut-paus.mp4 out/badak-jawa.mp4
+++ basename out/badak-jawa.mp4 .mp4
++ slug=badak-jawa
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/badak-jawa.mp4
+jobs/ps3d-25nov.sh: line 21: ffprobe: command not found
++ true
++ sha256sum out/badak-jawa.mp4
+ce16fd2222bcd0712d9261b7f656db6a6c2790c2e2c832a2b7eaefe059bcf328  out/badak-jawa.mp4
++ split -b 20M -d -a 2 out/badak-jawa.mp4 ../hasil-run/badak-jawa-chunk-
++ ls -la ../hasil-run/
+total 61880
+drwxr-xr-x  2 runner runner     4096 Nov 24 12:07 .
+drwxr-xr-x 19 runner runner     4096 Nov 24 11:26 ..
+-rw-r--r--  1 runner runner 15262042 Nov 24 12:07 badak-jawa-chunk-00
+-rw-r--r--  1 runner runner 16298669 Nov 24 12:07 kelinci-singa-chunk-00
+-rw-r--r--  1 runner runner 16250343 Nov 24 12:07 kudalaut-paus-chunk-00
+-rw-r--r--  1 runner runner 15522212 Nov 24 12:07 lebah-pelikan-chunk-00
+-rw-r--r--  1 runner runner     4767 Nov 24 12:07 log.txt
+-rw-r--r--  1 runner runner     3000 Nov 24 12:07 render_all.log
++ echo RENDER_JOB_DONE
+RENDER_JOB_DONE
+=== Selesai. Kode keluar: 0 ===

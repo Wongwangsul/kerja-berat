@@ -1,28 +1,86 @@
-bundle_s 12.9
-node:internal/modules/run_main:107
-    triggerUncaughtException(
-    ^
-
-SymbolicateableError: Could not find composition with ID LebahPelikan. Available compositions: RubahLembut
-    at window.remotion_calculateComposition (http://localhost:3000/bundle.js:83055:13)
-    at __puppeteer_evaluation_script__:2:21 {
-  stackFrame: [
-    {
-      columnNumber: 13,
-      fileName: 'http://localhost:3000/bundle.js',
-      functionName: 'window.remotion_calculateComposition',
-      lineNumber: 83055
-    },
-    {
-      columnNumber: 21,
-      fileName: '__puppeteer_evaluation_script__',
-      functionName: null,
-      lineNumber: 2
-    }
-  ],
-  delayRenderCall: null,
-  frame: null,
-  chunk: null
-}
-
-Node.js v24.22.3
+bundle_s 9.8
+comp LebahPelikan 1506 frames
+LebahPelikan progress 5% 39s
+LebahPelikan progress 10% 64s
+LebahPelikan progress 15% 92s
+LebahPelikan progress 20% 120s
+LebahPelikan progress 25% 148s
+LebahPelikan progress 30% 177s
+LebahPelikan progress 35% 207s
+LebahPelikan progress 40% 237s
+LebahPelikan progress 45% 262s
+LebahPelikan progress 50% 290s
+LebahPelikan progress 55% 318s
+LebahPelikan progress 60% 345s
+LebahPelikan progress 65% 370s
+LebahPelikan progress 70% 399s
+LebahPelikan progress 75% 427s
+LebahPelikan progress 80% 456s
+LebahPelikan progress 85% 484s
+LebahPelikan progress 90% 512s
+LebahPelikan progress 100% 532s
+DONE LebahPelikan 1506 frames in 532.5s = 0.35s/frame size=15522212 sha256=e94cdba1847607f8f401c81670c387ba94a933daea61986c06e0022d314eaac8
+comp KelinciSinga 1742 frames
+KelinciSinga progress 5% 40s
+KelinciSinga progress 10% 72s
+KelinciSinga progress 15% 106s
+KelinciSinga progress 20% 139s
+KelinciSinga progress 25% 174s
+KelinciSinga progress 30% 209s
+KelinciSinga progress 35% 246s
+KelinciSinga progress 40% 285s
+KelinciSinga progress 45% 324s
+KelinciSinga progress 50% 362s
+KelinciSinga progress 55% 399s
+KelinciSinga progress 60% 437s
+KelinciSinga progress 65% 475s
+KelinciSinga progress 70% 513s
+KelinciSinga progress 75% 550s
+KelinciSinga progress 80% 588s
+KelinciSinga progress 85% 628s
+KelinciSinga progress 90% 666s
+KelinciSinga progress 100% 696s
+DONE KelinciSinga 1742 frames in 695.5s = 0.40s/frame size=16298669 sha256=06cf73be68694b7e68746a00398f4d7ce26d1f9440dd6a5739c16466ebd3a350
+comp KudaLautPaus 1617 frames
+KudaLautPaus progress 5% 31s
+KudaLautPaus progress 10% 53s
+KudaLautPaus progress 15% 77s
+KudaLautPaus progress 20% 103s
+KudaLautPaus progress 25% 128s
+KudaLautPaus progress 30% 153s
+KudaLautPaus progress 35% 178s
+KudaLautPaus progress 40% 203s
+KudaLautPaus progress 45% 228s
+KudaLautPaus progress 50% 253s
+KudaLautPaus progress 55% 278s
+KudaLautPaus progress 60% 302s
+KudaLautPaus progress 65% 328s
+KudaLautPaus progress 70% 353s
+KudaLautPaus progress 75% 379s
+KudaLautPaus progress 80% 404s
+KudaLautPaus progress 85% 431s
+KudaLautPaus progress 90% 456s
+KudaLautPaus progress 100% 475s
+DONE KudaLautPaus 1617 frames in 475.4s = 0.29s/frame size=16250343 sha256=43d1c7503754683c4b851e784cbd71e6b6ae8f6f92005e90c555e77ee790b1cc
+comp BadakJawa 1698 frames
+BadakJawa progress 5% 42s
+BadakJawa progress 10% 79s
+BadakJawa progress 15% 116s
+BadakJawa progress 20% 154s
+BadakJawa progress 25% 191s
+BadakJawa progress 30% 228s
+BadakJawa progress 35% 267s
+BadakJawa progress 40% 306s
+BadakJawa progress 45% 344s
+BadakJawa progress 50% 383s
+BadakJawa progress 55% 421s
+BadakJawa progress 60% 459s
+BadakJawa progress 65% 497s
+BadakJawa progress 70% 537s
+BadakJawa progress 75% 577s
+BadakJawa progress 80% 617s
+BadakJawa progress 85% 655s
+BadakJawa progress 90% 693s
+BadakJawa progress 100% 722s
+DONE BadakJawa 1698 frames in 721.7s = 0.43s/frame size=15262042 sha256=ce16fd2222bcd0712d9261b7f656db6a6c2790c2e2c832a2b7eaefe059bcf328
+ALL_DONE total_s 2447.8
