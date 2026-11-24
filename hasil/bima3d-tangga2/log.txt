@@ -1,0 +1,68 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       1.0Gi        13Gi        41Mi       1.2Gi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   58G   87G  40% /
+Linux runnervm0hi8g 7.0.0-1020-azure #21-Ubuntu SMP PREEMPT Tue Oct 27 22:34:38 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/bima3d-tangga2.sh ===
++ cd bima3d
++ export REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/bima3d/remotion-tmp TEMP=/home/runner/work/kerja-berat/kerja-berat/bima3d/remotion-tmp TMP=/home/runner/work/kerja-berat/kerja-berat/bima3d/remotion-tmp
++ REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/bima3d/remotion-tmp
++ TEMP=/home/runner/work/kerja-berat/kerja-berat/bima3d/remotion-tmp
++ TMP=/home/runner/work/kerja-berat/kerja-berat/bima3d/remotion-tmp
++ mkdir -p remotion-tmp out hasil-run public
++ node --version
+v24.22.3
++ npm --version
+11.19.1
++ npm ci --no-audit --no-fund
++ tail -2
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
++ node render_final.mjs out/video.mp4
++ tail -30
+bundle_s 11.6
+comp BimaTangga 2081 frames
+progress 5% 80s
+progress 10% 152s
+progress 15% 220s
+progress 20% 288s
+progress 25% 329s
+progress 30% 358s
+progress 35% 398s
+progress 40% 445s
+progress 45% 491s
+progress 50% 524s
+progress 55% 558s
+progress 60% 594s
+progress 65% 642s
+progress 70% 698s
+progress 75% 770s
+progress 80% 842s
+progress 85% 876s
+progress 90% 929s
+progress 100% 989s
+renderMedia 2081 frames in 988.8s = 0.48s/frame
++ ls -la out/
+total 35976
+drwxr-xr-x 2 runner runner     4096 Nov 24 07:06 .
+drwxr-xr-x 8 runner runner     4096 Nov 24 06:49 ..
+-rw-r--r-- 1 runner runner 36830336 Nov 24 07:06 video.mp4
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/video.mp4
+jobs/bima3d-tangga2.sh: line 11: ffprobe: command not found
++ true
++ sha256sum out/video.mp4
+8d051a9c7a254905e912789cbebbc2eea867d4b6ee0144c9daebc5f2e968fd02  out/video.mp4
++ split -b 20M -d -a 2 out/video.mp4 ../hasil-run/chunk-
++ ls -la ../hasil-run/
+total 35980
+drwxr-xr-x  2 runner runner     4096 Nov 24 07:06 .
+drwxr-xr-x 18 runner runner     4096 Nov 24 06:49 ..
+-rw-r--r--  1 runner runner 20971520 Nov 24 07:06 chunk-00
+-rw-r--r--  1 runner runner 15858816 Nov 24 07:06 chunk-01
+-rw-r--r--  1 runner runner     2221 Nov 24 07:06 log.txt
++ echo RENDER_JOB_DONE
+RENDER_JOB_DONE
+=== Selesai. Kode keluar: 0 ===
