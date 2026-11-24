@@ -1,25 +1,15 @@
 import React from "react";
 import { Composition, registerRoot } from "remotion";
-import { LebahPelikan, LEBAH_FRAMES } from "./videos/lebah/LebahPelikan";
-import { KelinciSinga, KELINCI_FRAMES } from "./videos/kelinci/KelinciSinga";
-import { KudaLautPaus, KUDALAUT_FRAMES } from "./videos/kudalaut/KudaLautPaus";
-import { BadakJawa, BADAK_FRAMES } from "./videos/badak/BadakJawa";
-
-const COMPS = [
-  { id: "LebahPelikan", component: LebahPelikan, durationInFrames: LEBAH_FRAMES },
-  { id: "KelinciSinga", component: KelinciSinga, durationInFrames: KELINCI_FRAMES },
-  { id: "KudaLautPaus", component: KudaLautPaus, durationInFrames: KUDALAUT_FRAMES },
-  { id: "BadakJawa", component: BadakJawa, durationInFrames: BADAK_FRAMES },
-] as const;
+import { LumbaPenyuMatahari, LUMBA_FRAMES } from "./videos/lumba/LumbaPenyuMatahari";
 
 const Root: React.FC = () => React.createElement(React.Fragment, null,
-  ...COMPS.map((c) => React.createElement(Composition, {
-    id: c.id,
-    component: c.component,
-    durationInFrames: c.durationInFrames,
+  React.createElement(Composition, {
+    id: "LumbaPenyuMatahari",
+    component: LumbaPenyuMatahari,
+    durationInFrames: LUMBA_FRAMES,
     fps: 30,
-    width: 1080,
-    height: 1920,
-  })),
+    width: 1920,
+    height: 1080,
+  }),
 );
 registerRoot(Root);
