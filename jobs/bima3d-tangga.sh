@@ -3,7 +3,7 @@
 set -x
 cd bima3d || exit 1
 export REMOTION_TMP=$PWD/remotion-tmp TEMP=$PWD/remotion-tmp TMP=$PWD/remotion-tmp
-mkdir -p remotion-tmp out hasil-run
+mkdir -p remotion-tmp out hasil-run public
 node --version; npm --version
 npm ci --no-audit --no-fund 2>&1 | tail -2 || npm install --no-audit --no-fund 2>&1 | tail -2
 node render_final.mjs out/video.mp4 2>&1 | tail -30
