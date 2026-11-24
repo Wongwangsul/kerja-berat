@@ -1,0 +1,28 @@
+bundle_s 12.9
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+SymbolicateableError: Could not find composition with ID LebahPelikan. Available compositions: RubahLembut
+    at window.remotion_calculateComposition (http://localhost:3000/bundle.js:83055:13)
+    at __puppeteer_evaluation_script__:2:21 {
+  stackFrame: [
+    {
+      columnNumber: 13,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'window.remotion_calculateComposition',
+      lineNumber: 83055
+    },
+    {
+      columnNumber: 21,
+      fileName: '__puppeteer_evaluation_script__',
+      functionName: null,
+      lineNumber: 2
+    }
+  ],
+  delayRenderCall: null,
+  frame: null,
+  chunk: null
+}
+
+Node.js v24.22.3
