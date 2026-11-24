@@ -1,0 +1,22 @@
+bundle_s 10.3
+comp LumbaPenyuMatahari 17557 frames @ 30 fps 1920x1080
+progress 5% 290s
+progress 10% 608s
+progress 15% 937s
+progress 20% 1283s
+progress 25% 1614s
+progress 30% 1938s
+progress 35% 2280s
+progress 40% 2616s
+progress 45% 2951s
+progress 50% 3281s
+progress 55% 3659s
+progress 60% 4055s
+progress 65% 4451s
+progress 70% 4844s
+progress 75% 5239s
+progress 80% 5654s
+progress 85% 6107s
+progress 90% 6546s
+progress 100% 6943s
+DONE LumbaPenyuMatahari 17557 frames in 6943.2s = 0.40s/frame size=259167671 sha256=5d1fd5cb45cbbdf8b6f2c94c19a445f07073b3787d71dd12c60c145628fe6371
