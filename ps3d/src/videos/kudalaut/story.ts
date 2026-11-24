@@ -12,36 +12,72 @@ const MOUTH = timing.mouth as unknown as Record<string, number[]>;
 //  0  12–292   seahorse left, hesitant; whale right, calm
 //  1 304–476   whale shifts to block the current, fin pointing at the seaweed
 //  2 488–602   countdown, seahorse bends (anticipation), swims right, bubble trail
-//  3 611–786   current strengthens, seaweed whips, seahorse dragged left-down, tail slips
-//  4 798–945   seahorse droops, whale swims close to comfort
-//  5 957–1157  whale turns, tail braces the seahorse from behind; seahorse grips
-//              the whale's fin; they move right together
-//  6 1169–1351 arrive at the seaweed, seahorse wraps its tail tight, sparkles
+//  3 611–786   current strengthens: seahorse tumbles and is dragged left-down
+//              facing its direction of travel; whale RISES clear of the drag
+//              path (vertical motion, so its leftward facing never conflicts)
+//  4 798–945   seahorse droops and turns toward the whale; whale descends to
+//              comfort it from above-left (heads close, never merged)
+//  5 957–1157  whale turns, then both swim right together — seahorse
+//              ALONGSIDE the whale's lower flank (no fin-grip, no riding the back)
+//  6 1169–1351 seahorse swims on alone to the seaweed, passing IN FRONT OF
+//              the whale's fin (z-shift — it is too tall to pass under or
+//              over the fin); whale waits behind; tail curls, sparkles
 //  7 1363–1542 side by side: seahorse waves a fin, whale spouts water
+//
+// Perbaikan visual 24 Nov 2026 (cacat pola dari adegan lain):
+//  - ry kuda laut TIDAK PERNAH dipakai sebelum ini (SEA_KEYS.ry data mati —
+//    rotation.y tidak pernah disetel), jadi ia selalu menghadap kanan meski
+//    diseret ke kiri. Kini disalurkan lewat keyLerp.
+//  - Giliran 3: paus tidak lagi berenang kanan sambil menghadap kiri; ia NAIK
+//    (gerak vertikal) menjauhi jalur seret, kuda laut berputar menghadap kiri.
+//  - Giliran 5 "pegang sirip" DISEDERHANAKAN jadi "berenang berdampingan":
+//    posisi sirip yang sebenarnya (di bawah perut paus) membuat pegangan
+//    mustahil dibaca tanpa menempelkan kuda laut ke perut paus.
+//  - Teleport f1157 dihapus: kuda laut berenang lepas dari sisi paus ke
+//    rumput laut selama giliran 6; paus menunggu di belakang (tidak lagi
+//    berenang melewati kuda laut — dulu siripnya menyapu ekor kuda laut).
 
 const SEA_KEYS = [
   { f: 0, x: -2.0, y: -0.5, ry: 0 },
   { f: 476, x: -1.9, y: -0.4, ry: 0 },
   { f: 560, x: -1.7, y: -0.3, ry: 0 },
   { f: 602, x: 1.5, y: 0.0, ry: 0 },
-  { f: 786, x: -1.6, y: -1.35, ry: 0 },
+  // line 3: the current grabs the seahorse — it tumbles (ry 0→π) and is
+  // dragged left-down, ALWAYS facing its direction of travel (ry=π)
+  { f: 630, x: 1.15, y: -0.75, ry: Math.PI },
+  { f: 680, x: 0.3, y: -1.25, ry: Math.PI },
+  { f: 730, x: -0.8, y: -1.32, ry: Math.PI },
+  { f: 786, x: -1.6, y: -1.35, ry: Math.PI },
+  // line 4: it slowly turns back toward the approaching whale
+  { f: 860, x: -1.6, y: -1.35, ry: 0 },
   { f: 945, x: -1.6, y: -1.35, ry: 0 },
-  // 957–1157: riding on the whale's fin (handled below)
-  { f: 1157, x: 2.75, y: -0.7, ry: 0 },
-  { f: 1617, x: 2.8, y: -0.7, ry: 0 },
+  // line 5: alongside the whale (position overridden below, so this key only
+  // has to match the station exactly at f1157 for a seamless handover);
+  // line 6: it swims on alone to the seaweed on a smooth rising diagonal
+  { f: 1157, x: -0.3, y: -1.0, ry: 0 },
+  { f: 1330, x: 2.9, y: -0.7, ry: 0 },
+  { f: 1617, x: 2.9, y: -0.7, ry: 0 },
 ];
 
 const WHALE_KEYS = [
   { f: 0, x: 1.9, y: 0.2, ry: Math.PI },
   { f: 476, x: -0.4, y: 0.0, ry: Math.PI },
   { f: 602, x: -0.3, y: 0.0, ry: Math.PI },
-  { f: 786, x: 1.3, y: -0.2, ry: Math.PI },
-  { f: 945, x: -0.3, y: -0.5, ry: Math.PI },
-  { f: 960, x: -0.3, y: -0.5, ry: Math.PI },
-  { f: 1000, x: -0.2, y: -0.4, ry: 0 },   // quick turn in place, then swim right in profile
-  { f: 1157, x: 2.1, y: -0.1, ry: 0 },
-  { f: 1351, x: 2.4, y: -0.1, ry: 0 },
-  { f: 1617, x: 2.4, y: -0.1, ry: 0 },
+  // line 3: the whale RISES clear of the drag path (vertical motion, so its
+  // leftward facing never conflicts with its travel) instead of swimming
+  // right backwards into the seahorse
+  { f: 660, x: -0.3, y: 1.15, ry: Math.PI },
+  { f: 786, x: -0.3, y: 1.15, ry: Math.PI },
+  // line 4: descend to comfort the seahorse — moving left, facing left
+  { f: 945, x: -0.6, y: 0.5, ry: Math.PI },
+  { f: 960, x: -0.6, y: 0.5, ry: Math.PI },
+  { f: 1000, x: -0.6, y: -0.4, ry: 0 },   // turn in place (down only), then swim right in profile
+  // line 5: swim right together; lines 6–7: WAIT behind while the seahorse
+  // swims on alone to the seaweed (no more swimming past it, so the fin
+  // never sweeps through its tail)
+  { f: 1157, x: 0.6, y: -0.1, ry: 0 },
+  { f: 1351, x: 0.6, y: -0.1, ry: 0 },
+  { f: 1617, x: 0.6, y: -0.1, ry: 0 },
 ];
 
 export function poseFrame(frame: number, refs: KudaLautRefs, camera: THREE.PerspectiveCamera) {
@@ -83,17 +119,34 @@ export function poseFrame(frame: number, refs: KudaLautRefs, camera: THREE.Persp
   }
 
   // ---- seahorse -----------------------------------------------------------
+  // ry was NEVER applied before (SEA_KEYS.ry was dead data — rotation.y was
+  // never set), so the seahorse always faced right even while being dragged
+  // left. It is wired through keyLerp now: the seahorse faces its direction
+  // of travel on every segment.
+  const s = keyLerp(SEA_KEYS, f);
   let sx: number, sy: number;
   if (f >= 957 && f < 1157) {
-    // gripping the whale's fin: in front of the whale's body
+    // swimming ALONGSIDE the whale's lower flank. The old "grip the fin"
+    // pose put the seahorse on the whale's back, ~1.35 above the fin centre,
+    // and its tail through the fin — the real fin sits under the whale's
+    // belly, so a grip cannot read without plastering the seahorse to the
+    // belly. Station is clear of the fin, the tail fluke and the dorsal
+    // line; the tail curls in open water below the belly.
     const t = sstep(957, 1000, f);
-    sx = lerp(-1.6, wh.x + 0.4, t);
-    sy = lerp(-1.35, wh.y + 0.75, t);
+    sx = lerp(-1.6, wh.x - 0.9, t);
+    sy = lerp(-1.35, wh.y - 0.9, t);
   } else {
-    const s = keyLerp(SEA_KEYS, f);
     sx = s.x; sy = s.y;
   }
-  refs.seahorse.position.set(sx, sy, 0.6);
+  // Line 6 crosses the whale's near fin in x (fin spans x 0.65–2.15, y band
+  // −0.84…−0.56). The seahorse is 1.3 tall, so it can pass neither under the
+  // fin (its body always reaches the fin's band) nor over it (its head would
+  // cross the whale's dorsal line). Instead it passes IN FRONT of the fin:
+  // z 0.6→1.25 while its tail is inside the fin's x-range (ramp in/out
+  // safely outside the overlap window), z-gap 0.28 to the fin's front face.
+  const finPass = sstep(1160, 1195, f) * (1 - sstep(1305, 1340, f));
+  refs.seahorse.position.set(sx, sy, 0.6 + 0.65 * finPass);
+  refs.seahorse.rotation.y = s.ry;
   // gentle current sway — never frozen
   const sway = Math.sin(f * 0.08) * 0.05;
   refs.seaBodyG.rotation.z = sway

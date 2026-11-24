@@ -184,14 +184,15 @@ export function buildWorld(scene: THREE.Scene): LebahRefs {
   ]);
   makeSun(g, -13.5, 7.9, -22);
 
-  // wind streaks (only visible during the failed flight, line 3)
+  // wind streaks (only visible during the failed flight, line 3) — short
+  // dashes clustered around the action, never full-width bars
   const windG = new THREE.Group();
   g.add(windG);
   const wr = rng(21);
   for (let i = 0; i < 6; i++) {
     const y = -0.5 + wr() * 4.5;
-    const c = cyl(windG, "#ffffff", 0.022, 0.022, 2.2, [0, y, -0.5 + wr() * 1.2], [0, 0, Math.PI / 2]);
-    (c as THREE.Mesh).material = new THREE.MeshBasicMaterial({ color: "#ffffff", transparent: true, opacity: 0.5 });
+    const c = cyl(windG, "#ffffff", 0.022, 0.022, 1.1, [0, y, -0.5 + wr() * 1.2], [0, 0, Math.PI / 2]);
+    (c as THREE.Mesh).material = new THREE.MeshBasicMaterial({ color: "#ffffff", transparent: true, opacity: 0.35 });
     (c as THREE.Mesh).castShadow = false;
   }
   windG.visible = false;

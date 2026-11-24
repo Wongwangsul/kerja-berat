@@ -11,19 +11,24 @@ const MOUTH = timing.mouth as unknown as Record<string, number[]>;
 // Beats:
 //  0  12–232   establishing: mother right, calf left under a tree; mother
 //              raises her head, pointing her nose at the forest
-//  1 244–433   calf bows shyly, touches its small horn with a front foot
-//  2 442–630   mother walks a half-turn, looks at the wide forest; calf
-//              follows her gaze
+//  1 244–433   calf bows shyly (horn-touch SIMPLIFIED AWAY 24 Nov: the front
+//              leg could not reach the horn — it swung backwards and dangled
+//              mid-air under the belly, ~1 m from the horn; bow only)
+//  2 442–630   mother walks left facing left, looks at the wide forest; calf
+//              follows her gaze (mother keeps ry=π while moving — no yaw
+//              during translation, per the no-sideways-walk rule)
 //  3 639–809   calf bows again, scratching the ground
 //  4 821–1006  mother comes close, presses her head to the calf (comfort)
 //  5 1015–1180 calf looks up asking, ears up; mother nods firmly
 //  6 1192–1427 both stand tall and proud facing the forest, light breaks through
+//              (calf turns toward the CAMERA side, ry 0→−π, so its face and
+//              one horn stay visible mid-turn instead of its rear)
 //  7 1436–1644 calf jumps twice happily, head held high showing its one horn
 
 const IND_KEYS = [
   { f: 0, x: 1.7, y: 0, ry: Math.PI },
   { f: 442, x: 1.7, y: 0, ry: Math.PI },
-  { f: 630, x: 1.15, y: 0, ry: Math.PI - 0.55 },
+  { f: 630, x: 1.15, y: 0, ry: Math.PI },
   { f: 821, x: 1.15, y: 0, ry: Math.PI },
   { f: 1006, x: 0.9, y: 0, ry: Math.PI },
   { f: 1180, x: 0.85, y: 0, ry: Math.PI },
@@ -38,8 +43,12 @@ const ANA_KEYS = [
   { f: 809, x: -1.6, y: 0, ry: 0 },
   { f: 1006, x: -1.6, y: 0, ry: 0 },
   { f: 1180, x: -1.6, y: 0, ry: 0 },
-  { f: 1427, x: -1.6, y: 0, ry: Math.PI },
-  { f: 1698, x: -1.6, y: 0, ry: Math.PI },
+  // turn toward the camera side (0 → −π) and quick (90 f ≈ 3 s): mid-turn the
+  // calf faces the viewer, face + single horn visible; the old 0 → +π path
+  // over 247 f showed its rear to the camera for seconds.
+  { f: 1270, x: -1.6, y: 0, ry: -Math.PI },
+  { f: 1427, x: -1.6, y: 0, ry: -Math.PI },
+  { f: 1698, x: -1.6, y: 0, ry: -Math.PI },
 ];
 
 function jumpY(f: number, w0: number, w1: number, h: number): number {
@@ -90,10 +99,12 @@ export function poseFrame(frame: number, refs: BadakRefs, camera: THREE.Perspect
   refs.anak.position.set(ana.x, jump, -0.4);
   refs.anak.rotation.y = ana.ry;
   refs.anaBodyG.position.y = 0.55 + Math.sin(f * 0.09) * 0.015;
-  // front foot: touch the horn (line 1), scratch the ground (line 3)
-  const touchHorn = sstep(260, 300, f) * (1 - sstep(400, 433, f));
+  // front foot: scratch the ground (line 3) only. The line-1 horn-touch was
+  // removed: rotation.z −1.15 swung the foot BACKWARDS under the belly and it
+  // never came near the horn (leg too short, pivot too low) — the shy bow
+  // alone carries line 1 now.
   const scratch = line === 3 ? Math.sin(f * 0.7) * 0.5 : 0;
-  refs.anaLegFL.rotation.z = -1.15 * touchHorn + scratch;
+  refs.anaLegFL.rotation.z = scratch;
   refs.anaLegFR.rotation.z = 0;
   refs.anaLegBL.rotation.z = Math.sin(f * 0.1) * 0.03;
   refs.anaLegBR.rotation.z = Math.sin(f * 0.1 + Math.PI) * 0.03;

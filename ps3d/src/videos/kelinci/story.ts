@@ -14,20 +14,40 @@ const MOUTH = timing.mouth as unknown as Record<string, number[]>;
 //  1 294–481   lion raises a paw, pointing; rabbit nods, ears up
 //  2 496–641   countdown, crouch, then dig at the bush base; dirt flies
 //  3 650–822   hard ground, paws slip, tunnel bends right; dragged right-down
+//               (FIX 24 Nov: lion turns IN PLACE to face right first, then
+//               both slide right keeping >=1.9 apart — was: lion slid right
+//               while facing left = walking backwards, ending wedged into
+//               the rabbit at sep 0.7)
 //  4 837–1066  rabbit droops (ears limp), lion comes close to comfort
+//               (FIX 24 Nov: rabbit STAYS put (no backwards drift 1.8->1.5);
+//               lion turns in place, takes one slow step left and DIPS its
+//               head toward the rabbit — body stops at a safe distance
+//               (sep 1.8), the HEAD reaches, never the body; was: lion's
+//               body ended on top of the rabbit, head far away by the bush)
 //  5 1081–1295 rabbit stands tall watching from above, lion digs slowly on cue
+//               (FIX 24 Nov: lion digs IN PLACE where it stands (2.4) —
+//               was: lion trekked left 1.9->0.9 straight across the rabbit's
+//               path while the rabbit reared against its hindquarters)
 //  6 1310–1477 arrive at the green meadow, sparkles
+//               (FIX 24 Nov: lion turns IN PLACE first, then BOTH walk
+//               right (rabbit left of lion throughout, no crossing) — was:
+//               lion slid right while rotating pi->0 and the two crossed
+//               through each other at f~1400, rabbit swallowed by the lion)
 //  7 1492–1658 side by side: lion waves a paw, rabbit jumps twice happily
+//               (FIX 24 Nov: lion ends at 3.8 not 3.4, sep 1.9 — was: the
+//               rabbit's face was buried in the lion's rear/tail)
 
 const RAB_KEYS = [
   { f: 0, x: -1.9, y: 0, ry: 0 },
   { f: 481, x: -1.8, y: 0, ry: 0 },
   { f: 560, x: -1.15, y: 0, ry: 0 },
   { f: 641, x: -0.9, y: 0, ry: 0 },
-  { f: 822, x: 1.8, y: 0, ry: 0 },
-  { f: 1066, x: 1.5, y: 0, ry: 0 },
-  { f: 1295, x: 2.9, y: 0, ry: 0 },
-  { f: 1477, x: 1.9, y: 0, ry: 0 },
+  { f: 681, x: -0.85, y: 0, ry: 0 },   // hold while the lion turns (f641-681)
+  { f: 822, x: 0.6, y: 0, ry: 0 },     // dragged right, sep from lion ~1.9
+  { f: 1066, x: 0.6, y: 0, ry: 0 },    // STAYS for the comfort (no drift)
+  { f: 1295, x: 0.6, y: 0, ry: 0 },    // rears up IN PLACE watching
+  { f: 1350, x: 0.6, y: 0, ry: 0 },    // hold while the lion turns (f1310-1350)
+  { f: 1477, x: 1.9, y: 0, ry: 0 },    // walks right into the meadow
   { f: 1742, x: 1.9, y: 0, ry: 0 },
 ];
 
@@ -36,11 +56,14 @@ const LION_KEYS = [
   { f: 481, x: 1.6, y: 0, ry: Math.PI },
   { f: 560, x: 1.3, y: 0, ry: Math.PI },
   { f: 641, x: 1.1, y: 0, ry: Math.PI },
-  { f: 822, x: 2.5, y: 0, ry: Math.PI },
-  { f: 1066, x: 1.9, y: 0, ry: Math.PI },
-  { f: 1295, x: 0.9, y: 0, ry: Math.PI },
-  { f: 1477, x: 3.4, y: 0, ry: 0 },   // turn to face the meadow (right) for the finale
-  { f: 1742, x: 3.4, y: 0, ry: 0 },
+  { f: 681, x: 1.1, y: 0, ry: 0 },     // turn IN PLACE to face the drag (right)
+  { f: 822, x: 2.5, y: 0, ry: 0 },     // dragged right, facing right
+  { f: 862, x: 2.5, y: 0, ry: Math.PI }, // turn IN PLACE to face the rabbit
+  { f: 1066, x: 2.4, y: 0, ry: Math.PI }, // one slow step closer (sep 1.8)
+  { f: 1295, x: 2.4, y: 0, ry: Math.PI }, // digs slowly IN PLACE (no trek back)
+  { f: 1350, x: 2.4, y: 0, ry: 0 },    // turn IN PLACE to face the meadow
+  { f: 1477, x: 3.8, y: 0, ry: 0 },    // step right into the meadow
+  { f: 1742, x: 3.8, y: 0, ry: 0 },
 ];
 
 function jumpY(f: number, w0: number, w1: number, h: number): number {
@@ -80,7 +103,11 @@ export function poseFrame(frame: number, refs: KelinciRefs, camera: THREE.Perspe
   refs.lionLegBR.rotation.z = Math.sin(f * 0.3 + Math.PI) * 0.05;
   // head: nod while speaking, look back at the bush in line 3
   refs.lionHeadG.rotation.z = Math.sin(f * 0.45) * 0.04 * lionM
-    - 0.3 * sstep(650, 700, f) * (1 - sstep(800, 840, f));
+    - 0.3 * sstep(650, 700, f) * (1 - sstep(800, 840, f))
+    // comfort dip (line 4, FIX 24 Nov): after the turn (f862) the lion
+    // bows its head down toward the rabbit — the head reaches, the body
+    // stays at a safe distance (cf. Badak look-dev fix #6)
+    - 0.3 * sstep(880, 940, f) * (1 - sstep(1020, 1066, f));
   refs.lionHeadG.rotation.y = 0.5 * sstep(660, 720, f) * (1 - sstep(800, 840, f))
     // finale (line 7): turn the head back toward the camera/rabbit so the
     // face is visible in the closing shot instead of the back of the head
