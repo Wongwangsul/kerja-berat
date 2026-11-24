@@ -1,0 +1,118 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       1.1Gi        13Gi        42Mi       1.4Gi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   58G   87G  41% /
+Linux runnervm0hi8g 7.0.0-1020-azure #21-Ubuntu SMP PREEMPT Tue Oct 27 22:34:38 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/ps3d-25nov-perbaikan.sh ===
++ cd ps3d
++ export REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp TEMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp TMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp
++ REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp
++ TEMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp
++ TMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp
++ mkdir -p remotion-tmp out public
++ node --version
+v24.22.3
++ npm --version
+11.19.1
++ npm ci --no-audit --no-fund
++ tail -2
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
++ node render_all.mjs
++ RC=0
++ tail -40 render_all.log
+KudaLautPaus progress 15% 120s
+KudaLautPaus progress 20% 159s
+KudaLautPaus progress 25% 199s
+KudaLautPaus progress 30% 238s
+KudaLautPaus progress 35% 277s
+KudaLautPaus progress 40% 316s
+KudaLautPaus progress 45% 356s
+KudaLautPaus progress 50% 395s
+KudaLautPaus progress 55% 434s
+KudaLautPaus progress 60% 471s
+KudaLautPaus progress 65% 509s
+KudaLautPaus progress 70% 547s
+KudaLautPaus progress 75% 587s
+KudaLautPaus progress 80% 627s
+KudaLautPaus progress 85% 668s
+KudaLautPaus progress 90% 708s
+KudaLautPaus progress 100% 738s
+DONE KudaLautPaus 1617 frames in 737.6s = 0.46s/frame size=15723163 sha256=8b308df4b73b143280b6ba0c6facb1f238f70ef5e3e4822d2971cfc4d2d293a3
+comp BadakJawa 1698 frames
+BadakJawa progress 5% 70s
+BadakJawa progress 10% 131s
+BadakJawa progress 15% 190s
+BadakJawa progress 20% 251s
+BadakJawa progress 25% 311s
+BadakJawa progress 30% 372s
+BadakJawa progress 35% 435s
+BadakJawa progress 40% 498s
+BadakJawa progress 45% 559s
+BadakJawa progress 50% 622s
+BadakJawa progress 55% 685s
+BadakJawa progress 60% 748s
+BadakJawa progress 65% 813s
+BadakJawa progress 70% 878s
+BadakJawa progress 75% 940s
+BadakJawa progress 80% 1003s
+BadakJawa progress 85% 1065s
+BadakJawa progress 90% 1129s
+BadakJawa progress 100% 1175s
+DONE BadakJawa 1698 frames in 1175.0s = 0.69s/frame size=14369231 sha256=7759d0ffedb393f160c15d9290f8fdf5d27744a7c6e7f206bd7a6f3f8d4fb3dd
+ALL_DONE total_s 3965.8
++ mkdir -p ../hasil-run
++ cp render_all.log ../hasil-run/
++ '[' 0 -ne 0 ']'
++ for f in out/lebah-pelikan.mp4 out/kelinci-singa.mp4 out/kudalaut-paus.mp4 out/badak-jawa.mp4
+++ basename out/lebah-pelikan.mp4 .mp4
++ slug=lebah-pelikan
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/lebah-pelikan.mp4
+jobs/ps3d-25nov-perbaikan.sh: line 21: ffprobe: command not found
++ true
++ sha256sum out/lebah-pelikan.mp4
+d4108aa75921d2823b0735bad7a67b2a052f08d54c0f6502486d57a5968e7625  out/lebah-pelikan.mp4
++ split -b 20M -d -a 2 out/lebah-pelikan.mp4 ../hasil-run/lebah-pelikan-chunk-
++ for f in out/lebah-pelikan.mp4 out/kelinci-singa.mp4 out/kudalaut-paus.mp4 out/badak-jawa.mp4
+++ basename out/kelinci-singa.mp4 .mp4
++ slug=kelinci-singa
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/kelinci-singa.mp4
+jobs/ps3d-25nov-perbaikan.sh: line 21: ffprobe: command not found
++ true
++ sha256sum out/kelinci-singa.mp4
+7e67734fef51b56d2ee2e822ad37a75ba5cc3f7203463ef6d04bc33fe4a1762e  out/kelinci-singa.mp4
++ split -b 20M -d -a 2 out/kelinci-singa.mp4 ../hasil-run/kelinci-singa-chunk-
++ for f in out/lebah-pelikan.mp4 out/kelinci-singa.mp4 out/kudalaut-paus.mp4 out/badak-jawa.mp4
+++ basename out/kudalaut-paus.mp4 .mp4
++ slug=kudalaut-paus
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/kudalaut-paus.mp4
+jobs/ps3d-25nov-perbaikan.sh: line 21: ffprobe: command not found
++ true
++ sha256sum out/kudalaut-paus.mp4
+8b308df4b73b143280b6ba0c6facb1f238f70ef5e3e4822d2971cfc4d2d293a3  out/kudalaut-paus.mp4
++ split -b 20M -d -a 2 out/kudalaut-paus.mp4 ../hasil-run/kudalaut-paus-chunk-
++ for f in out/lebah-pelikan.mp4 out/kelinci-singa.mp4 out/kudalaut-paus.mp4 out/badak-jawa.mp4
+++ basename out/badak-jawa.mp4 .mp4
++ slug=badak-jawa
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/badak-jawa.mp4
+jobs/ps3d-25nov-perbaikan.sh: line 21: ffprobe: command not found
++ true
++ sha256sum out/badak-jawa.mp4
+7759d0ffedb393f160c15d9290f8fdf5d27744a7c6e7f206bd7a6f3f8d4fb3dd  out/badak-jawa.mp4
++ split -b 20M -d -a 2 out/badak-jawa.mp4 ../hasil-run/badak-jawa-chunk-
++ ls -la ../hasil-run/
+total 60256
+drwxr-xr-x  2 runner runner     4096 Nov 24 15:29 .
+drwxr-xr-x 19 runner runner     4096 Nov 24 14:23 ..
+-rw-r--r--  1 runner runner 14369231 Nov 24 15:29 badak-jawa-chunk-00
+-rw-r--r--  1 runner runner 15697817 Nov 24 15:29 kelinci-singa-chunk-00
+-rw-r--r--  1 runner runner 15723163 Nov 24 15:29 kudalaut-paus-chunk-00
+-rw-r--r--  1 runner runner 15881481 Nov 24 15:29 lebah-pelikan-chunk-00
+-rw-r--r--  1 runner runner     4814 Nov 24 15:29 log.txt
+-rw-r--r--  1 runner runner     3015 Nov 24 15:29 render_all.log
++ echo RENDER_JOB_DONE
+RENDER_JOB_DONE
+=== Selesai. Kode keluar: 0 ===
