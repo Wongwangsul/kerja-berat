@@ -2,6 +2,8 @@
 # Kerja-berat job GABUNGAN: render 4 Short Panggung Satwa tayang 25 Nov 2026
 # (LebahPelikan, KelinciSinga, KudaLautPaus, BadakJawa) — model 3D halus.
 # Satu job, satu commit hasil. Folder proyek di repo bernama ps3d.
+# v2 (24 Nov ~17.55 WIB): picu ulang sesudah perbaikan ps3d/src/index.ts
+# (v1 gagal: bundle hanya berisi RubahLembut karena index.ts lama).
 set -x
 cd ps3d || exit 1
 export REMOTION_TMP=$PWD/remotion-tmp TEMP=$PWD/remotion-tmp TMP=$PWD/remotion-tmp
