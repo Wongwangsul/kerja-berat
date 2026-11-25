@@ -151,7 +151,7 @@ function buildTrack(g: THREE.Group) {
   }
 }
 
-function buildPoints(g: THREE.Group): { pointsL: THREE.Group; pointsR: THREE.Group } {
+export function buildPoints(g: THREE.Group): { pointsL: THREE.Group; pointsR: THREE.Group } {
   const steel = new THREE.MeshStandardMaterial({ color: new THREE.Color("#b4bec6"), roughness: 0.4, metalness: 0.35 });
   const mk = (x: number) => {
     const grp = new THREE.Group();
@@ -166,7 +166,7 @@ function buildPoints(g: THREE.Group): { pointsL: THREE.Group; pointsR: THREE.Gro
   return { pointsL: mk(-0.68), pointsR: mk(0.68) };
 }
 
-function buildSwitchStand(g: THREE.Group): THREE.Group {
+export function buildSwitchStand(g: THREE.Group): THREE.Group {
   const grp = new THREE.Group();
   grp.position.set(2.45, 0, 2.6);
   g.add(grp);
@@ -201,7 +201,7 @@ function glowTexture(): THREE.CanvasTexture {
   return new THREE.CanvasTexture(c);
 }
 
-function buildTrain(g: THREE.Group): { train: THREE.Group; wheels: THREE.Mesh[]; smoke: THREE.Mesh[]; lampGlow: THREE.Sprite } {
+export function buildTrain(g: THREE.Group): { train: THREE.Group; wheels: THREE.Mesh[]; smoke: THREE.Mesh[]; lampGlow: THREE.Sprite } {
   const train = new THREE.Group();
   g.add(train);
   const wheels: THREE.Mesh[] = [];
@@ -268,7 +268,7 @@ function buildTrain(g: THREE.Group): { train: THREE.Group; wheels: THREE.Mesh[];
   return { train, wheels, smoke, lampGlow };
 }
 
-function buildMan(g: THREE.Group) {
+export function buildMan(g: THREE.Group) {
   const man = new THREE.Group();
   man.position.set(2.82, 0, 2.75);
   g.add(man);
