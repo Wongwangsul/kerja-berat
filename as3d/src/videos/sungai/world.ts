@@ -796,7 +796,7 @@ export function buildWorld(scene: THREE.Scene): SungaiRefs {
   const crab = makeCrab(g, 0.9);
   crab.root.position.set(36, 0, 5.2); crab.root.rotation.y = -0.5;
   const splashRings: THREE.Mesh[] = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 8; i++) {
     const ring = new THREE.Mesh(new THREE.TorusGeometry(1, 0.05, 8, 32),
       new THREE.MeshBasicMaterial({ color: "#eafcff", transparent: true, opacity: 0, depthWrite: false }));
     ring.rotation.x = Math.PI / 2; ring.castShadow = false;
