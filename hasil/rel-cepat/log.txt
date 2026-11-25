@@ -1,0 +1,78 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       1.1Gi        12Gi        42Mi       2.0Gi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   59G   86G  41% /
+Linux runnervm0hi8g 7.0.0-1020-azure #21-Ubuntu SMP PREEMPT Tue Oct 27 22:34:38 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/rel-cepat.sh ===
++ cd rel
++ export REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/rel/remotion-tmp TEMP=/home/runner/work/kerja-berat/kerja-berat/rel/remotion-tmp TMP=/home/runner/work/kerja-berat/kerja-berat/rel/remotion-tmp
++ REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/rel/remotion-tmp
++ TEMP=/home/runner/work/kerja-berat/kerja-berat/rel/remotion-tmp
++ TMP=/home/runner/work/kerja-berat/kerja-berat/rel/remotion-tmp
++ mkdir -p remotion-tmp out public
++ base64 -d public/narasi.ogg.b64
++ base64 -d public/musik.ogg.b64
++ ls -la public/
+total 1136
+drwxr-xr-x 2 runner runner   4096 Nov 25 05:48 .
+drwxr-xr-x 6 runner runner   4096 Nov 25 05:48 ..
+-rw-r--r-- 1 runner runner 273185 Nov 25 05:48 musik.ogg
+-rw-r--r-- 1 runner runner 369041 Nov 25 05:48 musik.ogg.b64
+-rw-r--r-- 1 runner runner 213351 Nov 25 05:48 narasi.ogg
+-rw-r--r-- 1 runner runner 288211 Nov 25 05:48 narasi.ogg.b64
++ node --version
+v24.22.3
++ npm --version
+11.19.1
++ npm install --no-audit --no-fund
++ tail -2
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
++ node render_cepat.mjs out/video.mp4
++ tail -30
+bundle_s 7.6
+comp RelCepat 714 frames
+progress 5% 19s
+progress 10% 29s
+progress 15% 39s
+progress 20% 49s
+progress 25% 57s
+progress 30% 66s
+progress 35% 76s
+progress 40% 85s
+progress 45% 95s
+progress 50% 106s
+progress 55% 118s
+progress 60% 130s
+progress 65% 140s
+progress 70% 150s
+progress 75% 160s
+progress 80% 170s
+progress 85% 181s
+progress 90% 194s
+progress 100% 202s
+renderMedia 714 frames in 201.8s = 0.28s/frame
++ ls -la out/
+total 8496
+drwxr-xr-x 2 runner runner    4096 Nov 25 05:52 .
+drwxr-xr-x 7 runner runner    4096 Nov 25 05:49 ..
+-rw-r--r-- 1 runner runner 8688548 Nov 25 05:52 video.mp4
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/video.mp4
+jobs/rel-cepat.sh: line 14: ffprobe: command not found
++ true
++ sha256sum out/video.mp4
+c2b107de6809b4c5e3323b07015863e0cecd76c4aca37df1d8cd678b7ce3f5cc  out/video.mp4
++ mkdir -p ../hasil-run
++ split -b 20M -d -a 2 out/video.mp4 ../hasil-run/chunk-
++ ls -la ../hasil-run/
+total 8500
+drwxr-xr-x  2 runner runner    4096 Nov 25 05:52 .
+drwxr-xr-x 21 runner runner    4096 Nov 25 05:48 ..
+-rw-r--r--  1 runner runner 8688548 Nov 25 05:52 chunk-00
+-rw-r--r--  1 runner runner    2624 Nov 25 05:52 log.txt
++ echo RENDER_JOB_DONE
+RENDER_JOB_DONE
+=== Selesai. Kode keluar: 0 ===
