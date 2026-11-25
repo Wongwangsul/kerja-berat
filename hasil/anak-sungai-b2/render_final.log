@@ -1,0 +1,191 @@
+Downloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell
+Customize this behavior by adding a onBrowserDownload function to ensureBrowser().
+Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-158.0.8127.2.zip?clear
+Downloading Chrome Headless Shell - 9.5 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 19.1 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 28.6 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 38.2 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 47.7 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 57.3 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 66.8 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 76.4 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 85.9 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 95.5 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 102.5 Mb/102.5 Mb
+browser ensured
+bundle_s 12.5
+comp AnakSungai 7200 frames @ 30 fps 1920x1080 range 3600 7199
+progress 2% elapsed_s 50
+progress 4% elapsed_s 82
+progress 6% elapsed_s 113
+progress 8% elapsed_s 145
+progress 10% elapsed_s 176
+progress 12% elapsed_s 208
+progress 14% elapsed_s 240
+progress 16% elapsed_s 271
+progress 18% elapsed_s 303
+progress 20% elapsed_s 336
+progress 22% elapsed_s 370
+progress 24% elapsed_s 403
+progress 26% elapsed_s 438
+progress 28% elapsed_s 472
+progress 30% elapsed_s 507
+progress 32% elapsed_s 542
+progress 34% elapsed_s 577
+progress 36% elapsed_s 612
+progress 38% elapsed_s 646
+progress 40% elapsed_s 679
+progress 42% elapsed_s 713
+progress 44% elapsed_s 746
+progress 46% elapsed_s 780
+progress 48% elapsed_s 815
+progress 50% elapsed_s 849
+progress 52% elapsed_s 884
+progress 54% elapsed_s 917
+progress 56% elapsed_s 951
+progress 59% elapsed_s 1000
+progress 61% elapsed_s 1031
+progress 63% elapsed_s 1062
+progress 65% elapsed_s 1093
+progress 67% elapsed_s 1122
+progress 69% elapsed_s 1150
+progress 71% elapsed_s 1177
+progress 73% elapsed_s 1204
+progress 75% elapsed_s 1230
+progress 77% elapsed_s 1255
+progress 79% elapsed_s 1280
+[40m Tab 0, node_modules/its-fine/dist/index.js:64 [49m [31m[0mTypeError: Cannot read properties of undefined (reading 'position')[0m[39m
+[31m[0m    at http://localhost:3000/bundle.js:82516:16[0m[39m
+[31m[0m    at Array.forEach (<anonymous>)[0m[39m
+[31m[0m    at http://localhost:3000/bundle.js:82512:16[0m[39m
+[31m[0m    at Array.forEach (<anonymous>)[0m[39m
+[31m[0m    at http://localhost:3000/bundle.js:82503:11[0m[39m
+[31m[0m    at Array.forEach (<anonymous>)[0m[39m
+[31m[0m    at poseFrame (http://localhost:3000/bundle.js:82501:15)[0m[39m
+[31m[0m    at Rig (http://localhost:3000/bundle.js:82589:3)[0m[39m
+[31m[0m    at Ke (http://localhost:3000/bundle.js:83455:137)[0m[39m
+[31m[0m    at cg (http://localhost:3000/bundle.js:83497:215)[0m[39m
+[40m Tab 0, node_modules/its-fine/dist/index.js:64 [49m [31m[0mTypeError: Cannot read properties of undefined (reading 'position')[0m[39m
+[31m[0m    at http://localhost:3000/bundle.js:82516:16[0m[39m
+[31m[0m    at Array.forEach (<anonymous>)[0m[39m
+[31m[0m    at http://localhost:3000/bundle.js:82512:16[0m[39m
+[31m[0m    at Array.forEach (<anonymous>)[0m[39m
+[31m[0m    at http://localhost:3000/bundle.js:82503:11[0m[39m
+[31m[0m    at Array.forEach (<anonymous>)[0m[39m
+[31m[0m    at poseFrame (http://localhost:3000/bundle.js:82501:15)[0m[39m
+[31m[0m    at Rig (http://localhost:3000/bundle.js:82589:3)[0m[39m
+[31m[0m    at Ke (http://localhost:3000/bundle.js:83455:137)[0m[39m
+[31m[0m    at cg (http://localhost:3000/bundle.js:83497:215)[0m[39m
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+SymbolicateableError [TypeError]: Cannot read properties of undefined (reading 'position')
+    at http://localhost:3000/bundle.js:82516:16
+    at Array.forEach (<anonymous>)
+    at http://localhost:3000/bundle.js:82512:16
+    at Array.forEach (<anonymous>)
+    at http://localhost:3000/bundle.js:82503:11
+    at Array.forEach (<anonymous>)
+    at poseFrame (http://localhost:3000/bundle.js:82501:15)
+    at Rig (http://localhost:3000/bundle.js:82589:3)
+    at Ke (http://localhost:3000/bundle.js:83455:137)
+    at cg (http://localhost:3000/bundle.js:83497:215) {
+  stackFrame: [
+    {
+      columnNumber: 15,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: '',
+      lineNumber: 82515
+    },
+    {
+      columnNumber: 15,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: '',
+      lineNumber: 82511
+    },
+    {
+      columnNumber: 10,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: '',
+      lineNumber: 82502
+    },
+    {
+      columnNumber: 14,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'poseFrame',
+      lineNumber: 82500
+    },
+    {
+      columnNumber: 2,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'Rig',
+      lineNumber: 82588
+    },
+    {
+      columnNumber: 136,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'Ke',
+      lineNumber: 83454
+    },
+    {
+      columnNumber: 214,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'cg',
+      lineNumber: 83496
+    },
+    {
+      columnNumber: 199,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'Sh',
+      lineNumber: 83574
+    },
+    {
+      columnNumber: 378,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'Rh',
+      lineNumber: 83562
+    },
+    {
+      columnNumber: 309,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'Qh',
+      lineNumber: 83562
+    },
+    {
+      columnNumber: 169,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'Gh',
+      lineNumber: 83562
+    },
+    {
+      columnNumber: 414,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'Lh',
+      lineNumber: 83553
+    },
+    {
+      columnNumber: 414,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'Eh',
+      lineNumber: 83551
+    },
+    {
+      columnNumber: 202,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'J',
+      lineNumber: 83768
+    },
+    {
+      columnNumber: 127,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'R',
+      lineNumber: 83769
+    }
+  ],
+  delayRenderCall: null,
+  frame: 6680,
+  chunk: null
+}
+
+Node.js v24.22.3

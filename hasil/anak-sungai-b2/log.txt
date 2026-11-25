@@ -1,0 +1,77 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       1.1Gi        12Gi        44Mi       2.1Gi        14Gi
+Swap:             0B          0B          0B
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/cow-root  145G   56G   90G  39% /
+Linux ip-10-0-138-115 7.0.0-1016-aws #17-Ubuntu SMP PREEMPT Mon Oct 19 17:36:33 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/anak-sungai-b2.sh ===
++ cd as3d
++ export REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/as3d/remotion-tmp TEMP=/home/runner/work/kerja-berat/kerja-berat/as3d/remotion-tmp TMP=/home/runner/work/kerja-berat/kerja-berat/as3d/remotion-tmp
++ REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/as3d/remotion-tmp
++ TEMP=/home/runner/work/kerja-berat/kerja-berat/as3d/remotion-tmp
++ TMP=/home/runner/work/kerja-berat/kerja-berat/as3d/remotion-tmp
++ mkdir -p remotion-tmp out public
++ node --version
+v24.22.3
++ npm --version
+11.19.1
++ npm ci --no-audit --no-fund
++ tail -2
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
++ FSTART=3600
++ FEND=7199
++ OUTNAME=part2.mp4
++ CONCURRENCY=4
++ node render_final.mjs
++ RC=1
++ tail -40 render_final.log
+      functionName: 'Qh',
+      lineNumber: 83562
+    },
+    {
+      columnNumber: 169,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'Gh',
+      lineNumber: 83562
+    },
+    {
+      columnNumber: 414,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'Lh',
+      lineNumber: 83553
+    },
+    {
+      columnNumber: 414,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'Eh',
+      lineNumber: 83551
+    },
+    {
+      columnNumber: 202,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'J',
+      lineNumber: 83768
+    },
+    {
+      columnNumber: 127,
+      fileName: 'http://localhost:3000/bundle.js',
+      functionName: 'R',
+      lineNumber: 83769
+    }
+  ],
+  delayRenderCall: null,
+  frame: 6680,
+  chunk: null
+}
+
+Node.js v24.22.3
++ mkdir -p ../hasil-run
++ cp render_final.log ../hasil-run/
++ '[' 1 -ne 0 ']'
++ echo 'RENDER FAILED rc=1'
+RENDER FAILED rc=1
++ exit 1
+=== Selesai. Kode keluar: 1 ===
