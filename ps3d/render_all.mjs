@@ -1,4 +1,4 @@
-// Combined heavy-run render: bundle ONCE, then render all four 25 Nov Shorts
+// Combined heavy-run render: bundle ONCE, then render all three 26 Nov Shorts
 // in sequence (video only, no audio) into out/<slug>.mp4.
 // Env: CHROME_BIN (optional path to chrome headless shell), CONCURRENCY (default 3)
 import { bundle } from "@remotion/bundler";
@@ -8,10 +8,9 @@ import { createReadStream, statSync } from "node:fs";
 import path from "node:path";
 
 const JOBS = [
-  { id: "LebahPelikan", out: "out/lebah-pelikan.mp4" },
-  { id: "KelinciSinga", out: "out/kelinci-singa.mp4" },
-  { id: "KudaLautPaus", out: "out/kudalaut-paus.mp4" },
-  { id: "BadakJawa", out: "out/badak-jawa.mp4" },
+  { id: "KucingJerapah", out: "out/kucing-jerapah.mp4" },
+  { id: "UburUburHiu", out: "out/uburubur-hiu.mp4" },
+  { id: "BangauCamar", out: "out/bangau-camar.mp4" },
 ];
 
 function sha256(file) {
