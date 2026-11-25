@@ -1,0 +1,78 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       1.3Gi        12Gi        40Mi       2.0Gi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   59G   86G  41% /
+Linux runnervm0hi8g 7.0.0-1020-azure #21-Ubuntu SMP PREEMPT Tue Oct 27 22:34:38 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/jet-sample.sh ===
++ cd jet
++ export REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/jet/remotion-tmp TEMP=/home/runner/work/kerja-berat/kerja-berat/jet/remotion-tmp TMP=/home/runner/work/kerja-berat/kerja-berat/jet/remotion-tmp
++ REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/jet/remotion-tmp
++ TEMP=/home/runner/work/kerja-berat/kerja-berat/jet/remotion-tmp
++ TMP=/home/runner/work/kerja-berat/kerja-berat/jet/remotion-tmp
++ mkdir -p remotion-tmp out public
++ base64 -d public/narasi.ogg.b64
++ base64 -d public/musik.ogg.b64
++ ls -la public/
+total 500
+drwxr-xr-x 2 runner runner   4096 Nov 25 05:59 .
+drwxr-xr-x 6 runner runner   4096 Nov 25 05:59 ..
+-rw-r--r-- 1 runner runner  94356 Nov 25 05:59 musik.ogg
+-rw-r--r-- 1 runner runner 127464 Nov 25 05:59 musik.ogg.b64
+-rw-r--r-- 1 runner runner 115018 Nov 25 05:59 narasi.ogg
+-rw-r--r-- 1 runner runner 155378 Nov 25 05:59 narasi.ogg.b64
++ node --version
+v24.22.3
++ npm --version
+11.19.1
++ npm install --no-audit --no-fund
++ tail -2
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
++ node render_final.mjs out/video.mp4
++ tail -30
+bundle_s 10.0
+comp JetSample 348 frames
+progress 5% 7s
+progress 10% 10s
+progress 15% 16s
+progress 20% 19s
+progress 25% 24s
+progress 30% 27s
+progress 35% 29s
+progress 40% 33s
+progress 45% 35s
+progress 50% 38s
+progress 55% 42s
+progress 60% 45s
+progress 65% 48s
+progress 70% 51s
+progress 75% 55s
+progress 80% 59s
+progress 85% 62s
+progress 90% 67s
+progress 100% 69s
+renderMedia 348 frames in 68.6s = 0.20s/frame
++ ls -la out/
+total 3584
+drwxr-xr-x 2 runner runner    4096 Nov 25 06:01 .
+drwxr-xr-x 7 runner runner    4096 Nov 25 06:00 ..
+-rw-r--r-- 1 runner runner 3661332 Nov 25 06:01 video.mp4
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/video.mp4
+jobs/jet-sample.sh: line 14: ffprobe: command not found
++ true
++ sha256sum out/video.mp4
+2c7b3e74cc9b7af521fac0dcab552042fda8ed09305922da03a79446203322c6  out/video.mp4
++ mkdir -p ../hasil-run
++ split -b 20M -d -a 2 out/video.mp4 ../hasil-run/chunk-
++ ls -la ../hasil-run/
+total 3588
+drwxr-xr-x  2 runner runner    4096 Nov 25 06:01 .
+drwxr-xr-x 22 runner runner    4096 Nov 25 05:59 ..
+-rw-r--r--  1 runner runner 3661332 Nov 25 06:01 chunk-00
+-rw-r--r--  1 runner runner    2615 Nov 25 06:01 log.txt
++ echo RENDER_JOB_DONE
+RENDER_JOB_DONE
+=== Selesai. Kode keluar: 0 ===
