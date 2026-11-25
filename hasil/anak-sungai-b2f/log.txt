@@ -1,0 +1,92 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       1.2Gi        12Gi        44Mi       2.2Gi        14Gi
+Swap:             0B          0B          0B
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/cow-root  145G   56G   90G  39% /
+Linux ip-10-0-128-96 7.0.0-1016-aws #17-Ubuntu SMP PREEMPT Mon Oct 19 17:36:33 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/anak-sungai-b2f.sh ===
++ cd as3d
++ export REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/as3d/remotion-tmp TEMP=/home/runner/work/kerja-berat/kerja-berat/as3d/remotion-tmp TMP=/home/runner/work/kerja-berat/kerja-berat/as3d/remotion-tmp
++ REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/as3d/remotion-tmp
++ TEMP=/home/runner/work/kerja-berat/kerja-berat/as3d/remotion-tmp
++ TMP=/home/runner/work/kerja-berat/kerja-berat/as3d/remotion-tmp
++ mkdir -p remotion-tmp out public
++ node --version
+v24.22.3
++ npm --version
+11.19.1
++ npm ci --no-audit --no-fund
++ tail -2
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
++ FSTART=3600
++ FEND=7199
++ OUTNAME=part2.mp4
++ CONCURRENCY=4
++ node render_final.mjs
++ RC=0
++ tail -40 render_final.log
+progress 18% elapsed_s 308
+progress 20% elapsed_s 342
+progress 22% elapsed_s 376
+progress 24% elapsed_s 410
+progress 26% elapsed_s 446
+progress 28% elapsed_s 481
+progress 30% elapsed_s 516
+progress 32% elapsed_s 552
+progress 34% elapsed_s 587
+progress 36% elapsed_s 623
+progress 38% elapsed_s 658
+progress 40% elapsed_s 692
+progress 42% elapsed_s 727
+progress 44% elapsed_s 761
+progress 46% elapsed_s 796
+progress 48% elapsed_s 832
+progress 50% elapsed_s 867
+progress 52% elapsed_s 902
+progress 54% elapsed_s 936
+progress 56% elapsed_s 971
+progress 59% elapsed_s 1021
+progress 61% elapsed_s 1053
+progress 63% elapsed_s 1085
+progress 65% elapsed_s 1115
+progress 67% elapsed_s 1144
+progress 69% elapsed_s 1172
+progress 71% elapsed_s 1199
+progress 73% elapsed_s 1226
+progress 75% elapsed_s 1253
+progress 77% elapsed_s 1278
+progress 79% elapsed_s 1303
+progress 81% elapsed_s 1326
+progress 83% elapsed_s 1350
+progress 85% elapsed_s 1376
+progress 87% elapsed_s 1417
+progress 89% elapsed_s 1448
+progress 91% elapsed_s 1471
+progress 93% elapsed_s 1493
+progress 100% elapsed_s 1506
+DONE /home/runner/work/kerja-berat/kerja-berat/as3d/out/part2.mp4 total_s 1506.5 s_per_frame 0.418 sha256 7e81defa7cfbe0dda5db3e1ca283241d802de488441f9147d302c9fba51e63b6
++ mkdir -p ../hasil-run
++ cp render_final.log ../hasil-run/
++ '[' 0 -ne 0 ']'
++ f=out/part2.mp4
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/part2.mp4
+jobs/anak-sungai-b2f.sh: line 16: ffprobe: command not found
++ true
++ sha256sum out/part2.mp4
+7e81defa7cfbe0dda5db3e1ca283241d802de488441f9147d302c9fba51e63b6  out/part2.mp4
++ split -b 20M -d -a 2 out/part2.mp4 ../hasil-run/part2-chunk-
++ ls -la ../hasil-run/
+total 46476
+drwxr-xr-x  2 runner runner     4096 Nov 25 13:12 .
+drwxr-xr-x 23 runner runner     4096 Nov 25 12:47 ..
+-rw-r--r--  1 runner runner     3009 Nov 25 13:12 log.txt
+-rw-r--r--  1 runner runner 20971520 Nov 25 13:12 part2-chunk-00
+-rw-r--r--  1 runner runner 20971520 Nov 25 13:12 part2-chunk-01
+-rw-r--r--  1 runner runner  5629359 Nov 25 13:12 part2-chunk-02
+-rw-r--r--  1 runner runner     2392 Nov 25 13:12 render_final.log
++ echo RENDER_JOB_DONE
+RENDER_JOB_DONE
+=== Selesai. Kode keluar: 0 ===

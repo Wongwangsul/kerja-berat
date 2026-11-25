@@ -1,0 +1,65 @@
+Downloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell
+Customize this behavior by adding a onBrowserDownload function to ensureBrowser().
+Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-158.0.8127.2.zip?clear
+Downloading Chrome Headless Shell - 9.6 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 19.1 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 28.6 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 38.2 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 47.7 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 57.3 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 66.8 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 76.4 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 85.9 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 95.5 Mb/102.5 Mb
+Downloading Chrome Headless Shell - 102.5 Mb/102.5 Mb
+browser ensured
+bundle_s 12.0
+comp AnakSungai 7200 frames @ 30 fps 1920x1080 range 3600 7199
+progress 2% elapsed_s 50
+progress 4% elapsed_s 81
+progress 6% elapsed_s 114
+progress 8% elapsed_s 146
+progress 10% elapsed_s 178
+progress 12% elapsed_s 211
+progress 14% elapsed_s 243
+progress 16% elapsed_s 275
+progress 18% elapsed_s 308
+progress 20% elapsed_s 342
+progress 22% elapsed_s 376
+progress 24% elapsed_s 410
+progress 26% elapsed_s 446
+progress 28% elapsed_s 481
+progress 30% elapsed_s 516
+progress 32% elapsed_s 552
+progress 34% elapsed_s 587
+progress 36% elapsed_s 623
+progress 38% elapsed_s 658
+progress 40% elapsed_s 692
+progress 42% elapsed_s 727
+progress 44% elapsed_s 761
+progress 46% elapsed_s 796
+progress 48% elapsed_s 832
+progress 50% elapsed_s 867
+progress 52% elapsed_s 902
+progress 54% elapsed_s 936
+progress 56% elapsed_s 971
+progress 59% elapsed_s 1021
+progress 61% elapsed_s 1053
+progress 63% elapsed_s 1085
+progress 65% elapsed_s 1115
+progress 67% elapsed_s 1144
+progress 69% elapsed_s 1172
+progress 71% elapsed_s 1199
+progress 73% elapsed_s 1226
+progress 75% elapsed_s 1253
+progress 77% elapsed_s 1278
+progress 79% elapsed_s 1303
+progress 81% elapsed_s 1326
+progress 83% elapsed_s 1350
+progress 85% elapsed_s 1376
+progress 87% elapsed_s 1417
+progress 89% elapsed_s 1448
+progress 91% elapsed_s 1471
+progress 93% elapsed_s 1493
+progress 100% elapsed_s 1506
+DONE /home/runner/work/kerja-berat/kerja-berat/as3d/out/part2.mp4 total_s 1506.5 s_per_frame 0.418 sha256 7e81defa7cfbe0dda5db3e1ca283241d802de488441f9147d302c9fba51e63b6
