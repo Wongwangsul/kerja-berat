@@ -34,7 +34,7 @@ export function Rig<T>({ refs, pose, lights, fov = 42 }: {
     sun.position.set(...lights.sunPos);
     sun.target.position.set(2, 0, -2);
     sun.castShadow = true;
-    sun.shadow.mapSize.set(2048, 2048);
+    sun.shadow.mapSize.set(1024, 1024);
     const sc = sun.shadow.camera;
     const b = lights.shadowBounds ?? [-24, 24, 24, -16];
     sc.left = b[0]; sc.right = b[1]; sc.top = b[2]; sc.bottom = b[3]; sc.near = 2; sc.far = 90;
