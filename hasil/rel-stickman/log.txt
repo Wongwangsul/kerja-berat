@@ -1,0 +1,68 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       1.3Gi        12Gi        41Mi       2.0Gi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   59G   86G  41% /
+Linux runnervm0hi8g 7.0.0-1020-azure #21-Ubuntu SMP PREEMPT Tue Oct 27 22:34:38 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/rel-stickman.sh ===
++ cd rel
++ export REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/rel/remotion-tmp TEMP=/home/runner/work/kerja-berat/kerja-berat/rel/remotion-tmp TMP=/home/runner/work/kerja-berat/kerja-berat/rel/remotion-tmp
++ REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/rel/remotion-tmp
++ TEMP=/home/runner/work/kerja-berat/kerja-berat/rel/remotion-tmp
++ TMP=/home/runner/work/kerja-berat/kerja-berat/rel/remotion-tmp
++ mkdir -p remotion-tmp out public
++ node --version
+v24.22.3
++ npm --version
+11.19.1
++ npm install --no-audit --no-fund
++ tail -2
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
++ node render_final.mjs out/video.mp4
++ tail -30
+bundle_s 7.8
+comp RelStickman 300 frames
+progress 5% 9s
+progress 10% 17s
+progress 15% 23s
+progress 20% 27s
+progress 25% 32s
+progress 30% 37s
+progress 35% 41s
+progress 40% 46s
+progress 45% 51s
+progress 50% 55s
+progress 55% 60s
+progress 60% 64s
+progress 65% 69s
+progress 70% 74s
+progress 75% 80s
+progress 80% 86s
+progress 85% 92s
+progress 90% 98s
+progress 100% 99s
+renderMedia 300 frames in 98.9s = 0.33s/frame
++ ls -la out/
+total 5128
+drwxr-xr-x 2 runner runner    4096 Nov 25 05:29 .
+drwxr-xr-x 7 runner runner    4096 Nov 25 05:27 ..
+-rw-r--r-- 1 runner runner 5241479 Nov 25 05:29 video.mp4
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/video.mp4
+jobs/rel-stickman.sh: line 11: ffprobe: command not found
++ true
++ sha256sum out/video.mp4
+37586696ffbbf4bf19b659870694b3600d067e2d2aaff9a79c2a17d5f30b10ae  out/video.mp4
++ mkdir -p ../hasil-run
++ split -b 20M -d -a 2 out/video.mp4 ../hasil-run/chunk-
++ ls -la ../hasil-run/
+total 5132
+drwxr-xr-x  2 runner runner    4096 Nov 25 05:29 .
+drwxr-xr-x 21 runner runner    4096 Nov 25 05:27 ..
+-rw-r--r--  1 runner runner 5241479 Nov 25 05:29 chunk-00
+-rw-r--r--  1 runner runner    2189 Nov 25 05:29 log.txt
++ echo RENDER_JOB_DONE
+RENDER_JOB_DONE
+=== Selesai. Kode keluar: 0 ===
