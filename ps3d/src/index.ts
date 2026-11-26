@@ -1,13 +1,13 @@
 import React from "react";
 import { Composition, registerRoot } from "remotion";
-import { KucingJerapah, KUCING_FRAMES } from "./videos/kucing/KucingJerapah";
-import { UburUburHiu, UBURUBUR_FRAMES } from "./videos/uburubur/UburUburHiu";
-import { BangauCamar, BANGAU_FRAMES } from "./videos/bangau/BangauCamar";
+import { PenguinUdang, PENGUIN_FRAMES } from "./videos/penguin/PenguinUdang";
+import { FlamingoPipit, FLAMINGO_FRAMES } from "./videos/flamingo/FlamingoPipit";
+import { AnjingPanda, ANJING_FRAMES } from "./videos/anjing/AnjingPanda";
 
 const COMPS = [
-  { id: "KucingJerapah", component: KucingJerapah, durationInFrames: KUCING_FRAMES },
-  { id: "UburUburHiu", component: UburUburHiu, durationInFrames: UBURUBUR_FRAMES },
-  { id: "BangauCamar", component: BangauCamar, durationInFrames: BANGAU_FRAMES },
+  { id: "PenguinUdang", component: PenguinUdang, durationInFrames: PENGUIN_FRAMES },
+  { id: "FlamingoPipit", component: FlamingoPipit, durationInFrames: FLAMINGO_FRAMES },
+  { id: "AnjingPanda", component: AnjingPanda, durationInFrames: ANJING_FRAMES },
 ] as const;
 
 const Root: React.FC = () => React.createElement(React.Fragment, null,
