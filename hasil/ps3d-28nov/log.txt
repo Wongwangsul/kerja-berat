@@ -1,0 +1,108 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       1.3Gi        12Gi        41Mi       2.4Gi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   59G   86G  41% /
+Linux runnervm0hi8g 7.0.0-1020-azure #21-Ubuntu SMP PREEMPT Tue Oct 27 22:34:38 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/ps3d-28nov.sh ===
++ cd ps3d
++ export REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp TEMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp TMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp
++ REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp
++ TEMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp
++ TMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp
++ mkdir -p remotion-tmp out public
++ node --version
+v24.22.3
++ npm --version
+11.19.1
++ npm ci --no-audit --no-fund
++ tail -2
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
++ node render_all.mjs
++ RC=0
++ tail -40 render_all.log
+SingaMonyet progress 15% 92s
+SingaMonyet progress 20% 120s
+SingaMonyet progress 25% 148s
+SingaMonyet progress 30% 176s
+SingaMonyet progress 35% 205s
+SingaMonyet progress 40% 233s
+SingaMonyet progress 45% 262s
+SingaMonyet progress 50% 292s
+SingaMonyet progress 55% 322s
+SingaMonyet progress 60% 352s
+SingaMonyet progress 65% 382s
+SingaMonyet progress 70% 410s
+SingaMonyet progress 75% 438s
+SingaMonyet progress 80% 466s
+SingaMonyet progress 85% 494s
+SingaMonyet progress 90% 521s
+SingaMonyet progress 100% 540s
+DONE SingaMonyet 1127 frames in 539.6s = 0.48s/frame size=11146368 sha256=9513de2a3d4bc4cbcbeecdc8ed121e5c5c7f3864afcecbf12b79e819a795a032
+comp PausKepiting 1036 frames
+PausKepiting progress 5% 18s
+PausKepiting progress 10% 30s
+PausKepiting progress 15% 42s
+PausKepiting progress 20% 55s
+PausKepiting progress 25% 69s
+PausKepiting progress 30% 81s
+PausKepiting progress 35% 94s
+PausKepiting progress 40% 108s
+PausKepiting progress 45% 122s
+PausKepiting progress 50% 135s
+PausKepiting progress 55% 147s
+PausKepiting progress 60% 160s
+PausKepiting progress 65% 173s
+PausKepiting progress 70% 185s
+PausKepiting progress 75% 198s
+PausKepiting progress 80% 212s
+PausKepiting progress 85% 227s
+PausKepiting progress 90% 241s
+PausKepiting progress 100% 250s
+DONE PausKepiting 1036 frames in 249.9s = 0.24s/frame size=8515121 sha256=50cbdfbff17edce5c53c79d645edd8052d654e19843626c9eeb7668cef045b6b
+ALL_DONE total_s 1152.4
++ mkdir -p ../hasil-run
++ cp render_all.log ../hasil-run/
++ '[' 0 -ne 0 ']'
++ for f in out/pelikan-gagak.mp4 out/singa-monyet.mp4 out/paus-kepiting.mp4
+++ basename out/pelikan-gagak.mp4 .mp4
++ slug=pelikan-gagak
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/pelikan-gagak.mp4
+jobs/ps3d-28nov.sh: line 20: ffprobe: command not found
++ true
++ sha256sum out/pelikan-gagak.mp4
+b54a10e80d3ae19edb0a5e69ae5b83925a592bb0630a5a8a1b1d081d362fe472  out/pelikan-gagak.mp4
++ split -b 20M -d -a 2 out/pelikan-gagak.mp4 ../hasil-run/pelikan-gagak-chunk-
++ for f in out/pelikan-gagak.mp4 out/singa-monyet.mp4 out/paus-kepiting.mp4
+++ basename out/singa-monyet.mp4 .mp4
++ slug=singa-monyet
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/singa-monyet.mp4
+jobs/ps3d-28nov.sh: line 20: ffprobe: command not found
++ true
++ sha256sum out/singa-monyet.mp4
+9513de2a3d4bc4cbcbeecdc8ed121e5c5c7f3864afcecbf12b79e819a795a032  out/singa-monyet.mp4
++ split -b 20M -d -a 2 out/singa-monyet.mp4 ../hasil-run/singa-monyet-chunk-
++ for f in out/pelikan-gagak.mp4 out/singa-monyet.mp4 out/paus-kepiting.mp4
+++ basename out/paus-kepiting.mp4 .mp4
++ slug=paus-kepiting
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/paus-kepiting.mp4
+jobs/ps3d-28nov.sh: line 20: ffprobe: command not found
++ true
++ sha256sum out/paus-kepiting.mp4
+50cbdfbff17edce5c53c79d645edd8052d654e19843626c9eeb7668cef045b6b  out/paus-kepiting.mp4
++ split -b 20M -d -a 2 out/paus-kepiting.mp4 ../hasil-run/paus-kepiting-chunk-
++ ls -la ../hasil-run/
+total 27928
+drwxr-xr-x  2 runner runner     4096 Nov 27 09:30 .
+drwxr-xr-x 23 runner runner     4096 Nov 27 09:10 ..
+-rw-r--r--  1 runner runner     4237 Nov 27 09:30 log.txt
+-rw-r--r--  1 runner runner  8515121 Nov 27 09:30 paus-kepiting-chunk-00
+-rw-r--r--  1 runner runner  8911071 Nov 27 09:30 pelikan-gagak-chunk-00
+-rw-r--r--  1 runner runner     2276 Nov 27 09:30 render_all.log
+-rw-r--r--  1 runner runner 11146368 Nov 27 09:30 singa-monyet-chunk-00
++ echo RENDER_JOB_DONE
+RENDER_JOB_DONE
+=== Selesai. Kode keluar: 0 ===
