@@ -8,9 +8,9 @@ import { createReadStream, statSync } from "node:fs";
 import path from "node:path";
 
 const JOBS = [
-  { id: "PenguinUdang", out: "out/penguin-udang.mp4" },
-  { id: "FlamingoPipit", out: "out/flamingo-pipit.mp4" },
-  { id: "AnjingPanda", out: "out/anjing-panda.mp4" },
+  { id: "PelikanGagak", out: "out/pelikan-gagak.mp4" },
+  { id: "SingaMonyet", out: "out/singa-monyet.mp4" },
+  { id: "PausKepiting", out: "out/paus-kepiting.mp4" },
 ];
 
 function sha256(file) {
