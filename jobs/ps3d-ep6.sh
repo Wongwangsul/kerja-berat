@@ -9,7 +9,7 @@ mkdir -p remotion-tmp out public
 node --version; npm --version
 npm ci --no-audit --no-fund 2>&1 | tail -2 || npm install --no-audit --no-fund 2>&1 | tail -2
 export CONCURRENCY=4
-node render_ep6.mjs > render_ep6.log 2>node render_ep6.mjs > render_ep6.log 2>&11
+node render_ep6.mjs > render_ep6.log 2>&1
 RC=$?
 tail -40 render_ep6.log
 mkdir -p ../hasil-run
