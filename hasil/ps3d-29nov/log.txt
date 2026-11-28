@@ -1,0 +1,108 @@
+=== Mesin runner GitHub Actions ===
+Inti CPU: 4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       1.1Gi        11Gi        44Mi       2.8Gi        14Gi
+Swap:             0B          0B          0B
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/cow-root  145G   57G   89G  39% /
+Linux ip-10-0-134-131 7.0.0-1018-aws #19-Ubuntu SMP PREEMPT Tue Nov 10 20:30:58 UTC 2026 x86_64 GNU/Linux
+=== Mulai pekerjaan: jobs/ps3d-29nov.sh ===
++ cd ps3d
++ export REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp TEMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp TMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp
++ REMOTION_TMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp
++ TEMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp
++ TMP=/home/runner/work/kerja-berat/kerja-berat/ps3d/remotion-tmp
++ mkdir -p remotion-tmp out public
++ node --version
+v24.22.3
++ npm --version
+11.19.1
++ npm ci --no-audit --no-fund
++ tail -2
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
++ node render_all.mjs
++ RC=0
++ tail -40 render_all.log
+HiuBintangLaut progress 15% 59s
+HiuBintangLaut progress 20% 76s
+HiuBintangLaut progress 25% 94s
+HiuBintangLaut progress 30% 112s
+HiuBintangLaut progress 35% 129s
+HiuBintangLaut progress 40% 148s
+HiuBintangLaut progress 45% 168s
+HiuBintangLaut progress 50% 187s
+HiuBintangLaut progress 55% 206s
+HiuBintangLaut progress 60% 225s
+HiuBintangLaut progress 65% 243s
+HiuBintangLaut progress 70% 263s
+HiuBintangLaut progress 75% 283s
+HiuBintangLaut progress 80% 302s
+HiuBintangLaut progress 85% 322s
+HiuBintangLaut progress 90% 341s
+HiuBintangLaut progress 100% 353s
+DONE HiuBintangLaut 1013 frames in 352.9s = 0.35s/frame size=12462771 sha256=cbdd88e82c348853ba2f681ff9f5e6085d0dad200eac0a0ea8be1d7ff0e57b69
+comp CamarAngsa 1084 frames
+CamarAngsa progress 5% 26s
+CamarAngsa progress 10% 44s
+CamarAngsa progress 15% 64s
+CamarAngsa progress 20% 83s
+CamarAngsa progress 25% 103s
+CamarAngsa progress 30% 122s
+CamarAngsa progress 35% 142s
+CamarAngsa progress 40% 163s
+CamarAngsa progress 45% 183s
+CamarAngsa progress 50% 203s
+CamarAngsa progress 55% 225s
+CamarAngsa progress 60% 246s
+CamarAngsa progress 65% 267s
+CamarAngsa progress 70% 289s
+CamarAngsa progress 75% 310s
+CamarAngsa progress 80% 332s
+CamarAngsa progress 85% 354s
+CamarAngsa progress 90% 376s
+CamarAngsa progress 100% 390s
+DONE CamarAngsa 1084 frames in 390.3s = 0.36s/frame size=10775124 sha256=46ea8fe34fcc78ea732bb12b1e3efcd8c3fe17ef4c7f4424f0397ac5710dbdff
+ALL_DONE total_s 1298.9
++ mkdir -p ../hasil-run
++ cp render_all.log ../hasil-run/
++ '[' 0 -ne 0 ']'
++ for f in out/jerapah-kanguru.mp4 out/hiu-bintanglaut.mp4 out/camar-angsa.mp4
+++ basename out/jerapah-kanguru.mp4 .mp4
++ slug=jerapah-kanguru
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/jerapah-kanguru.mp4
+jobs/ps3d-29nov.sh: line 20: ffprobe: command not found
++ true
++ sha256sum out/jerapah-kanguru.mp4
+cc6ccde657de35e5cdbba3d661be23080712ab3691a7465760122162ea4ccab6  out/jerapah-kanguru.mp4
++ split -b 20M -d -a 2 out/jerapah-kanguru.mp4 ../hasil-run/jerapah-kanguru-chunk-
++ for f in out/jerapah-kanguru.mp4 out/hiu-bintanglaut.mp4 out/camar-angsa.mp4
+++ basename out/hiu-bintanglaut.mp4 .mp4
++ slug=hiu-bintanglaut
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/hiu-bintanglaut.mp4
+jobs/ps3d-29nov.sh: line 20: ffprobe: command not found
++ true
++ sha256sum out/hiu-bintanglaut.mp4
+cbdd88e82c348853ba2f681ff9f5e6085d0dad200eac0a0ea8be1d7ff0e57b69  out/hiu-bintanglaut.mp4
++ split -b 20M -d -a 2 out/hiu-bintanglaut.mp4 ../hasil-run/hiu-bintanglaut-chunk-
++ for f in out/jerapah-kanguru.mp4 out/hiu-bintanglaut.mp4 out/camar-angsa.mp4
+++ basename out/camar-angsa.mp4 .mp4
++ slug=camar-angsa
++ ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/camar-angsa.mp4
+jobs/ps3d-29nov.sh: line 20: ffprobe: command not found
++ true
++ sha256sum out/camar-angsa.mp4
+46ea8fe34fcc78ea732bb12b1e3efcd8c3fe17ef4c7f4424f0397ac5710dbdff  out/camar-angsa.mp4
++ split -b 20M -d -a 2 out/camar-angsa.mp4 ../hasil-run/camar-angsa-chunk-
++ ls -la ../hasil-run/
+total 35976
+drwxr-xr-x  2 runner runner     4096 Nov 28 09:12 .
+drwxr-xr-x 23 runner runner     4096 Nov 28 08:50 ..
+-rw-r--r--  1 runner runner 10775124 Nov 28 09:12 camar-angsa-chunk-00
+-rw-r--r--  1 runner runner 12462771 Nov 28 09:12 hiu-bintanglaut-chunk-00
+-rw-r--r--  1 runner runner 13577424 Nov 28 09:12 jerapah-kanguru-chunk-00
+-rw-r--r--  1 runner runner     4293 Nov 28 09:12 log.txt
+-rw-r--r--  1 runner runner     2345 Nov 28 09:12 render_all.log
++ echo RENDER_JOB_DONE
+RENDER_JOB_DONE
+=== Selesai. Kode keluar: 0 ===
